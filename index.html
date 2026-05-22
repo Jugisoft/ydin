@@ -1751,7 +1751,6 @@ function renderPlayerTables() {
     players.filter(p => (p.t1_yrit||0)+(p.t2_yrit||0)+(p.kotiutus_yrit||0) > 0)
            .sort((a,b)=>(b.kotiutus_pct||0)-(a.kotiutus_pct||0)),
     pesCols2);
-}
 
   var paloCols = [
     { key: '__rank',   label: '#',        title: 'Sijoitus' },
@@ -2193,7 +2192,7 @@ function vtRenderSide(n,p,color,colorCls,side){
         +'<div style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">'+title+'</div>'+rows+'</div>';
     }
     var exKeys=[['ex_pv01_onn','ex_pv01_yrit'],['ex_pv12_onn','ex_pv12_yrit'],['ex_pv23_onn','ex_pv23_yrit'],['ex_pv3K_onn','ex_pv3K_yrit']];
-    var apKeys=[['api_1onn','api_1yrit'],['api_2onn','api_2yrit'],['api_3onn','api_3yrit'],['api_kolmos_onn','api_kolmos_yrit']];
+    var apKeys=[['api_1onn','api_1yrit'],['api_2onn','api_2yrit'],['api_3onn','api_3yrit'],['t3_onn','t3_yrit']];
     var exRows=PV_SITU.map(function(lbl,i){return pvRow(lbl,p[exKeys[i][0]]||0,p[exKeys[i][1]]||0,color);}).join('');
     var apRows=PV_SITU.map(function(lbl,i){return pvRow(lbl,p[apKeys[i][0]]||0,p[apKeys[i][1]]||0,color);}).join('');
     statsEl.innerHTML=pvBox('Lyöntikohtainen (Excel)',exRows)+pvBox('Lyöntivuorokohtainen (API)',apRows);
@@ -2233,7 +2232,7 @@ function vtRenderRadar(p1,p2){
   function exData(p){if(!p)return[0,0,0,0];return[p.ex_pv01_pct||0,p.ex_pv12_pct||0,p.ex_pv23_pct||0,p.ex_pv3K_pct||0];}
   function apData(p){
     if(!p)return[0,0,0,0];
-    var k3=p.api_kolmos_yrit>0?Math.round(p.api_kolmos_onn/p.api_kolmos_yrit*100):0;
+    var k3=p.t3_pct||0;
     return[p.api_1pct||0,p.api_2pct||0,p.api_3pct||0,k3];
   }
   var ROPTS={responsive:true,maintainAspectRatio:false,animation:false,
@@ -2259,6 +2258,7 @@ function vtRenderRadar(p1,p2){
 
 window.addEventListener('load', init);
 </script>
+
 
 
 
