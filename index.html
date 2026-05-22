@@ -2206,7 +2206,7 @@ function vtRenderSide(n,p,color,colorCls,side){
       {v:(p.onn_pct!=null?p.onn_pct.toFixed(1)+'%':'—'), l:'Lyönti-onn%'},
       {v:xR,                                              l:'xR / ottelu'},
       {v:p.kotiutus_yrit||0,                              l:'Kotiutusyrit.'},
-      {v:(p.api_kolmos_onn>0&&p.ex_pv3K_yrit>0)?(p.ex_pv3K_yrit/p.api_kolmos_onn).toFixed(1):'—',        l:'Lyöntiä/juoksu 3.p'},
+      {v:(p.api_3onn>0&&p.ex_pv3K_yrit>0)?(p.ex_pv3K_yrit/p.api_3onn).toFixed(1):'—',        l:'Lyöntiä/juoksu 3.p'},
     ];
     extEl.innerHTML=extras.map(function(e){
       return '<div class="vt-extra-cell '+colorCls+'"><div class="vt-extra-v">'+e.v+'</div><div class="vt-extra-l">'+e.l+'</div></div>';
