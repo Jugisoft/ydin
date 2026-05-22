@@ -1529,10 +1529,10 @@ function updateH2H() {
   if (window._h2hRadarExcel) { try { window._h2hRadarExcel.destroy(); } catch(e){} window._h2hRadarExcel = null; }
   if (window._h2hRadarApi)   { try { window._h2hRadarApi.destroy();   } catch(e){} window._h2hRadarApi = null; }
   const SITU = ['0-tilanne', '1-tilanne', '2-tilanne', '3-til / K%'];
-  const ex1=[t1.ex_pv01_pct||0,t1.ex_pv12_pct||0,t1.ex_pv23_pct||0,t1.ex_pv3K_pct||0];
-  const ex2=[t2.ex_pv01_pct||0,t2.ex_pv12_pct||0,t2.ex_pv23_pct||0,t2.ex_pv3K_pct||0];
-  const ex1r=[[t1.ex_pv01_onn,t1.ex_pv01_yrit],[t1.ex_pv12_onn,t1.ex_pv12_yrit],[t1.ex_pv23_onn,t1.ex_pv23_yrit],[t1.ex_pv3K_onn,t1.ex_pv3K_yrit]];
-  const ex2r=[[t2.ex_pv01_onn,t2.ex_pv01_yrit],[t2.ex_pv12_onn,t2.ex_pv12_yrit],[t2.ex_pv23_onn,t2.ex_pv23_yrit],[t2.ex_pv3K_onn,t2.ex_pv3K_yrit]];
+  const ex1=[(t1.kenttely_yrit>0?Math.round(t1.kenttely_onn/t1.kenttely_yrit*100):0)||0,(t1.t1_yrit>0?Math.round(t1.t1_onn/t1.t1_yrit*100):0)||0,(t1.t2_yrit>0?Math.round(t1.t2_onn/t1.t2_yrit*100):0)||0,t1.t3_pct||0];
+  const ex2=[(t2.kenttely_yrit>0?Math.round(t2.kenttely_onn/t2.kenttely_yrit*100):0)||0,(t2.t1_yrit>0?Math.round(t2.t1_onn/t2.t1_yrit*100):0)||0,(t2.t2_yrit>0?Math.round(t2.t2_onn/t2.t2_yrit*100):0)||0,t2.t3_pct||0];
+  const ex1r=[[t1.kenttely_onn,t1.kenttely_yrit],[t1.t1_onn,t1.t1_yrit],[t1.t2_onn,t1.t2_yrit],[t1.t3_onn,t1.t3_yrit]];
+  const ex2r=[[t2.kenttely_onn,t2.kenttely_yrit],[t2.t1_onn,t2.t1_yrit],[t2.t2_onn,t2.t2_yrit],[t2.t3_onn,t2.t3_yrit]];
   const ap1=[t1.api_1pct||0,t1.api_2pct||0,t1.api_3pct||0,t1.api_kotiutus_3||0];
   const ap2=[t2.api_1pct||0,t2.api_2pct||0,t2.api_3pct||0,t2.api_kotiutus_3||0];
   const ap1r=[[t1.api_1onn,t1.api_1yrit],[t1.api_2onn,t1.api_2yrit],[t1.api_3onn,t1.api_3yrit],[t1.api_kolmos_onn,t1.api_kolmos_yrit]];
@@ -2191,8 +2191,8 @@ function vtRenderSide(n,p,color,colorCls,side){
       return '<div style="background:#161b22;border:1px solid #374151;border-radius:8px;padding:8px;margin-bottom:8px">'
         +'<div style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">'+title+'</div>'+rows+'</div>';
     }
-    var exKeys=[['ex_pv01_onn','ex_pv01_yrit'],['ex_pv12_onn','ex_pv12_yrit'],['ex_pv23_onn','ex_pv23_yrit'],['ex_pv3K_onn','ex_pv3K_yrit']];
-    var apKeys=[['api_1onn','api_1yrit'],['api_2onn','api_2yrit'],['api_3onn','api_3yrit'],['t3_onn','t3_yrit']];
+    var exKeys=[['kenttely_onn','kenttely_yrit'],['t1_onn','t1_yrit'],['t2_onn','t2_yrit'],['t3_onn','t3_yrit']];
+    var apKeys=[['api_1onn','api_1yrit'],['api_2onn','api_2yrit'],['api_3onn','api_3yrit'],['api_kolmos_onn','api_kolmos_yrit']];
     var exRows=PV_SITU.map(function(lbl,i){return pvRow(lbl,p[exKeys[i][0]]||0,p[exKeys[i][1]]||0,color);}).join('');
     var apRows=PV_SITU.map(function(lbl,i){return pvRow(lbl,p[apKeys[i][0]]||0,p[apKeys[i][1]]||0,color);}).join('');
     statsEl.innerHTML=pvBox('Lyöntikohtainen (Excel)',exRows)+pvBox('Lyöntivuorokohtainen (API)',apRows);
@@ -2230,7 +2230,7 @@ function vtRenderRadar(p1,p2){
   var legend=document.getElementById('vt-legend');
   if(!cvEx&&!cvAp)return;
   var SITU=['0-tilanne','1-tilanne','2-tilanne','3-til / K%'];
-  function exData(p){if(!p)return[0,0,0,0];return[p.ex_pv01_pct||0,p.ex_pv12_pct||0,p.ex_pv23_pct||0,p.ex_pv3K_pct||0];}
+  function exData(p){if(!p)return[0,0,0,0];var k0=p.kenttely_yrit>0?Math.round(p.kenttely_onn/p.kenttely_yrit*100):0;var k1=p.t1_yrit>0?Math.round(p.t1_onn/p.t1_yrit*100):0;var k2=p.t2_yrit>0?Math.round(p.t2_onn/p.t2_yrit*100):0;var k3=p.t3_pct||0;return[k0,k1,k2,k3];}
   function apData(p){
     if(!p)return[0,0,0,0];
     var k3=p.t3_pct||0;
