@@ -1754,16 +1754,16 @@ function renderPlayerTables() {
 }
 
   var paloCols = [
-    { key: '__rank',    label: '#',        title: 'Sijoitus' },
-    { key: '__player',  label: 'Pelaaja',  title: 'Pelaajan nimi' },
-    { key: 'p0_pct',    label: '0-palo%',  title: '0 paloa alla: onnistuminen%', fmt: v => v!=null?v.toFixed(1)+'%':'—' },
-    { key: 'p0_yrit',   label: '0p yrit.', title: '0 paloa alla: yritykset', fmt: v => v||0 },
-    { key: 'p1_pct',    label: '1-palo%',  title: '1 palo alla: onnistuminen%', fmt: v => v!=null?v.toFixed(1)+'%':'—' },
-    { key: 'p1_yrit',   label: '1p yrit.', title: '1 palo alla: yritykset', fmt: v => v||0 },
-    { key: 'p2_pct',    label: '2-palo%',  title: '2 paloa alla: onnistuminen%', fmt: v => v!=null?v.toFixed(1)+'%':'—' },
-    { key: 'p2_yrit',   label: '2p yrit.', title: '2 paloa alla: yritykset', fmt: v => v||0 },
-    { key: 'p2_laiton', label: '2p lait.', title: '2 paloa alla: laittomat lyönnit', fmt: v => v||0 },
-    { key: 'matches',   label: 'Ott.',     title: 'Ottelut', fmt: v => v||0 },
+    { key: '__rank',   label: '#',        title: 'Sijoitus' },
+    { key: '__player', label: 'Pelaaja',  title: 'Pelaajan nimi' },
+    { key: 'p0_pct',   label: '0-palo%',  title: '0 paloa alla: onnistuminen%', fmt: v => v!=null?v.toFixed(1)+'%':'—' },
+    { key: 'p0_yrit',  label: '0p yrit.', title: '0 paloa alla: yritykset', fmt: v => v||0 },
+    { key: 'p1_pct',   label: '1-palo%',  title: '1 palo alla: onnistuminen%', fmt: v => v!=null?v.toFixed(1)+'%':'—' },
+    { key: 'p1_yrit',  label: '1p yrit.', title: '1 palo alla: yritykset', fmt: v => v||0 },
+    { key: 'p2_pct',   label: '2-palo%',  title: '2 paloa alla: onnistuminen%', fmt: v => v!=null?v.toFixed(1)+'%':'—' },
+    { key: 'p2_yrit',  label: '2p yrit.', title: '2 paloa alla: yritykset', fmt: v => v||0 },
+    { key: 'p2_laiton',label: '2p lait.', title: '2 paloa alla: laittomat lyönnit', fmt: v => v||0 },
+    { key: 'matches',  label: 'Ott.',     title: 'Ottelut', fmt: v => v||0 },
   ];
   buildPlayerTable('table-palotilanne',
     players.filter(p => (p.p2_yrit||0) >= 5).sort((a,b) => (b.p2_pct||0)-(a.p2_pct||0)),
@@ -2259,6 +2259,9 @@ function vtRenderRadar(p1,p2){
 
 window.addEventListener('load', init);
 </script>
+
+
+
 
 
 
