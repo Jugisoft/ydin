@@ -1486,8 +1486,8 @@ function renderVireystila() {
         <div class="stat-pill" style="opacity:0.75" title="Liekki-indeksi 0-100"><span class="stat-label">Liekki</span><span class="stat-val" style="font-size:12px;color:#ccff00">${t.liekki != null ? t.liekki : "—"}</span></div>
       </div>
       <div class="team-stats-row" style="margin-top:-4px">
-        <div class="stat-pill" title="xR = odotetut juoksut per ottelu (onnistuneet kolmostilanteet / ottelut)"><span class="stat-label">xR/peli</span><span class="stat-val" style="color:#06b6d4">${t.api_xR != null ? fmt(t.api_xR,2,"") : "—"}</span></div>
-        <div class="stat-pill" title="x3 = kolmostilanteet per ottelu (yritykset / ottelut)"><span class="stat-label">x3/peli</span><span class="stat-val" style="color:#06b6d4">${t.api_x3 != null ? fmt(t.api_x3,1,"") : "—"}</span></div>
+        <div class="stat-pill" title="xR = juoksuolettama per ottelu (onnistuneet kolmostilanteet / ottelut sarjataulukosta)"><span class="stat-label">xR/peli</span><span class="stat-val" style="color:#06b6d4">${t.api_kolmos_onn != null ? (t.api_kolmos_onn / (t.ottelut_st || t.matches || 1)).toFixed(2) : "—"}</span></div>
+        <div class="stat-pill" title="x3 = kolmostilanne-olettama per ottelu (yritykset / ottelut sarjataulukosta)"><span class="stat-label">x3/peli</span><span class="stat-val" style="color:#06b6d4">${t.api_kolmos_yrit != null ? (t.api_kolmos_yrit / (t.ottelut_st || t.matches || 1)).toFixed(1) : "—"}</span></div>
         <div class="stat-pill" title="Kotiutustehokkuus kolmostilanteissa (onnistuneet / yritykset)"><span class="stat-label">K3%</span><span class="stat-val" style="color:#06b6d4">${t.api_kotiutus_3 != null ? fmt(t.api_kotiutus_3,1)+"%" : "—"}</span></div>
         <div class="stat-pill" title="Kolmostilanteet yhteensä kaudella"><span class="stat-label">x3 yht.</span><span class="stat-val" style="color:#06b6d4">${t.api_kolmos_yrit != null ? t.api_kolmos_yrit : "—"}</span></div>
       </div>
@@ -1558,8 +1558,8 @@ function updateH2H() {
     ['Tappiot 0p (suora)',t1.lost_straight,              t2.lost_straight,                false],
     ['Kotiutus%',       fmt(t1.kotiutus_pct,1)+'%',      fmt(t2.kotiutus_pct,1)+'%',      true, t1.kotiutus_pct, t2.kotiutus_pct],
     ['Torjunta%',       fmt(t1.torjunta_pct,1)+'%',      fmt(t2.torjunta_pct,1)+'%',      true, t1.torjunta_pct, t2.torjunta_pct],
-    ['x3 / peli',        fmt(t1.api_x3,1,''),                      fmt(t2.api_x3,1,''),                        true, t1.api_x3, t2.api_x3],
-    ['xR / peli',        fmt(t1.api_xR,2,''),                      fmt(t2.api_xR,2,''),                        true, t1.api_xR, t2.api_xR],
+    ['x3 / peli',  ((t1.api_kolmos_yrit||0)/(t1.ottelut_st||t1.matches||1)).toFixed(1), ((t2.api_kolmos_yrit||0)/(t2.ottelut_st||t2.matches||1)).toFixed(1), true, t1.api_kolmos_yrit/(t1.ottelut_st||t1.matches||1), t2.api_kolmos_yrit/(t2.ottelut_st||t2.matches||1)],
+    ['xR / peli',  ((t1.api_kolmos_onn||0)/(t1.ottelut_st||t1.matches||1)).toFixed(2),  ((t2.api_kolmos_onn||0)/(t2.ottelut_st||t2.matches||1)).toFixed(2),  true, t1.api_kolmos_onn/(t1.ottelut_st||t1.matches||1),  t2.api_kolmos_onn/(t2.ottelut_st||t2.matches||1)],
     ['K3%',              fmt(t1.api_kotiutus_3,1)+'%',            fmt(t2.api_kotiutus_3,1)+'%',            true, t1.api_kotiutus_3, t2.api_kotiutus_3],
     ['3-til. kpl',       (t1.api_kolmos_yrit||0)+' kpl',          (t2.api_kolmos_yrit||0)+' kpl',          true, t1.api_kolmos_yrit, t2.api_kolmos_yrit],
     ['Liekki-indeksi',  t1.liekki,                       t2.liekki,                       true],
@@ -1890,9 +1890,8 @@ function _renderSarjataulukkoTable(wrap, rows, sortKey, sortAsc) {
     const color   = getLiekkiColor(cls);
     const losses  = (r.lost_straight || 0) + (r.lost_jatko || 0);
     const ppg     = r.matches ? ((r.points || 0) / r.matches).toFixed(2) : '—';
-    const x3po    = t.api_x3 != null
-      ? Number(t.api_x3).toFixed(1)
-      : (r.matches && t.api_kolmos_yrit ? (t.api_kolmos_yrit / r.matches).toFixed(1) : '—');
+    const _ott    = t.ottelut_st || r.matches || t.matches || 1;
+    const x3po    = t.api_kolmos_yrit != null ? (t.api_kolmos_yrit / _ott).toFixed(1) : '—';
     const isTop4  = (r.sija || 99) <= 4;
 
     // Viimeiset 5 ottelua mini-ruutuina
