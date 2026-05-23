@@ -1127,97 +1127,65 @@
     </div>
   </div>
 
-  <!-- ============================================================ -->
   <!-- PALOTILANNE-SIVU -->
-  <!-- ============================================================ -->
   <div id="v-palotilanne" class="view">
     <div style="max-width:900px;margin:0 auto;padding:16px 12px;">
       <div style="font-size:20px;font-weight:700;margin-bottom:16px;">🔢 Palotilanne-analyysi</div>
-
-      <!-- Pelaajahaku -->
       <div style="display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:24px;">
         <div>
           <label style="display:block;font-size:11px;color:var(--text-muted);margin-bottom:4px;">JOUKKUE</label>
-          <select id="pt-joukkue" onchange="ptFilterPlayers()" style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:13px;min-width:180px;">
-            <option value="">— Kaikki joukkueet —</option>
-          </select>
+          <select id="pt-joukkue" onchange="ptFilterPlayers()" style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:13px;min-width:180px;"><option value="">— Kaikki joukkueet —</option></select>
         </div>
         <div>
           <label style="display:block;font-size:11px;color:var(--text-muted);margin-bottom:4px;">PELAAJA</label>
-          <select id="pt-pelaaja" onchange="ptRender()" style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:13px;min-width:200px;">
-            <option value="">— Valitse pelaaja —</option>
-          </select>
+          <select id="pt-pelaaja" onchange="ptRender()" style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:13px;min-width:200px;"><option value="">— Valitse pelaaja —</option></select>
         </div>
       </div>
-
-      <!-- Pääsisältö: tulee JS:stä -->
       <div id="pt-content"></div>
-
-      <!-- Liigan top-lista -->
       <div style="margin-top:32px;">
         <div style="font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text-muted);">LIIGA — Lyöntivuorojakauma (min. 20 lyöntiä)</div>
         <div style="overflow-x:auto;">
-          <table class="data-table" id="pt-league-table">
-            <thead><tr>
-              <th style="text-align:left;">Pelaaja</th>
-              <th style="text-align:left;">Joukkue</th>
-              <th title="Kaikki lyönnit">Lyönnit</th>
-              <th title="0 paloa alla – osuus lyönneistä">0p %</th>
-              <th title="1 palo alla – osuus lyönneistä">1p %</th>
-              <th title="2 paloa alla – osuus lyönneistä">2p %</th>
-              <th title="Onnistuminen 0 paloa alla">0p onn%</th>
-              <th title="Onnistuminen 1 palo alla">1p onn%</th>
-              <th title="Onnistuminen 2 paloa alla">2p onn%</th>
-            </tr></thead>
-            <tbody id="pt-league-body"></tbody>
-          </table>
+          <table class="data-table"><thead><tr>
+            <th style="text-align:left;">Pelaaja</th><th style="text-align:left;">Joukkue</th>
+            <th>Lyönnit</th><th>0p %</th><th>1p %</th><th>2p %</th>
+            <th>0p onn%</th><th>1p onn%</th><th>2p onn%</th>
+          </tr></thead><tbody id="pt-league-body"></tbody></table>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ============================================================ -->
   <!-- SUUNTAUS-SIVU -->
-  <!-- ============================================================ -->
   <div id="v-suuntaus" class="view">
     <div style="max-width:1100px;margin:0 auto;padding:16px 12px;">
       <div style="font-size:20px;font-weight:700;margin-bottom:4px;">📈 Joukkueiden suuntaus</div>
-      <div style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Trendi: tehokkuus, voittotapa ja pistetahti — ei pelkkä sijoitus</div>
-
-      <!-- Kontrollit -->
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Trendi: tehokkuus, voittotapa ja pistetahti</div>
       <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px;">
         <div>
           <label style="font-size:11px;color:var(--text-muted);display:block;margin-bottom:3px;">VIIMEISET OTTELUT</label>
           <select id="su-window" onchange="suuntausRender()" style="padding:5px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:13px;">
-            <option value="3">Viimeiset 3</option>
-            <option value="5" selected>Viimeiset 5</option>
-            <option value="8">Viimeiset 8</option>
-            <option value="99">Kaikki pelit</option>
+            <option value="3">Viimeiset 3</option><option value="5" selected>Viimeiset 5</option>
+            <option value="8">Viimeiset 8</option><option value="99">Kaikki pelit</option>
           </select>
         </div>
         <div>
           <label style="font-size:11px;color:var(--text-muted);display:block;margin-bottom:3px;">JÄRJESTYS</label>
           <select id="su-sort" onchange="suuntausRender()" style="padding:5px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:13px;">
             <option value="suunta">Suunta (paras ensin)</option>
-            <option value="sija">Sarjasija</option>
-            <option value="ppg">Pisteet/ottelu</option>
+            <option value="sija">Sarjasija</option><option value="ppg">Pisteet/ottelu</option>
           </select>
         </div>
         <div style="font-size:11px;color:var(--text-muted);padding-top:18px;">
-          ⬆ Nouseva &nbsp;↗ Kasvava &nbsp;→ Tasainen &nbsp;↘ Laskeva &nbsp;⬇ Laskussa
-          &nbsp;|&nbsp;
-          <span style="background:#15803d;color:#fff;padding:1px 6px;border-radius:3px;font-size:10px;">W3</span> suora
-          <span style="background:#4ade80;color:#fff;padding:1px 6px;border-radius:3px;font-size:10px;">W2</span> jatkoero-voitto
-          <span style="background:#f59e0b;color:#fff;padding:1px 6px;border-radius:3px;font-size:10px;">J1</span> jatkoero-tappio
-          <span style="background:#ef4444;color:#fff;padding:1px 6px;border-radius:3px;font-size:10px;">L0</span> tappio
+          ⬆ Nouseva &nbsp;↗ Kasvava &nbsp;→ Tasainen &nbsp;↘ Laskeva &nbsp;⬇ Laskussa &nbsp;|&nbsp;
+          <span style="background:#15803d;color:#fff;padding:1px 5px;border-radius:3px;font-size:10px;">W3</span> suora
+          <span style="background:#4ade80;color:#fff;padding:1px 5px;border-radius:3px;font-size:10px;">W2</span> jatko-W
+          <span style="background:#f59e0b;color:#fff;padding:1px 5px;border-radius:3px;font-size:10px;">J1</span> jatko-L
+          <span style="background:#ef4444;color:#fff;padding:1px 5px;border-radius:3px;font-size:10px;">L0</span> tappio
         </div>
       </div>
-
-      <!-- Korttiruudukko -->
       <div id="su-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;"></div>
     </div>
   </div>
-
 
 
 
@@ -1279,328 +1247,6 @@ function barColor(val, lo=25, hi=55) {
   return pct >= 0.6 ? 'bar-green' : pct >= 0.4 ? 'bar-orange' : 'bar-red';
 }
 
-// =============================================
-// SUUNTAUS-SIVU
-// =============================================
-
-function suuntausInit() {
-  suuntausRender();
-}
-
-function suuntausRender() {
-  const n = parseInt(document.getElementById('su-window')?.value || '5');
-  const sort = document.getElementById('su-sort')?.value || 'suunta';
-  const joukkueet = (PDATA.joukkueet || []);
-  const history = PDATA.team_history || {};
-
-  // Laske per-joukkue metriikat
-  const teams = joukkueet.map(j => {
-    const hist = (history[j.name] || []).slice().sort((a,b) => a.date < b.date ? -1 : 1);
-    const total = hist.length;
-    const recent = hist.slice(-n);
-    const earlier = hist.slice(0, -n);
-
-    // Pisteet per peli
-    const recentPts = recent.reduce((s,g) => s + (g.pts||0), 0);
-    const recentPPG = recent.length ? recentPts / recent.length : 0;
-    const totalPts = hist.reduce((s,g) => s + (g.pts||0), 0);
-    const totalPPG = total ? totalPts / total : 0;
-
-    // Suorat 3-piste voitot viimeisimmissä
-    const recentStraight = recent.filter(g => g.pts === 3).length;
-    const recentStraightPct = recent.length ? recentStraight / recent.length * 100 : 0;
-    const totalStraightPct = total ? hist.filter(g => g.pts === 3).length / total * 100 : 0;
-
-    // Kotiutus- ja torjuntasuunta (last5 vs season)
-    const kot5 = j.kotiutus_pct_5 || 0;
-    const kotSeason = j.kotiutus_pct || 0;
-    const tor5 = j.torjunta_pct_5 || 0;
-    const torSeason = j.torjunta_pct || 0;
-
-    // Suunta-score: painotettu yhdistelmä
-    const dKot = kot5 - kotSeason;
-    const dTor = tor5 - torSeason;
-    const dPPG = (recentPPG - totalPPG) * 15;
-    const dStr = recentStraightPct - totalStraightPct;
-    const suunta = dKot * 1.5 + dTor * 1.0 + dPPG + dStr * 0.5;
-
-    const pelit = j.ottelut_st || j.matches || total || 1;
-    const kolmosPerPeli = j.api_kolmos_yrit != null ? (j.api_kolmos_yrit / pelit).toFixed(1) : '—';
-    const juoksuPerPeli = j.api_scorings   != null ? (j.api_scorings   / pelit).toFixed(1) : '—';
-
-    return { j, hist, recent, total, recentPPG, totalPPG,
-             kot5, kotSeason, tor5, torSeason,
-             dKot, dTor, suunta, recentStraight, recentStraightPct,
-             kolmosPerPeli, juoksuPerPeli };
-  });
-
-  // Järjestä
-  if (sort === 'suunta') teams.sort((a,b) => b.suunta - a.suunta);
-  else if (sort === 'sija') teams.sort((a,b) => (a.j.sija||99) - (b.j.sija||99));
-  else if (sort === 'ppg') teams.sort((a,b) => b.recentPPG - a.recentPPG);
-
-  function arrowInfo(val) {
-    if (val > 18)  return { arrow: '⬆', label: 'Nouseva',  color: '#22c55e' };
-    if (val > 6)   return { arrow: '↗', label: 'Kasvava',  color: '#86efac' };
-    if (val > -6)  return { arrow: '→', label: 'Tasainen', color: '#94a3b8' };
-    if (val > -18) return { arrow: '↘', label: 'Laskeva',  color: '#fca5a5' };
-    return          { arrow: '⬇', label: 'Laskussa', color: '#ef4444' };
-  }
-
-  function trendSpan(delta, unit='pp') {
-    if (Math.abs(delta) < 0.5) return `<span style="color:#94a3b8">→ ±0</span>`;
-    const col = delta > 0 ? '#22c55e' : '#ef4444';
-    const arr = delta > 0 ? '▲' : '▼';
-    return `<span style="color:${col}">${arr} ${Math.abs(delta).toFixed(1)}${unit}</span>`;
-  }
-
-  function gameSquare(g) {
-    const pts = g.pts || 0;
-    let bg, label;
-    if (pts === 3)      { bg = '#15803d'; label = 'W3'; }
-    else if (pts === 2) { bg = '#4ade80'; label = 'W2'; }
-    else if (pts === 1) { bg = '#f59e0b'; label = 'J1'; }
-    else                { bg = '#ef4444'; label = 'L0'; }
-    const opp = (g.opp || '').split(' ').pop(); // lyhenne
-    return `<div title="${g.opp||''} · ${pts}p · ${g.date||''}" style="
-      display:flex;flex-direction:column;align-items:center;gap:2px;
-      background:${bg};border-radius:6px;padding:4px 6px;min-width:34px;cursor:default;">
-      <span style="font-size:11px;font-weight:700;color:#fff;">${label}</span>
-      <span style="font-size:9px;color:rgba(255,255,255,0.8);white-space:nowrap;max-width:34px;overflow:hidden;text-overflow:ellipsis;">${opp}</span>
-    </div>`;
-  }
-
-  function trendBar(val, ref, lo, hi, label) {
-    const pct = Math.round(val);
-    const refPct = Math.round(ref);
-    const delta = val - ref;
-    const col = delta > 2 ? '#22c55e' : delta < -2 ? '#ef4444' : '#94a3b8';
-    const barW = Math.max(0, Math.min(100, (val - lo) / (hi - lo) * 100));
-    const refW = Math.max(0, Math.min(100, (ref - lo) / (hi - lo) * 100));
-    return `
-    <div style="margin-bottom:8px;">
-      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;">
-        <span style="color:var(--text-muted)">${label}</span>
-        <span>${pct}% <span style="color:${col};font-size:10px;">(${delta>0?'+':''}${delta.toFixed(1)}pp vs kausi)</span></span>
-      </div>
-      <div style="position:relative;height:8px;background:var(--bg-hover);border-radius:4px;">
-        <div style="position:absolute;left:0;top:0;height:8px;width:${barW}%;background:${col};border-radius:4px;opacity:0.8;"></div>
-        <div style="position:absolute;top:-3px;left:${refW}%;width:2px;height:14px;background:var(--text-muted);border-radius:1px;" title="Kauden keskiarvo"></div>
-      </div>
-    </div>`;
-  }
-
-  const html = teams.map(t => {
-    const ai = arrowInfo(t.suunta);
-    const gameSquares = t.hist.map(gameSquare).join('');
-    const recentGames = t.hist.slice(-n);
-    const recentLabel = t.hist.length > n ? `Viimeiset ${n} (${t.hist.length} yhteensä)` : `Kaikki ${t.hist.length} ottelua`;
-
-    return `
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-left:4px solid ${ai.color};
-         border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;">
-
-      <!-- Otsikkorivi -->
-      <div style="display:flex;align-items:center;gap:10px;">
-        <img src="${t.j.icon||''}" style="width:28px;height:28px;border-radius:50%;object-fit:contain;background:var(--bg-hover);" onerror="this.style.display='none'">
-        <div style="flex:1;">
-          <div style="font-weight:700;font-size:14px;">${t.j.name}</div>
-          <div style="font-size:11px;color:var(--text-muted);">Sija ${t.j.sija||'?'} · ${t.j.pisteet||0} pistettä · ${t.total} ottelua</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:28px;color:${ai.color};line-height:1;">${ai.arrow}</div>
-          <div style="font-size:10px;color:${ai.color};font-weight:600;">${ai.label}</div>
-        </div>
-      </div>
-
-      <!-- Otteluhistoria-nauha -->
-      <div>
-        <div style="font-size:10px;color:var(--text-muted);margin-bottom:5px;">${recentLabel}</div>
-        <div style="display:flex;gap:4px;flex-wrap:wrap;">${gameSquares}</div>
-      </div>
-
-      <!-- Trendipalkit -->
-      <div style="border-top:1px solid var(--border);padding-top:10px;">
-        ${trendBar(t.kot5, t.kotSeason, 20, 70, '⚡ Kotiutus% (viim.5)')}
-        ${trendBar(t.tor5, t.torSeason, 40, 90, '🛡 Torjunta% (viim.5)')}
-        <div style="display:flex;justify-content:space-between;font-size:11px;margin-top:6px;">
-          <span style="color:var(--text-muted)">Pisteet/ottelu (viim.${n})</span>
-          <span>${t.recentPPG.toFixed(1)} ${trendSpan(t.recentPPG - t.totalPPG, 'p')}</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:11px;margin-top:4px;">
-          <span style="color:var(--text-muted)">Suorat voitot (viim.${n})</span>
-          <span>${t.recentStraight}/${recentGames.length} = ${t.recentStraightPct.toFixed(0)}%</span>
-        </div>
-        <div style="display:flex;gap:0;margin-top:8px;border-top:1px solid var(--border);padding-top:8px;">
-          <div style="flex:1;text-align:center;">
-            <div style="font-size:18px;font-weight:700;color:var(--accent-orange);">${t.kolmosPerPeli}</div>
-            <div style="font-size:10px;color:var(--text-muted);">3-til/ottelu</div>
-          </div>
-          <div style="width:1px;background:var(--border);margin:0 8px;"></div>
-          <div style="flex:1;text-align:center;">
-            <div style="font-size:18px;font-weight:700;color:var(--accent-orange);">${t.juoksuPerPeli}</div>
-            <div style="font-size:10px;color:var(--text-muted);">juoksua/ottelu</div>
-          </div>
-          <div style="width:1px;background:var(--border);margin:0 8px;"></div>
-          <div style="flex:1;text-align:center;">
-            <div style="font-size:18px;font-weight:700;color:${t.j.api_kotiutus_3>=50?'#22c55e':t.j.api_kotiutus_3>=40?'#f59e0b':'#ef4444'};">${t.j.api_kotiutus_3!=null?t.j.api_kotiutus_3.toFixed(0)+'%':'—'}</div>
-            <div style="font-size:10px;color:var(--text-muted);">3-til K%</div>
-          </div>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
-
-  document.getElementById('su-grid').innerHTML = html;
-}
-
-// =============================================
-// PALOTILANNE-SIVU
-// =============================================
-
-function ptInit() {
-  const players = (PDATA.pelaajat_excel || []);
-  // Kerää joukkueet
-  const joukkueet = [...new Set(players.map(p => p.joukkue || '?').filter(j => j !== '?'))].sort();
-  const jSel = document.getElementById('pt-joukkue');
-  joukkueet.forEach(j => {
-    const o = document.createElement('option'); o.value = j; o.textContent = j; jSel.appendChild(o);
-  });
-  ptFilterPlayers();
-  ptRenderLeagueTable();
-}
-
-function ptFilterPlayers() {
-  const joukkue = document.getElementById('pt-joukkue').value;
-  const players = (PDATA.pelaajat_excel || []).filter(p => !joukkue || (p.joukkue||'') === joukkue);
-  players.sort((a, b) => a.name.localeCompare(b.name, 'fi'));
-  const sel = document.getElementById('pt-pelaaja');
-  sel.innerHTML = '<option value="">— Valitse pelaaja —</option>';
-  players.forEach(p => {
-    const o = document.createElement('option'); o.value = p.name; o.textContent = p.name; sel.appendChild(o);
-  });
-  document.getElementById('pt-content').innerHTML = '';
-}
-
-function ptRender() {
-  const name = document.getElementById('pt-pelaaja').value;
-  if (!name) { document.getElementById('pt-content').innerHTML = ''; return; }
-  const p = (PDATA.pelaajat_excel || []).find(x => x.name === name);
-  if (!p) return;
-
-  const ly = p.lyonnit || 0;
-  if (ly === 0) { document.getElementById('pt-content').innerHTML = '<p style="color:var(--text-muted)">Ei lyöntidataa.</p>'; return; }
-
-  // Liigan keskiarvot
-  const all = PDATA.pelaajat_excel || [];
-  const lg0onn = all.reduce((s,x)=>s+(x.p0_onn||0),0);
-  const lg0yrit = all.reduce((s,x)=>s+(x.p0_yrit||0),0);
-  const lg1onn = all.reduce((s,x)=>s+(x.p1_onn||0),0);
-  const lg1yrit = all.reduce((s,x)=>s+(x.p1_yrit||0),0);
-  const lg2onn = all.reduce((s,x)=>s+(x.p2_onn||0),0);
-  const lg2yrit = all.reduce((s,x)=>s+(x.p2_yrit||0),0);
-  const lgAvg = [
-    lg0yrit ? lg0onn/lg0yrit*100 : 0,
-    lg1yrit ? lg1onn/lg1yrit*100 : 0,
-    lg2yrit ? lg2onn/lg2yrit*100 : 0,
-  ];
-
-  const p0y = p.p0_yrit||0, p0o = p.p0_onn||0;
-  const p1y = p.p1_yrit||0, p1o = p.p1_onn||0;
-  const p2y = p.p2_yrit||0, p2o = p.p2_onn||0;
-  const p0pct = p0y ? p0o/p0y*100 : null;
-  const p1pct = p1y ? p1o/p1y*100 : null;
-  const p2pct = p2y ? p2o/p2y*100 : null;
-
-  function bar(val, max, color) {
-    const w = max > 0 ? Math.round(val/max*100) : 0;
-    return `<div style="height:10px;border-radius:5px;background:var(--bg-hover);margin-top:4px;"><div style="height:10px;border-radius:5px;width:${w}%;background:${color};transition:width .4s;"></div></div>`;
-  }
-  function pctColor(val, avg) {
-    if (val === null) return 'var(--text-muted)';
-    return val >= avg + 3 ? '#22c55e' : val <= avg - 3 ? '#ef4444' : 'var(--accent-orange)';
-  }
-  function fmt(v, dec=1) { return v !== null ? v.toFixed(dec)+'%' : '—'; }
-
-  const situations = [
-    { label: '0 paloa alla', emoji: '🟢', yrit: p0y, onn: p0o, pct: p0pct, lgAvg: lgAvg[0], laiton: p.p0_laiton||0 },
-    { label: '1 palo alla',  emoji: '🟡', yrit: p1y, onn: p1o, pct: p1pct, lgAvg: lgAvg[1], laiton: p.p1_laiton||0 },
-    { label: '2 paloa alla', emoji: '🔴', yrit: p2y, onn: p2o, pct: p2pct, lgAvg: lgAvg[2], laiton: p.p2_laiton||0 },
-  ];
-
-  let cards = situations.map(s => {
-    const sharePct = ly ? (s.yrit/ly*100) : 0;
-    const diff = s.pct !== null ? s.pct - s.lgAvg : null;
-    const diffStr = diff !== null ? (diff >= 0 ? '+' : '') + diff.toFixed(1) + '% vs liiga' : '';
-    const diffColor = diff !== null ? pctColor(s.pct, s.lgAvg) : 'var(--text-muted)';
-    return `
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;flex:1;min-width:220px;">
-      <div style="font-size:13px;font-weight:600;margin-bottom:12px;">${s.emoji} ${s.label}</div>
-      <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
-        <span style="color:var(--text-muted);font-size:12px;">Vuoroja</span>
-        <span style="font-weight:700;font-size:16px;">${s.yrit}</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
-        <span style="color:var(--text-muted);font-size:12px;">Osuus vuoroista</span>
-        <span style="font-weight:600;">${sharePct.toFixed(0)}%</span>
-      </div>
-      ${bar(s.yrit, ly, s.emoji==='🟢'?'#22c55e':s.emoji==='🟡'?'#f59e0b':'#ef4444')}
-      <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:12px;">
-        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
-          <span style="color:var(--text-muted);font-size:12px;">Onnistuminen</span>
-          <span style="font-weight:700;font-size:18px;color:${pctColor(s.pct, s.lgAvg)}">${fmt(s.pct)}</span>
-        </div>
-        <div style="font-size:11px;color:${diffColor};text-align:right;">${diffStr}</div>
-        <div style="display:flex;justify-content:space-between;margin-top:8px;">
-          <span style="color:var(--text-muted);font-size:12px;">Liigan keskiarvo</span>
-          <span style="font-size:12px;">${fmt(s.lgAvg)}</span>
-        </div>
-        ${s.laiton > 0 ? `<div style="font-size:11px;color:var(--text-muted);margin-top:6px;">Laittomat: ${s.laiton}</div>` : ''}
-      </div>
-    </div>`;
-  }).join('');
-
-  document.getElementById('pt-content').innerHTML = `
-    <div style="margin-bottom:8px;font-size:15px;font-weight:700;">${p.name} <span style="font-size:12px;color:var(--text-muted);font-weight:400;">${p.joukkue||''} · ${ly} lyöntiä · palo% ${(p.palo_pct||0).toFixed(1)}%</span></div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;">${cards}</div>
-    <div style="margin-top:20px;font-size:11px;color:var(--text-muted);">
-      Väri: 🟢 ero liigaan ≥+3pp | 🟡 ±3pp | 🔴 ≤−3pp
-    </div>`;
-}
-
-function ptRenderLeagueTable() {
-  const all = (PDATA.pelaajat_excel || []).filter(p => (p.lyonnit||0) >= 20);
-  const lg0onn = all.reduce((s,x)=>s+(x.p0_onn||0),0);
-  const lg0yrit = all.reduce((s,x)=>s+(x.p0_yrit||0),0);
-  const lg1onn = all.reduce((s,x)=>s+(x.p1_onn||0),0);
-  const lg1yrit = all.reduce((s,x)=>s+(x.p1_yrit||0),0);
-  const lg2onn = all.reduce((s,x)=>s+(x.p2_onn||0),0);
-  const lg2yrit = all.reduce((s,x)=>s+(x.p2_yrit||0),0);
-
-  all.sort((a,b) => (b.p2_yrit||0)/(b.lyonnit||1) - (a.p2_yrit||0)/(a.lyonnit||1));
-
-  const fmt = (v,d=1) => v!==null&&v!==undefined ? v.toFixed(d)+'%' : '—';
-  const rows = all.map(p => {
-    const ly = p.lyonnit||0;
-    const p0sh = ly ? ((p.p0_yrit||0)/ly*100) : 0;
-    const p1sh = ly ? ((p.p1_yrit||0)/ly*100) : 0;
-    const p2sh = ly ? ((p.p2_yrit||0)/ly*100) : 0;
-    return `<tr>
-      <td style="font-weight:600;">${p.name}</td>
-      <td style="color:var(--text-muted);font-size:12px;">${p.joukkue||'?'}</td>
-      <td style="text-align:center;">${ly}</td>
-      <td style="text-align:center;">${p0sh.toFixed(0)}%</td>
-      <td style="text-align:center;">${p1sh.toFixed(0)}%</td>
-      <td style="text-align:center;font-weight:600;">${p2sh.toFixed(0)}%</td>
-      <td style="text-align:center;color:${(p.p0_pct||0)>=(lg0yrit?lg0onn/lg0yrit*100:0)+3?'#22c55e':(p.p0_pct||0)<=(lg0yrit?lg0onn/lg0yrit*100:0)-3?'#ef4444':'inherit'}">${fmt(p.p0_pct)}</td>
-      <td style="text-align:center;color:${(p.p1_pct||0)>=(lg1yrit?lg1onn/lg1yrit*100:0)+3?'#22c55e':(p.p1_pct||0)<=(lg1yrit?lg1onn/lg1yrit*100:0)-3?'#ef4444':'inherit'}">${fmt(p.p1_pct)}</td>
-      <td style="text-align:center;color:${(p.p2_pct||0)>=(lg2yrit?lg2onn/lg2yrit*100:0)+3?'#22c55e':(p.p2_pct||0)<=(lg2yrit?lg2onn/lg2yrit*100:0)-3?'#ef4444':'inherit'}">${fmt(p.p2_pct)}</td>
-    </tr>`;
-  }).join('');
-  document.getElementById('pt-league-body').innerHTML = rows;
-}
-
-// =============================================
 // =============================================
 // VIEW & TAB SWITCHING
 // =============================================
@@ -2669,7 +2315,165 @@ function vtRenderRadar(p1,p2){
   if(cvAp){
     var d1a={label:n1,data:apData(p1),borderColor:'#f59e0b',backgroundColor:'rgba(245,158,11,0.15)',pointBackgroundColor:'#f59e0b',pointRadius:4,borderWidth:2};
     var d2a={label:n2,data:apData(p2),borderColor:'#06b6d4',backgroundColor:'rgba(6,182,212,0.15)',pointBackgroundColor:'#06b6d4',pointRadius:4,borderWidth:2};
-    i
+    if(_vtRadarApi){_vtRadarApi.data.datasets[0]=d1a;_vtRadarApi.data.datasets[1]=d2a;_vtRadarApi.update('active');}
+    else{_vtRadarApi=new Chart(cvAp.getContext('2d'),{type:'radar',data:{labels:SITU,datasets:[d1a,d2a]},options:ROPTS});}
+  }
+  if(legend)legend.textContent=(p1&&p2)?p1.name+'  vs  '+p2.name:(p1||p2)?'Valitse toinen pelaaja':'Valitse molemmat pelaajat';
+}
+
+
+// === SUUNTAUS-SIVU ===
+function suuntausInit(){suuntausRender();}
+function suuntausRender(){
+  var n=parseInt((document.getElementById('su-window')||{value:'5'}).value||'5');
+  var sort=(document.getElementById('su-sort')||{value:'suunta'}).value||'suunta';
+  var joukkueet=PDATA.joukkueet||[];
+  var history=PDATA.team_history||{};
+  var teams=joukkueet.map(function(j){
+    var hist=(history[j.name]||[]).slice().sort(function(a,b){return a.date<b.date?-1:1;});
+    var total=hist.length;
+    var recent=hist.slice(-n);
+    var recentPts=recent.reduce(function(s,g){return s+(g.pts||0);},0);
+    var recentPPG=recent.length?recentPts/recent.length:0;
+    var totalPts=hist.reduce(function(s,g){return s+(g.pts||0);},0);
+    var totalPPG=total?totalPts/total:0;
+    var recentStraight=recent.filter(function(g){return g.pts===3;}).length;
+    var recentStraightPct=recent.length?recentStraight/recent.length*100:0;
+    var totalStraightPct=total?hist.filter(function(g){return g.pts===3;}).length/total*100:0;
+    var kot5=j.kotiutus_pct_5||0,kotSeason=j.kotiutus_pct||0;
+    var tor5=j.torjunta_pct_5||0,torSeason=j.torjunta_pct||0;
+    var dKot=kot5-kotSeason,dTor=tor5-torSeason;
+    var suunta=dKot*1.5+dTor*1.0+(recentPPG-totalPPG)*15+(recentStraightPct-totalStraightPct)*0.5;
+    var pelit=j.ottelut_st||j.matches||total||1;
+    return {j:j,hist:hist,recent:recent,total:total,recentPPG:recentPPG,totalPPG:totalPPG,
+            kot5:kot5,kotSeason:kotSeason,tor5:tor5,torSeason:torSeason,suunta:suunta,
+            recentStraight:recentStraight,recentStraightPct:recentStraightPct,
+            kolmosPerPeli:j.api_kolmos_yrit!=null?(j.api_kolmos_yrit/pelit).toFixed(1):'--',
+            juoksuPerPeli:j.api_scorings!=null?(j.api_scorings/pelit).toFixed(1):'--'};
+  });
+  if(sort==='suunta') teams.sort(function(a,b){return b.suunta-a.suunta;});
+  else if(sort==='sija') teams.sort(function(a,b){return (a.j.sija||99)-(b.j.sija||99);});
+  else teams.sort(function(a,b){return b.recentPPG-a.recentPPG;});
+  function ai(v){
+    if(v>18)return{arrow:'⬆',label:'Nouseva',color:'#22c55e'};
+    if(v>6) return{arrow:'↗',label:'Kasvava',color:'#86efac'};
+    if(v>-6)return{arrow:'→',label:'Tasainen',color:'#94a3b8'};
+    if(v>-18)return{arrow:'↘',label:'Laskeva',color:'#fca5a5'};
+    return{arrow:'⬇',label:'Laskussa',color:'#ef4444'};
+  }
+  function ts(d,u){u=u||'pp';if(Math.abs(d)<0.5)return '<span style="color:#94a3b8">0</span>';var c=d>0?'#22c55e':'#ef4444';return '<span style="color:'+c+'">'+(d>0?'▲':'▼')+Math.abs(d).toFixed(1)+u+'</span>';}
+  function gs(g){var pts=g.pts||0,bg,lbl;if(pts===3){bg='#15803d';lbl='W3';}else if(pts===2){bg='#4ade80';lbl='W2';}else if(pts===1){bg='#f59e0b';lbl='J1';}else{bg='#ef4444';lbl='L0';}var opp=(g.opp||'').split(' ').pop();return '<div title="'+(g.opp||'')+' '+pts+'p '+( g.date||'')+'" style="display:flex;flex-direction:column;align-items:center;gap:2px;background:'+bg+';border-radius:6px;padding:4px 6px;min-width:34px;"><span style="font-size:11px;font-weight:700;color:#fff;">'+lbl+'</span><span style="font-size:9px;color:rgba(255,255,255,0.8);">'+opp+'</span></div>';}
+  function tb(val,ref,lo,hi,lbl){var d=val-ref,col=d>2?'#22c55e':d<-2?'#ef4444':'#94a3b8';var bw=Math.max(0,Math.min(100,(val-lo)/(hi-lo)*100)),rw=Math.max(0,Math.min(100,(ref-lo)/(hi-lo)*100));return '<div style="margin-bottom:8px;"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;"><span style="color:var(--text-muted)">'+lbl+'</span><span>'+Math.round(val)+'% <span style="color:'+col+';font-size:10px;">'+(d>0?'+':'')+d.toFixed(1)+'pp</span></span></div><div style="position:relative;height:8px;background:var(--bg-hover);border-radius:4px;"><div style="position:absolute;left:0;top:0;height:8px;width:'+bw+'%;background:'+col+';border-radius:4px;opacity:0.8;"></div><div style="position:absolute;top:-3px;left:'+rw+'%;width:2px;height:14px;background:#94a3b8;" title="Kausi"></div></div></div>';}
+  var html=teams.map(function(t){
+    var a=ai(t.suunta),sq=t.hist.map(gs).join(''),rl=t.hist.length>n?'Viimeiset '+n+' ('+t.hist.length+' yht.)':'Kaikki '+t.hist.length+' ottelua';
+    var k3c=t.j.api_kotiutus_3>=50?'#22c55e':t.j.api_kotiutus_3>=40?'#f59e0b':'#ef4444';
+    var k3v=t.j.api_kotiutus_3!=null?t.j.api_kotiutus_3.toFixed(0)+'%':'--';
+    return '<div style="background:var(--bg-card);border:1px solid var(--border);border-left:4px solid '+a.color+';border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;">'
+      +'<div style="display:flex;align-items:center;gap:10px;">'
+        +'<img src="'+(t.j.icon||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:contain;background:var(--bg-hover);" onerror="this.style.display=\'none\'">'
+        +'<div style="flex:1;"><div style="font-weight:700;font-size:14px;">'+t.j.name+'</div>'
+        +'<div style="font-size:11px;color:var(--text-muted);">Sija '+(t.j.sija||'?')+' · '+(t.j.pisteet||0)+' p · '+t.total+' ottelua</div></div>'
+        +'<div style="text-align:center;"><div style="font-size:28px;color:'+a.color+';line-height:1;">'+a.arrow+'</div><div style="font-size:10px;color:'+a.color+';font-weight:600;">'+a.label+'</div></div>'
+      +'</div>'
+      +'<div><div style="font-size:10px;color:var(--text-muted);margin-bottom:5px;">'+rl+'</div><div style="display:flex;gap:4px;flex-wrap:wrap;">'+sq+'</div></div>'
+      +'<div style="border-top:1px solid var(--border);padding-top:10px;">'
+        +tb(t.kot5,t.kotSeason,20,70,'⚡ Kotiutus% (viim.5)')+tb(t.tor5,t.torSeason,40,90,'🛡 Torjunta% (viim.5)')
+        +'<div style="display:flex;justify-content:space-between;font-size:11px;margin-top:6px;"><span style="color:var(--text-muted)">Pisteet/ottelu (viim.'+n+')</span><span>'+t.recentPPG.toFixed(1)+' '+ts(t.recentPPG-t.totalPPG,'p')+'</span></div>'
+        +'<div style="display:flex;justify-content:space-between;font-size:11px;margin-top:4px;"><span style="color:var(--text-muted)">Suorat voitot (viim.'+n+')</span><span>'+t.recentStraight+'/'+t.hist.slice(-n).length+' = '+t.recentStraightPct.toFixed(0)+'%</span></div>'
+        +'<div style="display:flex;margin-top:8px;border-top:1px solid var(--border);padding-top:8px;">'
+          +'<div style="flex:1;text-align:center;"><div style="font-size:18px;font-weight:700;color:var(--accent-orange);">'+t.kolmosPerPeli+'</div><div style="font-size:10px;color:var(--text-muted);">3-til/ottelu</div></div>'
+          +'<div style="width:1px;background:var(--border);margin:0 8px;"></div>'
+          +'<div style="flex:1;text-align:center;"><div style="font-size:18px;font-weight:700;color:var(--accent-orange);">'+t.juoksuPerPeli+'</div><div style="font-size:10px;color:var(--text-muted);">juoksua/ottelu</div></div>'
+          +'<div style="width:1px;background:var(--border);margin:0 8px;"></div>'
+          +'<div style="flex:1;text-align:center;"><div style="font-size:18px;font-weight:700;color:'+k3c+';">'+k3v+'</div><div style="font-size:10px;color:var(--text-muted);">3-til K%</div></div>'
+        +'</div>'
+      +'</div></div>';
+  }).join('');
+  document.getElementById('su-grid').innerHTML=html;
+}
+
+// === PALOTILANNE-SIVU ===
+function ptInit(){
+  var pl=PDATA.pelaajat_excel||[];
+  var jj=[...new Set(pl.map(function(p){return p.joukkue||'';}).filter(Boolean))].sort();
+  var js=document.getElementById('pt-joukkue');
+  js.innerHTML='<option value="">— Kaikki joukkueet —</option>';
+  jj.forEach(function(j){var o=document.createElement('option');o.value=j;o.textContent=j;js.appendChild(o);});
+  ptFilterPlayers();ptRenderLeagueTable();
+}
+function ptFilterPlayers(){
+  var jq=document.getElementById('pt-joukkue').value;
+  var pl=(PDATA.pelaajat_excel||[]).filter(function(p){return !jq||(p.joukkue||'')===jq;}).sort(function(a,b){return a.name.localeCompare(b.name,'fi');});
+  var s=document.getElementById('pt-pelaaja');
+  s.innerHTML='<option value="">— Valitse pelaaja —</option>';
+  pl.forEach(function(p){var o=document.createElement('option');o.value=p.name;o.textContent=p.name;s.appendChild(o);});
+  document.getElementById('pt-content').innerHTML='';
+}
+function ptRender(){
+  var nm=document.getElementById('pt-pelaaja').value;
+  if(!nm){document.getElementById('pt-content').innerHTML='';return;}
+  var p=(PDATA.pelaajat_excel||[]).find(function(x){return x.name===nm;});
+  if(!p)return;
+  var ly=p.lyonnit||0;
+  if(!ly){document.getElementById('pt-content').innerHTML='<p style="color:var(--text-muted)">Ei dataa.</p>';return;}
+  var all=PDATA.pelaajat_excel||[];
+  function lgAvg(on,yr){var to=all.reduce(function(s,x){return s+(x[on]||0);},0),ty=all.reduce(function(s,x){return s+(x[yr]||0);},0);return ty?to/ty*100:0;}
+  var la=[lgAvg('p0_onn','p0_yrit'),lgAvg('p1_onn','p1_yrit'),lgAvg('p2_onn','p2_yrit')];
+  var sits=[
+    {lb:'0 paloa alla',em:'🟢',y:p.p0_yrit||0,o:p.p0_onn||0,av:la[0],lt:p.p0_laiton||0,col:'#22c55e'},
+    {lb:'1 palo alla', em:'🟡',y:p.p1_yrit||0,o:p.p1_onn||0,av:la[1],lt:p.p1_laiton||0,col:'#f59e0b'},
+    {lb:'2 paloa alla',em:'🔴',y:p.p2_yrit||0,o:p.p2_onn||0,av:la[2],lt:p.p2_laiton||0,col:'#ef4444'},
+  ];
+  function pc(y,o){return y?o/y*100:null;}
+  function fc(v,a){return v===null?'var(--text-muted)':v>=a+3?'#22c55e':v<=a-3?'#ef4444':'var(--accent-orange)';}
+  function fmt(v){return v!==null?v.toFixed(1)+'%':'--';}
+  var cards=sits.map(function(s){
+    var pct=pc(s.y,s.o),sh=ly?s.y/ly*100:0,d=pct!==null?pct-s.av:null;
+    return '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;flex:1;min-width:220px;">'
+      +'<div style="font-size:13px;font-weight:600;margin-bottom:12px;">'+s.em+' '+s.lb+'</div>'
+      +'<div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="color:var(--text-muted);font-size:12px;">Vuoroja</span><span style="font-weight:700;font-size:16px;">'+s.y+'</span></div>'
+      +'<div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="color:var(--text-muted);font-size:12px;">Osuus vuoroista</span><span style="font-weight:600;">'+sh.toFixed(0)+'%</span></div>'
+      +'<div style="height:10px;border-radius:5px;background:var(--bg-hover);"><div style="height:10px;border-radius:5px;width:'+Math.round(sh)+'%;background:'+s.col+';"></div></div>'
+      +'<div style="margin-top:12px;border-top:1px solid var(--border);padding-top:10px;">'
+        +'<div style="display:flex;justify-content:space-between;"><span style="color:var(--text-muted);font-size:12px;">Onnistuminen</span><span style="font-weight:700;font-size:18px;color:'+fc(pct,s.av)+'">'+fmt(pct)+'</span></div>'
+        +(d!==null?'<div style="font-size:11px;color:'+fc(pct,s.av)+';text-align:right;">'+(d>=0?'+':'')+d.toFixed(1)+'% vs liiga</div>':'')
+        +'<div style="display:flex;justify-content:space-between;margin-top:6px;"><span style="color:var(--text-muted);font-size:12px;">Liigan ka</span><span style="font-size:12px;">'+fmt(s.av)+'</span></div>'
+        +(s.lt>0?'<div style="font-size:11px;color:var(--text-muted);">Laittomat: '+s.lt+'</div>':'')
+      +'</div></div>';
+  }).join('');
+  document.getElementById('pt-content').innerHTML='<div style="font-size:15px;font-weight:700;margin-bottom:10px;">'+p.name+' <span style="font-size:12px;color:var(--text-muted);font-weight:400;">'+(p.joukkue||'')+' · '+ly+' lyöntiä</span></div><div style="display:flex;gap:12px;flex-wrap:wrap;">'+cards+'</div>';
+}
+function ptRenderLeagueTable(){
+  var all=(PDATA.pelaajat_excel||[]).filter(function(p){return (p.lyonnit||0)>=20;});
+  function la(on,yr){var to=all.reduce(function(s,x){return s+(x[on]||0);},0),ty=all.reduce(function(s,x){return s+(x[yr]||0);},0);return ty?to/ty*100:0;}
+  var la0=la('p0_onn','p0_yrit'),la1=la('p1_onn','p1_yrit'),la2=la('p2_onn','p2_yrit');
+  all.sort(function(a,b){return (b.p2_yrit||0)/(b.lyonnit||1)-(a.p2_yrit||0)/(a.lyonnit||1);});
+  function fmt(v){return v!=null?v.toFixed(1)+'%':'--';}
+  function col(v,a){return v>=(a+3)?'#22c55e':v<=(a-3)?'#ef4444':'inherit';}
+  document.getElementById('pt-league-body').innerHTML=all.map(function(p){
+    var ly=p.lyonnit||0;
+    return '<tr><td style="font-weight:600;">'+p.name+'</td><td style="color:var(--text-muted);font-size:12px;">'+(p.joukkue||'?')+'</td>'
+      +'<td style="text-align:center;">'+ly+'</td>'
+      +'<td style="text-align:center;">'+(ly?((p.p0_yrit||0)/ly*100).toFixed(0):0)+'%</td>'
+      +'<td style="text-align:center;">'+(ly?((p.p1_yrit||0)/ly*100).toFixed(0):0)+'%</td>'
+      +'<td style="text-align:center;font-weight:600;">'+(ly?((p.p2_yrit||0)/ly*100).toFixed(0):0)+'%</td>'
+      +'<td style="text-align:center;color:'+col(p.p0_pct||0,la0)+'">'+fmt(p.p0_pct)+'</td>'
+      +'<td style="text-align:center;color:'+col(p.p1_pct||0,la1)+'">'+fmt(p.p1_pct)+'</td>'
+      +'<td style="text-align:center;color:'+col(p.p2_pct||0,la2)+'">'+fmt(p.p2_pct)+'</td></tr>';
+  }).join('');
+}
+
+window.addEventListener('load', init);
+</script>
+
+
+
+
+
+
+
+
+
 <script src="pdata.js"></script>
 </body>
 </html>
