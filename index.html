@@ -921,13 +921,14 @@
     <div class="header-divider"></div>
     <nav id="main-nav">
       <button class="nav-btn active" onclick="showView('nelikentta',this)">📊 Nelikenttä</button>
-      <button class="nav-btn" onclick="showView('vireystila',this)">🔥 Vireystila</button>
+      <button class="nav-btn" onclick="showView('vireystila',this)" style="display:none">🔥 Vireystila</button>
       <button class="nav-btn" onclick="showView('h2h',this)">⚔️ H2H Vertailu</button>
       <button class="nav-btn" onclick="showView('pelaajat',this)">👤 Pelaajat</button>
       <button class="nav-btn" onclick="showView('sarjataulukko',this)">🏆 Sarjataulukko</button>
       <button class="nav-btn" onclick="showView('vertailu',this)">⚖️ Vertailu</button>
       <button class="nav-btn" onclick="showView('palotilanne',this)">🔢 Palotilanne</button>
-      <button class="nav-btn" onclick="showView('suuntaus',this)">📈 Suuntaus</button>
+      <button class="nav-btn" onclick="showView('suuntaus',this)" style="display:none">📈 Suuntaus</button>
+      <button class="nav-btn" onclick="showView('kuntopuntari',this)">💪 Kuntopuntari</button>
     </nav>
     <div class="header-meta">
       <span class="season-badge" id="season-badge">—</span>
@@ -1195,6 +1196,36 @@
 
 
 
+  <!-- KUNTOPUNTARI-SIVU -->
+  <div id="v-kuntopuntari" class="view">
+    <div style="max-width:1100px;margin:0 auto;padding:16px 12px;">
+      <div style="font-size:20px;font-weight:700;margin-bottom:4px;">💪 Kuntopuntari</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Joukkueen kunto &mdash; komposiittipisteet, otteluhistoria ja avainmetriikat</div>
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px;">
+        <div>
+          <label style="font-size:11px;color:var(--text-muted);display:block;margin-bottom:3px;">AIKAIKKUNA</label>
+          <select id="kp-window" onchange="kpRender()" style="padding:5px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:13px;">
+            <option value="3">Viimeiset 3</option>
+            <option value="5" selected>Viimeiset 5</option>
+            <option value="8">Viimeiset 8</option>
+            <option value="99">Kaikki pelit</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:11px;color:var(--text-muted);display:block;margin-bottom:3px;">JARJESTYS</label>
+          <select id="kp-sort" onchange="kpRender()" style="padding:5px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:13px;">
+            <option value="kunto">Kunto (paras ensin)</option>
+            <option value="suunta">Suunta (kehitys)</option>
+            <option value="sija">Sarjasija</option>
+            <option value="ppg">Pisteet/ottelu</option>
+          </select>
+        </div>
+      </div>
+      <div id="kp-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;"></div>
+    </div>
+  </div>
+
+
 <script>
 // =============================================
 // DATA PLACEHOLDER — replaced by Python script
@@ -1263,6 +1294,7 @@ function showView(name, btn) {
   if (name === 'h2h') setTimeout(renderH2HCharts, 100);
   if (name === 'palotilanne') ptInit();
   if (name === 'suuntaus') suuntausInit();
+  if (name === 'kuntopuntari') kpInit();
 }
 
 function showTab(name, btn) {
@@ -2462,13 +2494,218 @@ function ptRenderLeagueTable(){
   }).join('');
 }
 
+// =============================================
+// KUNTOPUNTARI
+// =============================================
+function kpInit() { kpRender(); }
+
+function kpRender() {
+  const grid = document.getElementById('kp-grid');
+  if (!grid) return;
+  const joukkueet = PDATA.joukkueet || [];
+  const history   = PDATA.team_history || {};
+  const n         = Math.min(99, parseInt((document.getElementById('kp-window') || {}).value || '5'));
+  const sortBy    = (document.getElementById('kp-sort') || {}).value || 'kunto';
+  if (!joukkueet.length) { grid.innerHTML = '<div style="color:var(--text-muted);padding:24px;">Ei dataa.</div>'; return; }
+
+  function scoreColor(s) {
+    if (s >= 70) return '#22c55e';
+    if (s >= 50) return '#06b6d4';
+    if (s >= 35) return '#f97316';
+    return '#ef4444';
+  }
+  function scoreLabel(s) {
+    if (s >= 70) return 'Huippukunto';
+    if (s >= 50) return 'Hyvä kunto';
+    if (s >= 35) return 'Tyydyttävä';
+    return 'Heikko kunto';
+  }
+  function arrowInfo(val) {
+    if (val > 18)  return { arrow: '⬆', label: 'Nouseva',  color: '#22c55e' };
+    if (val > 6)   return { arrow: '↗', label: 'Kasvava',  color: '#86efac' };
+    if (val > -6)  return { arrow: '→', label: 'Tasainen', color: '#94a3b8' };
+    if (val > -18) return { arrow: '↘', label: 'Laskeva',  color: '#fca5a5' };
+    return          { arrow: '⬇', label: 'Laskussa', color: '#ef4444' };
+  }
+  function trendSpan(delta, unit='p') {
+    if (Math.abs(delta) < 0.05) return `<span style="color:#94a3b8">±0</span>`;
+    const col = delta > 0 ? '#22c55e' : '#ef4444';
+    const arr = delta > 0 ? '▲' : '▼';
+    return `<span style="color:${col}">${arr}${Math.abs(delta).toFixed(1)}${unit}</span>`;
+  }
+  function trendBar(val, ref, lo, hi, icon, label) {
+    const pct   = val.toFixed(1);
+    const delta = val - ref;
+    const col   = delta > 2 ? '#22c55e' : delta < -2 ? '#ef4444' : '#94a3b8';
+    const barW  = Math.max(0, Math.min(100, (val - lo) / (hi - lo) * 100));
+    const refW  = Math.max(0, Math.min(100, (ref - lo) / (hi - lo) * 100));
+    const sign  = delta >= 0 ? '+' : '';
+    return `
+    <div style="margin-bottom:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:11px;margin-bottom:4px;">
+        <span style="color:var(--text-muted);font-size:10px;">${icon} ${label}</span>
+        <span style="font-weight:600;">${pct}%
+          <span style="font-size:10px;color:${col};margin-left:3px;">${sign}${delta.toFixed(1)}pp</span>
+        </span>
+      </div>
+      <div style="position:relative;height:8px;background:rgba(255,255,255,0.07);border-radius:6px;">
+        <div style="position:absolute;left:0;top:0;height:8px;width:${barW}%;background:linear-gradient(90deg,${col}99,${col});border-radius:6px;"></div>
+        <div style="position:absolute;top:-4px;left:calc(${refW}% - 1px);width:2px;height:16px;background:rgba(255,255,255,0.4);border-radius:2px;" title="Kauden keskiarvo: ${ref.toFixed(1)}%"></div>
+      </div>
+    </div>`;
+  }
+  function sparkSVG(pts, color) {
+    if (!pts.length) return '<div style="height:40px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-muted);">ei historiadataa</div>';
+    const W = 400, H = 40, pad = 5;
+    const max = Math.max(...pts, 3);
+    const ys  = pts.map(v => H - pad - (v / max) * (H - pad * 2));
+    const xs  = pts.map((_, i) => pts.length === 1 ? W/2 : (i / (pts.length-1)) * W);
+    const line = xs.map((x,i) => `${x},${ys[i]}`).join(' ');
+    const area = `${xs[0]},${H} ${line} ${xs[xs.length-1]},${H}`;
+    const gid  = 'sg' + color.replace('#','');
+    const dotLast = `<circle cx="${xs[xs.length-1]}" cy="${ys[ys.length-1]}" r="4.5" fill="${color}" stroke="rgba(0,0,0,0.5)" stroke-width="1.5"/>`;
+    const dotsOld = xs.slice(0,-1).map((x,i) => `<circle cx="${x}" cy="${ys[i]}" r="2.5" fill="${color}" opacity="0.5"/>`).join('');
+    return `<svg width="100%" height="40" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="display:block;">
+      <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="${color}" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+      </linearGradient></defs>
+      <polygon points="${area}" fill="url(#${gid})"/>
+      <polyline points="${line}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      ${dotsOld}${dotLast}
+    </svg>`;
+  }
+  function scoreRingSVG(score, col) {
+    const r = 26, cx = 32, cy = 32, sw = 5;
+    const circ = 2 * Math.PI * r;
+    const dash = (score / 100) * circ;
+    return `<svg width="64" height="64" viewBox="0 0 64 64" style="display:block;flex-shrink:0;">
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="${sw}"/>
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${col}" stroke-width="${sw}"
+        stroke-dasharray="${dash.toFixed(1)} ${circ.toFixed(1)}"
+        stroke-linecap="round" transform="rotate(-90 ${cx} ${cy})"/>
+      <text x="${cx}" y="${cy - 3}" text-anchor="middle" dominant-baseline="middle"
+        fill="${col}" font-size="15" font-weight="700" font-family="inherit">${score}</text>
+      <text x="${cx}" y="${cy + 12}" text-anchor="middle"
+        fill="rgba(255,255,255,0.35)" font-size="8" font-family="inherit">/100</text>
+    </svg>`;
+  }
+  const shMap = {};
+  joukkueet.forEach(j => { shMap[j.name] = j.shorthand || j.name.split(' ')[0]; });
+  function gameSquare(g) {
+    const pts = g.pts || 0;
+    let bg, label, shadow;
+    if (pts === 3)      { bg = '#166534'; label = 'V3'; shadow = '#22c55e44'; }
+    else if (pts === 2) { bg = '#15803d'; label = 'V2'; shadow = '#4ade8044'; }
+    else if (pts === 1) { bg = '#92400e'; label = 'H1'; shadow = '#f59e0b44'; }
+    else                { bg = '#991b1b'; label = 'H0'; shadow = '#ef444444'; }
+    const opp = shMap[g.opp] || (g.opp || '').split(' ').pop();
+    return `<div title="${g.opp||''} · ${pts}p · ${g.date||''}" style="
+      display:flex;flex-direction:column;align-items:center;gap:1px;
+      background:${bg};border-radius:7px;padding:5px 7px;min-width:34px;cursor:default;
+      box-shadow:0 2px 6px ${shadow};">
+      <span style="font-size:11px;font-weight:800;color:#fff;letter-spacing:0.3px;">${label}</span>
+      <span style="font-size:9px;color:rgba(255,255,255,0.8);white-space:nowrap;">${opp}</span>
+    </div>`;
+  }
+  const teams = joukkueet.map(j => {
+    const hist    = (history[j.name] || []).slice().sort((a,b) => a.date < b.date ? -1 : 1);
+    const total   = hist.length;
+    const recent  = hist.slice(-n);
+    const recentPts = recent.reduce((s,g) => s + (g.pts||0), 0);
+    const recentPPG = recent.length ? recentPts / recent.length : 0;
+    const totalPts  = hist.reduce((s,g) => s + (g.pts||0), 0);
+    const totalPPG  = total ? totalPts / total : 0;
+    const recentStraight    = recent.filter(g => g.pts === 3).length;
+    const recentStraightPct = recent.length ? recentStraight / recent.length * 100 : 0;
+    const totalStraightPct  = total ? hist.filter(g => g.pts === 3).length / total * 100 : 0;
+    const kot5 = j.kotiutus_pct_5 != null ? j.kotiutus_pct_5 : (j.kotiutus_pct || 0);
+    const kotS = j.kotiutus_pct   || 0;
+    const tor5 = j.torjunta_pct_5 != null ? j.torjunta_pct_5 : (j.torjunta_pct  || 0);
+    const torS = j.torjunta_pct   || 0;
+    const dKot = kot5 - kotS, dTor = tor5 - torS;
+    const dPPG = (recentPPG - totalPPG) * 15;
+    const dStr = recentStraightPct - totalStraightPct;
+    const suunta = dKot * 1.5 + dTor * 1.0 + dPPG + dStr * 0.5;
+    const score  = Math.round(Math.min(100,kot5*0.8)*0.40 + Math.min(100,tor5*0.8)*0.35 + Math.min(100,recentPPG/3.0*100)*0.25);
+    const ott    = j.ottelut_st || j.matches || total || 1;
+    const xRpeli = j.api_kolmos_onn  != null ? (j.api_kolmos_onn  / ott).toFixed(2) : '—';
+    const x3peli = j.api_kolmos_yrit != null ? (j.api_kolmos_yrit / ott).toFixed(1) : '—';
+    return { j, hist, recent, total, recentPPG, totalPPG,
+             recentStraight, recentStraightPct, totalStraightPct,
+             kot5, kotS, tor5, torS, suunta, score, xRpeli, x3peli };
+  });
+  teams.sort((a,b) => {
+    if (sortBy === 'suunta') return b.suunta - a.suunta;
+    if (sortBy === 'sija')   return (a.j.sija||99) - (b.j.sija||99);
+    if (sortBy === 'ppg')    return b.recentPPG - a.recentPPG;
+    return b.score - a.score;
+  });
+  grid.innerHTML = teams.map(t => {
+    const ai     = arrowInfo(t.suunta);
+    const col    = scoreColor(t.score);
+    const sLabel = scoreLabel(t.score);
+    const nLabel = n >= 99 ? `Kaikki ${t.total}` : `Viimeiset ${Math.min(n, t.total)}`;
+    const gameNauha = t.recent.slice().reverse().map(gameSquare).join('');
+    return `
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 24px rgba(0,0,0,0.18);transition:transform 0.15s,box-shadow 0.15s;"
+      onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.28)'"
+      onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.18)'">
+      <div style="padding:14px 16px 12px;background:linear-gradient(135deg,${ai.color}1a 0%,transparent 65%);border-bottom:1px solid ${ai.color}33;display:flex;align-items:center;gap:12px;">
+        <img src="${t.j.icon||t.j.logo||''}" style="width:36px;height:36px;border-radius:50%;object-fit:contain;background:rgba(255,255,255,0.06);flex-shrink:0;" onerror="this.style.display='none'">
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${t.j.name}</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:1px;">Sija <strong style="color:var(--text-primary);">${t.j.sija||'?'}</strong> &nbsp;·&nbsp;${t.j.pisteet||0}p &nbsp;·&nbsp;${t.total} ottelua</div>
+          <div style="font-size:10px;font-weight:600;color:${col};margin-top:3px;">${sLabel}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">${scoreRingSVG(t.score, col)}</div>
+        <div style="text-align:center;flex-shrink:0;min-width:46px;">
+          <div style="font-size:30px;color:${ai.color};line-height:1;">${ai.arrow}</div>
+          <div style="font-size:10px;color:${ai.color};font-weight:700;margin-top:2px;">${ai.label}</div>
+        </div>
+      </div>
+      <div style="padding:10px 16px 6px;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <div style="font-size:10px;color:var(--text-muted);margin-bottom:3px;letter-spacing:0.4px;">PISTEKEHITYS — KAIKKI ${t.total} OTTELUA</div>
+        ${sparkSVG(t.hist.map(g => g.pts || 0), col)}
+      </div>
+      <div style="padding:10px 16px 8px;">
+        <div style="font-size:10px;color:var(--text-muted);margin-bottom:6px;letter-spacing:0.4px;">${nLabel.toUpperCase()} OTTELUA</div>
+        <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap;">
+          <span title="Viimeisin ottelu vasemmalla, vanhin oikealla" style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.2);font-size:10px;font-weight:700;cursor:default;flex-shrink:0;margin-right:2px;">?</span>
+          ${gameNauha}
+        </div>
+      </div>
+      <div style="padding:10px 16px 6px;border-top:1px solid rgba(255,255,255,0.06);">
+        ${trendBar(t.kot5, t.kotS, 20, 70, '⚡', 'Kotiutus% (viim.5 vs kausi)')}
+        ${trendBar(t.tor5, t.torS, 40, 90, '🛡', 'Torjunta% (viim.5 vs kausi)')}
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="padding:10px 6px 12px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:18px;font-weight:800;color:var(--accent-cyan);line-height:1.1;">${t.recentPPG.toFixed(1)}</div>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">p / ottelu</div>
+          <div style="font-size:9px;margin-top:2px;">${trendSpan(t.recentPPG - t.totalPPG)}</div>
+        </div>
+        <div style="padding:10px 6px 12px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:18px;font-weight:800;color:var(--accent-cyan);line-height:1.1;">${t.recentStraight}/${Math.min(n,t.total)}</div>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">suoraa voittoa</div>
+          <div style="font-size:9px;margin-top:2px;">${trendSpan(t.recentStraightPct - t.totalStraightPct,'%')}</div>
+        </div>
+        <div style="padding:10px 6px 12px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:18px;font-weight:800;color:var(--accent-orange);line-height:1.1;">${t.xRpeli}</div>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">xR / ottelu</div>
+        </div>
+        <div style="padding:10px 6px 12px;text-align:center;">
+          <div style="font-size:18px;font-weight:800;color:var(--accent-orange);line-height:1.1;">${t.x3peli}</div>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">x3 / ottelu</div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+
 window.addEventListener('load', init);
 </script>
-
-
-
-
-
 
 
 
