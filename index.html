@@ -1657,9 +1657,11 @@ function ptInit() {
   // Kerää joukkueet
   const joukkueet = [...new Set(players.map(p => p.joukkue || '?').filter(j => j !== '?'))].sort();
   const jSel = document.getElementById('pt-joukkue');
-  joukkueet.forEach(j => {
-    const o = document.createElement('option'); o.value = j; o.textContent = j; jSel.appendChild(o);
-  });
+  if (jSel.options.length <= 1) {  // lisää vain kerran, ei joka navigoinnilla
+    joukkueet.forEach(j => {
+      const o = document.createElement('option'); o.value = j; o.textContent = j; jSel.appendChild(o);
+    });
+  }
   ptFilterPlayers();
   ptRenderLeagueTable();
   ptMapInit();
@@ -1843,6 +1845,7 @@ function ptRenderLeagueTable() {
   let ptHits = null;
 
   window.ptMapInit = function() {
+    bgReady = false;  // reset aina uuden latauskierroksen alussa
     canvas = document.getElementById('pt-field-canvas');
     if (!canvas) return;
     canvas.width  = CW;
@@ -1885,6 +1888,7 @@ function ptRenderLeagueTable() {
       document.body.appendChild(sc);
     } else {
       ptHits = HITS_DATA;
+      ptMapRender();  // else-haara: data jo muistissa, piirretään heti
     }
   };
 
@@ -3031,6 +3035,13 @@ function init() {
     clearTimeout(window._quadTimer);
     window._quadTimer = setTimeout(drawQuadrant, 150);
   });
+
+  // Esiladata pdata_hits.js taustalla — lyöntikartta on heti valmis kun käyttäjä navigoi sinne
+  if (typeof HITS_DATA === 'undefined') {
+    const hsc = document.createElement('script');
+    hsc.src = 'pdata_hits.js';
+    document.body.appendChild(hsc);
+  }
 }
 
 function filterPlayerTables(query) {
