@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lukkari-tehokkuus — Superpesis Pro</title>
+<script src="pdata.js"></script>
+<style>
+  :root {
+    --bg-primary: #0d1422;
+    --bg-card: #131d2e;
+    --bg-elevated: #1a2540;
+    --bg-hover: #1f2e4a;
+    --border: #1e2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8fa3c0;
+    --text-muted: #4e6080;
+    --accent-lime: #ccff00;
+    --accent-cyan: #06b6d4;
+    --accent-green: #22c55e;
+    --accent-red: #ef4444;
+    --accent-orange: #f97316;
+    --accent-yellow: #eab308;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  #header {
+    background: linear-gradient(180deg, #0a1020 0%, #0d1422 100%);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .header-inner {
+    max-width: 1600px; margin: 0 auto; padding: 0 20px;
+    display: flex; align-items: center; gap: 16px; height: 56px;
+  }
+  .logo-mark { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .logo-icon {
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, #ccff00, #d97706);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 900; color: #0d1117;
+    font-style: italic; letter-spacing: -1px;
+  }
+  .logo-text { font-size: 15px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.3px; }
+  .logo-sub  { font-size: 10px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
+  .header-divider { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
+  #main-nav { display: flex; gap: 4px; flex: 1; overflow-x: auto; }
+  .nav-btn {
+    padding: 6px 14px; background: transparent;
+    border: 1px solid transparent; border-radius: 6px;
+    color: var(--text-secondary); cursor: pointer;
+    font-size: 13px; font-weight: 500; transition: all 0.15s;
+    white-space: nowrap; text-decoration: none;
+    display: inline-flex; align-items: center;
+  }
+  .nav-btn:hover { color: var(--text-primary); background: var(--bg-hover); border-color: var(--border); }
+  .nav-btn.active {
+    color: #ccff00; border-bottom: 2px solid #ccff00;
+    background: rgba(204,255,0,0.06);
+  }
+  .header-meta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+  .season-badge {
+    background: var(--bg-elevated); border: 1px solid var(--border);
+    border-radius: 20px; padding: 3px 10px;
+    font-size: 11px; font-weight: 600; color: var(--accent-cyan); letter-spacing: 0.5px;
+  }
+
+  /* MAIN */
+  .main { max-width: 1400px; margin: 0 auto; padding: 28px 24px; }
+
+  /* KPI CARDS */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: default;
+  }
+  .kpi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.28); }
+  .kpi-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .kpi-value { font-size: 32px; font-weight: 800; line-height: 1; }
+  .kpi-sub { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+  .kpi-lime { color: var(--accent-lime); }
+  .kpi-cyan { color: var(--accent-cyan); }
+  .kpi-red { color: var(--accent-red); }
+  .kpi-green { color: var(--accent-green); }
+
+  /* SECTION HEADER */
+  .section-hdr {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: 16px; font-weight: 700; color: var(--text-primary);
+  }
+  .section-sub { font-size: 12px; color: var(--text-muted); }
+  .sort-btns { margin-left: auto; display: flex; gap: 6px; }
+  .sort-btn {
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    font-size: 12px; font-weight: 500; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .sort-btn:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+  .sort-btn.active { border-color: var(--accent-lime); color: var(--accent-lime); background: rgba(204,255,0,0.08); }
+
+  /* RANKING TABLE */
+  .rank-table-wrap {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+  .rank-table { width: 100%; border-collapse: collapse; }
+  .rank-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(0,0,0,0.2);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  .rank-table th:hover { color: var(--text-secondary); }
+  .rank-table th.sorted { color: var(--accent-lime); }
+  .rank-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(30,45,69,0.5);
+    vertical-align: middle;
+  }
+  .rank-table tr:last-child td { border-bottom: none; }
+  .rank-table tr:hover td { background: var(--bg-hover); }
+
+  .rank-num {
+    font-size: 13px; font-weight: 700; color: var(--text-muted);
+    width: 36px; text-align: center;
+  }
+  .rank-num.top1 { color: #fbbf24; }
+  .rank-num.top2 { color: #9ca3af; }
+  .rank-num.top3 { color: #cd7c2f; }
+
+  .team-cell { display: flex; align-items: center; gap: 10px; }
+  .team-logo { width: 28px; height: 28px; object-fit: contain; border-radius: 4px; }
+  .team-name { font-weight: 600; font-size: 13px; }
+  .team-short { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+
+  .stat-cell { text-align: right; }
+  .stat-val { font-size: 16px; font-weight: 700; }
+  .stat-per { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+  /* Bar */
+  .bar-wrap {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .bar-bg {
+    flex: 1; height: 6px; border-radius: 3px;
+    background: rgba(255,255,255,0.06);
+    overflow: hidden;
+  }
+  .bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+  .bar-lime { background: var(--accent-lime); }
+  .bar-cyan { background: var(--accent-cyan); }
+  .bar-red  { background: var(--accent-red); }
+  .bar-green{ background: var(--accent-green); }
+
+  /* Colour helpers */
+  .c-lime  { color: var(--accent-lime); }
+  .c-cyan  { color: var(--accent-cyan); }
+  .c-red   { color: var(--accent-red); }
+  .c-green { color: var(--accent-green); }
+  .c-orange{ color: var(--accent-orange); }
+  .c-yellow{ color: var(--accent-yellow); }
+
+  /* INFO BOX */
+  .info-box {
+    background: rgba(6,182,212,0.07);
+    border: 1px solid rgba(6,182,212,0.25);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .info-box strong { color: var(--accent-cyan); }
+
+  /* PLACEHOLDER yksilötilastot */
+  .placeholder-card {
+    background: var(--bg-card);
+    border: 1px dashed var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    text-align: center;
+    color: var(--text-muted);
+  }
+  .placeholder-card h3 { font-size: 15px; color: var(--text-secondary); margin-bottom: 8px; }
+  .placeholder-card p { font-size: 13px; line-height: 1.7; }
+  .placeholder-card code {
+    display: inline-block; margin-top: 10px;
+    background: var(--bg-elevated); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 14px;
+    font-family: monospace; font-size: 12px; color: var(--accent-lime);
+  }
+
+  @media (max-width: 768px) {
+    .kpi-row { grid-template-columns: 1fr 1fr; }
+    .rank-table th:nth-child(n+5), .rank-table td:nth-child(n+5) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <div class="logo-mark">
+      <div class="logo-icon">SP</div>
+      <div>
+        <div class="logo-text">Superpesis Pro</div>
+        <div class="logo-sub">Analytics Dashboard</div>
+      </div>
+    </div>
+    <div class="header-divider"></div>
+    <nav id="main-nav">
+      <a href="index.html" class="nav-btn">🏠 Aloitus</a>
+      <a href="index.html" class="nav-btn">💪 Kuntopuntari</a>
+      <a href="index.html" class="nav-btn">📊 Nelikenttä</a>
+      <a href="index.html" class="nav-btn">⚔️ H2H Joukkuevertailu</a>
+      <a href="index.html" class="nav-btn">👤 Pelaajatilastot</a>
+      <a href="index.html" class="nav-btn">🏆 Sarjataulukko</a>
+      <a href="index.html" class="nav-btn">⚖️ Pelaajavertailu</a>
+      <a href="index.html" class="nav-btn">🔥 Palotilanne-analyysi</a>
+      <a href="lukkari.html" class="nav-btn active">⚾ Lukkari</a>
+    </nav>
+    <div class="header-meta">
+      <span class="season-badge">MSU 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+
+  <!-- INFO -->
+  <div class="info-box">
+    <strong>Mitä mitataan?</strong><br>
+    <strong>Vapaat (0-tilanne)</strong> = Lukkari syöttää väärän kun kentäällä ei ole etenijöitä
+    (0-tilanne = tyhjät pesät). Lyöjä saa vapaataipaleen ykköspesälle. Vähemmän = parempi.<br>
+    <strong>Kärpäset</strong> = Lukkari hämää pesällä olevaa etenijää nykäyksillä ja ulkopelaajayhteistyöllä
+    kunnes etenijä lipsahtaa liian kauas pesältä kärkkymisessä. Lukkari heittää äkisti joko lähtö- tai
+    menopesään ja pallo ehtii ennen etenijää: palo syntyy. Enemmän = parempi.<br>
+    Data laskettu Excel-tiedoston TapahtumaTeksti-sarakkeesta. Kaikki luvut kauden aikana yhteensä.
+  </div>
+
+  <!-- LASKENTAPERUSTEET -->
+  <div class="info-box" style="background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.1);">
+    <strong style="color:var(--text-secondary);">Laskentaperusteet</strong><br>
+    <strong style="color:var(--text-secondary);">Vapaat</strong> — Excel MasterLyonnit-välilehti: rivit joissa
+    <code style="background:rgba(255,255,255,0.08);padding:1px 5px;border-radius:3px;font-size:12px;">Tyyppi = vapaataival</code>
+    ja tilanne on 0-tilanne (kenttäpesillä ei etenijöitä). Summattu joukkueittain koko kaudelta.<br>
+    <strong style="color:var(--text-secondary);">Kärpäset</strong> — sama välilehti: rivit joissa
+    <code style="background:rgba(255,255,255,0.08);padding:1px 5px;border-radius:3px;font-size:12px;">TapahtumaTeksti = kärpänen</code>.
+    Summattu joukkueittain.<br>
+    <strong style="color:var(--text-secondary);">Per ottelu</strong> — lasketaan selaimessa:
+    <code style="background:rgba(255,255,255,0.08);padding:1px 5px;border-radius:3px;font-size:12px;">vapaat / matches</code>,
+    missä <code style="background:rgba(255,255,255,0.08);padding:1px 5px;border-radius:3px;font-size:12px;">matches</code>
+    tulee <code style="background:rgba(255,255,255,0.08);padding:1px 5px;border-radius:3px;font-size:12px;">PDATA.joukkueet</code>-taulukosta.<br>
+    <strong style="color:var(--text-secondary);">Korttien rengas</strong> — normalisoitu sarjan min/max-arvojen välille:
+    paras joukkue 100 %, huonoin 0 %. Kokonaisluvut laskettu valmiiksi
+    <code style="background:rgba(255,255,255,0.08);padding:1px 5px;border-radius:3px;font-size:12px;">paivita_pro_dashboard.py</code>:ssa
+    → tallennettu <code style="background:rgba(255,255,255,0.08);padding:1px 5px;border-radius:3px;font-size:12px;">pdata.js → PDATA.lukkari</code>.
+  </div>
+
+  <!-- KPI CARDS -->
+  <div class="kpi-row" id="kpi-row"></div>
+
+  <!-- VAPAAT RANKING -->
+  <div class="section-hdr">
+    <div>
+      <div class="section-title">🚫 Vapaat 0-tilanteessa</div>
+      <div class="section-sub">Lukkarin antamat vapaataipalet ilman etenijöitä — vähemmän on parempi</div>
+    </div>
+    <div class="sort-btns">
+      <button class="sort-btn active" onclick="sortVapaat('per_match')" id="sv-pm">/ ottelu ▾</button>
+      <button class="sort-btn" onclick="sortVapaat('total')" id="sv-tot">yhteensä</button>
+    </div>
+  </div>
+  <div class="rank-table-wrap">
+    <table class="rank-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Joukkue</th>
+          <th class="sorted" id="th-vp-pm" onclick="sortVapaat('per_match')" style="text-align:right">Vapaat / ottelu ↑</th>
+          <th onclick="sortVapaat('total')" id="th-vp-tot" style="text-align:right">Yhteensä</th>
+          <th style="min-width:120px">Jakauma</th>
+          <th style="text-align:right">Ottelut</th>
+        </tr>
+      </thead>
+      <tbody id="vapaat-body"></tbody>
+    </table>
+  </div>
+
+  <!-- KÄRPÄSET RANKING -->
+  <div class="section-hdr">
+    <div>
+      <div class="section-title">🪰 Kärpäset</div>
+      <div class="section-sub">Etenijät joita lukkari huijasi pesältä ansaittuun paloon — enemmän on parempi</div>
+    </div>
+    <div class="sort-btns">
+      <button class="sort-btn active" onclick="sortKarpanen('per_match')" id="sk-pm">/ ottelu ▾</button>
+      <button class="sort-btn" onclick="sortKarpanen('total')" id="sk-tot">yhteensä</button>
+    </div>
+  </div>
+  <div class="rank-table-wrap">
+    <table class="rank-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Joukkue</th>
+          <th class="sorted" id="th-kp-pm" onclick="sortKarpanen('per_match')" style="text-align:right">Kärpäset / ottelu ↑</th>
+          <th onclick="sortKarpanen('total')" id="th-kp-tot" style="text-align:right">Yhteensä</th>
+          <th style="min-width:120px">Jakauma</th>
+          <th style="text-align:right">Ottelut</th>
+        </tr>
+      </thead>
+      <tbody id="karpanen-body"></tbody>
+    </table>
+  </div>
+
+  <!-- YKSILÖTILASTOT PLACEHOLDER -->
+  <div class="placeholder-card">
+    <h3>🔧 Yksilökohtaiset lukkaritilastot — tulossa</h3>
+    <p>
+      Tällä hetkellä data on joukkuetasolla. Yksilökohtaisten tilastojen saamiseksi<br>
+      tarvitaan Python-päivitys: lue <strong>kysely1</strong>-välilehden <code>defensive_position = "L"</code><br>
+      pelaajat ja yhdistä MasterLyonnit-dataan per ottelu/vuoropari.
+    </p>
+    <code>python paivita_pro_dashboard.py  →  PDATA.lukkari_pelaajat</code>
+  </div>
+
+</div><!-- /main -->
+
+<script>
+// ── Data prep ──────────────────────────────────────────────────
+const lukkariRaw = (typeof PDATA !== 'undefined') ? PDATA.lukkari || [] : [];
+const joukkueetRaw = (typeof PDATA !== 'undefined') ? PDATA.joukkueet || [] : [];
+
+// Build team lookup: name → {shorthand, icon, matches}
+const teamMap = {};
+joukkueetRaw.forEach(j => { teamMap[j.name] = j; });
+
+// Merge lukkari + joukkue data
+const data = lukkariRaw.map(l => {
+  const j = teamMap[l.name] || {};
+  const matches = j.matches || 1;
+  return {
+    name:      l.name,
+    short:     j.shorthand || l.name.split(' ').pop(),
+    logo:      j.icon || j.logo || '',
+    matches,
+    vapaat:    l.vapaat || 0,
+    karpanen:  l.karpanen || 0,
+    vp_per:    (l.vapaat || 0) / matches,
+    kp_per:    (l.karpanen || 0) / matches,
+  };
+});
+
+// ── KPI ───────────────────────────────────────────────────────
+const avgVpPer = data.length ? (data.reduce((s,d) => s + d.vp_per, 0) / data.length) : 0;
+const avgKpPer = data.length ? (data.reduce((s,d) => s + d.kp_per, 0) / data.length) : 0;
+
+const minVpPer = Math.min(...data.map(d => d.vp_per));
+const maxVpPer2 = Math.max(...data.map(d => d.vp_per));
+const minKpPer = Math.min(...data.map(d => d.kp_per));
+const maxKpPer2 = Math.max(...data.map(d => d.kp_per));
+
+const byVpAsc  = [...data].sort((a,b) => a.vp_per - b.vp_per);
+const byVpDesc = [...data].sort((a,b) => b.vp_per - a.vp_per);
+const byKpDesc = [...data].sort((a,b) => b.kp_per - a.kp_per);
+const byKpAsc  = [...data].sort((a,b) => a.kp_per - b.kp_per);
+
+function statRingSVG(valStr, ringPct, col) {
+  const r = 28, cx = 34, cy = 34, sw = 5;
+  const circ = 2 * Math.PI * r;
+  const dash = (Math.max(0, Math.min(100, ringPct)) / 100) * circ;
+  return '<svg width="68" height="68" viewBox="0 0 68 68" style="display:block;flex-shrink:0;">'
+    + '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="' + sw + '"/>'
+    + '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="' + col + '" stroke-width="' + sw + '"'
+    + ' stroke-dasharray="' + dash.toFixed(1) + ' ' + circ.toFixed(1) + '"'
+    + ' stroke-linecap="round" transform="rotate(-90 ' + cx + ' ' + cy + ')"/>'
+    + '<text x="' + cx + '" y="' + (cy-3) + '" text-anchor="middle" dominant-baseline="middle"'
+    + ' fill="' + col + '" font-size="13" font-weight="700" font-family="inherit">' + valStr + '</text>'
+    + '<text x="' + cx + '" y="' + (cy+12) + '" text-anchor="middle"'
+    + ' fill="rgba(255,255,255,0.3)" font-size="8" font-family="inherit">/ott</text>'
+    + '</svg>';
+}
+
+function kpiCard(badge, label, team, valPer, ringPct, col, totalVal, totalLabel, avgVal) {
+  const ring = statRingSVG(valPer.toFixed(1), ringPct, col);
+  const barW  = Math.round(ringPct);
+  return '<div class="kpi-card">'
+    + '<div style="padding:14px 16px 12px;background:linear-gradient(135deg,' + col + '1a 0%,transparent 65%);border-bottom:1px solid ' + col + '33;display:flex;align-items:center;gap:12px;">'
+    +   '<img src="' + (team.logo||'') + '" style="width:38px;height:38px;border-radius:50%;object-fit:contain;background:rgba(255,255,255,0.06);flex-shrink:0;" onerror="this.style.display=\'none\'">'
+    +   '<div style="flex:1;min-width:0;">'
+    +     '<div style="font-size:10px;color:' + col + ';font-weight:700;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px;">' + badge + '</div>'
+    +     '<div style="font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + team.name + '</div>'
+    +     '<div style="font-size:11px;color:var(--text-muted);margin-top:2px;">' + team.matches + ' ottelua</div>'
+    +   '</div>'
+    +   ring
+    + '</div>'
+    + '<div style="padding:12px 16px 14px;">'
+    +   '<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px;">'
+    +     '<span style="color:var(--text-muted);">' + label + '</span>'
+    +     '<span style="font-weight:700;">' + totalVal + ' ' + totalLabel + '</span>'
+    +   '</div>'
+    +   '<div style="position:relative;height:6px;border-radius:3px;background:rgba(255,255,255,0.06);overflow:hidden;margin-bottom:8px;">'
+    +     '<div style="width:' + barW + '%;height:100%;background:' + col + ';border-radius:3px;transition:width 0.4s;"></div>'
+    +   '</div>'
+    +   '<div style="font-size:11px;color:var(--text-muted);">Sarjan ka: <span style="color:var(--text-secondary);font-weight:600;">' + avgVal + ' / ottelu</span></div>'
+    + '</div>'
+    + '</div>';
+}
+
+// Normalize to ring % (how "good" the team is: 100 = best, 0 = worst)
+function vpRingPct(vp)  { return maxVpPer2 === minVpPer ? 50 : Math.round((1 - (vp - minVpPer) / (maxVpPer2 - minVpPer)) * 100); }
+function kpRingPct(kp)  { return maxKpPer2 === minKpPer ? 50 : Math.round((kp - minKpPer) / (maxKpPer2 - minKpPer) * 100); }
+
+document.getElementById('kpi-row').innerHTML = [
+  kpiCard('🚫 Vähiten vapaat / ottelu', 'Vapaita yhteensä', byVpAsc[0],  byVpAsc[0].vp_per,  vpRingPct(byVpAsc[0].vp_per),  '#22c55e', byVpAsc[0].vapaat,  'kpl', avgVpPer.toFixed(1)),
+  kpiCard('⚠️ Eniten vapaat / ottelu',  'Vapaita yhteensä', byVpDesc[0], byVpDesc[0].vp_per, vpRingPct(byVpDesc[0].vp_per), '#ef4444', byVpDesc[0].vapaat, 'kpl', avgVpPer.toFixed(1)),
+  kpiCard('🪰 Eniten kärpäset / ottelu','Kärpäsiä yhteensä',byKpDesc[0], byKpDesc[0].kp_per, kpRingPct(byKpDesc[0].kp_per), '#ccff00', byKpDesc[0].karpanen,'kpl', avgKpPer.toFixed(1)),
+  kpiCard('💤 Vähiten kärpäset / ottelu','Kärpäsiä yhteensä',byKpAsc[0], byKpAsc[0].kp_per,  kpRingPct(byKpAsc[0].kp_per),  '#f97316', byKpAsc[0].karpanen, 'kpl', avgKpPer.toFixed(1)),
+].join('');
+
+// ── Render helpers ─────────────────────────────────────────────
+function rankClass(i) {
+  return i === 0 ? 'top1' : i === 1 ? 'top2' : i === 2 ? 'top3' : '';
+}
+function rankSymbol(i) {
+  return i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : (i+1);
+}
+
+// ── VAPAAT TABLE ───────────────────────────────────────────────
+let vpSort = 'per_match';
+const maxVapaat = Math.max(...data.map(d => d.vapaat));
+const maxVpPer  = Math.max(...data.map(d => d.vp_per));
+
+function renderVapaat() {
+  const sorted = [...data].sort((a,b) => vpSort === 'per_match'
+    ? a.vp_per - b.vp_per   // vähemmän = parempi → nouseva
+    : a.vapaat - b.vapaat);
+
+  const maxVal = vpSort === 'per_match' ? maxVpPer : maxVapaat;
+
+  document.getElementById('vapaat-body').innerHTML = sorted.map((d, i) => {
+    const barPct = Math.round((vpSort === 'per_match' ? d.vp_per : d.vapaat) / maxVal * 100);
+    // Colour: vähemmän vapaat = vihreä, enemmän = punainen
+    const barColor = barPct < 40 ? 'bar-green' : barPct < 65 ? 'bar-cyan' : 'bar-red';
+    const valColor = barPct < 40 ? 'c-green' : barPct < 65 ? 'c-cyan' : 'c-red';
+    return `<tr>
+      <td class="rank-num ${rankClass(i)}">${rankSymbol(i)}</td>
+      <td>
+        <div class="team-cell">
+          ${d.logo ? `<img class="team-logo" src="${d.logo}" alt="">` : ''}
+          <div>
+            <div class="team-name">${d.name}</div>
+            <div class="team-short">${d.short}</div>
+          </div>
+        </div>
+      </td>
+      <td class="stat-cell">
+        <div class="stat-val ${valColor}">${d.vp_per.toFixed(1)}</div>
+        <div class="stat-per">per ottelu</div>
+      </td>
+      <td class="stat-cell">
+        <div class="stat-val">${d.vapaat}</div>
+        <div class="stat-per">yhteensä</div>
+      </td>
+      <td>
+        <div class="bar-wrap">
+          <div class="bar-bg"><div class="bar-fill ${barColor}" style="width:${barPct}%"></div></div>
+          <span style="font-size:11px;color:var(--text-muted);width:32px;text-align:right">${barPct}%</span>
+        </div>
+      </td>
+      <td class="stat-cell" style="color:var(--text-muted)">${d.matches}</td>
+    </tr>`;
+  }).join('');
+}
+
+function sortVapaat(by) {
+  vpSort = by;
+  document.getElementById('sv-pm').classList.toggle('active', by==='per_match');
+  document.getElementById('sv-tot').classList.toggle('active', by==='total');
+  document.getElementById('th-vp-pm').classList.toggle('sorted', by==='per_match');
+  document.getElementById('th-vp-tot').classList.toggle('sorted', by==='total');
+  renderVapaat();
+}
+
+// ── KÄRPÄSET TABLE ─────────────────────────────────────────────
+let kpSort = 'per_match';
+const maxKarpanen = Math.max(...data.map(d => d.karpanen));
+const maxKpPer    = Math.max(...data.map(d => d.kp_per));
+
+function renderKarpanen() {
+  const sorted = [...data].sort((a,b) => kpSort === 'per_match'
+    ? b.kp_per - a.kp_per   // enemmän = parempi → laskeva
+    : b.karpanen - a.karpanen);
+
+  const maxVal = kpSort === 'per_match' ? maxKpPer : maxKarpanen;
+
+  document.getElementById('karpanen-body').innerHTML = sorted.map((d, i) => {
+    const barPct = Math.round((kpSort === 'per_match' ? d.kp_per : d.karpanen) / maxVal * 100);
+    const barColor = barPct > 65 ? 'bar-lime' : barPct > 40 ? 'bar-cyan' : 'bar-red';
+    const valColor = barPct > 65 ? 'c-lime' : barPct > 40 ? 'c-cyan' : 'c-red';
+    return `<tr>
+      <td class="rank-num ${rankClass(i)}">${rankSymbol(i)}</td>
+      <td>
+        <div class="team-cell">
+          ${d.logo ? `<img class="team-logo" src="${d.logo}" alt="">` : ''}
+          <div>
+            <div class="team-name">${d.name}</div>
+            <div class="team-short">${d.short}</div>
+          </div>
+        </div>
+      </td>
+      <td class="stat-cell">
+        <div class="stat-val ${valColor}">${d.kp_per.toFixed(1)}</div>
+        <div class="stat-per">per ottelu</div>
+      </td>
+      <td class="stat-cell">
+        <div class="stat-val">${d.karpanen}</div>
+        <div class="stat-per">yhteensä</div>
+      </td>
+      <td>
+        <div class="bar-wrap">
+          <div class="bar-bg"><div class="bar-fill ${barColor}" style="width:${barPct}%"></div></div>
+          <span style="font-size:11px;color:var(--text-muted);width:32px;text-align:right">${barPct}%</span>
+        </div>
+      </td>
+      <td class="stat-cell" style="color:var(--text-muted)">${d.matches}</td>
+    </tr>`;
+  }).join('');
+}
+
+function sortKarpanen(by) {
+  kpSort = by;
+  document.getElementById('sk-pm').classList.toggle('active', by==='per_match');
+  document.getElementById('sk-tot').classList.toggle('active', by==='total');
+  document.getElementById('th-kp-pm').classList.toggle('sorted', by==='per_match');
+  document.getElementById('th-kp-tot').classList.toggle('sorted', by==='total');
+  renderKarpanen();
+}
+
+// ── INIT ──────────────────────────────────────────────────────
+if (!data.length) {
+  document.querySelector('.main').innerHTML =
+    '<div style="text-align:center;padding:80px 20px;color:#4e6080">' +
+    '<div style="font-size:48px;margin-bottom:16px">⚠️</div>' +
+    '<div style="font-size:18px;margin-bottom:8px">pdata.js ei löydy tai PDATA.lukkari puuttuu</div>' +
+    '<div>Aja ensin KAYNNISTA_PRO.bat joka luo pdata.js</div></div>';
+} else {
+  renderVapaat();
+  renderKarpanen();
+}
+</script>
+</body>
+</html>
