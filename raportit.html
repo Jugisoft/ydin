@@ -221,8 +221,9 @@
       return true;
     });
     if (!nayt.length){
+      var piilossa = R.items.filter(function(it){ return it.status !== 'julkaistu'; }).length;
       lista.innerHTML = '<div class="tyhja">Ei raportteja näillä suodattimilla.' +
-        (R.items.length && !naytaLuonnokset ? '<br><span style="font-size:12px">(luonnokset piilotettu — lisää osoitteeseen ?luonnokset=1)</span>' : '') + '</div>';
+        (piilossa && !naytaLuonnokset ? '<br><a href="' + (location.protocol === 'file:' ? '#luonnokset' : 'raportit.html?luonnokset=1') + '" onclick="setTimeout(function(){location.reload();},0)" style="color:#ccff00;font-size:13px">🗂️ Avaa työjono (' + piilossa + ' luonnosta/tarkastettavaa piilossa)</a>' : '') + '</div>';
       return;
     }
     nayt.forEach(function(it){
