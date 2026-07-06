@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raportit &amp; Ennakot — Superpesis Pro</title>
+<script src="reports.js"></script>
+<style>
+  :root {
+    --bg-primary: #0d1422;
+    --bg-card: #131d2e;
+    --bg-elevated: #1a2540;
+    --bg-hover: #1f2e4a;
+    --border: #1e2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8fa3c0;
+    --text-muted: #4e6080;
+    --accent-lime: #ccff00;
+    --accent-cyan: #06b6d4;
+    --accent-green: #22c55e;
+    --accent-red: #ef4444;
+    --accent-orange: #f97316;
+    --accent-yellow: #eab308;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px; line-height: 1.5; min-height: 100vh;
+  }
+  #header {
+    background: linear-gradient(180deg, #0a1020 0%, #0d1422 100%);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .header-inner {
+    max-width: 1400px; margin: 0 auto; padding: 10px 20px;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .logo-mark { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .logo-icon {
+    width: 34px; height: 34px; border-radius: 8px;
+    background: linear-gradient(135deg, #ccff00, #7dd956);
+    color: #0a1020; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 13px;
+  }
+  .logo-text { font-weight: 700; font-size: 15px; }
+  .logo-sub { font-size: 10px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+  .header-divider { width: 1px; height: 28px; background: var(--border); }
+  #main-nav { display: flex; gap: 2px; flex-wrap: wrap; }
+  .nav-btn {
+    padding: 6px 14px; background: transparent;
+    border: 1px solid transparent; border-radius: 6px;
+    color: var(--text-secondary); cursor: pointer;
+    font-size: 13px; font-weight: 500; transition: all 0.15s;
+    white-space: nowrap; text-decoration: none;
+    display: inline-flex; align-items: center;
+  }
+  .nav-btn:hover { color: var(--text-primary); background: var(--bg-hover); border-color: var(--border); }
+  .nav-btn.active { color: #ccff00; border-bottom: 2px solid #ccff00; background: rgba(204,255,0,0.06); }
+  .header-meta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; margin-left: auto; }
+  .season-badge {
+    background: var(--bg-elevated); border: 1px solid var(--border);
+    border-radius: 20px; padding: 3px 10px;
+    font-size: 11px; font-weight: 600; color: var(--accent-cyan); letter-spacing: 0.5px;
+  }
+  .main { max-width: 980px; margin: 0 auto; padding: 24px 20px 60px; }
+  .page-title { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .page-sub { color: var(--text-secondary); font-size: 13px; margin-bottom: 20px; }
+
+  /* SUODATTIMET */
+  .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; align-items: center; }
+  .filters select {
+    background: var(--bg-elevated); color: var(--text-primary);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 7px 10px; font-size: 13px; cursor: pointer;
+  }
+  .luonnos-info {
+    font-size: 11px; color: var(--accent-orange);
+    border: 1px dashed rgba(249,115,22,0.4); border-radius: 6px; padding: 5px 10px;
+  }
+
+  /* KORTIT */
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; margin-bottom: 16px; overflow: hidden;
+    transition: border-color 0.15s;
+  }
+  .card:hover { border-color: #2e4368; }
+  .card-head { padding: 16px 20px; cursor: pointer; }
+  .badge-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
+  .badge {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 20px;
+  }
+  .badge.ennakko { background: rgba(6,182,212,0.12); color: var(--accent-cyan); border: 1px solid rgba(6,182,212,0.3); }
+  .badge.raportti { background: rgba(34,197,94,0.12); color: var(--accent-green); border: 1px solid rgba(34,197,94,0.3); }
+  .badge.luonnos { background: rgba(249,115,22,0.12); color: var(--accent-orange); border: 1px solid rgba(249,115,22,0.35); }
+  .badge.saa { background: var(--bg-elevated); color: var(--text-secondary); border: 1px solid var(--border); text-transform: none; letter-spacing: 0; font-weight: 500; }
+  .card-title { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+  .card-meta { font-size: 12px; color: var(--text-secondary); }
+  .card-meta b { color: var(--text-primary); }
+  .card-teaser { margin-top: 8px; color: var(--text-secondary); font-size: 13px; }
+  .lue-nappi { margin-top: 10px; font-size: 12px; color: var(--accent-lime); font-weight: 600; }
+
+  /* ARTIKKELI */
+  .card-body { display: none; padding: 4px 24px 24px; border-top: 1px solid var(--border); }
+  .card.open .card-body { display: block; }
+  .card.open .lue-nappi .avaa { display: none; }
+  .card:not(.open) .lue-nappi .sulje { display: none; }
+  .artikkeli { max-width: 720px; margin: 0 auto; font-size: 15px; line-height: 1.75; }
+  .artikkeli p { margin: 14px 0; color: #d7e1f0; }
+  .artikkeli .nostoboksi, .artikkeli .spesiaali {
+    border-radius: 10px; padding: 14px 18px; margin: 18px 0;
+  }
+  .artikkeli .nostoboksi { background: rgba(6,182,212,0.07); border: 1px solid rgba(6,182,212,0.3); }
+  .artikkeli .spesiaali { background: rgba(249,115,22,0.06); border: 1px solid rgba(249,115,22,0.3); }
+  .artikkeli .nosto-otsikko { font-size: 11px; font-weight: 800; letter-spacing: 1.2px; margin-bottom: 6px; }
+  .artikkeli .nostoboksi .nosto-otsikko { color: var(--accent-cyan); }
+  .artikkeli .spesiaali .nosto-otsikko { color: var(--accent-orange); }
+  .artikkeli .spesiaali ul { margin: 8px 0 8px 20px; }
+  .artikkeli .spesiaali li { margin: 8px 0; color: #d7e1f0; }
+  .artikkeli .pikku { font-size: 12px; color: var(--text-muted); }
+  .artikkeli .vastuu {
+    font-size: 12px; font-style: italic; color: var(--text-secondary);
+    border-top: 1px solid var(--border); padding-top: 12px; margin-top: 22px;
+  }
+  .artikkeli .lahde { font-size: 11px; color: var(--text-muted); }
+  .tyhja { text-align: center; color: var(--text-muted); padding: 60px 0; }
+  @media (max-width: 768px) {
+    .card-head { padding: 14px 14px; }
+    .card-body { padding: 4px 14px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <div class="logo-mark">
+      <div class="logo-icon">SP</div>
+      <div>
+        <div class="logo-text">Superpesis Pro</div>
+        <div class="logo-sub">Analytics Dashboard</div>
+      </div>
+    </div>
+    <div class="header-divider"></div>
+    <nav id="main-nav">
+      <a href="index.html" class="nav-btn">🏠 Aloitus</a>
+      <a href="lukkari.html" class="nav-btn">⚾ Lukkari</a>
+      <a href="raportit.html" class="nav-btn active">📰 Raportit</a>
+    </nav>
+    <div class="header-meta">
+      <span class="season-badge">MSU 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+  <div class="page-title">📰 Raportit &amp; Ennakot</div>
+  <div class="page-sub">Otteluennakot ja -raportit — data: pdata.js + api.pesistulokset.fi. Päivitetty: <span id="paivitetty">—</span></div>
+
+  <div class="filters">
+    <select id="f-tyyppi">
+      <option value="">Kaikki tyypit</option>
+      <option value="ennakko">Ennakot</option>
+      <option value="raportti">Raportit</option>
+    </select>
+    <select id="f-joukkue">
+      <option value="">Kaikki joukkueet</option>
+    </select>
+    <span class="luonnos-info" id="luonnos-info" style="display:none">Luonnostila: näytetään myös julkaisemattomat (?luonnokset=1)</span>
+  </div>
+
+  <div id="lista"></div>
+</div>
+
+<script>
+(function(){
+  var R = (typeof RAPORTIT !== 'undefined') ? RAPORTIT : { paivitetty:'', items:[] };
+  var params = new URLSearchParams(location.search);
+  var naytaLuonnokset = params.get('luonnokset') === '1' || location.hash === '#luonnokset';
+  document.getElementById('paivitetty').textContent = R.paivitetty || '—';
+  if (naytaLuonnokset) document.getElementById('luonnos-info').style.display = 'inline-block';
+
+  // Joukkuesuodattimen vaihtoehdot datasta
+  var joukkueet = {};
+  R.items.forEach(function(it){ joukkueet[it.koti]=1; joukkueet[it.vieras]=1; });
+  var fj = document.getElementById('f-joukkue');
+  Object.keys(joukkueet).sort().forEach(function(j){
+    var o = document.createElement('option'); o.value = j; o.textContent = j; fj.appendChild(o);
+  });
+
+  function saaBadge(s){
+    if (!s) return '';
+    var t = [];
+    if (s.lampotila !== undefined) t.push(Math.round(s.lampotila) + '°C');
+    if (s.kuvaus) t.push(s.kuvaus);
+    return '<span class="badge saa">🌤️ ' + t.join(', ') + '</span>';
+  }
+
+  function fiPvm(iso){
+    if (!iso) return '';
+    var p = iso.split('-');
+    return p.length === 3 ? (parseInt(p[2],10) + '.' + parseInt(p[1],10) + '.' + p[0]) : iso;
+  }
+
+  function render(){
+    var ft = document.getElementById('f-tyyppi').value;
+    var fjv = fj.value;
+    var lista = document.getElementById('lista');
+    lista.innerHTML = '';
+    var nayt = R.items.filter(function(it){
+      if (it.status === 'luonnos' && !naytaLuonnokset) return false;
+      if (ft && it.tyyppi !== ft) return false;
+      if (fjv && it.koti !== fjv && it.vieras !== fjv) return false;
+      return true;
+    });
+    if (!nayt.length){
+      lista.innerHTML = '<div class="tyhja">Ei raportteja näillä suodattimilla.' +
+        (R.items.length && !naytaLuonnokset ? '<br><span style="font-size:12px">(luonnokset piilotettu — lisää osoitteeseen ?luonnokset=1)</span>' : '') + '</div>';
+      return;
+    }
+    nayt.forEach(function(it){
+      var card = document.createElement('div');
+      card.className = 'card'; card.id = it.id;
+      var badges = '<span class="badge ' + it.tyyppi + '">' + it.tyyppi + '</span>';
+      if (it.status === 'luonnos') badges += '<span class="badge luonnos">luonnos</span>';
+      badges += saaBadge(it.saa);
+      card.innerHTML =
+        '<div class="card-head">' +
+          '<div class="badge-row">' + badges + '</div>' +
+          '<div class="card-title">' + it.otsikko + '</div>' +
+          '<div class="card-meta"><b>' + it.koti + ' – ' + it.vieras + '</b> · ' +
+            fiPvm(it.pvm) + (it.klo ? ' klo ' + it.klo : '') +
+            (it.stadion ? ' · ' + it.stadion : '') + '</div>' +
+          (it.teaser ? '<div class="card-teaser">' + it.teaser + '</div>' : '') +
+          '<div class="lue-nappi"><span class="avaa">Lue koko juttu ↓</span><span class="sulje">Sulje ↑</span></div>' +
+        '</div>' +
+        '<div class="card-body"><div class="artikkeli">' + (it.html || '') + '</div></div>';
+      card.querySelector('.card-head').addEventListener('click', function(){
+        card.classList.toggle('open');
+        if (card.classList.contains('open')) history.replaceState(null, '', '#' + it.id);
+      });
+      lista.appendChild(card);
+    });
+    // hash-linkki avaa suoraan (#luonnokset on tilalippu, ei kortti-id)
+    if (location.hash && location.hash !== '#luonnokset'){
+      var h = document.getElementById(location.hash.slice(1));
+      if (h){ h.classList.add('open'); h.scrollIntoView(); }
+    }
+  }
+
+  document.getElementById('f-tyyppi').addEventListener('change', render);
+  fj.addEventListener('change', render);
+  render();
+})();
+</script>
+</body>
+</html>
