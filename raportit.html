@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raportit &amp; Ennakot — Superpesis Pro</title>
 <script src="reports.js"></script>
+<script src="pdata.js"></script>
 <style>
   :root {
     --bg-primary: #0d1422;
@@ -131,9 +132,56 @@
   }
   .artikkeli .lahde { font-size: 11px; color: var(--text-muted); }
   .tyhja { text-align: center; color: var(--text-muted); padding: 60px 0; }
+
+  /* ===== LIEKKI-INDEKSI -OSIO (3 & 5 pelin ikkuna) ===== */
+  .liekki-osio {
+    margin: 22px 0 4px; padding: 16px 18px;
+    background: var(--bg-elevated); border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .liekki-osio-otsikko {
+    font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    color: var(--accent-lime); margin-bottom: 4px;
+  }
+  .liekki-osio-alaotsikko { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+  .liekki-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .liekki-tiimi {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 14px;
+  }
+  .liekki-tiimi-nimi { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .liekki-rivi { margin-bottom: 12px; }
+  .liekki-rivi:last-child { margin-bottom: 0; }
+  .liekki-rivi-head {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 8px; margin-bottom: 5px;
+  }
+  .liekki-ikkuna-nimi { font-size: 12px; font-weight: 600; color: var(--text-secondary); }
+  .liekki-arvo { font-size: 15px; font-weight: 800; }
+  .liekki-badge {
+    font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 12px; white-space: nowrap;
+  }
+  .lk-liekeissa { color: #f59e0b; background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.35); }
+  .lk-hyvassa   { color: #4ade80; background: rgba(34,197,94,0.15);  border: 1px solid rgba(34,197,94,0.3); }
+  .lk-tasainen  { color: #60a5fa; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); }
+  .lk-haparoiva { color: #94a3b8; background: rgba(148,163,184,0.1); border: 1px solid rgba(148,163,184,0.25); }
+  .lk-kriisi    { color: #f87171; background: rgba(239,68,68,0.15);  border: 1px solid rgba(239,68,68,0.3); }
+  .lk-ei        { color: #94a3b8; background: rgba(100,116,139,0.1); border: 1px solid rgba(100,116,139,0.2); }
+  .liekki-bar-wrap { position: relative; background: var(--bg-primary); border-radius: 5px; height: 10px; overflow: hidden; margin-bottom: 6px; }
+  .liekki-bar { height: 10px; border-radius: 5px; }
+  .lk-bar-liekeissa { background: linear-gradient(90deg,#ccff00,#88cc00); }
+  .lk-bar-hyvassa   { background: linear-gradient(90deg,#22c55e,#16a34a); }
+  .lk-bar-tasainen  { background: linear-gradient(90deg,#3b82f6,#06b6d4); }
+  .lk-bar-haparoiva { background: #94a3b8; }
+  .lk-bar-kriisi    { background: linear-gradient(90deg,#ef4444,#7f1d1d); }
+  .liekki-erittely { font-size: 12px; color: var(--text-secondary); }
+  .liekki-erittely b { color: var(--text-primary); }
+  .liekki-osio-selite { font-size: 11px; color: var(--text-muted); margin-top: 12px; line-height: 1.5; }
+  .liekki-puuttuu { font-size: 12px; color: var(--text-muted); }
   @media (max-width: 768px) {
     .card-head { padding: 14px 14px; }
     .card-body { padding: 4px 14px 18px; }
+    .liekki-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -195,6 +243,87 @@
     var o = document.createElement('option'); o.value = j; o.textContent = j; fj.appendChild(o);
   });
 
+  // ===== Liekki-indeksi (ikkunoitu: 3 & 5 peliä) =====
+  // Sama kaava kuin dashboardissa, mutta rajattuna N viimeiseen peliin:
+  //   Score = Voittoputki_N×20 + VoittoN%×50 + VoittoN%×30  (max 100)
+  // pelit_5 on järjestetty vanhin→uusin; N viimeistä = slice(-N).
+  var PD = (typeof PDATA !== 'undefined') ? PDATA : null;
+  var LK_VARI = { liekeissa:'#f59e0b', hyvassa:'#4ade80', tasainen:'#60a5fa', haparoiva:'#94a3b8', kriisi:'#f87171', ei:'#94a3b8' };
+
+  function lyhToTiimi(lyh){
+    if (!PD || !PD.joukkueet) return null;
+    var j = PD.joukkueet.filter(function(x){ return x.shorthand === lyh; })[0];
+    return (j && j.pelit_5) ? j : null;
+  }
+  function liekkiLuokka(v){
+    if (v === null || v === undefined || isNaN(v)) return {cls:'ei', bar:'', txt:'— EI PELANNUT'};
+    if (v >= 80) return {cls:'liekeissa', bar:'lk-bar-liekeissa', txt:'🔥 LIEKEISSÄ'};
+    if (v >= 70) return {cls:'hyvassa',   bar:'lk-bar-hyvassa',   txt:'✅ HYVÄSSÄ VIREESSÄ'};
+    if (v >= 40) return {cls:'tasainen',  bar:'lk-bar-tasainen',  txt:'🟦 TASAINEN'};
+    if (v >= 20) return {cls:'haparoiva', bar:'lk-bar-haparoiva', txt:'⚠️ HAPAROIVA'};
+    return {cls:'kriisi', bar:'lk-bar-kriisi', txt:'❄️ KRIISI'};
+  }
+  function laskeIkkuna(pelit, N){
+    var g = pelit.slice(-N);
+    var n = g.length;
+    if (!n) return null;
+    var voitot = g.filter(function(x){ return x.res === 'W'; }).length;
+    var putki = 0;
+    for (var i = g.length - 1; i >= 0; i--){ if (g[i].res === 'W') putki++; else break; }
+    var voittoPct = voitot / n;
+    var score = Math.min(Math.round(putki*20 + voittoPct*50 + voittoPct*30), 100);
+    var v3 = g.filter(function(x){ return x.res==='W' && x.pts===3; }).length; // suora voitto (3p)
+    var v2 = g.filter(function(x){ return x.res==='W' && x.pts===2; }).length; // jatkovoitto (2p)
+    var tj = g.filter(function(x){ return x.pts===1; }).length;               // jatkotappio (1p)
+    var ts = g.filter(function(x){ return x.pts===0; }).length;               // suora tappio (0p)
+    return {n:n, liekki:score, putki:putki, voitot:voitot, voittoPct:Math.round(voittoPct*100),
+            v3:v3, v2:v2, tj:tj, ts:ts, tappiot:tj+ts,
+            pisteet:(v3*3 + v2*2 + tj), maxpisteet:(n*3),
+            jono: g.map(function(x){ return x.res; }).join('')};
+  }
+  function ikkunaRiviHtml(nimi, r){
+    if (!r) return '<div class="liekki-rivi"><div class="liekki-ikkuna-nimi">' + nimi +
+      '</div><div class="liekki-puuttuu">ei riittävästi pelejä</div></div>';
+    var lk = liekkiLuokka(r.liekki);
+    return '<div class="liekki-rivi">' +
+      '<div class="liekki-rivi-head">' +
+        '<span class="liekki-ikkuna-nimi">' + nimi +
+          ' <span style="color:var(--text-muted);font-weight:500">(' + r.jono + ')</span></span>' +
+        '<span style="display:flex;align-items:center;gap:8px">' +
+          '<span class="liekki-arvo" style="color:' + LK_VARI[lk.cls] + '">' + r.liekki + '</span>' +
+          '<span class="liekki-badge lk-' + lk.cls + '">' + lk.txt + '</span>' +
+        '</span>' +
+      '</div>' +
+      '<div class="liekki-bar-wrap"><div class="liekki-bar ' + lk.bar + '" style="width:' + r.liekki + '%"></div></div>' +
+      '<div class="liekki-erittely">' +
+        '<b>' + r.v3 + '</b> × 3p-voitto · <b>' + r.v2 + '</b> × 2p-voitto · <b>' + r.tappiot + '</b> tappio' +
+        (r.tj ? ' (' + r.tj + ' jatkolla)' : '') +
+        ' · pisteet <b>' + r.pisteet + '</b>/' + r.maxpisteet +
+      '</div>' +
+    '</div>';
+  }
+  function tiimiHtml(lyh){
+    var t = lyhToTiimi(lyh);
+    if (!t) return '<div class="liekki-tiimi"><div class="liekki-tiimi-nimi">' + lyh +
+      '</div><div class="liekki-puuttuu">Ei muotodataa (pdata.js)</div></div>';
+    return '<div class="liekki-tiimi">' +
+      '<div class="liekki-tiimi-nimi">' + lyh + ' <span style="color:var(--text-muted);font-weight:500;font-size:12px">' + t.name + '</span></div>' +
+      ikkunaRiviHtml('3 viime peliä', laskeIkkuna(t.pelit_5, 3)) +
+      ikkunaRiviHtml('5 viime peliä', laskeIkkuna(t.pelit_5, 5)) +
+    '</div>';
+  }
+  function liekkiOsioHtml(it){
+    if (!PD || !PD.joukkueet) return '';
+    return '<div class="liekki-osio">' +
+      '<div class="liekki-osio-otsikko">🔥 Liekki-indeksi — 3 &amp; 5 viime peliä</div>' +
+      '<div class="liekki-osio-alaotsikko">Vire rajattuna viimeisiin otteluihin · data: pdata.js ' + (PD.paivitetty || '') + '</div>' +
+      '<div class="liekki-grid">' + tiimiHtml(it.koti) + tiimiHtml(it.vieras) + '</div>' +
+      '<div class="liekki-osio-selite">Kaava: Voittoputki×20 + Voitto%×50 + Voitto%×30 (max 100), laskettuna vain valitun ikkunan peleistä. ' +
+      'Luokat: ≥80 🔥 Liekeissä · ≥70 ✅ Hyvässä vireessä · ≥40 🟦 Tasainen · ≥20 ⚠️ Haparoiva · &lt;20 ❄️ Kriisi. ' +
+      'Tulosjono uusin oikealla: W = voitto, J = jatkotappio, L = suora tappio.</div>' +
+    '</div>';
+  }
+
   function saaBadge(s){
     if (!s) return '';
     var t = [];
@@ -242,7 +371,7 @@
           (it.teaser ? '<div class="card-teaser">' + it.teaser + '</div>' : '') +
           '<div class="lue-nappi"><span class="avaa">Lue koko juttu ↓</span><span class="sulje">Sulje ↑</span></div>' +
         '</div>' +
-        '<div class="card-body"><div class="artikkeli">' + (it.html || '') + '</div></div>';
+        '<div class="card-body"><div class="artikkeli">' + (it.html || '') + '</div>' + liekkiOsioHtml(it) + '</div>';
       card.querySelector('.card-head').addEventListener('click', function(){
         card.classList.toggle('open');
         if (card.classList.contains('open')) history.replaceState(null, '', '#' + it.id);
