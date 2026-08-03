@@ -969,7 +969,17 @@
     line-height: 1.4;
   }
 
-</style>
+
+  .rj-h{font-size:11px;margin:18px 0 0;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+  .rj-t{border-collapse:collapse;width:100%;font-size:12px;margin-top:6px}
+  .rj-t th,.rj-t td{padding:4px 7px;text-align:right;border-bottom:1px solid var(--border)}
+  .rj-t th{color:var(--text-muted);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.3px}
+  .rj-t td:first-child,.rj-t th:first-child{text-align:left}
+  .rj-t tr.sel{background:var(--bg-hover)}
+  .rj-t tr.click:hover{background:var(--bg-elevated);cursor:pointer}
+  .rj-t tr.tot td{font-weight:700;border-top:2px solid var(--border)}
+  .rj-t tr.ref td{color:var(--text-muted)}
+  </style>
 </head>
 <body>
 
@@ -996,6 +1006,7 @@
       <button class="nav-btn" onclick="showView('sarjataulukko',this)">🏆 Sarjataulukko</button>
       <button class="nav-btn" onclick="showView('vertailu',this)">⚖️ Pelaajavertailu</button>
       <button class="nav-btn" onclick="showView('palotilanne',this)">🔥 Palotilanne-analyysi</button>
+      <button class="nav-btn" onclick="showView('rajat',this)">📐 Rajalyönnit</button>
       <a href="lukkari.html" class="nav-btn">⚾ Lukkari</a>
       <a href="raportit.html" class="nav-btn">📰 Raportit</a>
       <button class="nav-btn" onclick="showView('suuntaus',this)" style="display:none">📈 Suuntaus</button>
@@ -1408,6 +1419,45 @@
               <tbody id="pt-vl-body"><tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:20px;">Ladataan hits-dataa…</td></tr></tbody>
             </table>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- RAJALYÖNNIT-SIVU -->
+  <!-- ============================================================ -->
+  <div id="v-rajat" class="view">
+    <div style="max-width:1380px;margin:0 auto;padding:16px 12px;">
+      <div style="font-size:20px;font-weight:700;margin-bottom:4px;">📐 Rajasuuntaan lyödyt lyönnit</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;line-height:1.6;">
+        Neljä aluetta rajaviivojen suunnassa: kaksi viistoa (kotipesä→ykkös- ja kotipesä→kakkospesä) sekä kolmos- ja kakkospesän jatkeet.<br>
+        X/Y on pallon <strong style="color:var(--text-secondary);">pysähtymis- tai poistumiskohta</strong>, ei ensiosumaa — siksi alue ulottuu kaistan verran viivan sisäpuolelta ulospäin rajattomasti.<br>
+        Laiton = <code>Laiton</code>-sarake <strong style="color:var(--text-secondary);">tai</strong> tapahtumateksti <code>3. lyönti laiton</code>; jälkimmäisestä seuraa palo eikä se ole Laiton-sarakkeessa.
+      </div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;">
+        <div>
+          <canvas id="rj-c" width="330" height="637" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;"></canvas>
+          <div id="rj-leg" style="margin-top:8px;font-size:11px;color:var(--text-muted);display:flex;flex-wrap:wrap;gap:4px 14px;max-width:330px;"></div>
+        </div>
+        <div style="min-width:430px;flex:1;">
+          <div style="display:grid;grid-template-columns:132px 1fr 46px;gap:7px 10px;align-items:center;font-size:12px;
+                      background:var(--bg-card);border:1px solid var(--border);padding:12px;border-radius:8px;margin-bottom:12px;">
+            <label style="color:var(--text-muted);">Joukkue</label>
+            <select id="rj-tm" style="width:100%;padding:5px 8px;border-radius:6px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text-primary);font-size:12px;"></select><span></span>
+            <label style="color:var(--text-muted);">Kaistan leveys (m)</label><input type="range" id="rj-band" min="0.5" max="6" step="0.25" value="2" style="width:100%"><span id="rj-vband" style="color:var(--text-secondary);"></span>
+            <label style="color:var(--text-muted);">Vasen raja X</label><input type="range" id="rj-xl" min="4" max="18" step="0.5" value="11" style="width:100%"><span id="rj-vxl" style="color:var(--text-secondary);"></span>
+            <label style="color:var(--text-muted);">Oikea raja X</label><input type="range" id="rj-xr" min="82" max="96" step="0.5" value="91" style="width:100%"><span id="rj-vxr" style="color:var(--text-secondary);"></span>
+            <label style="color:var(--text-muted);">Kulma-Y (kolmosviiva)</label><input type="range" id="rj-yc" min="54" max="70" step="1" value="62" style="width:100%"><span id="rj-vyc" style="color:var(--text-secondary);"></span>
+            <label style="color:var(--text-muted);">Jatkealueen alku-Y</label><input type="range" id="rj-y0" min="20" max="58" step="2" value="44" style="width:100%"><span id="rj-vy0" style="color:var(--text-secondary);"></span>
+          </div>
+          <div class="rj-h">Alueittain</div><table class="rj-t" id="rj-tz"></table>
+          <div class="rj-h">Etenijätilanteittain</div><table class="rj-t" id="rj-ts"></table>
+          <div class="rj-h">Palot alla</div><table class="rj-t" id="rj-tp"></table>
+          <div class="rj-h">Lyöntinumero</div><table class="rj-t" id="rj-tl"></table>
+          <div class="rj-h">Joukkuevertailu</div><table class="rj-t" id="rj-tv"></table>
+          <div id="rj-note" style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:14px;border-left:3px solid var(--accent-red);padding-left:11px;"></div>
         </div>
       </div>
     </div>
@@ -2143,6 +2193,123 @@ function ptVlRenderRows() {
 // =============================================
 let h2hCharts = {};
 
+
+// ============================================================
+// RAJALYÖNNIT-SIVU
+// ============================================================
+(function(){
+const YBACK=14,YHOME=106,XHOME=50,PW=369,PH=713,CW=330,CH=637,SX=CW/PW,SY=CH/PH,PXL=23,PXR=359,PYB=13,PYH=652;
+const SITORD=['0-tilanne','1-tilanne','2-tilanne','3-tilanne','1-2-tilanne','1-3-tilanne','2-3-tilanne','1-2-3-tilanne'];
+let D=null, SELT=0, CNT=[0,0,0,0,0], img=null, wired=false;
+const G=id=>+document.getElementById('rj-'+id).value;
+function P(){const XL=G('xl'),XR=G('xr'),YC=G('yc'),Y0=G('y0'),band=G('band');
+  const MX=(XR-XL)/50,MY=(YHOME-YBACK)/94;
+  return {XL,XR,YC,Y0,band,MX,COS:((YHOME-YC)/MY)/Math.hypot((XHOME-XL)/MX,(YHOME-YC)/MY)};}
+function bnd(y,s,p){ if(y<p.YC) return s=='L'?p.XL:p.XR;
+  const f=Math.min(1,(y-p.YC)/(YHOME-p.YC));
+  return s=='L'? p.XL+(XHOME-p.XL)*f : p.XR-(p.XR-XHOME)*f; }
+function zone(x,y,p){
+  for(const q of [['A','L',p.YC,102],['B','R',p.YC,102],['C','L',p.Y0,p.YC],['D','R',p.Y0,p.YC]]){
+    if(y<q[2]||y>=q[3]) continue;
+    const b=bnd(y,q[1],p), ins = q[1]=='L'? x-b : b-x;
+    if(ins <= p.band*p.MX/(y>=p.YC?p.COS:1)) return q[0]; }
+  return null; }
+const E=()=>[0,0,0,0,0];
+function add(a,l,v,j){a[0]++; if(l){a[1]++; if(v)a[2]++;} else {a[3]++; a[4]+=j;}}
+function compute(){
+  const p=P(), zo={},si={},pal={},lyn={},tv={},all={};
+  for(const row of D.r){ const t=row[0],s=row[1],x=row[2],y=row[3],j=row[4],l=row[5],pa=row[6],ln=row[7],v=row[8];
+    all[t]=all[t]||E(); add(all[t],l,v,j);
+    const z=zone(x,y,p); if(!z) continue;
+    tv[t]=tv[t]||E(); add(tv[t],l,v,j);
+    if(t==SELT){ const map=[[zo,z],[si,D.s[s]],[pal,pa],[lyn,ln]];
+      for(const m of map){ m[0][m[1]]=m[0][m[1]]||E(); add(m[0][m[1]],l,v,j);} } }
+  return {p,zo,si,pal,lyn,tv,all}; }
+function row(nm,a,cls,on){ const n=a[0],la=a[1],vi=a[2],le=a[3],ju=a[4];
+  return '<tr class="'+(cls||'')+'" '+(on||'')+'><td>'+nm+'</td><td>'+n+'</td><td>'+la+'</td><td>'+
+    (n?(100*la/n).toFixed(0):'–')+' %</td><td>'+vi+'</td><td>'+le+'</td><td>'+ju+'</td><td>'+
+    (le?(100*ju/le).toFixed(1):'–')+' %</td></tr>';}
+const HEAD=h=>'<tr><th>'+h+'</th><th>Lyönnit</th><th>Laittomia</th><th>Laiton-%</th><th>3.ly→palo</th><th>Laillisia</th><th>Juoksut</th><th>Juoksu-%</th></tr>';
+function sum(list){const t=E(); list.forEach(a=>{for(let i=0;i<5;i++)t[i]+=a[i];}); return t;}
+function legend(){
+  const it=[['#22e06a','juoksu',4],['#5f7cab','laillinen, ei juoksua',3],
+            ['#8f4a4a','laiton',1],['#c2761f','3. lyönti laiton → palo',2],['#555','muut lyönnit',0]];
+  document.getElementById('rj-leg').innerHTML = it.map(x=>
+    '<span><span style="color:'+x[0]+';font-size:14px">●</span> '+x[1]+' <b style="color:var(--text-primary)">'+CNT[x[2]]+'</b></span>').join('');}
+function px(dx,dy,p){const cxL=PXL*SX,cxR=PXR*SX,cyB=PYB*SY,cyH=PYH*SY;
+  return [cxL+(dx-p.XL)/(p.XR-p.XL)*(cxR-cxL), cyB+(dy-YBACK)/(YHOME-YBACK)*(cyH-cyB)];}
+function draw(){
+  const p=P(), cv=document.getElementById('rj-c'); if(!cv) return;
+  const ctx=cv.getContext('2d');
+  ctx.clearRect(0,0,CW,CH); if(img && img.complete){ try{ctx.drawImage(img,0,0,CW,CH);}catch(e){} }
+  const L=[[],[],[],[],[]];
+  for(const r of D.r){ if(r[0]!=SELT) continue;
+    const z=zone(r[2],r[3],p), c=px(r[2],r[3],p);
+    L[!z?0 : (r[4]>0&&!r[5])?4 : r[8]?2 : r[5]?1 : 3].push(c); }
+  const ST=[['rgba(255,255,255,.07)',1.1],['#8f4a4a',2.4],['#c2761f',2.6],['#5f7cab',2.6],['#22e06a',5.2]];
+  L.forEach((pts,i)=>{ const col=ST[i][0], r=ST[i][1];
+    if(i==4){ ctx.fillStyle='rgba(34,224,106,.22)';
+      pts.forEach(c=>{ ctx.beginPath(); ctx.arc(c[0],c[1],r+4,0,7); ctx.fill(); }); }
+    ctx.fillStyle=col;
+    pts.forEach(c=>{ ctx.beginPath(); ctx.arc(c[0],c[1],r,0,7); ctx.fill(); });
+    if(i==4){ ctx.strokeStyle='#fff'; ctx.lineWidth=1.8;
+      pts.forEach(c=>{ ctx.beginPath(); ctx.arc(c[0],c[1],r,0,7); ctx.stroke(); }); } });
+  CNT=L.map(a=>a.length);
+  ctx.strokeStyle='#ef4444'; ctx.lineWidth=1.3;
+  [['L',p.YC,102],['R',p.YC,102],['L',p.Y0,p.YC],['R',p.Y0,p.YC]].forEach(q=>{
+    ctx.beginPath();
+    for(let y=q[1];y<=q[2];y+=0.5){ const b=bnd(y,q[0],p), off=p.band*p.MX/(y>=p.YC?1/1*p.COS:1);
+      const o=p.band*p.MX/(y>=p.YC?p.COS:1);
+      const c=px(q[0]=='L'?b+o:b-o,y,p); y==q[1]?ctx.moveTo(c[0],c[1]):ctx.lineTo(c[0],c[1]); }
+    ctx.stroke(); });
+  legend(); }
+function render(){
+  if(!D) return;
+  ['band','xl','xr','yc','y0'].forEach(k=>document.getElementById('rj-v'+k).textContent=G(k));
+  const S=compute();
+  const NM={A:'A · Vasen viisto (kotipesä→1)',B:'B · Oikea viisto (kotipesä→2)',
+            C:'C · Vasen suora (3-pesän jatke)',D:'D · Oikea suora (2-pesän jatke)'};
+  const tot=sum(['A','B','C','D'].map(k=>S.zo[k]||E()));
+  let h=HEAD('Alue'); ['A','B','C','D'].forEach(k=>h+=row(NM[k],S.zo[k]||E()));
+  h+=row('Yhteensä rajasuuntaan',tot,'tot'); h+=row('Kaikki lyönnit',S.all[SELT]||E(),'ref');
+  document.getElementById('rj-tz').innerHTML=h;
+  let s=HEAD('Tilanne'); SITORD.forEach(k=>{if(S.si[k])s+=row(k,S.si[k]);});
+  document.getElementById('rj-ts').innerHTML=s+row('Yhteensä',tot,'tot');
+  let q=HEAD('Palot alla'); [0,1,2].forEach(k=>q+=row(k+' paloa alla',S.pal[k]||E()));
+  document.getElementById('rj-tp').innerHTML=q+row('Yhteensä',tot,'tot');
+  let m=HEAD('Lyöntinro'); [1,2,3].forEach(k=>{if(S.lyn[k])m+=row(k+'. lyönti',S.lyn[k]);});
+  document.getElementById('rj-tl').innerHTML=m+row('Yhteensä',tot,'tot');
+  let v=HEAD('Joukkue');
+  D.t.map((nm,i)=>({nm:nm,i:i,a:S.tv[i]||E()})).sort((x,y)=>y.a[0]-x.a[0])
+   .forEach(r=>v+=row(r.nm,r.a,'click'+(r.i==SELT?' sel':''),'onclick="rajatPick('+r.i+')"'));
+  document.getElementById('rj-tv').innerHTML=v;
+  const A=S.all[SELT]||E();
+  document.getElementById('rj-note').innerHTML=
+   '<strong style="color:var(--text-primary)">Laiton-% rajasuunnassa '+(tot[0]?(100*tot[1]/tot[0]).toFixed(0):'–')+
+   ' % vs. kaikissa lyönneissä '+(A[0]?(100*A[1]/A[0]).toFixed(0):'–')+' %.</strong> Näistä '+tot[2]+
+   ' oli kolmannella lyönnillä eli johti suoraan paloon. Juoksu-% lasketaan vain laillisista.<br><br>'+
+   '<span style="color:var(--accent-orange)">Tulkinta:</span> viistoilla rajoilla (A, B) koordinaatti on pallon pysähtymispaikka, joten siellä on pääosin näppyjä ja ulos pompanneita rajaleikkureita — siksi laiton-% on korkea. Läpi menneet rajan suuntaiset lyönnit näkyvät jatkealueilla (C, D).<br><br>'+
+   '<span style="color:var(--accent-orange)">Huom:</span> kenttien ympäristö (vallit, katsomon läheisyys, avoin tila) vaikuttaa pysähtymispaikkaan, joten eri kenttien luvut eivät ole täysin vertailukelpoisia.';
+  draw(); }
+window.rajatPick=function(i){SELT=i; const s=document.getElementById('rj-tm'); if(s) s.value=i; render();};
+function boot(){
+  const sel=document.getElementById('rj-tm');
+  sel.innerHTML=''; D.t.forEach((t,i)=>{const o=document.createElement('option');o.value=i;o.textContent=t;sel.appendChild(o);});
+  SELT=Math.max(0,D.t.indexOf('Kouvolan Pallonlyöjät')); sel.value=SELT;
+  if(!wired){ wired=true;
+    sel.addEventListener('change',()=>{SELT=+sel.value;render();});
+    ['band','xl','xr','yc','y0'].forEach(k=>document.getElementById('rj-'+k).addEventListener('input',render)); }
+  img=new Image(); img.onload=draw; img.onerror=draw; img.src='Pesäpall.Field_Transparant.png';
+  render(); }
+window.rajatInit=function(){
+  if(D){ render(); return; }
+  if(typeof RAJAT_DATA !== 'undefined'){ D=RAJAT_DATA; boot(); return; }
+  const sc=document.createElement('script'); sc.src='pdata_rajat.js';
+  sc.onload=()=>{ if(typeof RAJAT_DATA!=='undefined'){ D=RAJAT_DATA; boot(); } };
+  sc.onerror=()=>{ const n=document.getElementById('rj-note'); if(n) n.textContent='Datatiedostoa pdata_rajat.js ei löytynyt.'; };
+  document.body.appendChild(sc); };
+})();
+
 function showView(name, btn) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -2153,6 +2320,7 @@ function showView(name, btn) {
   if (name === 'nelikentta') drawQuadrant();
   if (name === 'h2h') setTimeout(renderH2HCharts, 100);
   if (name === 'palotilanne') ptInit();
+  if (name === 'rajat') rajatInit();
   if (name === 'suuntaus') suuntausInit();
   if (name === 'kuntopuntari') kpInit();
   if (name === 'aloitus') aloitusInit();
