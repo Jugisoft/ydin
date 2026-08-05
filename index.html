@@ -76,7 +76,7 @@
   .logo-text { font-size: 15px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.3px; }
   .logo-sub { font-size: 10px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
   .header-divider { width: 1px; height: 28px; background: var(--border); }
-  nav { display: flex; gap: 4px; flex: 1; }
+  nav { display: flex; gap: 4px; flex: 1; flex-wrap: wrap; }
   .nav-btn {
     padding: 6px 14px;
     background: transparent;
@@ -1001,14 +1001,15 @@
       <button class="nav-btn" onclick="showView('kuntopuntari',this)">💪 Kuntopuntari</button>
       <button class="nav-btn" onclick="showView('nelikentta',this)">📊 Nelikenttä</button>
       <button class="nav-btn" onclick="showView('vireystila',this)" style="display:none">🔥 Vireystila</button>
-      <button class="nav-btn" onclick="showView('h2h',this)">⚔️ H2H Joukkuevertailu</button>
-      <button class="nav-btn" onclick="showView('pelaajat',this)">👤 Pelaajatilastot</button>
+      <button class="nav-btn" onclick="showView('h2h',this)">⚔️ H2H</button>
+      <button class="nav-btn" onclick="showView('pelaajat',this)">👤 Pelaajat</button>
       <button class="nav-btn" onclick="showView('sarjataulukko',this)">🏆 Sarjataulukko</button>
-      <button class="nav-btn" onclick="showView('vertailu',this)">⚖️ Pelaajavertailu</button>
-      <button class="nav-btn" onclick="showView('palotilanne',this)">🔥 Palotilanne-analyysi</button>
+      <button class="nav-btn" onclick="showView('vertailu',this)">⚖️ Vertailu</button>
+      <button class="nav-btn" onclick="showView('palotilanne',this)">🔥 Palotilanne</button>
       <button class="nav-btn" onclick="showView('rajat',this)">📐 Rajalyönnit</button>
       <a href="lukkari.html" class="nav-btn">⚾ Lukkari</a>
       <a href="raportit.html" class="nav-btn">📰 Raportit</a>
+      <a href="ketjut.html" class="nav-btn">⛓️ Ketjut</a>
       <button class="nav-btn" onclick="showView('suuntaus',this)" style="display:none">📈 Suuntaus</button>
       
     </nav>
