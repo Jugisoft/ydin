@@ -2,7 +2,7 @@ const PPO = {
  "meta": {
   "kausi": 2026,
   "seasonSeries": 2945,
-  "generoitu": "2026-08-16 17:11:07",
+  "generoitu": "2026-08-16 17:40:16",
   "kutistuspaino_w": 34,
   "rating": {
    "AA": -1.3455,
@@ -11466,7 +11466,113 @@ const PPO = {
    }
   }
  ],
- "sarjat": [],
+ "sarjat": [
+  {
+   "id": null,
+   "kierros": "Puolivalierat",
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "ViVe",
+   "vieras": "PattU",
+   "sijat": [
+    1,
+    8
+   ],
+   "kasin_syotetty": true,
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.814,
+    "koti_ottelu_vieraissa": 0.7703,
+    "koti_sarja": 0.9397,
+    "koti_sarja_alussa": 0.9397
+   },
+   "seuraava": null,
+   "ottelut": []
+  },
+  {
+   "id": null,
+   "kierros": "Puolivalierat",
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "SoJy",
+   "vieras": "JoMa",
+   "sijat": [
+    2,
+    7
+   ],
+   "kasin_syotetty": true,
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.6077,
+    "koti_ottelu_vieraissa": 0.5422,
+    "koti_sarja": 0.6504,
+    "koti_sarja_alussa": 0.6504
+   },
+   "seuraava": null,
+   "ottelut": []
+  },
+  {
+   "id": null,
+   "kierros": "Puolivalierat",
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "KPL",
+   "vieras": "KiPa",
+   "sijat": [
+    3,
+    6
+   ],
+   "kasin_syotetty": true,
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.5818,
+    "koti_ottelu_vieraissa": 0.5154,
+    "koti_sarja": 0.603,
+    "koti_sarja_alussa": 0.603
+   },
+   "seuraava": null,
+   "ottelut": []
+  },
+  {
+   "id": null,
+   "kierros": "Puolivalierat",
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "Manse",
+   "vieras": "Tahko",
+   "sijat": [
+    4,
+    5
+   ],
+   "kasin_syotetty": true,
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.5549,
+    "koti_ottelu_vieraissa": 0.4879,
+    "koti_sarja": 0.5527,
+    "koti_sarja_alussa": 0.5527
+   },
+   "seuraava": null,
+   "ottelut": []
+  }
+ ],
+ "sarjat_kasin": true,
  "kotari": {
   "AA": {
    "n": 5,

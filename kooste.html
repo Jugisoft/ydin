@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runkosarjan kooste — Superpesis Pro</title>
+<style>
+:root{
+  --bg-primary:#0d1422; --bg-card:#131d2e; --bg-elevated:#1a2540;
+  --bg-hover:#1f2e4a; --border:#1e2d45;
+  --text-primary:#fff; --text-secondary:#8fa3c0; --text-muted:#4e6080;
+  --accent-lime:#ccff00; --accent-cyan:#06b6d4; --accent-green:#22c55e;
+  --accent-red:#ef4444; --accent-orange:#f97316; --accent-yellow:#eab308;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-primary);color:var(--text-primary);
+  font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+  font-size:14px;line-height:1.5;padding:0 0 60px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 20px}
+#header{background:linear-gradient(180deg,#0a1020 0%,#0d1422 100%);
+  border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1400px;margin:0 auto;padding:10px 20px;display:flex;
+  align-items:center;gap:16px;flex-wrap:wrap}
+.logo-mark{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-icon{width:34px;height:34px;border-radius:8px;
+  background:linear-gradient(135deg,#ccff00,#7dd956);color:#0a1020;display:flex;
+  align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.logo-text{font-weight:700;font-size:15px}
+.logo-sub{font-size:10px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase}
+.header-divider{width:1px;height:28px;background:var(--border)}
+#main-nav{display:flex;gap:2px;flex-wrap:wrap}
+.nav-btn{padding:6px 14px;background:transparent;border:1px solid transparent;
+  border-radius:6px;color:var(--text-secondary);cursor:pointer;font-size:13px;
+  font-weight:500;transition:all .15s;white-space:nowrap;text-decoration:none;
+  display:inline-flex;align-items:center}
+.nav-btn:hover{color:var(--text-primary);background:var(--bg-hover);border-color:var(--border)}
+.nav-btn.active{color:#ccff00;border-bottom:2px solid #ccff00;background:rgba(204,255,0,.06)}
+.header-meta{display:flex;align-items:center;gap:12px;flex-shrink:0;margin-left:auto}
+.season-badge{background:var(--bg-elevated);border:1px solid var(--border);
+  border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;
+  color:var(--accent-cyan);letter-spacing:.5px}
+.page-title{font-size:23px;font-weight:700;letter-spacing:-.4px;margin:22px 0 4px}
+.sub{color:var(--text-secondary);font-size:13px;margin-bottom:18px}
+h2.sec{font-size:16px;font-weight:700;margin:30px 0 4px;letter-spacing:-.2px}
+p.secsub{color:var(--text-muted);font-size:12px;margin-bottom:14px}
+
+.banner{background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.35);
+  border-radius:10px;padding:12px 15px;margin:16px 0 22px;font-size:12.5px;
+  color:var(--text-secondary);line-height:1.65}
+.banner b{color:var(--accent-orange)}
+
+.ctrl{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;
+  padding:14px 18px;margin-bottom:18px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end}
+.cg{display:flex;flex-direction:column;gap:6px}
+.cg label{font-size:11px;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--text-muted);font-weight:700}
+.seg{display:flex;background:var(--bg-elevated);border:1px solid var(--border);
+  border-radius:7px;overflow:hidden}
+.seg button{background:none;border:none;color:var(--text-secondary);
+  padding:7px 14px;font-size:12.5px;cursor:pointer;font-family:inherit;font-weight:600;transition:.15s}
+.seg button:hover{background:var(--bg-hover);color:var(--text-primary)}
+.seg button.on{background:var(--accent-cyan);color:#06202a}
+select{background:var(--bg-elevated);color:var(--text-primary);border:1px solid var(--border);
+  border-radius:7px;padding:7px 10px;font-size:13px;font-family:inherit;min-width:150px}
+
+/* --- sarjakortit --- */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.card-head{padding:9px 15px;font-size:11px;font-weight:700;letter-spacing:.7px;
+  text-transform:uppercase;background:var(--bg-elevated);color:var(--accent-cyan);
+  display:flex;justify-content:space-between;align-items:center}
+.card-body{padding:15px}
+.tiimirivi{display:flex;justify-content:space-between;align-items:center;
+  padding:7px 0;font-size:15px;font-weight:600}
+.tiimirivi.johtaa{color:var(--accent-lime)}
+.tiimirivi .voitot{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
+.bar{height:7px;background:var(--bg-elevated);border-radius:4px;overflow:hidden;margin:9px 0 4px;display:flex}
+.bar i{display:block;height:100%}
+.bar i.a{background:var(--accent-cyan)} .bar i.b{background:var(--bg-hover)}
+.prob{display:flex;justify-content:space-between;font-size:11.5px;color:var(--text-muted);margin-bottom:10px}
+.ottelut{border-top:1px solid var(--border);padding-top:10px;margin-top:6px}
+.ott{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;
+  color:var(--text-secondary);font-variant-numeric:tabular-nums}
+.ott.tuleva{color:var(--text-muted);font-style:italic}
+.ott b{color:var(--text-primary);font-weight:600}
+.tag{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 5px;border-radius:4px;
+  margin-left:5px;letter-spacing:.4px;vertical-align:1px}
+.tag.s{background:rgba(204,255,0,.16);color:var(--accent-lime)}
+.tag.k{background:rgba(6,182,212,.16);color:var(--accent-cyan)}
+.tag.jt{background:rgba(249,115,22,.16);color:var(--accent-orange)}
+
+/* --- taulukot --- */
+.tblwrap{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;
+  overflow:auto;max-height:640px}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+thead th{position:sticky;top:0;background:var(--bg-elevated);color:var(--text-secondary);
+  font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;
+  padding:9px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border);z-index:2}
+thead th.l{text-align:left}
+thead tr.grp th{font-size:10px;color:var(--text-muted);padding:6px 10px;top:0}
+tbody td{padding:7px 10px;text-align:right;border-bottom:1px solid rgba(30,45,69,.5);white-space:nowrap}
+tbody td.l{text-align:left}
+tbody tr:hover{background:var(--bg-hover)}
+td.nimi{font-weight:600}
+td.jk{color:var(--text-secondary);font-size:12px}
+.pos{color:var(--accent-green)} .neg{color:var(--accent-red)}
+.n{color:var(--text-muted);font-size:11px}
+.pieni{opacity:.45}
+.warn{color:var(--accent-orange);font-weight:700;cursor:help}
+.enn{color:var(--accent-lime);font-weight:600}
+.sep{border-left:1px solid var(--border)}
+.foot{color:var(--text-muted);font-size:11.5px;margin-top:26px;line-height:1.75}
+.foot b{color:var(--text-secondary)}
+.tyhja{padding:40px;text-align:center;color:var(--text-muted);font-size:13px}
+</style>
+<style>
+.kortit{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px;margin-bottom:8px}
+.kortti{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.kortti .otsikko{font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--text-muted);font-weight:700;margin-bottom:8px}
+.kortti .nimi{font-size:15px;font-weight:700;margin-bottom:2px}
+.kortti .arvo{font-size:26px;font-weight:800;color:var(--accent-lime);line-height:1.15;font-variant-numeric:tabular-nums}
+.kortti .lisa{font-size:11.5px;color:var(--text-secondary);margin-top:3px}
+.kortti .jono{margin-top:9px;padding-top:8px;border-top:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7}
+.kortti .jono b{color:var(--text-secondary);font-weight:600}
+.palkki{display:inline-block;height:9px;border-radius:2px;vertical-align:middle;margin-right:5px}
+.palkki.p{background:var(--accent-green)} .palkki.n{background:var(--accent-red)}
+td.ero{white-space:nowrap;font-variant-numeric:tabular-nums}
+.perustaso{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;
+  padding:11px 15px;margin-bottom:16px;font-size:12.5px;color:var(--text-secondary);
+  display:flex;gap:26px;flex-wrap:wrap}
+.perustaso b{color:var(--accent-cyan);font-variant-numeric:tabular-nums}
+th.sortable{cursor:pointer;user-select:none}
+th.sortable:hover{color:var(--text-primary)}
+th.sortable.aktiivinen{color:var(--accent-cyan)}
+</style>
+</head>
+<body>
+
+<div id="header">
+  <div class="header-inner">
+    <div class="logo-mark">
+      <div class="logo-icon">SP</div>
+      <div><div class="logo-text">Superpesis Pro</div><div class="logo-sub">Analytiikka</div></div>
+    </div>
+    <div class="header-divider"></div>
+    <nav id="main-nav">
+      <a href="index.html" class="nav-btn" id="nav-koti">🏠 Aloitus</a>
+      <a href="lukkari.html" class="nav-btn">⚾ Lukkari</a>
+      <a href="raportit.html" class="nav-btn">📰 Raportit</a>
+      <a href="ketjut.html" class="nav-btn">⛓️ Ketjut</a>
+      <a href="pudotuspelit.html" class="nav-btn">🏆 Pudotuspelit</a>
+      <a href="kooste.html" class="nav-btn active">📊 Kooste</a>
+    </nav>
+    <div class="header-meta"><span class="season-badge" id="kausibadge">—</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="page-title">📊 Runkosarjan kooste</div>
+  <div class="sub" id="alaotsikko">Ladataan…</div>
+
+  <div class="perustaso" id="perustaso"></div>
+
+  <h2 class="sec">Kauden kärki</h2>
+  <p class="secsub">Suurimmat kokonaispanokset ja suurimmat poikkeamat odottamaan.</p>
+  <div class="kortit" id="kortit"></div>
+
+  <h2 class="sec">Joukkueet</h2>
+  <p class="secsub">Odottama = paljonko joukkueen omista yrityksistä olisi syntynyt sarjan keskitasolla. Ero kertoo yli- tai alisuorituksen.</p>
+  <div class="tblwrap" style="max-height:none"><table id="tbl-j"></table></div>
+
+  <h2 class="sec">Pelaajat</h2>
+  <p class="secsub">Klikkaa saraketta järjestääksesi. Odottamat lasketaan pelaajan omista yrityksistä.</p>
+  <div class="ctrl">
+    <div class="cg"><label>Joukkue</label><select id="sel-jk"></select></div>
+    <div class="cg"><label>Vähintään otteluita</label>
+      <div class="seg" id="seg-min">
+        <button data-v="1">1</button><button data-v="10">10</button>
+        <button data-v="20" class="on">20</button><button data-v="28">28</button>
+      </div></div>
+    <div class="cg"><label>Näkymä</label>
+      <div class="seg" id="seg-nak">
+        <button data-v="juoksut" class="on">Juoksut ja odottamat</button>
+        <button data-v="karki">Kärkilyönnit</button>
+        <button data-v="kolmos">3-tilanne</button>
+      </div></div>
+  </div>
+  <div class="tblwrap"><table id="tbl-p"></table></div>
+
+  <div class="foot" id="alaviite"></div>
+</div>
+
+<script>
+(function(){var a=document.getElementById('nav-koti');
+ if(a&&location.protocol==='file:')a.href='Superpesis_Pro_Dashboard.html';})();
+</script>
+<script src="pdata_kooste.js"></script>
+<script>
+(function(){
+"use strict";
+var D=(typeof PKOOSTE!=='undefined')?PKOOSTE:null;
+var $=function(i){return document.getElementById(i);};
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function pc(v){return (v===null||v===undefined)?'–':Number(v).toFixed(1)+' %';}
+function nu(v,d){return (v===null||v===undefined)?'–':Number(v).toFixed(d===undefined?1:d);}
+function ero(v,skaala){
+  if(v===null||v===undefined) return '<span class="n">–</span>';
+  var w=Math.min(46,Math.abs(v)*(skaala||2));
+  var c=v>0?'p':'n', k=v>0?'pos':'neg';
+  return '<span class="palkki '+c+'" style="width:'+w.toFixed(0)+'px"></span>'
+       + '<span class="'+k+'">'+(v>0?'+':'')+Number(v).toFixed(1)+'</span>';
+}
+if(!D){$('alaotsikko').textContent='pdata_kooste.js puuttuu tai on rikki.';return;}
+
+var P=D.meta.perustaso;
+$('kausibadge').textContent='MSU '+D.meta.kausi;
+$('alaotsikko').innerHTML='Kausi '+D.meta.kausi+' · runkosarja · '
+  +Object.keys(D.joukkueet).length+' joukkuetta, '+D.pelaajat.length+' pelaajaa · päivitetty '+esc(D.meta.generoitu);
+$('perustaso').innerHTML=
+  '<span>Sarjan perustaso — näihin odottamat perustuvat:</span>'
+ +'<span>Lyöty (L) <b>'+nu(P.L_pct)+' %</b></span>'
+ +'<span>Tuotu (T) <b>'+nu(P.T_pct)+' %</b></span>'
+ +'<span>Kärkilyönti (KL) <b>'+nu(P.KL_pct)+' %</b></span>'
+ +'<span>3-tilanne (KL3) <b>'+nu(P.KL3_pct)+' %</b></span>';
+
+/* ---------- kortit ---------- */
+(function(){
+  var kelpo=D.pelaajat.filter(function(p){return p.O>=15;});
+  function kar(avain,n){return kelpo.slice().sort(function(a,b){return (b[avain]||0)-(a[avain]||0);}).slice(0,n);}
+  function jono(lista,avain,d){return lista.map(function(p,idx){
+    return '<div><b>'+(idx+1)+'. '+esc(p.nimi)+'</b> '+esc(p.joukkue)+' — '+nu(p[avain],d)+'</div>';}).join('');}
+  var yht=kar('YHT',4), yli=kar('eroYHT',4);
+  var ali=kelpo.slice().sort(function(a,b){return (a.eroYHT||0)-(b.eroYHT||0);}).slice(0,4);
+  var kl=kelpo.filter(function(p){return p.KLY>=80;}).sort(function(a,b){return (b.KL_pct||0)-(a.KL_pct||0);}).slice(0,4);
+  var k3=kelpo.filter(function(p){return p.KLY3>=20;}).sort(function(a,b){return (b.KL3_pct||0)-(a.KL3_pct||0);}).slice(0,4);
+  var h='';
+  h+='<div class="kortti"><div class="otsikko">Kokonaispanos YHT</div>'
+    +'<div class="nimi">'+esc(yht[0].nimi)+'</div><div class="arvo">'+yht[0].YHT+'</div>'
+    +'<div class="lisa">'+esc(yht[0].joukkue)+' · '+yht[0].K+'+'+yht[0].L+' ja '+yht[0].T+' tuotua</div>'
+    +'<div class="jono">'+jono(yht.slice(1),'YHT',0)+'</div></div>';
+  h+='<div class="kortti"><div class="otsikko">Suurin ylisuoritus</div>'
+    +'<div class="nimi">'+esc(yli[0].nimi)+'</div><div class="arvo">'+(yli[0].eroYHT>0?'+':'')+nu(yli[0].eroYHT)+'</div>'
+    +'<div class="lisa">'+esc(yli[0].joukkue)+' · YHT '+yli[0].YHT+' vs odotettu '+nu(yli[0].oYHT)+'</div>'
+    +'<div class="jono">'+jono(yli.slice(1),'eroYHT')+'</div></div>';
+  h+='<div class="kortti"><div class="otsikko">Suurin alisuoritus</div>'
+    +'<div class="nimi">'+esc(ali[0].nimi)+'</div><div class="arvo" style="color:var(--accent-red)">'+nu(ali[0].eroYHT)+'</div>'
+    +'<div class="lisa">'+esc(ali[0].joukkue)+' · YHT '+ali[0].YHT+' vs odotettu '+nu(ali[0].oYHT)+'</div>'
+    +'<div class="jono">'+jono(ali.slice(1),'eroYHT')+'</div></div>';
+  h+='<div class="kortti"><div class="otsikko">Kärkilyönti-% (min 80 yr.)</div>'
+    +'<div class="nimi">'+esc(kl[0].nimi)+'</div><div class="arvo">'+nu(kl[0].KL_pct)+' %</div>'
+    +'<div class="lisa">'+esc(kl[0].joukkue)+' · '+kl[0].KL+'/'+kl[0].KLY+'</div>'
+    +'<div class="jono">'+jono(kl.slice(1),'KL_pct')+'</div></div>';
+  h+='<div class="kortti"><div class="otsikko">3-tilanne KL%3 (min 25 yr.)</div>'
+    +'<div class="nimi">'+esc(k3[0].nimi)+'</div><div class="arvo">'+nu(k3[0].KL3_pct)+' %</div>'
+    +'<div class="lisa">'+esc(k3[0].joukkue)+' · '+k3[0].KL3+'/'+k3[0].KLY3+' · xR '+nu(k3[0].xR,2)+'</div>'
+    +'<div class="jono">'+jono(k3.slice(1),'KL3_pct')+'</div></div>';
+  $('kortit').innerHTML=h;
+})();
+
+/* ---------- joukkuetaulukko ---------- */
+(function(){
+  var rivit=Object.keys(D.joukkueet).map(function(n){var o=D.joukkueet[n];o.nimi=n;return o;});
+  rivit.sort(function(a,b){return (b.voitot||0)-(a.voitot||0);});
+  var h='<thead><tr class="grp"><th class="l" colspan="4"></th><th colspan="4">Toteutunut</th>'
+      +'<th class="sep" colspan="2">Odottama</th><th colspan="3">Kärkilyönti</th><th colspan="3">3-tilanne</th></tr>'
+      +'<tr><th class="l">Joukkue</th><th>O</th><th>V</th><th>Juoksut/O</th>'
+      +'<th>K</th><th>L</th><th>T</th><th>YHT</th>'
+      +'<th class="sep">Odotettu YHT</th><th>Ero</th>'
+      +'<th>KL%</th><th>KLY</th><th>Torjunta-%</th>'
+      +'<th>KL%3</th><th>xR</th><th>Ero KL3</th></tr></thead><tbody>';
+  rivit.forEach(function(r){
+    h+='<tr><td class="l nimi">'+esc(r.nimi)+'</td><td>'+r.ottelut+'</td><td>'+r.voitot+'</td>'
+      +'<td>'+nu(r.juoksut_per_O,2)+'</td>'
+      +'<td>'+r.K+'</td><td>'+r.L+'</td><td>'+r.T+'</td><td><b>'+r.YHT+'</b></td>'
+      +'<td class="sep">'+nu(r.oYHT)+'</td><td class="ero">'+ero(r.eroYHT,1.2)+'</td>'
+      +'<td><b>'+pc(r.KL_pct)+'</b></td><td class="n">'+r.KLY+'</td><td>'+pc(r.torjunta_pct)+'</td>'
+      +'<td>'+pc(r.KL3_pct)+'</td><td>'+nu(r.xR,2)+'</td><td class="ero">'+ero(r.eroKL3,1.2)+'</td></tr>';
+  });
+  $('tbl-j').innerHTML=h+'</tbody>';
+})();
+
+/* ---------- pelaajataulukko ---------- */
+var tila={jk:'',min:20,nak:'juoksut',jarj:null,suunta:1};
+(function(){var s={};D.pelaajat.forEach(function(p){if(p.joukkue)s[p.joukkue]=1;});
+  $('sel-jk').innerHTML='<option value="">Kaikki joukkueet</option>'
+    +Object.keys(s).sort().map(function(k){return '<option>'+esc(k)+'</option>';}).join('');})();
+
+var SARAKKEET={
+ juoksut:[['nimi','Pelaaja','l'],['joukkue','Jk','l'],['O','O'],['K','K'],['L','L'],['T','T'],['YHT','YHT'],
+          ['oYHT','Odotettu YHT','sep'],['eroYHT','Ero','ero'],
+          ['L_pct','L-%'],['T_pct','T-%'],['YHT_per_O','YHT/O']],
+ karki:[['nimi','Pelaaja','l'],['joukkue','Jk','l'],['O','O'],['KL','KL'],['KLY','KLY'],['KL_pct','KL%'],
+        ['oKL','Odotettu KL','sep'],['eroKL','Ero','ero'],['vuorot','Lyöntivuoroja'],['vapaat','Vapaat']],
+ kolmos:[['nimi','Pelaaja','l'],['joukkue','Jk','l'],['O','O'],['KL3','KL3'],['KLY3','KLY3'],['KL3_pct','KL%3'],
+         ['oKL3','Odotettu KL3','sep'],['eroKL3','Ero','ero'],['xR','xR'],['oxR','Odotettu xR']]
+};
+var OLETUS={juoksut:'YHT',karki:'KL_pct',kolmos:'KL3_pct'};
+/* Prosenttilajittelussa pieni nimittaja tuottaa harhaisen karjen (2/2 = 100 %).
+   Minimit ovat sarjan mediaanin tuntumassa; alle jaavat rivit nayttavat luvun
+   mutta himmennettyina eivatka nouse karkeen. */
+var MIN_NIMITTAJA={KL_pct:['KLY',50],KL3_pct:['KLY3',20],L_pct:['L_yrit',30],T_pct:['T_yrit',15]};
+function riittava(p,jarj){
+  var m=MIN_NIMITTAJA[jarj];
+  return !m || (p[m[0]]||0) >= m[1];
+}
+
+function piirraP(){
+  var sar=SARAKKEET[tila.nak];
+  var jarj=tila.jarj||OLETUS[tila.nak];
+  var rivit=D.pelaajat.filter(function(p){
+    if(p.O<tila.min) return false;
+    if(tila.jk&&p.joukkue!==tila.jk) return false;
+    return true;});
+  rivit.sort(function(a,b){
+    var ra=riittava(a,jarj), rb=riittava(b,jarj);
+    if(ra!==rb) return ra?-1:1;              // pieni otanta aina viimeisena
+    var x=a[jarj],y=b[jarj];
+    if(typeof x==='string') return tila.suunta*String(y).localeCompare(String(x));
+    return tila.suunta*((y===null||y===undefined?-1e9:y)-(x===null||x===undefined?-1e9:x));});
+  var h='<thead><tr>';
+  sar.forEach(function(c){
+    h+='<th class="sortable'+(c[2]==='l'?' l':'')+(c[2]==='sep'?' sep':'')
+      +(jarj===c[0]?' aktiivinen':'')+'" data-k="'+c[0]+'">'+esc(c[1])+'</th>';});
+  h+='</tr></thead><tbody>';
+  rivit.slice(0,300).forEach(function(p){
+    var pieni=!riittava(p,jarj);
+    h+='<tr'+(pieni?' class="pieni"':'')+'>';
+    sar.forEach(function(c){
+      var k=c[0],v=p[k];
+      if(k==='nimi') h+='<td class="l nimi">'+esc(v)+'</td>';
+      else if(k==='joukkue') h+='<td class="l jk">'+esc(v)+'</td>';
+      else if(c[2]==='ero') h+='<td class="ero">'+ero(v,1.6)+'</td>';
+      else if(/_pct$/.test(k)) h+='<td>'+pc(v)+(pieni&&k===jarj?' <span class="warn" title="Liian vähän yrityksiä luotettavaan vertailuun">⚠</span>':'')+'</td>';
+      else if(k==='xR'||k==='oxR'||k==='YHT_per_O') h+='<td>'+nu(v,2)+'</td>';
+      else if(k==='oYHT'||k==='oKL'||k==='oKL3') h+='<td class="sep">'+nu(v)+'</td>';
+      else h+='<td>'+(v===null||v===undefined?'–':v)+'</td>';});
+    h+='</tr>';});
+  $('tbl-p').innerHTML=h+'</tbody>';
+  $('tbl-p').querySelectorAll('th.sortable').forEach(function(th){
+    th.addEventListener('click',function(){
+      var k=th.getAttribute('data-k');
+      if(tila.jarj===k) tila.suunta=-tila.suunta; else {tila.jarj=k;tila.suunta=1;}
+      piirraP();});});
+}
+function seg(id,cb){var el=$(id);if(!el)return;
+  el.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    el.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on');cb(b.getAttribute('data-v'));});}
+seg('seg-min',function(v){tila.min=+v;piirraP();});
+seg('seg-nak',function(v){tila.nak=v;tila.jarj=null;tila.suunta=1;piirraP();});
+$('sel-jk').addEventListener('change',function(){tila.jk=this.value;piirraP();});
+piirraP();
+
+$('alaviite').innerHTML=
+ '<b>Termit</b> ovat pesistulokset.fi-standardin mukaiset: K = kunnareita, L = lyötyjä '
+ +'(lyönnillä kotiin tuodut muut pelaajat), T = tuotuja (pelaaja itse juoksi kotipesälle), '
+ +'YHT = K + L + T. KL / KLY / KL% = kärkilyönnit, yritykset ja onnistumisprosentti. '
+ +'KL3 = kärkilyönnit 3. pesältä. xR = onnistuneet kolmostilanteet per ottelu.<br>'
+ +'<b>Odottama</b> kertoo paljonko pelaajan <i>omista yrityksistä</i> olisi syntynyt, jos hän olisi '
+ +'onnistunut sarjan keskitasolla. Esimerkiksi odotettu L = L-yritykset × '+nu(P.L_pct)+' %. '
+ +'Ero = toteutunut − odotettu; plus tarkoittaa ylisuoritusta.<br>'
+ +'<span style="color:var(--accent-orange)"><b>Odottama ei ole ennuste.</b> Se on vertailukohta, ei arvio '
+ +'siitä mitä seuraavaksi tapahtuu. Pienillä yritysmäärillä ero on suurelta osin satunnaisvaihtelua — '
+ +'katso aina yritysten määrää luvun vierestä.</span><br>'
+ +'<b>Sarakekartoituksesta:</b> projektin vanha <code>Sarakekuvaukset.docx</code> (huhtikuu) väittää '
+ +'<code>runs</code> = lyötyjä ja <code>scorings</code> = tuotuja. Se on väärin päin. Todennettu datasta: '
+ +'pelaajien <code>runs</code>-summa 2266 vastaa joukkueiden juoksujen kokonaismäärää 2202, '
+ +'<code>scorings</code>-summa on 1996. Tämä sivu käyttää oikeaa kartoitusta.';
+})();
+</script>
+
+</body>
+</html>
