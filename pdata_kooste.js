@@ -3,13 +3,14 @@ const PKOOSTE = {
   "kausi": 2026,
   "vaihe": "runko",
   "seasonSeries": 2945,
-  "generoitu": "2026-08-16 17:38:57",
+  "generoitu": "2026-08-16 21:44:31",
   "perustaso": {
    "L_pct": 44.14,
    "T_pct": 47.29,
    "KL_pct": 53.66,
    "KL3_pct": 45.31
   },
+  "lukkari_lahde": "16.8.2026 21:09",
   "termit": {
    "K": "kunnareita",
    "L": "lyötyjä",
@@ -57,7 +58,17 @@ const PKOOSTE = {
    "xR": 6.94,
    "oxR": 6.16,
    "torjunta_pct": 47.3,
-   "rab3": 478
+   "sallittu_KL": 1101,
+   "vastustajan_KLY": 2088,
+   "o_sallittu": 1120.5,
+   "eroTorjunta": 19.5,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 111,
+   "karpaset": 32,
+   "vapaat_per_O": 3.36,
+   "karpaset_per_O": 0.97,
+   "rab3": 478,
+   "eroYhteensa": 67.1
   },
   "AA": {
    "ottelut": 33,
@@ -96,7 +107,17 @@ const PKOOSTE = {
    "xR": 3.39,
    "oxR": 4.08,
    "torjunta_pct": 39.5,
-   "rab3": 340
+   "sallittu_KL": 1425,
+   "vastustajan_KLY": 2357,
+   "o_sallittu": 1264.9,
+   "eroTorjunta": -160.1,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 91,
+   "karpaset": 37,
+   "vapaat_per_O": 2.76,
+   "karpaset_per_O": 1.12,
+   "rab3": 340,
+   "eroYhteensa": -200.2
   },
   "PattU": {
    "ottelut": 33,
@@ -135,7 +156,17 @@ const PKOOSTE = {
    "xR": 5.12,
    "oxR": 5.33,
    "torjunta_pct": 46.0,
-   "rab3": 404
+   "sallittu_KL": 1145,
+   "vastustajan_KLY": 2120,
+   "o_sallittu": 1137.7,
+   "eroTorjunta": -7.3,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 95,
+   "karpaset": 41,
+   "vapaat_per_O": 2.88,
+   "karpaset_per_O": 1.24,
+   "rab3": 404,
+   "eroYhteensa": -19.8
   },
   "KiPa": {
    "ottelut": 33,
@@ -174,7 +205,17 @@ const PKOOSTE = {
    "xR": 5.76,
    "oxR": 5.81,
    "torjunta_pct": 50.3,
-   "rab3": 455
+   "sallittu_KL": 1072,
+   "vastustajan_KLY": 2157,
+   "o_sallittu": 1157.5,
+   "eroTorjunta": 85.5,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 83,
+   "karpaset": 28,
+   "vapaat_per_O": 2.52,
+   "karpaset_per_O": 0.85,
+   "rab3": 455,
+   "eroYhteensa": 79.8
   },
   "JoMa": {
    "ottelut": 33,
@@ -213,7 +254,17 @@ const PKOOSTE = {
    "xR": 4.79,
    "oxR": 5.53,
    "torjunta_pct": 47.5,
-   "rab3": 424
+   "sallittu_KL": 1042,
+   "vastustajan_KLY": 1985,
+   "o_sallittu": 1065.2,
+   "eroTorjunta": 23.2,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 118,
+   "karpaset": 29,
+   "vapaat_per_O": 3.58,
+   "karpaset_per_O": 0.88,
+   "rab3": 424,
+   "eroYhteensa": -27.9
   },
   "KPL": {
    "ottelut": 33,
@@ -252,7 +303,17 @@ const PKOOSTE = {
    "xR": 5.7,
    "oxR": 6.16,
    "torjunta_pct": 51.0,
-   "rab3": 472
+   "sallittu_KL": 1003,
+   "vastustajan_KLY": 2046,
+   "o_sallittu": 1098.0,
+   "eroTorjunta": 95.0,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 93,
+   "karpaset": 36,
+   "vapaat_per_O": 2.82,
+   "karpaset_per_O": 1.09,
+   "rab3": 472,
+   "eroYhteensa": 67.9
   },
   "KeKi": {
    "ottelut": 33,
@@ -291,7 +352,17 @@ const PKOOSTE = {
    "xR": 5.18,
    "oxR": 5.14,
    "torjunta_pct": 43.1,
-   "rab3": 403
+   "sallittu_KL": 1199,
+   "vastustajan_KLY": 2106,
+   "o_sallittu": 1130.2,
+   "eroTorjunta": -68.8,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 105,
+   "karpaset": 31,
+   "vapaat_per_O": 3.18,
+   "karpaset_per_O": 0.94,
+   "rab3": 403,
+   "eroYhteensa": -56.6
   },
   "KoU": {
    "ottelut": 33,
@@ -330,7 +401,17 @@ const PKOOSTE = {
    "xR": 4.39,
    "oxR": 4.39,
    "torjunta_pct": 40.5,
-   "rab3": 342
+   "sallittu_KL": 1321,
+   "vastustajan_KLY": 2219,
+   "o_sallittu": 1190.8,
+   "eroTorjunta": -130.2,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 153,
+   "karpaset": 25,
+   "vapaat_per_O": 4.64,
+   "karpaset_per_O": 0.76,
+   "rab3": 342,
+   "eroYhteensa": -131.2
   },
   "Tahko": {
    "ottelut": 33,
@@ -369,7 +450,17 @@ const PKOOSTE = {
    "xR": 5.58,
    "oxR": 5.63,
    "torjunta_pct": 49.5,
-   "rab3": 412
+   "sallittu_KL": 1039,
+   "vastustajan_KLY": 2056,
+   "o_sallittu": 1103.3,
+   "eroTorjunta": 64.3,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 111,
+   "karpaset": 42,
+   "vapaat_per_O": 3.36,
+   "karpaset_per_O": 1.27,
+   "rab3": 412,
+   "eroYhteensa": 62.3
   },
   "ViVe": {
    "ottelut": 33,
@@ -408,7 +499,17 @@ const PKOOSTE = {
    "xR": 8.21,
    "oxR": 7.04,
    "torjunta_pct": 48.7,
-   "rab3": 537
+   "sallittu_KL": 1092,
+   "vastustajan_KLY": 2130,
+   "o_sallittu": 1143.1,
+   "eroTorjunta": 51.1,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 57,
+   "karpaset": 31,
+   "vapaat_per_O": 1.73,
+   "karpaset_per_O": 0.94,
+   "rab3": 537,
+   "eroYhteensa": 118.3
   },
   "SoJy": {
    "ottelut": 33,
@@ -447,7 +548,17 @@ const PKOOSTE = {
    "xR": 6.45,
    "oxR": 6.14,
    "torjunta_pct": 49.3,
-   "rab3": 480
+   "sallittu_KL": 1102,
+   "vastustajan_KLY": 2174,
+   "o_sallittu": 1166.7,
+   "eroTorjunta": 64.7,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 95,
+   "karpaset": 38,
+   "vapaat_per_O": 2.88,
+   "karpaset_per_O": 1.15,
+   "rab3": 480,
+   "eroYhteensa": 92.0
   },
   "IPV": {
    "ottelut": 33,
@@ -486,7 +597,17 @@ const PKOOSTE = {
    "xR": 4.48,
    "oxR": 4.59,
    "torjunta_pct": 44.6,
-   "rab3": 357
+   "sallittu_KL": 1196,
+   "vastustajan_KLY": 2160,
+   "o_sallittu": 1159.1,
+   "eroTorjunta": -36.9,
+   "o_torjunta_pct": 46.3,
+   "vapaat": 83,
+   "karpaset": 39,
+   "vapaat_per_O": 2.52,
+   "karpaset_per_O": 1.18,
+   "rab3": 357,
+   "eroYhteensa": -51.7
   }
  },
  "pelaajat": [
