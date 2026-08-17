@@ -2,7 +2,7 @@ const PPO = {
  "meta": {
   "kausi": 2026,
   "seasonSeries": 2945,
-  "generoitu": "2026-08-16 21:44:30",
+  "generoitu": "2026-08-17 18:06:21",
   "kutistuspaino_w": 34,
   "rating": {
    "AA": -1.3455,
@@ -11468,69 +11468,198 @@ const PPO = {
  ],
  "sarjat": [
   {
-   "id": null,
-   "kierros": "Puolivalierat",
-   "best_of": "5",
-   "tarvittavat_voitot": 3,
-   "koti": "ViVe",
-   "vieras": "PattU",
-   "sijat": [
-    1,
-    8
-   ],
-   "kasin_syotetty": true,
-   "voitot": {
-    "koti": 0,
-    "vieras": 0
+   "id": 3336,
+   "kierros": "Puolivälierät",
+   "ennakko": {
+    "kulma": "Parin kiinnostavin asetelma. Molemmat elavat torjunnalla: KPL +95 ja KiPa +86, sarjan kaksi parasta. Kummankin kotiutus on odottaman alapuolella. Runkosarjassa KiPa vei 2-1 ja molemmat voitot tulivat kotiutuskilpailussa. Ne ovat myos sarjan kaksi parasta kotarijoukkuetta: KPL 8/12, KiPa 7/11. Odota vahajuoksuista sarjaa ja varaudu siihen etta ratkaisu tulee kotarista.",
+    "vertailu": {
+     "koti": {
+      "nimi": "KPL",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 23,
+      "KL_pct": 54.5,
+      "KL3_pct": 41.9,
+      "torjunta_pct": 51.0,
+      "eroHyokkays": -27.1,
+      "eroTorjunta": 95.0,
+      "eroYhteensa": 67.9,
+      "juoksut_per_O": 5.85,
+      "vapaat_per_O": 2.91,
+      "vapaat_kolmostil": 5,
+      "karpaset_per_O": 1.12,
+      "kotari": {
+       "n": 12,
+       "voitot": 8,
+       "pct": 66.7
+      },
+      "rating": 0.3689
+     },
+     "vieras": {
+      "nimi": "KiPa",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 20,
+      "KL_pct": 54.2,
+      "KL3_pct": 44.9,
+      "torjunta_pct": 50.3,
+      "eroHyokkays": -5.7,
+      "eroTorjunta": 85.5,
+      "eroYhteensa": 79.8,
+      "juoksut_per_O": 5.97,
+      "vapaat_per_O": 2.68,
+      "vapaat_kolmostil": 6,
+      "karpaset_per_O": 0.9,
+      "kotari": {
+       "n": 11,
+       "voitot": 7,
+       "pct": 63.6
+      },
+      "rating": 0.1714
+     }
+    },
+    "h2h": {
+     "ottelut": [
+      {
+       "pvm": "2026-07-14",
+       "koti": "KPL",
+       "vieras": "KiPa",
+       "tulos": "2-0 (3-1, 4-2)",
+       "ratkaisu": null,
+       "voittaja": "KPL"
+      },
+      {
+       "pvm": "2026-07-26",
+       "koti": "KiPa",
+       "vieras": "KPL",
+       "tulos": "1-0k (0-0, 0-0, 2-1k)",
+       "ratkaisu": "k",
+       "voittaja": "KiPa"
+      },
+      {
+       "pvm": "2026-08-03",
+       "koti": "KPL",
+       "vieras": "KiPa",
+       "tulos": "1-2k (0-2, 3-0, 1-4k)",
+       "ratkaisu": "k",
+       "voittaja": "KiPa"
+      }
+     ],
+     "voitot": {
+      "KPL": 1,
+      "KiPa": 2
+     },
+     "kotareita": 2
+    },
+    "avainpelaajat": {
+     "KPL": {
+      "panos": [
+       {
+        "nimi": "Teemu Nikkanen",
+        "YHT": 55,
+        "K": 2,
+        "L": 50,
+        "T": 3,
+        "KL_pct": 49.3,
+        "KLY": 225
+       },
+       {
+        "nimi": "Patrik Wahlsten",
+        "YHT": 55,
+        "K": 0,
+        "L": 53,
+        "T": 2,
+        "KL_pct": 37.5,
+        "KLY": 208
+       },
+       {
+        "nimi": "Elias Pitkänen",
+        "YHT": 55,
+        "K": 4,
+        "L": 25,
+        "T": 26,
+        "KL_pct": 64.7,
+        "KLY": 221
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Eemeli Laine",
+        "YHT": 47,
+        "K": 1,
+        "L": 2,
+        "T": 44,
+        "KL_pct": 68.7,
+        "KLY": 230
+       },
+       {
+        "nimi": "Elias Pitkänen",
+        "YHT": 55,
+        "K": 4,
+        "L": 25,
+        "T": 26,
+        "KL_pct": 64.7,
+        "KLY": 221
+       }
+      ]
+     },
+     "KiPa": {
+      "panos": [
+       {
+        "nimi": "Janne Mäkelä",
+        "YHT": 59,
+        "K": 1,
+        "L": 55,
+        "T": 3,
+        "KL_pct": 40.3,
+        "KLY": 181
+       },
+       {
+        "nimi": "Jiri Pippola",
+        "YHT": 55,
+        "K": 1,
+        "L": 46,
+        "T": 8,
+        "KL_pct": 42.2,
+        "KLY": 206
+       },
+       {
+        "nimi": "Samu-Kalle Varonen",
+        "YHT": 46,
+        "K": 3,
+        "L": 23,
+        "T": 20,
+        "KL_pct": 59.0,
+        "KLY": 222
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Otto Kauppinen",
+        "YHT": 36,
+        "K": 1,
+        "L": 1,
+        "T": 34,
+        "KL_pct": 70.5,
+        "KLY": 207
+       },
+       {
+        "nimi": "Aku Kettunen",
+        "YHT": 24,
+        "K": 0,
+        "L": 0,
+        "T": 24,
+        "KL_pct": 65.7,
+        "KLY": 198
+       }
+      ]
+     }
+    }
    },
-   "paattynyt": false,
-   "todennakoisyys": {
-    "koti_ottelu_kotona": 0.814,
-    "koti_ottelu_vieraissa": 0.7703,
-    "koti_sarja": 0.9397,
-    "koti_sarja_alussa": 0.9397
-   },
-   "seuraava": null,
-   "ottelut": []
-  },
-  {
-   "id": null,
-   "kierros": "Puolivalierat",
-   "best_of": "5",
-   "tarvittavat_voitot": 3,
-   "koti": "SoJy",
-   "vieras": "JoMa",
-   "sijat": [
-    2,
-    7
-   ],
-   "kasin_syotetty": true,
-   "voitot": {
-    "koti": 0,
-    "vieras": 0
-   },
-   "paattynyt": false,
-   "todennakoisyys": {
-    "koti_ottelu_kotona": 0.6077,
-    "koti_ottelu_vieraissa": 0.5422,
-    "koti_sarja": 0.6504,
-    "koti_sarja_alussa": 0.6504
-   },
-   "seuraava": null,
-   "ottelut": []
-  },
-  {
-   "id": null,
-   "kierros": "Puolivalierat",
    "best_of": "5",
    "tarvittavat_voitot": 3,
    "koti": "KPL",
    "vieras": "KiPa",
-   "sijat": [
-    3,
-    6
-   ],
-   "kasin_syotetty": true,
    "voitot": {
     "koti": 0,
     "vieras": 0
@@ -11542,21 +11671,257 @@ const PPO = {
     "koti_sarja": 0.603,
     "koti_sarja_alussa": 0.603
    },
-   "seuraava": null,
-   "ottelut": []
+   "seuraava": {
+    "pvm": "2026-08-21",
+    "koti": "KPL",
+    "vieras": "KiPa"
+   },
+   "ottelut": [
+    {
+     "id": 146956,
+     "pvm": "2026-08-21",
+     "pelattu": false,
+     "koti": "KPL",
+     "vieras": "KiPa",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146957,
+     "pvm": "2026-08-23",
+     "pelattu": false,
+     "koti": "KiPa",
+     "vieras": "KPL",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146958,
+     "pvm": "2026-08-25",
+     "pelattu": false,
+     "koti": "KPL",
+     "vieras": "KiPa",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146959,
+     "pvm": "2026-08-26",
+     "pelattu": false,
+     "koti": "KiPa",
+     "vieras": "KPL",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146960,
+     "pvm": "2026-08-28",
+     "pelattu": false,
+     "koti": "KPL",
+     "vieras": "KiPa",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    }
+   ]
   },
   {
-   "id": null,
-   "kierros": "Puolivalierat",
+   "id": 3337,
+   "kierros": "Puolivälierät",
+   "ennakko": {
+    "kulma": "Tasaisin pari, malli antaa Manselle 55 %. Manse tekee juoksuja odotettua enemman (+48), Tahko on tasan odottamassa. Torjunnassa jarjestys kaantyy: Tahko +64, Manse +20. Runkosarjassa Tahko 2-1 ja molemmat voitot kotarissa. Tahkon lukkari antaa eniten kolmostilanteen vapaita koko sarjassa, 15 kappaletta — siina on Mansen sauma.",
+    "vertailu": {
+     "koti": {
+      "nimi": "Manse",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 19,
+      "KL_pct": 55.4,
+      "KL3_pct": 51.0,
+      "torjunta_pct": 47.3,
+      "eroHyokkays": 47.6,
+      "eroTorjunta": 19.5,
+      "eroYhteensa": 67.1,
+      "juoksut_per_O": 7.18,
+      "vapaat_per_O": 3.36,
+      "vapaat_kolmostil": 7,
+      "karpaset_per_O": 0.97,
+      "kotari": {
+       "n": 11,
+       "voitot": 5,
+       "pct": 45.5
+      },
+      "rating": 0.3149
+     },
+     "vieras": {
+      "nimi": "Tahko",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 20,
+      "KL_pct": 52.5,
+      "KL3_pct": 44.9,
+      "torjunta_pct": 49.5,
+      "eroHyokkays": -2.0,
+      "eroTorjunta": 64.3,
+      "eroYhteensa": 62.3,
+      "juoksut_per_O": 5.67,
+      "vapaat_per_O": 3.36,
+      "vapaat_kolmostil": 15,
+      "karpaset_per_O": 1.27,
+      "kotari": {
+       "n": 13,
+       "voitot": 8,
+       "pct": 61.5
+      },
+      "rating": 0.2282
+     }
+    },
+    "h2h": {
+     "ottelut": [
+      {
+       "pvm": "2026-05-17",
+       "koti": "Tahko",
+       "vieras": "Manse",
+       "tulos": "2-1k (2-1, 5-9, 2-1k)",
+       "ratkaisu": "k",
+       "voittaja": "Tahko"
+      },
+      {
+       "pvm": "2026-06-26",
+       "koti": "Manse",
+       "vieras": "Tahko",
+       "tulos": "1-2k (7-4, 1-2, 2-3k)",
+       "ratkaisu": "k",
+       "voittaja": "Tahko"
+      },
+      {
+       "pvm": "2026-08-10",
+       "koti": "Manse",
+       "vieras": "Tahko",
+       "tulos": "2-0 (1-0, 5-1)",
+       "ratkaisu": null,
+       "voittaja": "Manse"
+      }
+     ],
+     "voitot": {
+      "Manse": 1,
+      "Tahko": 2
+     },
+     "kotareita": 2
+    },
+    "avainpelaajat": {
+     "Manse": {
+      "panos": [
+       {
+        "nimi": "Perttu Ruuska",
+        "YHT": 82,
+        "K": 2,
+        "L": 65,
+        "T": 15,
+        "KL_pct": 50.0,
+        "KLY": 274
+       },
+       {
+        "nimi": "Jukka-Pekka Vainionpää",
+        "YHT": 71,
+        "K": 2,
+        "L": 65,
+        "T": 4,
+        "KL_pct": 43.8,
+        "KLY": 224
+       },
+       {
+        "nimi": "Antti Korhonen",
+        "YHT": 56,
+        "K": 1,
+        "L": 33,
+        "T": 22,
+        "KL_pct": 62.4,
+        "KLY": 189
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Perttu Olli",
+        "YHT": 39,
+        "K": 3,
+        "L": 3,
+        "T": 33,
+        "KL_pct": 63.5,
+        "KLY": 189
+       },
+       {
+        "nimi": "Antti Korhonen",
+        "YHT": 56,
+        "K": 1,
+        "L": 33,
+        "T": 22,
+        "KL_pct": 62.4,
+        "KLY": 189
+       }
+      ]
+     },
+     "Tahko": {
+      "panos": [
+       {
+        "nimi": "Santtu Patova",
+        "YHT": 54,
+        "K": 1,
+        "L": 43,
+        "T": 10,
+        "KL_pct": 50.7,
+        "KLY": 203
+       },
+       {
+        "nimi": "Valentin Ikonen",
+        "YHT": 50,
+        "K": 2,
+        "L": 42,
+        "T": 6,
+        "KL_pct": 50.9,
+        "KLY": 222
+       },
+       {
+        "nimi": "Teemu Nurmio",
+        "YHT": 48,
+        "K": 3,
+        "L": 3,
+        "T": 42,
+        "KL_pct": 66.9,
+        "KLY": 281
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Teemu Nurmio",
+        "YHT": 48,
+        "K": 3,
+        "L": 3,
+        "T": 42,
+        "KL_pct": 66.9,
+        "KLY": 281
+       },
+       {
+        "nimi": "Luka Raesmaa",
+        "YHT": 39,
+        "K": 3,
+        "L": 3,
+        "T": 33,
+        "KL_pct": 66.0,
+        "KLY": 203
+       }
+      ]
+     }
+    }
+   },
    "best_of": "5",
    "tarvittavat_voitot": 3,
    "koti": "Manse",
    "vieras": "Tahko",
-   "sijat": [
-    4,
-    5
-   ],
-   "kasin_syotetty": true,
    "voitot": {
     "koti": 0,
     "vieras": 0
@@ -11568,11 +11933,852 @@ const PPO = {
     "koti_sarja": 0.5527,
     "koti_sarja_alussa": 0.5527
    },
-   "seuraava": null,
-   "ottelut": []
+   "seuraava": {
+    "pvm": "2026-08-21",
+    "koti": "Manse",
+    "vieras": "Tahko"
+   },
+   "ottelut": [
+    {
+     "id": 146951,
+     "pvm": "2026-08-21",
+     "pelattu": false,
+     "koti": "Manse",
+     "vieras": "Tahko",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146952,
+     "pvm": "2026-08-23",
+     "pelattu": false,
+     "koti": "Tahko",
+     "vieras": "Manse",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146953,
+     "pvm": "2026-08-25",
+     "pelattu": false,
+     "koti": "Manse",
+     "vieras": "Tahko",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146954,
+     "pvm": "2026-08-26",
+     "pelattu": false,
+     "koti": "Tahko",
+     "vieras": "Manse",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146955,
+     "pvm": "2026-08-28",
+     "pelattu": false,
+     "koti": "Manse",
+     "vieras": "Tahko",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    }
+   ]
+  },
+  {
+   "id": 3335,
+   "kierros": "Puolivälierät",
+   "ennakko": {
+    "kulma": "Sijoitusero puhuu SoJy:n puolesta, kohtaamiset eivat. JoMa voitti kolmesta kaksi, viimeisimman kotarissa 14.8. Mutta JoMa on sarjan pahin alisuorittaja kotiutuksessa, 51 juoksua odottamaa jaljessa, ja antaa 3,81 vapaata ottelua kohti. SoJy:n torjunta on +65. Jos JoMa ei tallakaan saa kotarikierrosta, matematiikka kaantyy nopeasti.",
+    "vertailu": {
+     "koti": {
+      "nimi": "SoJy",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 23,
+      "KL_pct": 57.7,
+      "KL3_pct": 47.7,
+      "torjunta_pct": 49.3,
+      "eroHyokkays": 27.3,
+      "eroTorjunta": 64.7,
+      "eroYhteensa": 92.0,
+      "juoksut_per_O": 6.73,
+      "vapaat_per_O": 2.97,
+      "vapaat_kolmostil": 5,
+      "karpaset_per_O": 1.19,
+      "kotari": {
+       "n": 8,
+       "voitot": 5,
+       "pct": 62.5
+      },
+      "rating": 0.5656
+     },
+     "vieras": {
+      "nimi": "JoMa",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 17,
+      "KL_pct": 54.0,
+      "KL3_pct": 39.2,
+      "torjunta_pct": 47.5,
+      "eroHyokkays": -51.1,
+      "eroTorjunta": 23.2,
+      "eroYhteensa": -27.9,
+      "juoksut_per_O": 4.97,
+      "vapaat_per_O": 3.81,
+      "vapaat_kolmostil": 8,
+      "karpaset_per_O": 0.94,
+      "kotari": {
+       "n": 9,
+       "voitot": 3,
+       "pct": 33.3
+      },
+      "rating": 0.2595
+     }
+    },
+    "h2h": {
+     "ottelut": [
+      {
+       "pvm": "2026-06-29",
+       "koti": "SoJy",
+       "vieras": "JoMa",
+       "tulos": "0-1 (1-2, 0-0)",
+       "ratkaisu": null,
+       "voittaja": "JoMa"
+      },
+      {
+       "pvm": "2026-07-14",
+       "koti": "SoJy",
+       "vieras": "JoMa",
+       "tulos": "1-0 (4-3, 4-4)",
+       "ratkaisu": null,
+       "voittaja": "SoJy"
+      },
+      {
+       "pvm": "2026-08-14",
+       "koti": "JoMa",
+       "vieras": "SoJy",
+       "tulos": "2-1k (3-5, 3-2, 3-2k)",
+       "ratkaisu": "k",
+       "voittaja": "JoMa"
+      }
+     ],
+     "voitot": {
+      "SoJy": 1,
+      "JoMa": 2
+     },
+     "kotareita": 1
+    },
+    "avainpelaajat": {
+     "SoJy": {
+      "panos": [
+       {
+        "nimi": "Aapo Hiltunen",
+        "YHT": 56,
+        "K": 2,
+        "L": 49,
+        "T": 5,
+        "KL_pct": 50.0,
+        "KLY": 220
+       },
+       {
+        "nimi": "Elmeri Purmonen",
+        "YHT": 47,
+        "K": 0,
+        "L": 2,
+        "T": 45,
+        "KL_pct": 68.3,
+        "KLY": 224
+       },
+       {
+        "nimi": "Samuel Huotari",
+        "YHT": 46,
+        "K": 0,
+        "L": 30,
+        "T": 16,
+        "KL_pct": 56.3,
+        "KLY": 197
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Kalle Kuosmanen",
+        "YHT": 25,
+        "K": 1,
+        "L": 2,
+        "T": 22,
+        "KL_pct": 73.1,
+        "KLY": 160
+       },
+       {
+        "nimi": "Elmeri Purmonen",
+        "YHT": 47,
+        "K": 0,
+        "L": 2,
+        "T": 45,
+        "KL_pct": 68.3,
+        "KLY": 224
+       }
+      ]
+     },
+     "JoMa": {
+      "panos": [
+       {
+        "nimi": "Juho Toivola",
+        "YHT": 70,
+        "K": 4,
+        "L": 59,
+        "T": 7,
+        "KL_pct": 45.3,
+        "KLY": 265
+       },
+       {
+        "nimi": "Joosua Rättö",
+        "YHT": 40,
+        "K": 2,
+        "L": 35,
+        "T": 3,
+        "KL_pct": 47.1,
+        "KLY": 206
+       },
+       {
+        "nimi": "Konsta Piironen",
+        "YHT": 38,
+        "K": 1,
+        "L": 2,
+        "T": 35,
+        "KL_pct": 65.7,
+        "KLY": 245
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Konsta Piironen",
+        "YHT": 38,
+        "K": 1,
+        "L": 2,
+        "T": 35,
+        "KL_pct": 65.7,
+        "KLY": 245
+       },
+       {
+        "nimi": "Kasperi Hämäläinen",
+        "YHT": 30,
+        "K": 3,
+        "L": 1,
+        "T": 26,
+        "KL_pct": 65.6,
+        "KLY": 183
+       }
+      ]
+     }
+    }
+   },
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "SoJy",
+   "vieras": "JoMa",
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.6077,
+    "koti_ottelu_vieraissa": 0.5422,
+    "koti_sarja": 0.6504,
+    "koti_sarja_alussa": 0.6504
+   },
+   "seuraava": {
+    "pvm": "2026-08-20",
+    "koti": "SoJy",
+    "vieras": "JoMa"
+   },
+   "ottelut": [
+    {
+     "id": 146946,
+     "pvm": "2026-08-20",
+     "pelattu": false,
+     "koti": "SoJy",
+     "vieras": "JoMa",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146947,
+     "pvm": "2026-08-22",
+     "pelattu": false,
+     "koti": "JoMa",
+     "vieras": "SoJy",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146948,
+     "pvm": "2026-08-25",
+     "pelattu": false,
+     "koti": "SoJy",
+     "vieras": "JoMa",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146949,
+     "pvm": "2026-08-26",
+     "pelattu": false,
+     "koti": "JoMa",
+     "vieras": "SoJy",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146950,
+     "pvm": "2026-08-28",
+     "pelattu": false,
+     "koti": "SoJy",
+     "vieras": "JoMa",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    }
+   ]
+  },
+  {
+   "id": 3334,
+   "kierros": "Puolivälierät",
+   "ennakko": {
+    "kulma": "ViVe on molemmilla mittareilla sarjan paras: kotiutus +67 ja torjunta +51 odottamaan nahden. Lukkari antaa 1,84 vapaata ottelua kohti, vahiten koko sarjassa — PattU ei saa ilmaisia etenijoita. Runkosarjassa 3-0 ViVelle. Mallin 94 % on kuitenkin sen testatun alueen ulkopuolella, joten ota se suuntana eika lukuna. PattU:n realistisin tie kulkee kotiutuskilpailun kautta.",
+    "vertailu": {
+     "koti": {
+      "nimi": "ViVe",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 28,
+      "KL_pct": 58.9,
+      "KL3_pct": 52.8,
+      "torjunta_pct": 48.7,
+      "eroHyokkays": 67.2,
+      "eroTorjunta": 51.1,
+      "eroYhteensa": 118.3,
+      "juoksut_per_O": 8.7,
+      "vapaat_per_O": 1.84,
+      "vapaat_kolmostil": 5,
+      "karpaset_per_O": 1.0,
+      "kotari": {
+       "n": 9,
+       "voitot": 5,
+       "pct": 55.6
+      },
+      "rating": 1.2833
+     },
+     "vieras": {
+      "nimi": "PattU",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 14,
+      "KL_pct": 54.6,
+      "KL3_pct": 43.6,
+      "torjunta_pct": 46.0,
+      "eroHyokkays": -12.5,
+      "eroTorjunta": -7.3,
+      "eroYhteensa": -19.8,
+      "juoksut_per_O": 5.3,
+      "vapaat_per_O": 2.97,
+      "vapaat_kolmostil": 7,
+      "karpaset_per_O": 1.28,
+      "kotari": {
+       "n": 9,
+       "voitot": 4,
+       "pct": 44.4
+      },
+      "rating": -0.0747
+     }
+    },
+    "h2h": {
+     "ottelut": [
+      {
+       "pvm": "2026-06-02",
+       "koti": "PattU",
+       "vieras": "ViVe",
+       "tulos": "0-2 (0-1, 1-4)",
+       "ratkaisu": null,
+       "voittaja": "ViVe"
+      },
+      {
+       "pvm": "2026-07-27",
+       "koti": "PattU",
+       "vieras": "ViVe",
+       "tulos": "0-2 (0-7, 4-5)",
+       "ratkaisu": null,
+       "voittaja": "ViVe"
+      },
+      {
+       "pvm": "2026-08-07",
+       "koti": "ViVe",
+       "vieras": "PattU",
+       "tulos": "2-0 (2-1, 11-8)",
+       "ratkaisu": null,
+       "voittaja": "ViVe"
+      }
+     ],
+     "voitot": {
+      "ViVe": 3,
+      "PattU": 0
+     },
+     "kotareita": 0
+    },
+    "avainpelaajat": {
+     "ViVe": {
+      "panos": [
+       {
+        "nimi": "Henri Puputti",
+        "YHT": 101,
+        "K": 7,
+        "L": 82,
+        "T": 12,
+        "KL_pct": 62.7,
+        "KLY": 233
+       },
+       {
+        "nimi": "Mikko Vihriälä",
+        "YHT": 64,
+        "K": 3,
+        "L": 2,
+        "T": 59,
+        "KL_pct": 65.9,
+        "KLY": 232
+       },
+       {
+        "nimi": "Aleksi Lassila",
+        "YHT": 57,
+        "K": 4,
+        "L": 9,
+        "T": 44,
+        "KL_pct": 66.4,
+        "KLY": 256
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Mikko Kanala",
+        "YHT": 36,
+        "K": 2,
+        "L": 0,
+        "T": 34,
+        "KL_pct": 76.9,
+        "KLY": 156
+       },
+       {
+        "nimi": "Elmeri Anttila",
+        "YHT": 46,
+        "K": 4,
+        "L": 20,
+        "T": 22,
+        "KL_pct": 70.0,
+        "KLY": 240
+       }
+      ]
+     },
+     "PattU": {
+      "panos": [
+       {
+        "nimi": "Martti Viitasalo",
+        "YHT": 66,
+        "K": 2,
+        "L": 61,
+        "T": 3,
+        "KL_pct": 41.5,
+        "KLY": 217
+       },
+       {
+        "nimi": "Mikael Mäkelä",
+        "YHT": 47,
+        "K": 5,
+        "L": 0,
+        "T": 42,
+        "KL_pct": 72.6,
+        "KLY": 208
+       },
+       {
+        "nimi": "Eemeli Mikkilä",
+        "YHT": 45,
+        "K": 2,
+        "L": 37,
+        "T": 6,
+        "KL_pct": 43.6,
+        "KLY": 181
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Mikael Mäkelä",
+        "YHT": 47,
+        "K": 5,
+        "L": 0,
+        "T": 42,
+        "KL_pct": 72.6,
+        "KLY": 208
+       },
+       {
+        "nimi": "Vertti Kontinaho",
+        "YHT": 28,
+        "K": 2,
+        "L": 3,
+        "T": 23,
+        "KL_pct": 71.5,
+        "KLY": 123
+       }
+      ]
+     }
+    }
+   },
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "ViVe",
+   "vieras": "PattU",
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.814,
+    "koti_ottelu_vieraissa": 0.7703,
+    "koti_sarja": 0.9397,
+    "koti_sarja_alussa": 0.9397
+   },
+   "seuraava": {
+    "pvm": "2026-08-20",
+    "koti": "ViVe",
+    "vieras": "PattU"
+   },
+   "ottelut": [
+    {
+     "id": 146941,
+     "pvm": "2026-08-20",
+     "pelattu": false,
+     "koti": "ViVe",
+     "vieras": "PattU",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146942,
+     "pvm": "2026-08-22",
+     "pelattu": false,
+     "koti": "PattU",
+     "vieras": "ViVe",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146943,
+     "pvm": "2026-08-25",
+     "pelattu": false,
+     "koti": "ViVe",
+     "vieras": "PattU",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146944,
+     "pvm": "2026-08-26",
+     "pelattu": false,
+     "koti": "PattU",
+     "vieras": "ViVe",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146945,
+     "pvm": "2026-08-28",
+     "pelattu": false,
+     "koti": "ViVe",
+     "vieras": "PattU",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    }
+   ]
+  },
+  {
+   "id": 3338,
+   "kierros": "Putoamiskarsinta",
+   "ennakko": {
+    "kulma": "Putoamiskarsinta. Haviaja putoaa, ja se nakyy pelissa. KoU vei runkosarjan kohtaamiset 2-1 ja voitti viimeisimman selvasti. KoU:n lukkari antaa kuitenkin eniten vapaita koko sarjassa, 4,94 ottelua kohti, ja AA:n torjunta on sarjan heikoin, 160 karkilyontia odottamaa enemman. Kumpikaan ei torju, joten juoksuja tulee.",
+    "vertailu": {
+     "koti": {
+      "nimi": "KoU",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 5,
+      "KL_pct": 49.5,
+      "KL3_pct": 45.3,
+      "torjunta_pct": 40.5,
+      "eroHyokkays": -1.0,
+      "eroTorjunta": -130.2,
+      "eroYhteensa": -131.2,
+      "juoksut_per_O": 4.64,
+      "vapaat_per_O": 4.94,
+      "vapaat_kolmostil": 14,
+      "karpaset_per_O": 0.81,
+      "kotari": {
+       "n": 3,
+       "voitot": 1,
+       "pct": 33.3
+      },
+      "rating": -1.2126
+     },
+     "vieras": {
+      "nimi": "AA",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 2,
+      "KL_pct": 48.6,
+      "KL3_pct": 37.7,
+      "torjunta_pct": 39.5,
+      "eroHyokkays": -40.1,
+      "eroTorjunta": -160.1,
+      "eroYhteensa": -200.2,
+      "juoksut_per_O": 3.52,
+      "vapaat_per_O": 2.76,
+      "vapaat_kolmostil": 11,
+      "karpaset_per_O": 1.12,
+      "kotari": {
+       "n": 5,
+       "voitot": 0,
+       "pct": 0.0
+      },
+      "rating": -1.3455
+     }
+    },
+    "h2h": {
+     "ottelut": [
+      {
+       "pvm": "2026-05-13",
+       "koti": "KoU",
+       "vieras": "AA",
+       "tulos": "0-2 (0-1, 3-5)",
+       "ratkaisu": null,
+       "voittaja": "AA"
+      },
+      {
+       "pvm": "2026-07-04",
+       "koti": "AA",
+       "vieras": "KoU",
+       "tulos": "0-2 (3-5, 1-9)",
+       "ratkaisu": null,
+       "voittaja": "KoU"
+      },
+      {
+       "pvm": "2026-08-06",
+       "koti": "KoU",
+       "vieras": "AA",
+       "tulos": "2-0 (5-3, 10-1)",
+       "ratkaisu": null,
+       "voittaja": "KoU"
+      }
+     ],
+     "voitot": {
+      "KoU": 2,
+      "AA": 1
+     },
+     "kotareita": 0
+    },
+    "avainpelaajat": {
+     "KoU": {
+      "panos": [
+       {
+        "nimi": "Rasmus Teppo",
+        "YHT": 77,
+        "K": 2,
+        "L": 63,
+        "T": 12,
+        "KL_pct": 46.4,
+        "KLY": 252
+       },
+       {
+        "nimi": "Matias Rauhala",
+        "YHT": 35,
+        "K": 5,
+        "L": 14,
+        "T": 16,
+        "KL_pct": 43.6,
+        "KLY": 179
+       },
+       {
+        "nimi": "Joona Anttila",
+        "YHT": 31,
+        "K": 3,
+        "L": 23,
+        "T": 5,
+        "KL_pct": 42.5,
+        "KLY": 167
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Justus Teppo",
+        "YHT": 19,
+        "K": 1,
+        "L": 2,
+        "T": 16,
+        "KL_pct": 60.7,
+        "KLY": 122
+       },
+       {
+        "nimi": "Aapeli Suvisalmi",
+        "YHT": 23,
+        "K": 1,
+        "L": 4,
+        "T": 18,
+        "KL_pct": 54.4,
+        "KLY": 228
+       }
+      ]
+     },
+     "AA": {
+      "panos": [
+       {
+        "nimi": "Petteri Kortelainen",
+        "YHT": 41,
+        "K": 0,
+        "L": 41,
+        "T": 0,
+        "KL_pct": 40.0,
+        "KLY": 165
+       },
+       {
+        "nimi": "Toni Marjamäki",
+        "YHT": 31,
+        "K": 1,
+        "L": 23,
+        "T": 7,
+        "KL_pct": 46.0,
+        "KLY": 198
+       },
+       {
+        "nimi": "Matias Litmanen",
+        "YHT": 25,
+        "K": 1,
+        "L": 6,
+        "T": 18,
+        "KL_pct": 61.9,
+        "KLY": 239
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Joona Peltokangas",
+        "YHT": 10,
+        "K": 0,
+        "L": 0,
+        "T": 10,
+        "KL_pct": 66.9,
+        "KLY": 130
+       },
+       {
+        "nimi": "Elmeri Koivusalmi",
+        "YHT": 22,
+        "K": 1,
+        "L": 1,
+        "T": 20,
+        "KL_pct": 66.8,
+        "KLY": 232
+       }
+      ]
+     }
+    }
+   },
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "KoU",
+   "vieras": "AA",
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.5661,
+    "koti_ottelu_vieraissa": 0.4994,
+    "koti_sarja": 0.5738,
+    "koti_sarja_alussa": 0.5738
+   },
+   "seuraava": {
+    "pvm": "2026-08-21",
+    "koti": "KoU",
+    "vieras": "AA"
+   },
+   "ottelut": [
+    {
+     "id": 146962,
+     "pvm": "2026-08-21",
+     "pelattu": false,
+     "koti": "KoU",
+     "vieras": "AA",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146963,
+     "pvm": "2026-08-23",
+     "pelattu": false,
+     "koti": "AA",
+     "vieras": "KoU",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146964,
+     "pvm": "2026-08-26",
+     "pelattu": false,
+     "koti": "KoU",
+     "vieras": "AA",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146965,
+     "pvm": "2026-08-29",
+     "pelattu": false,
+     "koti": "AA",
+     "vieras": "KoU",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 146966,
+     "pvm": "2026-09-02",
+     "pelattu": false,
+     "koti": "KoU",
+     "vieras": "AA",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    }
+   ]
   }
  ],
- "sarjat_kasin": true,
+ "sarjat_kasin": false,
  "kotari": {
   "AA": {
    "n": 5,
@@ -13426,6 +14632,231 @@ const PPO = {
    "supervuoropari_kaytossa": false,
    "sarja": null,
    "pvm": "2026-08-16"
+  },
+  "146941": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3334,
+   "pvm": "2026-08-20"
+  },
+  "146946": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3335,
+   "pvm": "2026-08-20"
+  },
+  "146951": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3337,
+   "pvm": "2026-08-21"
+  },
+  "146956": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3336,
+   "pvm": "2026-08-21"
+  },
+  "146962": {
+   "phase": 3,
+   "group": 7025,
+   "ryhma": "Putoamiskarsinta",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3338,
+   "pvm": "2026-08-21"
+  },
+  "146942": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3334,
+   "pvm": "2026-08-22"
+  },
+  "146947": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3335,
+   "pvm": "2026-08-22"
+  },
+  "146952": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3337,
+   "pvm": "2026-08-23"
+  },
+  "146957": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3336,
+   "pvm": "2026-08-23"
+  },
+  "146963": {
+   "phase": 3,
+   "group": 7025,
+   "ryhma": "Putoamiskarsinta",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3338,
+   "pvm": "2026-08-23"
+  },
+  "146943": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3334,
+   "pvm": "2026-08-25"
+  },
+  "146948": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3335,
+   "pvm": "2026-08-25"
+  },
+  "146953": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3337,
+   "pvm": "2026-08-25"
+  },
+  "146958": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3336,
+   "pvm": "2026-08-25"
+  },
+  "146944": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3334,
+   "pvm": "2026-08-26"
+  },
+  "146949": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3335,
+   "pvm": "2026-08-26"
+  },
+  "146954": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3337,
+   "pvm": "2026-08-26"
+  },
+  "146959": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3336,
+   "pvm": "2026-08-26"
+  },
+  "146964": {
+   "phase": 3,
+   "group": 7025,
+   "ryhma": "Putoamiskarsinta",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3338,
+   "pvm": "2026-08-26"
+  },
+  "146945": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3334,
+   "pvm": "2026-08-28"
+  },
+  "146950": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3335,
+   "pvm": "2026-08-28"
+  },
+  "146955": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3337,
+   "pvm": "2026-08-28"
+  },
+  "146960": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3336,
+   "pvm": "2026-08-28"
+  },
+  "146965": {
+   "phase": 3,
+   "group": 7025,
+   "ryhma": "Putoamiskarsinta",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3338,
+   "pvm": "2026-08-29"
+  },
+  "146966": {
+   "phase": 3,
+   "group": 7025,
+   "ryhma": "Putoamiskarsinta",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3338,
+   "pvm": "2026-09-02"
   }
  }
 };

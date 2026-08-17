@@ -109,6 +109,33 @@ td.jk{color:var(--text-secondary);font-size:12px}
 .warn{color:var(--accent-orange);font-weight:700;cursor:help}
 .enn{color:var(--accent-lime);font-weight:600}
 .sep{border-left:1px solid var(--border)}
+.enn-blk{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;
+  margin-bottom:16px;overflow:hidden}
+.enn-head{display:flex;align-items:center;gap:14px;padding:13px 18px;background:var(--bg-elevated);
+  border-bottom:1px solid var(--border);flex-wrap:wrap}
+.enn-kierros{font-size:10.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
+  color:var(--accent-cyan)}
+.enn-parit{font-size:18px;font-weight:800;letter-spacing:-.3px}
+.enn-parit .vs{color:var(--text-muted);font-weight:500;font-size:14px;margin:0 7px}
+.enn-todnak{margin-left:auto;font-size:12.5px;color:var(--text-secondary);text-align:right}
+.enn-todnak b{color:var(--accent-cyan);font-size:16px}
+.enn-body{padding:16px 18px;display:grid;grid-template-columns:minmax(280px,1fr) minmax(340px,1.15fr);gap:22px}
+@media(max-width:900px){.enn-body{grid-template-columns:1fr}}
+.enn-kulma{font-size:13.5px;line-height:1.72;color:var(--text-secondary)}
+.enn-kulma b{color:var(--text-primary)}
+.enn-otsikko{font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+  color:var(--text-muted);margin:14px 0 7px}
+.enn-otsikko:first-child{margin-top:0}
+table.vt{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+table.vt td{padding:4px 6px;border-bottom:1px solid rgba(30,45,69,.5)}
+table.vt td.mid{text-align:center;color:var(--text-muted);font-size:11px;width:40%}
+table.vt td.a{text-align:right;width:30%} table.vt td.b{text-align:left;width:30%}
+table.vt td.voittaa{color:var(--accent-lime);font-weight:700}
+.h2h-rivi{display:flex;justify-content:space-between;font-size:12px;padding:2.5px 0;
+  color:var(--text-secondary);font-variant-numeric:tabular-nums}
+.h2h-rivi b{color:var(--text-primary)}
+.pel{font-size:12.5px;line-height:1.65;color:var(--text-secondary)}
+.pel b{color:var(--text-primary)}
 .foot{color:var(--text-muted);font-size:11.5px;margin-top:26px;line-height:1.75}
 .foot b{color:var(--text-secondary)}
 .tyhja{padding:40px;text-align:center;color:var(--text-muted);font-size:13px}
@@ -147,6 +174,10 @@ td.jk{color:var(--text-secondary);font-size:12px}
   <h2 class="sec">Ottelusarjat</h2>
   <p class="secsub">Sarjatilanne, seuraava ottelu ja mallin arvio. Todennäköisyys on arvio ilman marginaalia.</p>
   <div id="sarjat" class="cards"></div>
+
+  <h2 class="sec">Ennakot</h2>
+  <p class="secsub">Luvut päivittyvät datasta joka ajolla. Kirjoitettu näkökulma on runkosarjan päättyessä tehty — päivitä se kun sarja etenee.</p>
+  <div id="ennakot"></div>
 
   <h2 class="sec">Joukkueet</h2>
   <p class="secsub">Kolmiportainen: <b>havainto</b> (mitä on tapahtunut) → <b>muutos</b> (ero runkosarjaan) → <b>ennuste</b> (kutistettu arvo seuraavaan otteluun).</p>
@@ -267,6 +298,90 @@ if(!D.sarjat.length){
     h += '</div></div></div>';
   });
   $('sarjat').innerHTML = h;
+})();
+
+/* ---------- ennakot ---------- */
+(function(){
+  if(!D.sarjat.length||!D.sarjat.some(function(s){return s.ennakko;})){
+    $('ennakot').innerHTML='<div class="tyhja">Ennakot ilmestyvät kun ottelusarjat ovat rajapinnassa.</div>';
+    return;
+  }
+  function pv(s){var o=s.split('-');return o[2]+'.'+o[1]+'.';}
+  function rivi(otsikko,a,b,suunta,muoto){
+    // suunta: 1 = isompi parempi, -1 = pienempi parempi, 0 = ei vertailua
+    var fa=(a===null||a===undefined)?'–':(muoto?muoto(a):a);
+    var fb=(b===null||b===undefined)?'–':(muoto?muoto(b):b);
+    var ca='',cb='';
+    if(suunta&&a!==null&&b!==null&&a!==undefined&&b!==undefined&&a!==b){
+      if((a>b)===(suunta>0)) ca='voittaa'; else cb='voittaa';
+    }
+    return '<tr><td class="a '+ca+'">'+fa+'</td><td class="mid">'+esc(otsikko)
+         + '</td><td class="b '+cb+'">'+fb+'</td></tr>';
+  }
+  var pros=function(v){return Number(v).toFixed(1)+' %';};
+  var era =function(v){return (v>0?'+':'')+Number(v).toFixed(1);};
+  var kaksi=function(v){return Number(v).toFixed(2);};
+  var h='';
+  D.sarjat.forEach(function(s){
+    var e=s.ennakko; if(!e) return;
+    var A=e.vertailu.koti, B=e.vertailu.vieras, t=s.todennakoisyys||{};
+    var p=(t.koti_sarja!==null&&t.koti_sarja!==undefined)?t.koti_sarja:t.koti_sarja_alussa;
+    h+='<div class="enn-blk"><div class="enn-head">'
+      +'<span class="enn-kierros">'+esc(s.kierros)+(s.best_of?' · paras '+esc(s.best_of)+':stä':'')+'</span>'
+      +'<span class="enn-parit">'+esc(s.koti)+'<span class="vs">vs</span>'+esc(s.vieras)+'</span>'
+      +'<span class="enn-todnak">'+esc(s.koti)+' vie sarjan<br><b>'
+      +(p===null||p===undefined?'–':(100*p).toFixed(0)+' %')+'</b></span></div>';
+    h+='<div class="enn-body"><div>';
+    if(e.kulma) h+='<div class="enn-otsikko">Näkökulma</div><div class="enn-kulma">'+esc(e.kulma)+'</div>';
+    var hh=e.h2h||{};
+    h+='<div class="enn-otsikko">Runkosarjassa</div>';
+    if((hh.ottelut||[]).length){
+      h+='<div class="h2h-rivi"><span>Voitot</span><span><b>'+esc(s.koti)+' '
+       +(hh.voitot[s.koti]||0)+'–'+(hh.voitot[s.vieras]||0)+' '+esc(s.vieras)+'</b>'
+       +(hh.kotareita?' · '+hh.kotareita+' kotiutuskilpailussa':'')+'</span></div>';
+      hh.ottelut.forEach(function(o){
+        var tag=o.ratkaisu==='s'?'<span class="tag s">SUPER</span>'
+               :(o.ratkaisu==='k'?'<span class="tag k">KOTARI</span>':'');
+        h+='<div class="h2h-rivi"><span>'+pv(o.pvm)+' '+esc(o.koti)+'–'+esc(o.vieras)+'</span>'
+          +'<span>'+esc(o.tulos||'')+' <b>'+esc(o.voittaja)+'</b>'+tag+'</span></div>';
+      });
+    } else h+='<div class="h2h-rivi"><span>Ei kohtaamisia runkosarjassa.</span><span></span></div>';
+    h+='</div><div>';
+    h+='<div class="enn-otsikko">Vertailu — runkosarja</div><table class="vt"><tbody>'
+      +'<tr><td class="a"><b>'+esc(s.koti)+'</b></td><td class="mid"></td><td class="b"><b>'+esc(s.vieras)+'</b></td></tr>'
+      +rivi('voittoja runkosarjassa', A.voitot, B.voitot, 1)
+      +rivi('juoksuja per ottelu', A.juoksut_per_O, B.juoksut_per_O, 1, kaksi)
+      +rivi('kotiutus, ero odottamaan', A.eroHyokkays, B.eroHyokkays, 1, era)
+      +rivi('torjunta, ero odottamaan', A.eroTorjunta, B.eroTorjunta, 1, era)
+      +rivi('kärkilyönti-% (KL%)', A.KL_pct, B.KL_pct, 1, pros)
+      +rivi('KL% 3. pesältä', A.KL3_pct, B.KL3_pct, 1, pros)
+      +rivi('torjunta-%', A.torjunta_pct, B.torjunta_pct, 1, pros)
+      +rivi('vapaita per ottelu', A.vapaat_per_O, B.vapaat_per_O, -1, kaksi)
+      +rivi('vapaat 3-tilanteessa', A.vapaat_kolmostil, B.vapaat_kolmostil, -1)
+      +rivi('kärpäset per ottelu', A.karpaset_per_O, B.karpaset_per_O, 1, kaksi)
+      +(function(){
+         var ka=A.kotari, kb=B.kotari;
+         var fa=ka?(ka.voitot+'/'+ka.n+'  '+nu(ka.pct,0)+' %'):'–';
+         var fb=kb?(kb.voitot+'/'+kb.n+'  '+nu(kb.pct,0)+' %'):'–';
+         var ca='',cb='';
+         if(ka&&kb&&ka.pct!==kb.pct){ if(ka.pct>kb.pct) ca='voittaa'; else cb='voittaa'; }
+         return '<tr><td class="a '+ca+'">'+fa+'</td><td class="mid">kotiutuskilpailu, voitot</td>'
+              + '<td class="b '+cb+'">'+fb+'</td></tr>';
+       })()
+      +'</tbody></table>';
+    var ap=e.avainpelaajat||{};
+    h+='<div class="enn-otsikko">Avainpelaajat</div><div class="pel">';
+    [s.koti,s.vieras].forEach(function(tt){
+      var d=ap[tt]; if(!d) return;
+      h+='<div><b>'+esc(tt)+':</b> '
+        +d.panos.map(function(p){return esc(p.nimi)+' ('+p.YHT+')';}).join(', ');
+      if(d.karki&&d.karki.length) h+=' · kärki '
+        +d.karki.map(function(p){return esc(p.nimi)+' '+nu(p.KL_pct)+' %';}).join(', ');
+      h+='</div>';
+    });
+    h+='</div></div></div></div>';
+  });
+  $('ennakot').innerHTML=h;
 })();
 
 /* ---------- joukkuetaulukko ---------- */
