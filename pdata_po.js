@@ -2,7 +2,7 @@ const PPO = {
  "meta": {
   "kausi": 2026,
   "seasonSeries": 2945,
-  "generoitu": "2026-08-17 18:06:21",
+  "generoitu": "2026-08-17 19:21:36",
   "kutistuspaino_w": 34,
   "rating": {
    "AA": -1.3455,
@@ -20,6 +20,23 @@ const PPO = {
   },
   "kotietu": 0.1355,
   "jakso_tasapeli_pct": 9.1,
+  "malli": "marginaali",
+  "marginaali_rating": {
+   "AA": -2.6881,
+   "Tahko": 0.4853,
+   "IPV": -0.5414,
+   "JoMa": 0.2614,
+   "KeKi": -0.5653,
+   "KiPa": 0.4719,
+   "KPL": 0.7814,
+   "Manse": 0.8881,
+   "PattU": -0.1681,
+   "SoJy": 1.1147,
+   "ViVe": 2.0081,
+   "KoU": -2.0481
+  },
+  "marginaali_kotietu": 0.3029,
+  "marginaali_skaala": 0.65,
   "huom": "API:n luvut sisaltavat supervuoroparin, eivat kotiutuskilpailua. Koko kausi = runkosarja + pudotuspelit, Ita-Lansi ei mukana."
  },
  "joukkueet": {
@@ -11666,10 +11683,10 @@ const PPO = {
    },
    "paattynyt": false,
    "todennakoisyys": {
-    "koti_ottelu_kotona": 0.5818,
-    "koti_ottelu_vieraissa": 0.5154,
-    "koti_sarja": 0.603,
-    "koti_sarja_alussa": 0.603
+    "koti_ottelu_kotona": 0.5974,
+    "koti_ottelu_vieraissa": 0.5011,
+    "koti_sarja": 0.6099,
+    "koti_sarja_alussa": 0.6099
    },
    "seuraava": {
     "pvm": "2026-08-21",
@@ -11733,7 +11750,7 @@ const PPO = {
    "id": 3337,
    "kierros": "Puolivälierät",
    "ennakko": {
-    "kulma": "Tasaisin pari, malli antaa Manselle 55 %. Manse tekee juoksuja odotettua enemman (+48), Tahko on tasan odottamassa. Torjunnassa jarjestys kaantyy: Tahko +64, Manse +20. Runkosarjassa Tahko 2-1 ja molemmat voitot kotarissa. Tahkon lukkari antaa eniten kolmostilanteen vapaita koko sarjassa, 15 kappaletta — siina on Mansen sauma.",
+    "kulma": "Jaksovoitoissa nama ovat kaytannossa sama joukkue: 36-25 ja 34-26. Ero syntyy marginaalista — Manse +1,00 juoksua per jakso, Tahko +0,56. Kotiutuksessa Manse on +48 odottamaan, Tahko tasan; torjunnassa jarjestys kaantyy, Tahko +64 ja Manse +20. Runkosarjassa Tahko vei 2-1 ja molemmat voitot tulivat kotarissa. Loppukaudesta puhutaan Tahkon notkahduksesta, ja viisi viimeista olikin 1/5 ja -1,6 juoksua — mutta Manse teki samaan aikaan 2/5 ja -1,4, eli molemmat hyytyivat. Tahkon lukkari antaa eniten kolmostilanteen vapaita koko sarjassa, 15 kappaletta. Siina on Mansen sauma.",
     "vertailu": {
      "koti": {
       "nimi": "Manse",
@@ -11928,10 +11945,10 @@ const PPO = {
    },
    "paattynyt": false,
    "todennakoisyys": {
-    "koti_ottelu_kotona": 0.5549,
-    "koti_ottelu_vieraissa": 0.4879,
-    "koti_sarja": 0.5527,
-    "koti_sarja_alussa": 0.5527
+    "koti_ottelu_kotona": 0.6118,
+    "koti_ottelu_vieraissa": 0.5161,
+    "koti_sarja": 0.6365,
+    "koti_sarja_alussa": 0.6365
    },
    "seuraava": {
     "pvm": "2026-08-21",
@@ -12190,10 +12207,10 @@ const PPO = {
    },
    "paattynyt": false,
    "todennakoisyys": {
-    "koti_ottelu_kotona": 0.6077,
-    "koti_ottelu_vieraissa": 0.5422,
-    "koti_sarja": 0.6504,
-    "koti_sarja_alussa": 0.6504
+    "koti_ottelu_kotona": 0.678,
+    "koti_ottelu_vieraissa": 0.5878,
+    "koti_sarja": 0.7531,
+    "koti_sarja_alussa": 0.7531
    },
    "seuraava": {
     "pvm": "2026-08-20",
@@ -12257,7 +12274,7 @@ const PPO = {
    "id": 3334,
    "kierros": "Puolivälierät",
    "ennakko": {
-    "kulma": "ViVe on molemmilla mittareilla sarjan paras: kotiutus +67 ja torjunta +51 odottamaan nahden. Lukkari antaa 1,84 vapaata ottelua kohti, vahiten koko sarjassa — PattU ei saa ilmaisia etenijoita. Runkosarjassa 3-0 ViVelle. Mallin 94 % on kuitenkin sen testatun alueen ulkopuolella, joten ota se suuntana eika lukuna. PattU:n realistisin tie kulkee kotiutuskilpailun kautta.",
+    "kulma": "ViVe on molemmilla mittareilla sarjan paras: kotiutus +67 ja torjunta +51 odottamaan nahden, ja juoksuero +2,3 per jakso on kaksinkertainen seuraavaan. Lukkari antaa 1,84 vapaata ottelua kohti, vahiten koko sarjassa — PattU ei saa ilmaisia etenijoita. Runkosarjassa 3-0 ViVelle. Mallin luku on kuitenkin sen testatun alueen ulkopuolella, joten ota se suuntana eika lukuna. PattU:n realistisin tie kulkee kotiutuskilpailun kautta.",
     "vertailu": {
      "koti": {
       "nimi": "ViVe",
@@ -12452,10 +12469,10 @@ const PPO = {
    },
    "paattynyt": false,
    "todennakoisyys": {
-    "koti_ottelu_kotona": 0.814,
-    "koti_ottelu_vieraissa": 0.7703,
-    "koti_sarja": 0.9397,
-    "koti_sarja_alussa": 0.9397
+    "koti_ottelu_kotona": 0.8309,
+    "koti_ottelu_vieraissa": 0.7694,
+    "koti_sarja": 0.9475,
+    "koti_sarja_alussa": 0.9475
    },
    "seuraava": {
     "pvm": "2026-08-20",
@@ -12714,10 +12731,10 @@ const PPO = {
    },
    "paattynyt": false,
    "todennakoisyys": {
-    "koti_ottelu_kotona": 0.5661,
-    "koti_ottelu_vieraissa": 0.4994,
-    "koti_sarja": 0.5738,
-    "koti_sarja_alussa": 0.5738
+    "koti_ottelu_kotona": 0.6474,
+    "koti_ottelu_vieraissa": 0.5541,
+    "koti_sarja": 0.7007,
+    "koti_sarja_alussa": 0.7007
    },
    "seuraava": {
     "pvm": "2026-08-21",
