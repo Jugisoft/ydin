@@ -979,6 +979,52 @@
   .rj-t tr.click:hover{background:var(--bg-elevated);cursor:pointer}
   .rj-t tr.tot td{font-weight:700;border-top:2px solid var(--border)}
   .rj-t tr.ref td{color:var(--text-muted)}
+
+  /* --- VAIHE1: laajuusvalitsin --------------------------------------- */
+  #scope-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:8px 20px;
+    background:var(--bg-elevated);border-bottom:1px solid var(--border);position:relative;z-index:40}
+  #scope-bar .scope-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.6px;
+    color:var(--text-muted);font-weight:700}
+  .scope-seg{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  .scope-seg button{background:transparent;border:0;color:var(--text-secondary);font:inherit;
+    font-size:12px;font-weight:600;padding:6px 14px;cursor:pointer;transition:background .12s}
+  .scope-seg button+button{border-left:1px solid var(--border)}
+  .scope-seg button:hover{background:var(--bg-hover);color:#fff}
+  .scope-seg button.on{background:var(--accent-orange);color:#0b1020}
+  .scope-seg button[disabled]{opacity:.35;cursor:not-allowed}
+  .scope-note{font-size:11px;color:var(--text-muted);line-height:1.5}
+  .scope-note b{color:var(--text-secondary)}
+  /* ottelusarjat */
+  .po-kierros{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--text-muted);
+    font-weight:700;margin:14px 0 6px}
+  .po-sarja{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--border);
+    border-radius:10px;margin-bottom:8px;background:var(--bg-secondary,var(--bg-elevated));flex-wrap:wrap}
+  .po-parit{font-weight:700;font-size:14px;min-width:150px}
+  .po-tilanne{font-size:20px;font-weight:800;letter-spacing:1px;min-width:56px;text-align:center}
+  .po-pips{display:flex;gap:3px}
+  .po-pip{width:9px;height:9px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.05)}
+  .po-pip.on{background:var(--accent-green,#22c55e);border-color:var(--accent-green,#22c55e)}
+  .po-meta{font-size:11px;color:var(--text-muted);margin-left:auto;text-align:right;line-height:1.5}
+  .po-ott{font-size:11px;color:var(--text-secondary);display:flex;gap:6px;flex-wrap:wrap}
+  .po-ott span{padding:1px 6px;border-radius:5px;background:var(--bg-hover)}
+  .po-ott span.tul{color:#fff;font-weight:600}
+  /* liekit */
+  .liekit-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+  @media(max-width:800px){.liekit-wrap{grid-template-columns:1fr}}
+  .liekit-box{border:1px solid var(--border);border-radius:10px;padding:10px 12px;
+    background:var(--bg-secondary,var(--bg-elevated))}
+  .liekit-otsikko{font-size:11px;text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-bottom:8px}
+  .liekit-rivi{display:flex;align-items:center;gap:8px;font-size:12px;padding:4px 0;
+    border-bottom:1px solid rgba(255,255,255,.05)}
+  .liekit-rivi:last-child{border-bottom:0}
+  .liekit-nimi{font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .liekit-jk{color:var(--text-muted);font-size:11px}
+  .liekit-d{font-weight:800;min-width:58px;text-align:right}
+  .liekit-n{color:var(--text-muted);font-size:10px;min-width:78px;text-align:right}
+  .otos-pieni{opacity:.5}
+  #scope-varoitus{display:none;padding:7px 20px;font-size:11.5px;line-height:1.5;
+    background:rgba(245,158,11,.12);border-bottom:1px solid rgba(245,158,11,.35);color:#f59e0b}
+  #scope-varoitus b{color:#fbbf24}
   </style>
 </head>
 <body>
@@ -1022,6 +1068,17 @@
   </div>
 </header>
 
+<div id="scope-bar">
+  <span class="scope-lbl">Laajuus</span>
+  <span class="scope-seg">
+    <button data-scope="runko" onclick="setScope('runko')">Runkosarja</button>
+    <button data-scope="po"    onclick="setScope('po')">Pudotuspelit</button>
+    <button data-scope="koko"  onclick="setScope('koko')">Koko kausi</button>
+  </span>
+  <span class="scope-note" id="scope-note"></span>
+</div>
+<div id="scope-varoitus"></div>
+
 <div id="main">
   <div id="no-data-msg">
     <div class="no-data-icon">⚾</div>
@@ -1052,6 +1109,7 @@
     </div>
     <div class="aloitus-sarja-title">Sarjan tilanne tällä hetkellä</div>
     <div id="aloitus-sarja-content"><div style="color:var(--text-muted);padding:16px;">Ladataan sarjataulukkoa&hellip;</div></div>
+    <div id="aloitus-liekit"></div>
     <div style="margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.07);font-size:11px;color:var(--text-muted);line-height:1.6">
       <span style="color:var(--text-secondary);font-weight:600">ℹ Vireystila-badge</span> = komposiittipisteet (0–100) &nbsp;·&nbsp;
       <span style="color:#f59e0b">Voittoputki×20</span> +
@@ -2314,6 +2372,7 @@ window.rajatInit=function(){
 })();
 
 function showView(name, btn) {
+  CURVIEW = name;
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
   const el = document.getElementById('v-' + name);
@@ -2327,6 +2386,7 @@ function showView(name, btn) {
   if (name === 'suuntaus') suuntausInit();
   if (name === 'kuntopuntari') kpInit();
   if (name === 'aloitus') aloitusInit();
+  scopeVaroitus();
 }
 
 function showTab(name, btn) {
@@ -2890,7 +2950,7 @@ function renderKausitilastot() {
   const el = document.getElementById('table-kausitilastot');
   if (!el) return;
 
-  const rawPlayers = (PDATA.pelaajat || []);
+  const rawPlayers = SP();
   if (!rawPlayers.length) {
     el.innerHTML = '<div class="empty-state">Ei pelaajadataa</div>';
     return;
@@ -3031,7 +3091,7 @@ function ktSort(key) {
 }
 
 function renderPlayerTables() {
-  const players = PDATA.pelaajat || [];
+  const players = SP();
   if (!players.length) {
     ['kotiuttajat','kentallemenijat','onnistuminen','pesavali'].forEach(id => {
       const el = document.getElementById('table-' + id);
@@ -3263,9 +3323,22 @@ function _sarjSort(key) {
 // ALOITUSSIVU
 // =============================================
 function aloitusInit() {
-  const rows = PDATA.sarjataulukko || [];
   const el = document.getElementById('aloitus-sarja-content');
   if (!el) return;
+  const ttl = document.querySelector('.aloitus-sarja-title');
+  // VAIHE1: pudotuspeleissa ei ole pistetaulukkoa — vaihdetaan komponentti,
+  // ei vain lukuja. Nolla-rivinen taulukko olisi vaarin, ei tyhja.
+  if (SCOPE === 'po') {
+    if (ttl) ttl.textContent = 'Pudotuspelien ottelusarjat';
+    aloitusSarjat(el);
+    aloitusLiekit();
+    return;
+  }
+  if (ttl) ttl.textContent = (SCOPE === 'koko')
+    ? 'Sarjan tilanne (taulukko runkosarjasta)'
+    : 'Sarjan tilanne tällä hetkellä';
+  aloitusLiekit();
+  const rows = PDATA.sarjataulukko || [];
   if (!rows.length) {
     el.innerHTML = '<div style="color:var(--text-muted);padding:16px;">Ei sarjadataa.</div>';
     return;
@@ -3308,13 +3381,195 @@ function aloitusInit() {
   el.innerHTML = html;
 }
 
+
+/* ===== VAIHE1: laajuus (runkosarja / pudotuspelit / koko kausi) =========
+   Yksi globaali tila, ei sivukohtaisia valitsimia: kaksi nakymaa ei voi
+   ajautua eri laajuuteen huomaamatta. Tila on URL:ssa (?n=po), joten
+   linkin voi jakaa ja se avautuu samassa tilassa.
+   Ylin taso PDATA:ssa on runkosarja; "po" ja "koko" ovat viipaleita joissa
+   on vain ne kentat jotka laajuuden mukana vaihtuvat. ==================== */
+const SCOPES = { runko:'Runkosarja', po:'Pudotuspelit', koko:'Koko kausi' };
+let SCOPE = 'runko';
+try { const _q = new URLSearchParams(location.search).get('n'); if (_q && SCOPES[_q]) SCOPE = _q; } catch(e){}
+
+function scopeSlice(o){
+  if (!o) return null;
+  if (SCOPE === 'runko') return o;
+  const sl = o[SCOPE];
+  return sl ? Object.assign({}, o, sl) : null;   // null = ei pelannut talla laajuudella
+}
+function SJ(){ return (PDATA.joukkueet || []).map(scopeSlice).filter(Boolean); }
+function SP(){ return (PDATA.pelaajat  || []).map(scopeSlice).filter(Boolean); }
+function scopeLabel(){ return SCOPES[SCOPE] || 'Runkosarja'; }
+
+/* Nakymat jotka TOTTELEVAT laajuusvalitsinta. Kaikki muut nayttavat aina
+   runkosarjan luvut — ja se sanotaan kayttajalle nakyvasti, koska hiljainen
+   epasuhta kahden nakyman valilla on juuri se vika jota ei huomaa. */
+const SCOPE_VIEWS = { aloitus:1, nelikentta:1, pelaajat:1 };
+let CURVIEW = 'aloitus';
+
+function scopeVaroitus(){
+  const el = document.getElementById('scope-varoitus');
+  if (!el) return;
+  if (SCOPE === 'runko' || SCOPE_VIEWS[CURVIEW]) { el.style.display = 'none'; return; }
+  el.style.display = 'block';
+  el.innerHTML = '⚠ Laajuus on <b>' + scopeLabel() + '</b>, mutta tämä näkymä laskee aina ' +
+    '<b>runkosarjasta</b>. Laajuusvalitsin vaikuttaa toistaiseksi aloitussivuun, ' +
+    'nelikenttään ja pelaajiin.';
+}
+
+function scopeRender(){
+  document.querySelectorAll('#scope-bar .scope-seg button').forEach(function(b){
+    b.classList.toggle('on', b.dataset.scope === SCOPE);
+    if (b.dataset.scope === 'po' && !(PDATA.po_pelaajia > 0)) {
+      b.disabled = true; b.title = 'Pudotuspelidataa ei ole vielä';
+    }
+  });
+  const note = document.getElementById('scope-note');
+  if (!note) return;
+  if (SCOPE === 'runko') {
+    note.innerHTML = 'Runkosarja päättyi <b>' + (PDATA.runkosarja_paattyi || '—') +
+      '</b>. Sarjataulukko on aina runkosarjasta.';
+  } else if (SCOPE === 'po') {
+    note.innerHTML = 'Pudotuspelit alkoivat <b>' + (PDATA.pudotuspelit_alkoi || '—') +
+      '</b>. Otos on pieni — <b>n</b> näkyy jokaisella rivillä, älä lue prosenteista liikaa.';
+  } else {
+    note.innerHTML = 'Runkosarja + pudotuspelit yhteenlaskettuna. ' +
+      'Sarjataulukko pysyy runkosarjan taulukkona.';
+  }
+}
+
+function setScope(v){
+  if (!SCOPES[v] || v === SCOPE) return;
+  SCOPE = v;
+  try { const u = new URL(location.href); u.searchParams.set('n', v); history.replaceState(null,'',u); } catch(e){}
+  scopeRender();
+  scopeVaroitus();
+  scopeRefresh();
+}
+
+function scopeRefresh(){
+  try {
+    const teams = SJ();
+    quadData = teams;
+    const xs = teams.map(t => t.primary_kotiutus || t.kotiutus_pct || 0).filter(v => v > 0);
+    const ys = teams.map(t => t.primary_torjunta || t.torjunta_pct || 0).filter(v => v > 0);
+    if (xs.length) quadMedianX = xs.reduce((a,b)=>a+b,0)/xs.length;
+    if (ys.length) quadMedianY = ys.reduce((a,b)=>a+b,0)/ys.length;
+    drawQuadrant();
+    aloitusInit();
+    renderPlayerTables();
+  } catch(e){ console.error('scopeRefresh', e); }
+}
+
+/* ---------- Pudotuspelien ottelusarjat (aloitussivu, laajuus = po) ------
+   Pudotuspeleissa ei ole pistetaulukkoa, joten laajuus vaihtaa komponentin
+   eika vain lukuja. Lahde on PPO (pdata_po.js) — sama jota pudotuspelisivu
+   kayttaa, jotta sarjatilanne on vain yhdessa paikassa. ================== */
+function aloitusSarjat(el){
+  const S = (typeof PPO !== 'undefined' && PPO && PPO.sarjat) ? PPO.sarjat : null;
+  if (!S || !S.length) {
+    el.innerHTML = '<div style="color:var(--text-muted);padding:16px;">' +
+      'Ottelusarjadataa ei ole ladattu (pdata_po.js). Aja <code>vie_pudotuspelit.py</code>.</div>';
+    return;
+  }
+  const pips = (v, tarv) => {
+    let h = '';
+    for (let i = 0; i < tarv; i++) h += '<div class="po-pip' + (i < v ? ' on' : '') + '"></div>';
+    return '<div class="po-pips">' + h + '</div>';
+  };
+  const kierrokset = [];
+  S.forEach(x => { if (kierrokset.indexOf(x.kierros) < 0) kierrokset.push(x.kierros); });
+  el.innerHTML = kierrokset.map(function(k){
+    const rivit = S.filter(x => x.kierros === k).map(function(x){
+      const vk = (x.voitot && x.voitot.koti)   || 0;
+      const vv = (x.voitot && x.voitot.vieras) || 0;
+      const tarv = x.tarvittavat_voitot || 3;
+      const ott = (x.ottelut || []).filter(o => o.pelattu);
+      const ottHtml = ott.length
+        ? '<div class="po-ott">' + ott.map(o =>
+            '<span class="tul" title="' + (o.pvm||'') + '">' + (o.tulos || '—') +
+            (o.ratkaisu === 's' ? ' <b title="supervuoropari">S</b>' :
+             o.ratkaisu === 'k' ? ' <b title="kotiutuskilpailu">K</b>' : '') + '</span>').join('') + '</div>'
+        : '<div class="po-ott"><span>ei vielä pelattu</span></div>';
+      const seur = (!x.paattynyt && x.seuraava)
+        ? 'Seuraava ' + (x.seuraava.pvm || '') + ' · ' + x.seuraava.koti + '–' + x.seuraava.vieras
+        : (x.paattynyt ? 'Sarja ratkennut' : '');
+      const p = (x.todennakoisyys && x.todennakoisyys.koti_sarja != null)
+        ? Math.round(x.todennakoisyys.koti_sarja * 100) : null;
+      const ennuste = (p != null && !x.paattynyt)
+        ? '<br>Malli: ' + x.koti + ' ' + p + ' % / ' + x.vieras + ' ' + (100 - p) + ' %' : '';
+      const vari = vk > vv ? '#22c55e' : (vv > vk ? '#ef4444' : 'var(--text-secondary)');
+      return '<div class="po-sarja">' +
+        '<div class="po-parit">' + x.koti + ' – ' + x.vieras + '</div>' +
+        pips(vk, tarv) +
+        '<div class="po-tilanne" style="color:' + vari + '">' + vk + '–' + vv + '</div>' +
+        pips(vv, tarv) +
+        ottHtml +
+        '<div class="po-meta">Paras ' + (x.best_of || '?') + ':stä' +
+        (seur ? '<br>' + seur : '') + ennuste + '</div>' +
+        '</div>';
+    }).join('');
+    return '<div class="po-kierros">' + k + '</div>' + rivit;
+  }).join('');
+}
+
+/* ---------- Kuka on liekeissä / kuka kyntää (laajuus = po) --------------
+   Delta = pudotuspelien KL%3 miinus runkosarjan KL%3. Prosentti yksin
+   nostaisi karkeen sen joka pelasi yhden hyvan illan, joten n on aina
+   nakyvissa ja pienen otoksen rivit himmennetaan. ====================== */
+function aloitusLiekit(){
+  const host = document.getElementById('aloitus-liekit');
+  if (!host) return;
+  if (SCOPE !== 'po') { host.innerHTML = ''; return; }
+  const RAJA = 8;   // yritysta, jonka alle rivi himmennetaan
+  const rows = [];
+  (PDATA.pelaajat || []).forEach(function(p){
+    const po = p.po; if (!po) return;
+    const ry = p.api_kolmos_yrit || 0, ro = p.api_kolmos_onn || 0;
+    const py = po.api_kolmos_yrit || 0, po_ = po.api_kolmos_onn || 0;
+    if (ry < 20 || py < 3) return;          // runkosarjapohja liian ohut
+    const rp = ro / ry * 100, pp = po_ / py * 100;
+    rows.push({ nimi: p.name, jk: p.shorthand || p.team, d: pp - rp,
+                pp: pp, rp: rp, n: py, onn: po_ });
+  });
+  if (!rows.length) {
+    host.innerHTML = '<div style="color:var(--text-muted);padding:12px;font-size:12px;">' +
+      'Kotiutusvertailuun ei ole vielä tarpeeksi pudotuspelilyöntejä.</div>';
+    return;
+  }
+  rows.sort((a,b) => b.d - a.d);
+  const box = (otsikko, vari, lista, merkki) =>
+    '<div class="liekit-box"><div class="liekit-otsikko" style="color:' + vari + '">' + otsikko + '</div>' +
+    lista.map(r =>
+      '<div class="liekit-rivi' + (r.n < RAJA ? ' otos-pieni' : '') + '">' +
+      '<div class="liekit-nimi">' + r.nimi + ' <span class="liekit-jk">' + (r.jk||'') + '</span></div>' +
+      '<div class="liekit-d" style="color:' + vari + '">' + merkki + Math.abs(r.d).toFixed(1) + ' pp</div>' +
+      '<div class="liekit-n">' + r.onn + '/' + r.n + ' · runko ' + r.rp.toFixed(0) + ' %</div>' +
+      '</div>').join('') + '</div>';
+  const ylos = rows.slice(0, 6).filter(r => r.d > 0);
+  const alas = rows.slice(-6).filter(r => r.d < 0).reverse();
+  host.innerHTML =
+    '<div class="aloitus-sarja-title" style="margin-top:18px">Kotiutus pudotuspeleissä vs. runkosarja</div>' +
+    '<div class="liekit-wrap">' +
+      box('🔥 Liekeissä', '#22c55e', ylos, '+') +
+      box('❄️ Kyntää',   '#ef4444', alas, '−') +
+    '</div>' +
+    '<div style="margin-top:8px;font-size:11px;color:var(--text-muted);line-height:1.6">' +
+    'Kolmostilanteiden kotiutusprosentti (KL%3), pudotuspelit vs. runkosarja. ' +
+    'Mukana pelaajat joilla runkosarjassa vähintään 20 ja pudotuspeleissä vähintään 3 yritystä. ' +
+    'Alle ' + RAJA + ' yrityksen rivit on himmennetty: ne ovat kohinaa yhtä todennäköisesti kuin muutosta.</div>';
+}
+
 function init() {
   const sb = document.getElementById('season-badge');
   const ut = document.getElementById('update-time');
   if (sb) sb.textContent = PDATA.kausi || 'MSU 2026';
   if (ut) ut.textContent = 'Päivitetty: ' + (PDATA.paivitetty || '—');
 
-  const teams = PDATA.joukkueet || [];
+  scopeRender();
+  scopeVaroitus();
+  const teams = SJ();
   quadData = teams;
   const xs = teams.map(t => t.primary_kotiutus || t.kotiutus_pct || 0).filter(v => v > 0);
   const ys = teams.map(t => t.primary_torjunta || t.torjunta_pct || 0).filter(v => v > 0);
@@ -3942,6 +4197,7 @@ function kpRender() {
 window.addEventListener('load', init);
 </script>
 
+<script src="pdata_po.js"></script>
 <script src="pdata.js"></script>
 </body>
 </html>
