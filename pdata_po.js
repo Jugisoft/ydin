@@ -2,7 +2,7 @@ const PPO = {
  "meta": {
   "kausi": 2026,
   "seasonSeries": 2945,
-  "generoitu": "2026-08-20 20:39:28",
+  "generoitu": "2026-08-21 12:43:06",
   "kutistuspaino_w": 34,
   "rating": {
    "AA": -1.3455,
@@ -13172,7 +13172,7 @@ const PPO = {
     },
     {
      "id": 146953,
-     "pvm": "2026-08-25",
+     "pvm": "2026-08-24",
      "pelattu": false,
      "koti": "Manse",
      "vieras": "Tahko",
@@ -13244,7 +13244,7 @@ const PPO = {
       "juoksut_per_O": 4.97,
       "vapaat_per_O": 3.72,
       "vapaat_kolmostil": 9,
-      "karpaset_per_O": 0.91,
+      "karpaset_per_O": 0.94,
       "kotari": {
        "n": 9,
        "voitot": 3,
@@ -15934,6 +15934,15 @@ const PPO = {
    "sarja": 3338,
    "pvm": "2026-08-23"
   },
+  "146953": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3337,
+   "pvm": "2026-08-24"
+  },
   "146943": {
    "phase": 2,
    "group": 5844,
@@ -15950,15 +15959,6 @@ const PPO = {
    "playoff": true,
    "supervuoropari_kaytossa": true,
    "sarja": 3335,
-   "pvm": "2026-08-25"
-  },
-  "146953": {
-   "phase": 2,
-   "group": 5844,
-   "ryhma": "Ylemmät pudotuspelit",
-   "playoff": true,
-   "supervuoropari_kaytossa": true,
-   "sarja": 3337,
    "pvm": "2026-08-25"
   },
   "146958": {

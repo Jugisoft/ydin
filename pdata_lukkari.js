@@ -1,7 +1,7 @@
 const PLUKKARI = {
  "meta": {
   "kausi": "MSU2026",
-  "generoitu": "2026-08-20 20:38:00",
+  "generoitu": "2026-08-21 12:42:36",
   "lahde": "Vain arvot.xlsx / MasterLyonnit",
   "otteluita_summa": 386,
   "otteluita_datassa": 193,
@@ -12,7 +12,7 @@ const PLUKKARI = {
    "vapaat_kolmostil": 112,
    "vapaat_taydet": 56,
    "vapaat_3K": 92,
-   "karpaset": 411
+   "karpaset": 412
   },
   "keskiarvo_per_ottelu": {
    "vapaat": 3.106,
@@ -20,7 +20,7 @@ const PLUKKARI = {
    "vapaat_kolmostil": 0.29,
    "vapaat_taydet": 0.145,
    "vapaat_3K": 0.238,
-   "karpaset": 1.065
+   "karpaset": 1.067
   },
   "vapaat_tilanteittain": {
    "0-tilanne": 889,
@@ -64,7 +64,7 @@ const PLUKKARI = {
    "vapaat_3K_ero": 0.03,
    "karpaset": 37,
    "karpaset_per_O": 1.12,
-   "karpaset_ero": 0.06,
+   "karpaset_ero": 0.05,
    "vapaat_0_osuus": 63.7
   },
   "PattU": {
@@ -212,9 +212,9 @@ const PLUKKARI = {
    "vapaat_3K": 6,
    "vapaat_3K_per_O": 0.19,
    "vapaat_3K_ero": -0.05,
-   "karpaset": 29,
-   "karpaset_per_O": 0.91,
-   "karpaset_ero": -0.16,
+   "karpaset": 30,
+   "karpaset_per_O": 0.94,
+   "karpaset_ero": -0.13,
    "vapaat_0_osuus": 79.0
   },
   "KeKi": {
@@ -264,7 +264,7 @@ const PLUKKARI = {
    "vapaat_3K_ero": -0.12,
    "karpaset": 39,
    "karpaset_per_O": 1.18,
-   "karpaset_ero": 0.12,
+   "karpaset_ero": 0.11,
    "vapaat_0_osuus": 74.0
   },
   "KPL": {
