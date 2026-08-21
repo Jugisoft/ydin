@@ -2,7 +2,7 @@ const PPO = {
  "meta": {
   "kausi": 2026,
   "seasonSeries": 2945,
-  "generoitu": "2026-08-21 12:43:06",
+  "generoitu": "2026-08-21 12:43:57",
   "kutistuspaino_w": 34,
   "rating": {
    "AA": -1.3455,

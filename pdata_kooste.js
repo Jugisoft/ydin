@@ -3,7 +3,7 @@ const PKOOSTE = {
   "kausi": 2026,
   "vaihe": "runko",
   "seasonSeries": 2945,
-  "generoitu": "2026-08-21 12:43:13",
+  "generoitu": "2026-08-21 12:43:58",
   "perustaso": {
    "L_pct": 44.14,
    "T_pct": 47.29,
