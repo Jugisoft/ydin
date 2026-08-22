@@ -72,6 +72,21 @@ tr.tot td{border-top:1px solid var(--border);font-weight:700}
 .up{color:var(--accent-green)} .dn{color:var(--accent-red)} .mut{color:var(--text-muted)}
 .n{font-size:10px;color:var(--text-muted);font-weight:600}
 .warn{color:var(--accent-orange)}
+.jut{display:block;text-decoration:none;color:inherit;border:1px solid var(--border);
+  border-radius:9px;padding:11px 13px;margin-bottom:9px;transition:.15s;background:var(--bg-elevated)}
+.jut:hover{background:var(--bg-hover);border-color:var(--accent-cyan)}
+.jut-head{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:5px}
+.jut-otsikko{font-size:14px;font-weight:700;line-height:1.35;margin-bottom:4px}
+.jut-teaser{font-size:12.5px;color:var(--text-secondary);line-height:1.55}
+.b{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.4px}
+.b.ennakko{background:rgba(6,182,212,.12);color:var(--accent-cyan);border:1px solid rgba(6,182,212,.3)}
+.b.raportti{background:rgba(34,197,94,.12);color:var(--accent-green);border:1px solid rgba(34,197,94,.3)}
+.b.luonnos{background:rgba(249,115,22,.12);color:var(--accent-orange);border:1px solid rgba(249,115,22,.35)}
+.b.tarkastettu{background:rgba(234,179,8,.12);color:var(--accent-yellow);border:1px solid rgba(234,179,8,.35)}
+.b.toimitettu{background:rgba(34,197,94,.12);color:var(--accent-green);border:1px solid rgba(34,197,94,.35)}
+.b.vanhentunut{background:var(--bg-card);color:var(--text-muted);border:1px solid var(--border)}
+.jut-pvm{font-size:11px;color:var(--text-muted);font-weight:600}
 .hav-item{border-left:3px solid var(--border);padding:2px 0 2px 13px;margin-bottom:13px}
 .hav-item.vahv{border-left-color:var(--accent-green)}
 .hav-item.yksi{border-left-color:var(--accent-yellow)}
@@ -147,6 +162,7 @@ tr.tot td{border-top:1px solid var(--border);font-weight:700}
 </div>
 
 <script src="pdata_posarja.js"></script>
+<script src="reports.js"></script>
 <script>
 var PIENI = 12;                      // alle taman verran yrityksia = pieni otanta
 var valittu = 0;
@@ -206,6 +222,35 @@ function tilanneTaulu(s,jk,otsikko,selite){
     '<tr class="tot"><td>Yhteensä</td><td>'+tv+'</td><td>'+tt+'</td><td>'+
     (tv?(100*tt/tv).toFixed(0)+' %':'—')+'</td><td>'+tj+'</td><td>'+tp+'</td></tr>'+
     '</tbody></table></div>';
+}
+
+function omatJutut(s){
+  if(typeof RAPORTIT==='undefined'){
+    return '<div class="card"><div class="card-t">Omat ennakot ja raportit</div>'+
+      '<p class="secsub">reports.js ei ole ladattu.</p></div>';
+  }
+  var idt={}; (s.ottelut||[]).forEach(function(o){ idt[o.match_id]=o; });
+  var jutut=RAPORTIT.items.filter(function(i){ return idt[i.match_id]; });
+  if(!jutut.length){
+    return '<div class="card"><div class="card-t">Omat ennakot ja raportit</div>'+
+      '<p class="secsub">Tälle parille ei ole vielä kirjoitettu ennakoita eikä raportteja.</p></div>';
+  }
+  jutut.sort(function(a,b){ return (b.pvm+b.tyyppi).localeCompare(a.pvm+a.tyyppi); });
+  var live = location.protocol!=='file:';
+  return '<div class="card"><div class="card-t">Omat ennakot ja raportit ('+jutut.length+')</div>'+
+    jutut.map(function(i){
+      var url = live ? ('raportit.html'+(i.status!=='julkaistu'?'?luonnokset=1':'')+'#'+i.id)
+                     : ('raportit.html'+(i.status!=='julkaistu'?'#luonnokset':'#'+i.id));
+      return '<a class="jut" href="'+esc(url)+'">'+
+        '<div class="jut-head"><span class="b '+esc(i.tyyppi)+'">'+esc(i.tyyppi)+'</span>'+
+        '<span class="b '+esc(i.status)+'">'+esc(i.status)+'</span>'+
+        '<span class="jut-pvm">'+esc(i.pvm.split('-').reverse().join('.'))+'. '+esc(i.koti)+'–'+esc(i.vieras)+
+        (i.tulos?' · '+esc(i.tulos):'')+'</span></div>'+
+        '<div class="jut-otsikko">'+esc(i.otsikko)+'</div>'+
+        '<div class="jut-teaser">'+esc(i.teaser||'')+'</div></a>';
+    }).join('')+
+    '<p class="secsub" style="margin-top:4px">Linkit avaavat jutun raportit-sivulla. '+
+    'Luonnokset ja tarkastettavat näkyvät työjononäkymässä.</p></div>';
 }
 
 var VARM={vahvistettu:['vahv','Vahvistettu'],yksi_lahde:['yksi','Yksi lähde'],tulkinta:['tulk','Tulkinta']};
@@ -373,6 +418,10 @@ function piirra(){
   html += '<h2 class="sec">Seurojen aineisto</h2>'+
           '<p class="secsub">Seurojen omista ennakoista ja otteluraporteista poimittua tietoa, jota tilastot eivät näytä.</p>'+
           seurantaOsio(s);
+
+  html += '<h2 class="sec">Omat ennakot ja raportit</h2>'+
+          '<p class="secsub">Tämän otteluparin jutut EpicBet-putkesta. Klikkaus avaa koko tekstin.</p>'+
+          omatJutut(s);
 
   html += '<h2 class="sec">Mitä sarjassa on tapahtunut</h2><p class="secsub">Ottelu kerrallaan, tuorein ensin.</p>';
   if(!pelatut.length){
