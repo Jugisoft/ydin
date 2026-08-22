@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-22 08:55:50
+// 2026-08-22 09:08:33
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-22 08:55:50",
+  "generoitu": "2026-08-22 09:08:33",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -1158,6 +1158,24 @@ const PSARJA = {
     "kulma": "Näiden kahden välillä ei ole enää paljon uutta opittavaa: Jymyn puolivälierävastus on tullut Itä-Suomesta joka kausi vuodesta 2020, ja tämä on parin neljäs puolivälierä. Avausottelu venyi koko miesten Superpesiksen kauden ensimmäiseen jatkovuoropariin. Sarjan käännekohta voi kuitenkin olla jokin aivan muu kuin tulos: JoMan lukkari Ukko Schroderus joutui jättämään pelin kesken päävamman takia juuri ratkaisuhetkellä.",
     "seuranta": [
      {
+      "pvm": "2026-08-22",
+      "joukkue": "JoMa",
+      "tyyppi": "loukkaantuminen",
+      "tieto": "Schroderuksen paluuaikataulusta tai lauantain kokoonpanosta ei ole julkaistu mitään 22.8. klo 9 mennessä. Joensuun uutissivu on renderöity JavaScriptillä eikä palauta sisältöä automaattiselle haulle, joten tilanne on tarkistettava käsin ennen ottelua.",
+      "lahde": "Oma seuranta",
+      "url": null,
+      "varmuus": "tulkinta"
+     },
+     {
+      "pvm": "2026-08-19",
+      "joukkue": "SoJy",
+      "tyyppi": "tausta",
+      "tieto": "Sotkamon kautta on leimannut loukkaantumiskierre ja oikean lyöntijärjestyksen etsiminen. Avausottelussa rosteri oli käytännössä sama kuin runkosarjan päätöskierroksella, eli kokeilujen aika vaikuttaa olevan ohi.",
+      "lahde": "Pallomeri.net",
+      "url": "https://pallomeri.net/superpesiksen-pudotuspelit-2026-ennakko/",
+      "varmuus": "yksi_lahde"
+     },
+     {
       "pvm": "2026-08-20",
       "joukkue": "JoMa",
       "tyyppi": "loukkaantuminen",
@@ -1676,8 +1694,36 @@ const PSARJA = {
     "kotareita": 0
    },
    "tarina": {
-    "kulma": null,
-    "seuranta": []
+    "kulma": "Paperilla ero on kierroksen suurin: Pallomeri.net antoi Vedolle noin 95 prosentin suosikkiaseman. Pattijoki tuli sarjaan silti neljän voiton putkessa ja 34 juoksulla niissä otteluissa. Neljässä kauden kohtaamisessa PattU ei ole vienyt Vedolta yhtäkään jaksoa — se, eikä ottelusarjan voittaminen, on Rännärin realistinen tavoite.",
+    "seuranta": [
+     {
+      "pvm": "2026-08-19",
+      "joukkue": "PattU",
+      "tyyppi": "pelinjohto",
+      "tieto": "Topi Still on Pattijoen lukkari, ja hänen onnistumisensa lautasella on joukkueen tapa rikkoa Vimpelin sisäpelin rytmi. Ykköskärjen Mäkelä–Launonen–Määttä on saatava etenijä kolmospesälle riittävän usein, jotta Martti Viitasalolla on työtä. Vimpelin lautasella Ville Soini saa ensimmäisen todellisen pudotuspelisyksynsä.",
+      "lahde": "Pallomeri.net",
+      "url": "https://pallomeri.net/superpesiksen-pudotuspelit-2026-ennakko/",
+      "varmuus": "yksi_lahde"
+     },
+     {
+      "pvm": "2026-08-19",
+      "joukkue": "ViVe",
+      "tyyppi": "tausta",
+      "tieto": "Pattijoki teki Vimpelin ulkokentästä toisessa keskinäisessä ottelussa neljä ja kolmannessa kahdeksan juoksua. Viimeisessä kohtaamisessa Veto ei tosin pelannut parhaalla kokoonpanollaan.",
+      "lahde": "Pallomeri.net",
+      "url": "https://pallomeri.net/superpesiksen-pudotuspelit-2026-ennakko/",
+      "varmuus": "yksi_lahde"
+     },
+     {
+      "pvm": "2026-08-20",
+      "joukkue": "ViVe",
+      "tyyppi": "avainpelaaja",
+      "tieto": "Avausottelun kunnarin löi Matias Rinta-aho, joka ei ollut lyönyt kaudella yhtäkään kunnaria kahdessakymmenessäyhdeksässä runkosarjaottelussa.",
+      "lahde": "Oma havainto ottelun tapahtumalokista ja pdata.js:stä",
+      "url": null,
+      "varmuus": "tulkinta"
+     }
+    ]
    },
    "ottelut": [
     {
@@ -2163,7 +2209,7 @@ const PSARJA = {
     "kotareita": 0
    },
    "tarina": {
-    "kulma": null,
+    "kulma": "Putoamiskarsinnan häviäjä putoaa suoraan Ykköspesikseen. Kummankaan seuran sivuilta ei ole vielä poimittu aineistoa — Koskenkorvan ja Alajärven osalta tämä osio täydentyy seuraavalla kierroksella.",
     "seuranta": []
    },
    "ottelut": [
