@@ -72,6 +72,23 @@ tr.tot td{border-top:1px solid var(--border);font-weight:700}
 .up{color:var(--accent-green)} .dn{color:var(--accent-red)} .mut{color:var(--text-muted)}
 .n{font-size:10px;color:var(--text-muted);font-weight:600}
 .warn{color:var(--accent-orange)}
+.hav-item{border-left:3px solid var(--border);padding:2px 0 2px 13px;margin-bottom:13px}
+.hav-item.vahv{border-left-color:var(--accent-green)}
+.hav-item.yksi{border-left-color:var(--accent-yellow)}
+.hav-item.tulk{border-left-color:var(--text-muted)}
+.hav-head{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted);
+  font-weight:700;margin-bottom:3px}
+.hav-tieto{font-size:13.5px;color:var(--text-primary);line-height:1.65}
+.hav-lahde{font-size:11px;color:var(--text-muted);margin-top:4px}
+.hav-lahde a{color:var(--accent-cyan);text-decoration:none}
+.hav-lahde a:hover{text-decoration:underline}
+.tag{display:inline-block;padding:1px 7px;border-radius:4px;font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.4px;margin-left:6px}
+.tag.loukkaantuminen{background:rgba(239,68,68,.14);color:var(--accent-red)}
+.tag.aikataulu{background:rgba(249,115,22,.14);color:var(--accent-orange)}
+.tag.sopimus,.tag.pelinjohto{background:rgba(6,182,212,.12);color:var(--accent-cyan)}
+.tag.avainpelaaja,.tag.ottelutapahtuma{background:rgba(204,255,0,.1);color:var(--accent-lime)}
+.tag.tausta{background:var(--bg-elevated);color:var(--text-secondary)}
 .jok{display:inline-block;min-width:22px;text-align:center;padding:1px 5px;border-radius:5px;
   font-size:10.5px;font-weight:800;background:rgba(204,255,0,.12);color:var(--accent-lime);
   border:1px solid rgba(204,255,0,.3);margin-right:7px}
@@ -189,6 +206,39 @@ function tilanneTaulu(s,jk,otsikko,selite){
     '<tr class="tot"><td>Yhteensä</td><td>'+tv+'</td><td>'+tt+'</td><td>'+
     (tv?(100*tt/tv).toFixed(0)+' %':'—')+'</td><td>'+tj+'</td><td>'+tp+'</td></tr>'+
     '</tbody></table></div>';
+}
+
+var VARM={vahvistettu:['vahv','Vahvistettu'],yksi_lahde:['yksi','Yksi lähde'],tulkinta:['tulk','Tulkinta']};
+
+function seurantaOsio(s){
+  var t=s.tarina||{};
+  var lista=t.seuranta||[];
+  if(!t.kulma && !lista.length){
+    return '<div class="card"><div class="card-t">Seurojen aineisto</div>'+
+      '<p class="secsub">Tälle parille ei ole vielä poimittu seurojen ennakoita tai raportteja. '+
+      'Lisää ne tiedostoon TIETOPANKKI/SARJATARINAT.json ja aja vie_ottelusarjat.py.</p></div>';
+  }
+  var html='';
+  if(t.kulma){
+    html+='<div class="card"><div class="card-t">Näkökulma sarjaan</div>'+
+          '<div class="kulma">'+esc(t.kulma)+'</div></div>';
+  }
+  if(lista.length){
+    html+='<div class="card"><div class="card-t">Mitä seurat kertovat ('+lista.length+')</div>'+
+      lista.map(function(h){
+        var v=VARM[h.varmuus]||['tulk',h.varmuus||'—'];
+        return '<div class="hav-item '+v[0]+'">'+
+          '<div class="hav-head">'+esc(h.pvm.split('-').reverse().join('.'))+'. · '+esc(h.joukkue)+
+          '<span class="tag '+esc(h.tyyppi)+'">'+esc(h.tyyppi)+'</span></div>'+
+          '<div class="hav-tieto">'+esc(h.tieto)+'</div>'+
+          '<div class="hav-lahde">'+esc(v[1])+' · lähde: '+
+          (h.url?'<a href="'+esc(h.url)+'" target="_blank" rel="noopener">'+esc(h.lahde)+'</a>':esc(h.lahde))+
+          '</div></div>';
+      }).join('')+
+      '<p class="secsub" style="margin-top:4px">Vihreä = kaksi riippumatonta lähdettä tai seuran oma tiedote · '+
+      'keltainen = yksi lähde · harmaa = oma tulkinta.</p></div>';
+  }
+  return html;
 }
 
 function kotiuttajat(s,jk){
@@ -319,6 +369,10 @@ function piirra(){
    '<div class="score">'+kv+'–'+vv+'</div><div class="tname">'+esc(s.vieras)+'</div>'+
    '<div style="margin-left:auto">'+seur+'</div></div>'+
    '<div class="strip">'+strip+'</div></div>';
+
+  html += '<h2 class="sec">Seurojen aineisto</h2>'+
+          '<p class="secsub">Seurojen omista ennakoista ja otteluraporteista poimittua tietoa, jota tilastot eivät näytä.</p>'+
+          seurantaOsio(s);
 
   html += '<h2 class="sec">Mitä sarjassa on tapahtunut</h2><p class="secsub">Ottelu kerrallaan, tuorein ensin.</p>';
   if(!pelatut.length){

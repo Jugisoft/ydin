@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-21 21:46:11
+// 2026-08-22 08:55:50
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-21 21:46:11",
+  "generoitu": "2026-08-22 08:55:50",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -124,6 +124,38 @@ const PSARJA = {
      "KiPa": 2
     },
     "kotareita": 2
+   },
+   "tarina": {
+    "kulma": "Runkosarjan kolme kohtaamista olivat vähäjuoksuisia ja ratkesivat pienillä marginaaleilla — yhdessä niistä pelattiin kaksi peräkkäistä nollajaksoa. Avausottelussa lyötiin neljätoista juoksua. Kopla nostaa itse esiin, että Kitee oli runkosarjassa sille vaikea vastustaja ja vei keskinäiset 2–1. Edellisen kerran parit kohtasivat pudotuspeleissä 2024, jolloin Kopla eteni välieriin voitoin 3–0.",
+    "seuranta": [
+     {
+      "pvm": "2026-08-21",
+      "joukkue": "KPL",
+      "tyyppi": "ottelutapahtuma",
+      "tieto": "Ottelun avausjuoksu syntyi harhaheitolla: Eemeli Laine löi pompun kakkospuolelle, polttoheitto meni kakkospesästä yli ja Patrik Vartama toi tilanteeksi 1–0. Sama tapahtuma näkyy myös tapahtumalokissa harhaheittona.",
+      "lahde": "Kouvolan Pallonlyojat",
+      "url": "https://www.kouvolanpallonlyojat.fi/post/ensimm%C3%A4inen-kiinnitys-v%C3%A4lieriin",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-20",
+      "joukkue": "KPL",
+      "tyyppi": "sopimus",
+      "tieto": "Kopla julkisti pudotuspelien kynnyksellä neljä jatkosopimusta: Jasperi Luoma ja Aleksi Haatainen vuodeksi, Jesse Eskelinen ja Toni Tossavainen kahdeksi. Tossavaisen sopimuksessa on lisäksi kahden vuoden lisäoptio.",
+      "lahde": "Kouvolan Pallonlyojat",
+      "url": "https://www.kouvolanpallonlyojat.fi/post/nelj%C3%A4lle-pelaajalle-jatkosopimukset",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-20",
+      "joukkue": "molemmat",
+      "tyyppi": "tausta",
+      "tieto": "Edellinen pudotuspelikohtaaminen oli 2024, jolloin Kopla eteni välieriin voitoin 3–0. Kitee päätti tämän kauden runkosarjan kahdentoista ottelun voittoputkeen.",
+      "lahde": "Kouvolan Pallonlyojat",
+      "url": "https://www.kouvolanpallonlyojat.fi/post/kohti-puoliv%C3%A4lieri%C3%A4",
+      "varmuus": "vahvistettu"
+     }
+    ]
    },
    "ottelut": [
     {
@@ -640,6 +672,20 @@ const PSARJA = {
     },
     "kotareita": 2
    },
+   "tarina": {
+    "kulma": "Sarjan aikataulu muuttui kesken kaiken: kolmas ottelu siirtyi tiistailta 25.8. maanantaille 24.8. Se tarkoittaa kahta ottelua reilun vuorokauden sisään eri kaupungeissa, ja se on tekijä jota ei näy missään tilastossa. Manse vahvisti muutoksen omilla sivuillaan.",
+    "seuranta": [
+     {
+      "pvm": "2026-08-21",
+      "joukkue": "molemmat",
+      "tyyppi": "aikataulu",
+      "tieto": "Kolmas ottelu siirretty tiistailta 25.8. maanantaille 24.8. Sarjan rytmi tiivistyy: ottelut 23.8. Hyvinkäällä ja 24.8. Tampereella. Vaikuttaa myös toimitusaikatauluun, koska T-2-deadline aikaistuu vuorokaudella.",
+      "lahde": "Manse PP",
+      "url": "https://www.mansepp.fi/otteluohjelmaan-muutos-manse-tahko-ottelu-siirtyy-pelattavaksi-maanantaina-24-08/",
+      "varmuus": "vahvistettu"
+     }
+    ]
+   },
    "ottelut": [
     {
      "match_id": 146951,
@@ -1108,6 +1154,65 @@ const PSARJA = {
     },
     "kotareita": 1
    },
+   "tarina": {
+    "kulma": "Näiden kahden välillä ei ole enää paljon uutta opittavaa: Jymyn puolivälierävastus on tullut Itä-Suomesta joka kausi vuodesta 2020, ja tämä on parin neljäs puolivälierä. Avausottelu venyi koko miesten Superpesiksen kauden ensimmäiseen jatkovuoropariin. Sarjan käännekohta voi kuitenkin olla jokin aivan muu kuin tulos: JoMan lukkari Ukko Schroderus joutui jättämään pelin kesken päävamman takia juuri ratkaisuhetkellä.",
+    "seuranta": [
+     {
+      "pvm": "2026-08-20",
+      "joukkue": "JoMa",
+      "tyyppi": "loukkaantuminen",
+      "tieto": "Lukkari Ukko Schroderus sai pallon päähänsä jatkovuoroparissa ja joutui jättämään kentän. Joni Lehikoinen siirtyi lukkariksi ja otti heti kärpäsen ajolähtötilanteessa kolmospesältä. Pelaamisen jatkosta sarjassa ei ole tietoa.",
+      "lahde": "Joensuun Maila ja Sotkamon Jymy",
+      "url": "https://joensuunmaila.fi/fi-fi/article/ajankohtaista/jymy-parempi-supervuoron-jalkeen-sarja-jatkuu-lauantaina-joensuussa/2675/",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-20",
+      "joukkue": "molemmat",
+      "tyyppi": "ottelutapahtuma",
+      "tieto": "Kauden ensimmäinen jatkovuoropari koko miesten Superpesiksessä. Jymy aloitti sisältä, Roope Korhosen matalaksi jäänyt kumura yllätti Elmeri Lonkaisen ja Iivari Vihanto ehti kotiin.",
+      "lahde": "Sotkamon Jymy",
+      "url": "https://www.superjymy.fi/jymy-avasi-puolivalierasarjan-voitolla/",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-20",
+      "joukkue": "JoMa",
+      "tyyppi": "avainpelaaja",
+      "tieto": "Joni Lehikoinen oli illan hahmo kahdesti: hän iski toisen jakson kolmannen vuoroparin aloittavalla takakentältä läpi kahden juoksun arvoisesti, ja siirtyi myöhemmin lukkariksi Schroderuksen tilalle.",
+      "lahde": "Joensuun Maila",
+      "url": "https://joensuunmaila.fi/fi-fi/article/ajankohtaista/jymy-parempi-supervuoron-jalkeen-sarja-jatkuu-lauantaina-joensuussa/2675/",
+      "varmuus": "yksi_lahde"
+     },
+     {
+      "pvm": "2026-08-20",
+      "joukkue": "SoJy",
+      "tyyppi": "pelinjohto",
+      "tieto": "Rosteri oli käytännössä sama kuin runkosarjan päätöskierroksella; vain Kalle Kuosmanen ja Samuel Huotari vaihtoivat paikkoja kakkoskeulassa. Roope Korhonen voitti hutunkeiton ja valitsi ulkovuoron. Pelinjohtaja Iiro Haimi arvioi ottelun jälkeen, että joukkue pystyy parantamaan sarjan edetessä.",
+      "lahde": "Sotkamon Jymy",
+      "url": "https://www.superjymy.fi/jymy-avasi-puolivalierasarjan-voitolla/",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-16",
+      "joukkue": "molemmat",
+      "tyyppi": "tausta",
+      "tieto": "Jymyn puolivälierävastustaja on ollut Itä-Suomesta joka kausi vuodesta 2020: Kiteen Pallo kahdesti ja Joensuun Maila kolmesti. Tämä on neljäs puolivälieräkohtaaminen JoMaa vastaan.",
+      "lahde": "Sotkamon Jymy",
+      "url": "https://www.superjymy.fi/superjymy-fi-puolivalierat2026/",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-20",
+      "joukkue": "SoJy",
+      "tyyppi": "ottelutapahtuma",
+      "tieto": "Kolmas ottelu 25.8. Hiukassa on JymyHyvä-ottelu, jossa yleisö pääsee ilmaiseksi C-katsomoon. Odotettavissa tavallista suurempi kotiyleisö.",
+      "lahde": "Sotkamon Jymy",
+      "url": "https://www.superjymy.fi/jymy-avasi-puolivalierasarjan-voitolla/",
+      "varmuus": "vahvistettu"
+     }
+    ]
+   },
    "ottelut": [
     {
      "match_id": 146946,
@@ -1569,6 +1674,10 @@ const PSARJA = {
      "PattU": 0
     },
     "kotareita": 0
+   },
+   "tarina": {
+    "kulma": null,
+    "seuranta": []
    },
    "ottelut": [
     {
@@ -2052,6 +2161,10 @@ const PSARJA = {
      "AA": 1
     },
     "kotareita": 0
+   },
+   "tarina": {
+    "kulma": null,
+    "seuranta": []
    },
    "ottelut": [
     {
