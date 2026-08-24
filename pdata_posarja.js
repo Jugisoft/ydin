@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-23 19:50:33
+// 2026-08-24 20:21:22
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-23 19:50:33",
+  "generoitu": "2026-08-24 20:21:22",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -794,10 +794,10 @@ const PSARJA = {
    "best_of": "5",
    "tarvittavat": 3,
    "voitot": {
-    "koti": 2,
+    "koti": 3,
     "vieras": 0
    },
-   "paattynyt": false,
+   "paattynyt": true,
    "kulma": "Jaksovoitoissa nama ovat kaytannossa sama joukkue: 36-25 ja 34-26. Ero syntyy marginaalista — Manse +1,00 juoksua per jakso, Tahko +0,56. Kotiutuksessa Manse on +48 odottamaan, Tahko tasan; torjunnassa jarjestys kaantyy, Tahko +64 ja Manse +20. Runkosarjassa Tahko vei 2-1 ja molemmat voitot tulivat kotarissa. Loppukaudesta puhutaan Tahkon notkahduksesta, ja viisi viimeista olikin 1/5 ja -1,6 juoksua — mutta Manse teki samaan aikaan 2/5 ja -1,4, eli molemmat hyytyivat. Tahkon lukkari antaa eniten kolmostilanteen vapaita koko sarjassa, 15 kappaletta. Siina on Mansen sauma.",
    "runko": {
     "Manse": {
@@ -836,13 +836,13 @@ const PSARJA = {
      "eroTorjunta": 19.5,
      "eroYhteensa": 67.1,
      "juoksut_per_O": 7.18,
-     "vapaat_per_O": 3.34,
+     "vapaat_per_O": 3.36,
      "vapaat_kolmostil": 7,
      "karpaset_per_O": 1.0,
      "kotari": {
-      "n": 11,
-      "voitot": 5,
-      "pct": 45.5
+      "n": 12,
+      "voitot": 6,
+      "pct": 50.0
      },
      "rating": 0.3149
     },
@@ -858,13 +858,13 @@ const PSARJA = {
      "eroTorjunta": 64.3,
      "eroYhteensa": 62.3,
      "juoksut_per_O": 5.67,
-     "vapaat_per_O": 3.31,
+     "vapaat_per_O": 3.33,
      "vapaat_kolmostil": 15,
-     "karpaset_per_O": 1.2,
+     "karpaset_per_O": 1.25,
      "kotari": {
-      "n": 13,
+      "n": 14,
       "voitot": 8,
-      "pct": 61.5
+      "pct": 57.1
      },
      "rating": 0.2282
     }
@@ -1473,36 +1473,234 @@ const PSARJA = {
      "stadion": "Kaupin pesäpallostadion, Tampere",
      "koti": "Manse",
      "vieras": "Tahko",
-     "pelattu": false
-    },
-    {
-     "match_id": 146954,
-     "pvm": "2026-08-26",
-     "klo": "17:00",
-     "stadion": "Pihkalan pesäpallostadion, Hyvinkää",
-     "koti": "Tahko",
-     "vieras": "Manse",
-     "pelattu": false
-    },
-    {
-     "match_id": 146955,
-     "pvm": "2026-08-28",
-     "klo": "17:00",
-     "stadion": "Kaupin pesäpallostadion, Tampere",
-     "koti": "Manse",
-     "vieras": "Tahko",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "1-0k (0-0, 0-0, 0-0, 2-1)",
+     "jaksot": "0-0, 0-0, 0-0, 2-1",
+     "joukkueet": {
+      "Manse": {
+       "kotiutus": {
+        "onn": 0,
+        "yrit": 6,
+        "pct": 0.0
+       },
+       "torjunta_pct": 100.0,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 11,
+         "yrit": 22,
+         "pct": 50.0
+        },
+        {
+         "pesa": 1,
+         "onn": 10,
+         "yrit": 21,
+         "pct": 47.6
+        },
+        {
+         "pesa": 2,
+         "onn": 5,
+         "yrit": 13,
+         "pct": 38.5
+        },
+        {
+         "pesa": 3,
+         "onn": 0,
+         "yrit": 7,
+         "pct": 0.0
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 2,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 21,
+         "juoksuja": 0,
+         "paloja": 4
+        },
+        "1": {
+         "vuoroja": 18,
+         "juoksuja": 3,
+         "paloja": 8,
+         "tuottavia": 1
+        },
+        "1-2": {
+         "vuoroja": 11,
+         "juoksuja": 0,
+         "paloja": 8
+        },
+        "1-2-3": {
+         "vuoroja": 5,
+         "juoksuja": 0,
+         "paloja": 7
+        },
+        "2": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "2-3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 8574,
+         "nimi": "Perttu Ruuska",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 4911,
+         "nimi": "Jukka-Pekka Vainionpää",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        }
+       ]
+      },
+      "Tahko": {
+       "kotiutus": {
+        "onn": 0,
+        "yrit": 5,
+        "pct": 0.0
+       },
+       "torjunta_pct": 100.0,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 10,
+         "yrit": 28,
+         "pct": 35.7
+        },
+        {
+         "pesa": 1,
+         "onn": 10,
+         "yrit": 23,
+         "pct": 43.5
+        },
+        {
+         "pesa": 2,
+         "onn": 6,
+         "yrit": 15,
+         "pct": 40.0
+        },
+        {
+         "pesa": 3,
+         "onn": 0,
+         "yrit": 5,
+         "pct": 0.0
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 1,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 30,
+         "juoksuja": 0,
+         "paloja": 2
+        },
+        "1": {
+         "vuoroja": 21,
+         "juoksuja": 0,
+         "paloja": 7
+        },
+        "2": {
+         "vuoroja": 8,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-2": {
+         "vuoroja": 11,
+         "juoksuja": 0,
+         "paloja": 9
+        },
+        "1-2-3": {
+         "vuoroja": 7,
+         "juoksuja": 0,
+         "paloja": 8
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 4294,
+         "nimi": "Juha Niemi",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 12934,
+         "nimi": "Samu Kyhyräinen",
+         "nro": 4,
+         "paikka": "S",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 7004,
+         "nimi": "Valentin Ikonen",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      }
+     },
+     "kunnarit": [],
+     "ryopyt": [
+      {
+       "jakso": 4,
+       "vuoropari": 0,
+       "joukkue": "Manse",
+       "maara": 2
+      }
+     ],
+     "tuojat": [
+      [
+       "Teemu Rouhiainen",
+       1
+      ],
+      [
+       "Severi Tikkakoski",
+       1
+      ],
+      [
+       "Simo Vainikainen",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     }
    ],
-   "seuraava": {
-    "match_id": 146953,
-    "pvm": "2026-08-24",
-    "klo": "17:00",
-    "stadion": "Kaupin pesäpallostadion, Tampere",
-    "koti": "Manse",
-    "vieras": "Tahko",
-    "pelattu": false
-   }
+   "seuraava": null
   },
   {
    "id": 3335,
@@ -2214,17 +2412,6 @@ const PSARJA = {
          "T": 1
         },
         {
-         "pid": 10559,
-         "nimi": "Samuel Huotari",
-         "nro": 6,
-         "paikka": "3P",
-         "jokeri": false,
-         "L": 0,
-         "K": 0,
-         "yrit": 1,
-         "T": 2
-        },
-        {
          "pid": 10950,
          "nimi": "Vertti Veittikoski",
          "nro": 11,
@@ -2234,6 +2421,17 @@ const PSARJA = {
          "K": 0,
          "yrit": 1,
          "T": 1
+        },
+        {
+         "pid": 10559,
+         "nimi": "Samuel Huotari",
+         "nro": 6,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
         }
        ]
       }
@@ -2897,22 +3095,22 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 2861,
-         "nimi": "Antti Karjaluoto",
-         "nro": 4,
-         "paikka": "2P",
-         "jokeri": false,
+         "pid": 10350,
+         "nimi": "Eemeli Mikkilä",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
          "L": 0,
          "K": 0,
          "yrit": 1,
          "T": 0
         },
         {
-         "pid": 10350,
-         "nimi": "Eemeli Mikkilä",
-         "nro": 11,
-         "paikka": null,
-         "jokeri": true,
+         "pid": 2861,
+         "nimi": "Antti Karjaluoto",
+         "nro": 4,
+         "paikka": "2P",
+         "jokeri": false,
          "L": 0,
          "K": 0,
          "yrit": 1,
@@ -3649,22 +3847,22 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 5814,
-         "nimi": "Toni Marjamäki",
-         "nro": 4,
-         "paikka": "S",
-         "jokeri": false,
+         "pid": 7794,
+         "nimi": "Mikael Penninkangas",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
          "L": 1,
          "K": 0,
          "yrit": 4,
          "T": 0
         },
         {
-         "pid": 7794,
-         "nimi": "Mikael Penninkangas",
-         "nro": 12,
-         "paikka": null,
-         "jokeri": true,
+         "pid": 5814,
+         "nimi": "Toni Marjamäki",
+         "nro": 4,
+         "paikka": "S",
+         "jokeri": false,
          "L": 1,
          "K": 0,
          "yrit": 4,

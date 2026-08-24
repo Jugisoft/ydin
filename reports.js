@@ -3,8 +3,215 @@
 // Rakenne: RAPORTIT.items[] — uusin ensin. status: "luonnos" | "julkaistu"
 // Uusi raportti = uusi objekti listan alkuun. HTML-sivua ei tarvitse muokata.
 const RAPORTIT = {
- "paivitetty": "2026-08-22",
+ "paivitetty": "2026-08-23",
  "items": [
+  {
+   "id": "146965-ennakko",
+   "match_id": 146965,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "AA",
+   "vieras": "KoU",
+   "pvm": "2026-08-31",
+   "klo": "16:30",
+   "stadion": "Saltex Areena (Kitro), Alajärvi",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 15.2,
+    "sade_mm": 0.4,
+    "sade_tn": 35,
+    "tuuli_kmh": 18.9,
+    "kuvaus": "alustava ennuste: 15 astetta, pilvistä, tihkun mahdollisuus 35 %, tuulta 17–19 km/h"
+   },
+   "otsikko": "Jos Kitrossa vielä pelataan, kyseessä on Alajärven kauden tärkein ilta — ja kylmin",
+   "teaser": "Ehdollinen ennakko: ottelu pelataan vain, jos Alajärven Ankkurit voittaa keskiviikon kolmannen ottelun Koskenkorvalla. Maanantaiksi luvataan viittätoista astetta, tuulta ja tihkua.",
+   "html": "<p class='pikku'><strong>Ehdollinen:</strong> ottelu pelataan vain, jos AA voittaa keskiviikon 26.8. ottelun Koskenkorvalla. Sarjatilanne ennakon kirjoitushetkell&auml;: KoU johtaa 2&ndash;0. H&auml;vi&auml;j&auml; putoaa suoraan Ykk&ouml;spesikseen.</p><p>Alaj&auml;rven Ankkurit voitti t&auml;n&auml; kes&auml;n&auml; kaksi ottelua kolmestakymmenest&auml;kolmesta. Jotta t&auml;h&auml;n otteluun ylip&auml;&auml;t&auml;&auml;n p&auml;&auml;st&auml;isiin, sen pit&auml;&auml; voittaa kolmas keskiviikkona Koskenkorvalla &mdash; kent&auml;ll&auml;, jolla se h&auml;visi jo perjantaina ja jolla se ei ole t&auml;n&auml; kes&auml;n&auml; voittanut. Todenn&auml;k&ouml;isyys ei ole hyv&auml;.</p><p>Mutta jos se tapahtuu, Kitrossa pelataan maanantaina 31. elokuuta ottelu, joka on Alaj&auml;rven kauden ja mahdollisesti seuraavien vuosien t&auml;rkein.</p><p>Numerot ovat julmat. Alaj&auml;rvi teki kaudella 3,2 juoksua per ottelu ja p&auml;&auml;sti 8,5. Kotiutus kolmospes&auml;lt&auml; 32,2 prosenttia ja kokonaiskotiutus 37,4 prosenttia ovat runkosarjan heikoimpia. Kunnareita tuli kaudella viisi, koko sarjan v&auml;hiten. Koskenkorva teki 3,9 ja p&auml;&auml;sti 8,1, mutta l&ouml;i 18 kunnaria &mdash; sarjan toiseksi eniten. Kun kaksi joukkuetta on molemmat heikkoja, ratkaisee se, kummalla on yksi ty&ouml;kalu, joka silti toimii.</p><p>Petteri Kortelainen on kantanut Ankkureiden kotiutusvastuun: 41 ly&ouml;ty&auml; juoksua ja nolla itse juostua pistett&auml; koko kaudella. H&auml;n oli my&ouml;s sen kiistellyn takarajatuomion keskiöss&auml; perjantain avausottelussa, josta seura on pyyt&auml;nyt Pes&auml;palloliitolta selvityksi&auml;. Toni Marjam&auml;ki l&ouml;i kaudella kotiin 23 ja Matias Litmanen on onnistunut kolmosen k&auml;rjess&auml; 66,2-prosenttisesti (43/65) &mdash; joukkueen paras lukema.</p><p>Koskenkorvalla Rasmus Teppo on ollut kirkkaasti paras: 63 ly&ouml;ty&auml; juoksua ja kaksi kunnaria runkosarjassa, karsintasarjan kahdessa ensimm&auml;isess&auml; ottelussa viisi ly&ouml;ty&auml; ja kunnari. Matias Rauhala on ly&ouml;nyt viisi kunnaria. Miki Likander juoksi perjantaina itse kotiin kahdesti.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>Kunnarit kaudella: KoU 18, AA 5. AA:n kotiutus 37,4 % ja juoksuodotus 5,05 &mdash; molemmat runkosarjan heikoimmat. Alaj&auml;rvi voitti kaudella kaksi ottelua 33:sta. P&auml;&auml;st&auml;kseen t&auml;h&auml;n otteluun sen on voitettava kolme per&auml;kk&auml;ist&auml; &mdash; enemm&auml;n kuin koko runkosarjassa yhteens&auml;.</p></div><p>Kitron pesäpallostadion on Wikipedian mukaan Suomen ensimm&auml;inen ainoastaan pesäpalloa varten rakennettu stadion, valmistunut 1990. Nimi tulee Raamatun Kidronin laaksosta, koska kent&auml;n vieress&auml; virtaa Kitronjoeksi kutsuttu puro. Nelj&auml;tuhatta paikkaa; vuoden 1995 It&auml;&ndash;L&auml;nness&auml; siell&auml; oli 6 822 ihmist&auml;. Jos Ankkurit putoaa, J&auml;rviseudun derbyj&auml; Vimpeli&auml; vastaan ei ensi kaudella pelata p&auml;&auml;sarjassa lainkaan.</p><p>Maanantain keli on kahdeksan p&auml;iv&auml;n p&auml;&auml;ss&auml;, joten t&auml;m&auml; on <strong>alustava ennuste</strong> ja tarkentuu olennaisesti. T&auml;m&auml;n hetken malli lupaa viitt&auml;toista astetta, pilvist&auml;, kolmenkymmenenviiden prosentin todenn&auml;k&ouml;isyytt&auml; tihkulle ja tuulta seitsem&auml;st&auml;toista yhdeks&auml;&auml;ntoista kilometriin tunnissa. Jos se pit&auml;&auml;, kyseess&auml; on kelien ep&auml;kiitollisin yhdistelm&auml;: alle viidentoista asteen ilta ei kanna palloa, tuuli tekee korkeista arpapeli&auml; ja kostea pallo vie kierteen n&auml;ppily&ouml;nneist&auml;. Kunnarikohteissa ei-puoli vahvistuu selv&auml;sti.</p><p>Kertoimissa juoksuodotus on t&auml;ss&auml; parissa normaalisti korkea &mdash; noin kaksitoista &mdash; mutta jos ennuste pit&auml;&auml;, sit&auml; kannattaa laskea. T&auml;m&auml; olisi kylm&auml;, tuulinen ja hermostunut ilta joukkueelta, jolla on kaikki menetett&auml;v&auml;n&auml;.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Ottelussa ly&ouml;d&auml;&auml;n kunnari &ndash; ei.</em> Yhteinen kausifrekvenssi 0,7 per peli, ja alle 15 asteen tuulinen keli vahvistaa ei-puolta. Arvio: ~1,85 (kelisidonnainen, tarkistettava ennen toimitusta).</li><li><em>Ottelun juoksut yhteens&auml; alle 11,5.</em> Kausifrekvenssien odotus noin 11,8, mutta keli painaa alasp&auml;in. Arvio: ~2,00, ja alle-puoli vahvistuu jos ennuste pit&auml;&auml;.</li><li><em>Petteri Kortelainen tuo tai ly&ouml; v&auml;hint&auml;&auml;n 1.</em> Ly&ouml;dyt ja kunnarit yhteens&auml; 41 kappaletta 33 runkosarjaottelussa eli 1,24 per peli. Arvio: ~1,40.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Kaksi voittoa kolmessakymmeness&auml;kolmessa ottelussa. Kolme per&auml;kk&auml;ist&auml; voittoa vaatisi enemm&auml;n kuin koko kes&auml; yhteens&auml; antoi. Siin&auml; on kaikki, mit&auml; Alaj&auml;rvell&auml; nyt on.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 + api.pesistulokset.fi 23.8.2026. Taustat: Yle Urheilu 22.&ndash;23.8.2026, TIETOPANKKI/KENTAT.md. S&auml;&auml;ennuste: Open-Meteo 23.8.2026 (alustava, yli 5 vrk p&auml;&auml;ss&auml;).</p>"
+  },
+  {
+   "id": "146944-ennakko",
+   "match_id": 146944,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "PattU",
+   "vieras": "ViVe",
+   "pvm": "2026-08-26",
+   "klo": "17:00",
+   "stadion": "MiiluAreena (Rännäri), Raahe",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 15.7,
+    "sade_mm": 0,
+    "sade_tn": 0,
+    "tuuli_kmh": 9.1,
+    "kuvaus": "15,7 astetta laskien 14:ään, puolipilvistä, poutaa, heikkoa tuulta 5–9 km/h"
+   },
+   "otsikko": "Jos Rännärillä vielä pelataan, keli on ensimmäistä kertaa Pattijoen puolella",
+   "teaser": "Ehdollinen ennakko: ottelu pelataan vain, jos Pattijoki voittaa tiistain kolmannen ottelun Vimpelissä. Silloin vastassa on neljäntoista asteen ilta ja pehmeäksi kastunut kenttä — eli olosuhteet, jotka vaimentavat Vedon vahvimman aseen.",
+   "html": "<p class='pikku'><strong>Ehdollinen:</strong> ottelu pelataan vain, jos PattU voittaa tiistain kolmannen ottelun Vimpeliss&auml;. Sarjatilanne ennakon kirjoitushetkell&auml;: ViVe johtaa 2&ndash;0.</p><p>Aloitetaan rehellisesti: t&auml;m&auml; ottelu on t&auml;ll&auml; hetkell&auml; noin kolmanneksen verran todenn&auml;k&ouml;inen, ei enemp&auml;&auml;. Pattijoki on 0&ndash;2 tappiolla eik&auml; se ole voittanut Vimpelin Vetoa kertaakaan t&auml;n&auml; kes&auml;n&auml;. Mutta jos R&auml;nn&auml;rill&auml; keskiviikkona pelataan, tarjolla on ensimm&auml;ist&auml; kertaa koko sarjassa asetelma, jossa olosuhteet ovat kotijoukkueen puolella.</p><p>Syy on ennusteessa. Raahen keskiviikkoilta on viisitoista astetta ottelun alkaessa ja nelj&auml;toista viimeisiss&auml; vuoropareissa. Se on juuri sen rajan alapuolella, jossa pallo lakkaa kantamasta kunnolla. Kahdessa viikossa Raaheen on satanut 113 milli&auml; &mdash; kaksinkertainen m&auml;&auml;r&auml; useimpiin sarjan kenttiin verrattuna &mdash; joten pohja on pehme&auml; ja pomppu matala. Tuulta on vain viidest&auml; yhdeks&auml;&auml;n kilometriin tunnissa, joten arpomista ei tule sit&auml;k&auml;&auml;n kautta.</p><p>Miksi se on Pattijoen etu? Koska Vimpelin ylivoimaisin yksitt&auml;inen ase on pitk&auml; ly&ouml;nti. Veto l&ouml;i kaudella 32 kunnaria, koko sarjan eniten, ja sen juoksukeskiarvo 7,2 per ottelu on toista luokkaa kuin Pattijoen 4,7. Kylm&auml; ja pehme&auml; kentt&auml; sy&ouml; juuri sit&auml; osaa pelist&auml;, joka erottaa n&auml;m&auml; joukkueet toisistaan. Se ei tee Pattijoesta suosikkia. Se kaventaa v&auml;li&auml;.</p><p>Mikael M&auml;kel&auml; on se pelaaja, jonka varaan kotijoukkueen ilta rakentuu. Viisi kunnaria, 42 itse juostua pistett&auml; ja palo-osuus 3,9 prosenttia &mdash; mies, joka menee pesille ja pysyy siell&auml;. Martti Viitasalo hoitaa kotiutuksen: 61 ly&ouml;ty&auml; juoksua kaudella, mutta my&ouml;s 27,5 prosentin palo-osuus. Eemeli Mikkil&auml; on kolmas nimi, 37 ly&ouml;ty&auml; ja k&auml;rkily&ouml;nti kolmoselta tasan 50 prosenttia (29/58).</p><p>Vieraissa vastassa on Henri Puputti, jonka 89 ly&ouml;ty&auml; juoksua ja kunnaria kahdessakymmeness&auml;kahdeksassa ottelussa tarkoittaa reilua kolmea per peli. Aleksi Lassila onnistuu kolmosen k&auml;rjess&auml; 79,2-prosenttisesti (19/24), ja Mikko Vihri&auml;l&auml; on juossut kaudella kotiin 59 kertaa.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>Raaheen on satanut 14 vuorokaudessa 113 mm &mdash; sarjan m&auml;rimm&auml;t olosuhteet. Ottelutunnin l&auml;mp&ouml;tila 15,7 &deg;C, loppuilta 14 &deg;C. Kunnarit kaudella: ViVe 32, PattU 15. Keskin&auml;isi&auml; kohtaamisia viisi, kaikki Vimpelille.</p></div><p>R&auml;nn&auml;ri on Raahen pesäpallon kotipes&auml;: kolmetuhatta paikkaa, yleis&ouml;enn&auml;tys 4 830 vuoden 2008 It&auml;&ndash;L&auml;nnest&auml; ja saman vuoden nelj&auml;nnest&auml; finaalista 3 512. Ne luvut ovat el&auml;neet nyt kahdeksantoista vuotta. Raahe on ter&auml;stehdaskaupunki, mutta pesist&auml; siell&auml; pelataan Pattijoen kyl&auml;ss&auml;, ja se on ihan eri asia.</p><p>Kertoimissa suosikkiasetelma ei muutu miksik&auml;&auml;n, mutta juoksuodotus kannattaa laskea. Kylm&auml;, pehme&auml; ja tyyni ilta yhdistettyn&auml; siihen, ett&auml; Pattijoki kotona joutuu pelaamaan tappiollisen sarjan pakkopeli&auml;, viittaa hallittuun ja hitaaseen otteluun pikemminkin kuin taulukon t&auml;ytt&auml;miseen.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Ottelun juoksut yhteens&auml; alle 10,5.</em> Kausifrekvenssien odotus noin 10,4, mutta alle 15 asteen keli ja pehme&auml; pohja painavat sit&auml; alasp&auml;in. Arvio: ~1,80, ja keli tukee alle-puolta.</li><li><em>Ottelussa ly&ouml;d&auml;&auml;n kunnari &ndash; ei.</em> Yhteinen kausifrekvenssi 1,4 per peli puoltaisi kyll&auml;-puolta, mutta viile&auml; ilta ja m&auml;rk&auml; kentt&auml; k&auml;&auml;nt&auml;v&auml;t asetelmaa. Arvio: ~3,60 &mdash; t&auml;m&auml; on kelisidonnainen kohde, ei datakohde.</li><li><em>Mikael M&auml;kel&auml; juoksee itse kotiin v&auml;hint&auml;&auml;n 1.</em> 42 itse juostua pistett&auml; 29 ottelussa eli 1,45 per peli, palo-osuus vain 3,9 %. Arvio: ~1,40.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Ensin pit&auml;&auml; voittaa Vimpeliss&auml;. Mutta jos se tapahtuu, R&auml;nn&auml;rill&auml; on keskiviikkona ilta, jollaista Pattijoki on odottanut koko kes&auml;n.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 + api.pesistulokset.fi 23.8.2026. Taustat: TIETOPANKKI/KENTAT.md. S&auml;&auml;ennuste: Open-Meteo 23.8.2026.</p>"
+  },
+  {
+   "id": "146949-ennakko",
+   "match_id": 146949,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "JoMa",
+   "vieras": "SoJy",
+   "pvm": "2026-08-26",
+   "klo": "17:00",
+   "stadion": "Ilosaarirock Stadion (Mehtimäki), Joensuu",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 19.2,
+    "sade_mm": 0,
+    "sade_tn": 2,
+    "tuuli_kmh": 10.9,
+    "kuvaus": "19 astetta laskien 15:een, selkenevää, poutaa, tuuli laantuu 11:stä 8:aan km/h"
+   },
+   "otsikko": "Mehtimäki on ainoa paikka, jossa Maila on kaatanut Jymyn tänä kesänä",
+   "teaser": "Ehdollinen ennakko: ottelu pelataan vain, jos Joensuun Maila voittaa tiistain kolmannen ottelun Sotkamossa. Molemmat Mailan tämänkesäiset voitot Jymystä ovat tulleet omalla kentällä.",
+   "html": "<p class='pikku'><strong>Ehdollinen:</strong> ottelu pelataan vain, jos JoMa voittaa tiistain kolmannen ottelun Hiukassa. Sarjatilanne ennakon kirjoitushetkell&auml;: SoJy johtaa 2&ndash;0.</p><p>Joensuun Maila on kohdannut Sotkamon Jymyn t&auml;n&auml; kes&auml;n&auml; viidesti ja voittanut kaksi. Molemmat voitot ovat tulleet Mehtim&auml;ell&auml;. Kes&auml;kuun lopussa 1&ndash;0 ja elokuun puoliv&auml;liss&auml; 2&ndash;1 kotiutusly&ouml;ntikilpailun j&auml;lkeen. Sotkamossa Maila ei ole ottanut mit&auml;&auml;n.</p><p>Siin&auml; on koko t&auml;m&auml;n ennakon perustelu &mdash; ja samalla sen ongelma. Jotta t&auml;h&auml;n otteluun p&auml;&auml;st&auml;isiin, Mailan pit&auml;&auml; ensin voittaa juuri siell&auml;, miss&auml; se ei ole onnistunut.</p><p>Sotkamon Jymyn kes&auml; oli 23&ndash;10 ja toinen sija. Sen ulkopeli on sarjan k&auml;rke&auml;: torjunta 67,0 prosenttia, p&auml;&auml;stettyj&auml; juoksuja 3,6 per ottelu. Lauantaina Joensuussa Jymy voitti 2&ndash;0 jaksoin 5&ndash;2 ja 5&ndash;1, ja Aapo Hiltunen l&ouml;i toisen jakson kaikki viisi juoksua. Samassa ottelussa Roope Korhonen ohitti 600 ly&ouml;dyn juoksun rajan miesten Superpesiksess&auml;.</p><p>Mailan luvut ovat kaksijakoiset. Ulkopeli on erinomainen &mdash; torjunta 68,1 prosenttia, sarjan toiseksi paras &mdash; mutta kotiutus kolmospes&auml;lt&auml; 31,1 prosenttia on koko sarjan heikoin lukema. Joukkue rakentaa tilanteita ja j&auml;&auml; niihin. Juoksuja tuli kaudella 4,4 per ottelu, mik&auml; on v&auml;hemm&auml;n kuin yhdell&auml;k&auml;&auml;n muulla pudotuspeleihin selvinneell&auml;.</p><p>Juho Toivola on se, joka avaa lukkoja: 59 ly&ouml;ty&auml; juoksua, nelj&auml; kunnaria, k&auml;rkily&ouml;nti kolmoselta 61,6 prosenttia. Kapteeni Niko Korhonen on kes&auml;n mittaan juossut itse kotiin kaksikymment&auml; kertaa ja onnistunut kolmosen k&auml;rjess&auml; 73 kertaa 110:st&auml;. Joosua R&auml;tt&ouml; l&ouml;i lauantaina Joensuun molemmat avausjakson juoksut. Kokoonpanosta puuttui silloin Kasperi H&auml;m&auml;l&auml;inen, ja lukkari Ukko Schroderus pelasi torstaina saamansa p&auml;&auml;n alueen t&auml;rskyn j&auml;lkeen.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>JoMan kotiutus kolmospes&auml;lt&auml; 31,1 % &mdash; sarjan heikoin. Torjunta 68,1 % &mdash; sarjan toiseksi paras. Keskin&auml;isist&auml; viidest&auml; kohtaamisesta Maila on voittanut kaksi, molemmat Mehtim&auml;ell&auml;. Jymy on p&auml;&auml;stänyt 3,6 juoksua per ottelu.</p></div><p>Mehtim&auml;ki oli 1980-luvulle asti pikaluistelurata ja j&auml;&auml;pallokentt&auml;; tammikuussa 1975 siell&auml; pelattiin nuorten j&auml;&auml;pallomaaottelu Suomi&ndash;Neuvostoliitto. Syksyll&auml; 2017 vanhat katsomot purettiin ja ymp&auml;r&ouml;iv&auml; mets&auml; kaadettiin, ja puoli vuotta my&ouml;hemmin avattiin yksi Superpesiksen moderneimmista stadioneista. Se veti heti It&auml;&ndash;L&auml;nten&auml; 4 500 katsojaa. Nyt paikka kantaa nime&auml; Ilosaarirock Stadion, mik&auml; on Joensuulta niin joensuulaista kuin olla voi.</p><p>Jymyn oma raportti lauantailta pani merkille, ett&auml; Mehtim&auml;en pinta &rdquo;mahdollisti t&auml;ysin uuden ulottuvuuden sis&auml;peliin&rdquo; verrattuna sateiseen torstai-iltaan Hiukassa. Keskiviikoksi ennuste lupaa samaa: yhdeks&auml;ntoista astetta ottelun alkaessa, taivas selkenee illan mittaan, poutaa, tuuli laantuu. Joensuuhun on kahdessa viikossa satanut 47 milli&auml;, eli kentt&auml; on normaalikosteudessa.</p><p>Kertoimissa t&auml;m&auml; on se ottelu, jossa kotietu tarkoittaa oikeasti jotain. Viisi keskin&auml;ist&auml; kohtaamista, ja kotijoukkue on voittanut nelj&auml;. Jos Maila selvi&auml;&auml; Hiukasta hengiss&auml;, keskiviikon kertoimen ei pit&auml;isi olla kaukana tasan.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Juho Toivola tuo tai ly&ouml; v&auml;hint&auml;&auml;n 2.</em> Ly&ouml;dyt ja kunnarit yhteens&auml; 63 kappaletta 32 runkosarjaottelussa eli 2,0 per peli. Arvio: ~1,70.</li><li><em>Ottelun juoksut yhteens&auml; alle 9,5.</em> Kausifrekvenssien odotus noin 9,1, ja kahden sarjan parhaan ulkopelin kohtaaminen tukee alle-puolta. Arvio: ~1,75.</li><li><em>Ottelu ratkeaa supervuoroparissa tai kotiutusly&ouml;ntikilpailussa &ndash; kyll&auml;.</em> Viidest&auml; keskin&auml;isest&auml; kohtaamisesta kaksi on mennyt jatkoon. Pieni otanta, mutta ulkopelien taso puoltaa. Arvio: ~2,60.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Maila osaa voittaa Jymyn. Se vain ei ole toistaiseksi osannut tehd&auml; sit&auml; muualla kuin kotona &mdash; ja tiistaina pelataan Sotkamossa.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 + api.pesistulokset.fi 23.8.2026. Taustat: superjymy.fi 22.8.2026, Yle Urheilu 22.8.2026, TIETOPANKKI/KENTAT.md. S&auml;&auml;ennuste: Open-Meteo 23.8.2026.</p>"
+  },
+  {
+   "id": "146954-ennakko",
+   "match_id": 146954,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "Tahko",
+   "vieras": "Manse",
+   "pvm": "2026-08-26",
+   "klo": "17:00",
+   "stadion": "Pihkalan pesäpallostadion, Hyvinkää",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 20.7,
+    "sade_mm": 0,
+    "sade_tn": 0,
+    "tuuli_kmh": 8,
+    "kuvaus": "20,7 astetta laskien 17:ään, selkenevää, poutaa, lähes tyyntä (4,5–8 km/h)"
+   },
+   "otsikko": "Sunnuntaina Pihkalassa nähtiin yksi juoksu — keskiviikoksi luvataan kahtakymmentä astetta ja tyyntä",
+   "teaser": "Ehdollinen ennakko: ottelu pelataan vain, jos Hyvinkään Tahko voittaa maanantain kolmannen ottelun Tampereella. Sunnuntain 0–1 oli koko pudotuspelien vähäjuoksuisin ottelu.",
+   "html": "<p class='pikku'><strong>Ehdollinen:</strong> ottelu pelataan vain, jos Tahko voittaa maanantain kolmannen ottelun Kaupissa. Sarjatilanne ennakon kirjoitushetkell&auml;: Manse johtaa 2&ndash;0.</p><p>Sunnuntaina Pihkalassa pelattiin ottelu, jonka lopputulos oli 0&ndash;1 ja jaksot 0&ndash;1 ja 0&ndash;0. Yksi juoksu. Koko iltana. Kahden joukkueen v&auml;lill&auml;, jotka molemmat ly&ouml;v&auml;t seitsem&auml;ntoista kunnaria kaudessa.</p><p>Jos joku viel&auml; ep&auml;ili, ett&auml; pudotuspeleiss&auml; peli muuttuu, siin&auml; oli vastaus.</p><p>Manse johtaa sarjaa 2&ndash;0 ja voi p&auml;&auml;tt&auml;&auml; sen maanantaina Kaupissa. T&auml;m&auml; ennakko koskee siis tilannetta, jossa Tahko voittaa ensin Tampereella &mdash; ja palaa Pihkalaan pelaamaan hengest&auml;&auml;n.</p><p>Asetelma on kes&auml;n mittaan ollut kiehtovan symmetrinen. Manse kotiuttaa varmemmin kuin kukaan muu sarjassa: 42,3 prosenttia. Tahko torjuu paremmin kuin kukaan muu: 70,7 prosenttia. Manse tekee 6,4 juoksua per ottelu ja p&auml;&auml;st&auml;&auml; 4,7; Tahko tekee 5,1 ja p&auml;&auml;st&auml;&auml; 4,0. Kunnareita kummallakin seitsem&auml;ntoista. Runkosarjassa nelj&auml;st&auml; kohtaamisesta kolme ratkesi vasta viimeisell&auml; jaksolla tai sen j&auml;lkeen.</p><p>Yksi luku erottaa. Tahkon k&auml;rkily&ouml;nti kolmospes&auml;lt&auml; onnistuu 53,2-prosenttisesti, mik&auml; on sarjan kymmenenneksi paras eli k&auml;yt&auml;nn&ouml;ss&auml; pudotuspelijoukkueiden heikoin. Mansella vastaava on 58,0. Kun ottelu kiristyy niin tiukalle kuin sunnuntaina, ero ratkeaa juuri siin&auml;: kumpi saa pallon kentt&auml;&auml;n silloin, kun kolmospes&auml;ll&auml; seisoo mies.</p><p>Tahkon ly&ouml;j&auml;kaarti on Santtu Patova (43 ly&ouml;ty&auml; juoksua), Valentin Ikonen (42 ly&ouml;ty&auml;, k&auml;rkily&ouml;nti kolmoselta 58,4 %) ja Juha Niemi, jonka 42 ly&ouml;ty&auml; juoksua on tullut poikkeuksellisen kalliilla &mdash; k&auml;rkily&ouml;nti kolmoselta 27,3 prosenttia (12/44) ja palo-osuus 28,6. Etenij&auml;puolella Teemu Nurmio on juossut kaudella kotiin 42 kertaa ja Luka Raesmaa 33.</p><p>Mansen puolella Perttu Ruuska ja Jukka-Pekka Vainionp&auml;&auml; ovat ly&ouml;neet kumpikin 65 juoksua kaudella &mdash; kaksi kotiuttajaa, joilla on t&auml;ysin sama saldo ja hyvin eri tyyli: Ruuskan k&auml;rkily&ouml;nti kolmoselta on 56,2 prosenttia, Vainionp&auml;&auml;n 42,2. Antti Korhonen on tarkin (70,9 %, 56/79), ja Simo Vainikainen on juossut itse kotiin 40 kertaa nelj&auml;n kunnarin lis&auml;ksi.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>Mansen kotiutus 42,3 % &mdash; sarjan paras. Tahkon torjunta 70,7 % &mdash; sarjan paras. Kunnarit 17&ndash;17. Sunnuntaina Pihkalassa juoksuja yksi. Viidest&auml; keskin&auml;isest&auml; kohtaamisesta kaksi on ratkennut kotiutusly&ouml;ntikilpailussa.</p></div><p>Pihkalan pesäpallostadion on nimetty lajin kehitt&auml;j&auml;n Lauri &rdquo;Tahko&rdquo; Pihkalan mukaan, ja seurakin kantaa samaa nime&auml;. Harvassa lajissa pelataan kent&auml;ll&auml;, joka on nimetty koko lajin keksij&auml;n mukaan. Yleis&ouml;enn&auml;tys 7 640 on vuoden 1992 ensimm&auml;isest&auml; finaalista Sotkamon Jymy&auml; vastaan &mdash; luku, joka ylitt&auml;&auml; useimpien nykystadionien koko kapasiteetin. Katsomon uusi katto valmistui 2024.</p><p>Keskiviikon ennuste on sellainen, ett&auml; sunnuntain yhden juoksun ottelu tuntuu ep&auml;todenn&auml;k&ouml;iselt&auml; toisintaa: kaksikymment&auml;yksi astetta ottelun alkaessa, taivas selkenee, poutaa ja tuulta nelj&auml;st&auml; kahdeksaan kilometriin tunnissa. K&auml;yt&auml;nn&ouml;ss&auml; tyynt&auml;. L&auml;mmin ja tyyni ilta on ly&ouml;jien ilta, ja se sopii paremmin Mansen profiiliin.</p><p>Kertoimissa juoksuodotus kannattaa nostaa takaisin normaalille tasolle. Kausifrekvenssit lupaavat noin kymment&auml; juoksua, ja keli tukee sit&auml; &mdash; sunnuntain yksi juoksu oli poikkeama, ei uusi normaali.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Ottelun juoksut yhteens&auml; yli 9,5.</em> Kausifrekvenssien odotus noin 10,1, ja l&auml;mmin tyyni ilta nostaa sit&auml;. Arvio: ~1,75.</li><li><em>Ottelussa ly&ouml;d&auml;&auml;n kunnari &ndash; kyll&auml;.</em> Molemmilla 17 kunnaria 33 ottelussa eli yhteens&auml; 1,0 per peli; tyyni ilta puoltaa. Arvio: ~1,50.</li><li><em>Perttu Ruuska tuo tai ly&ouml; v&auml;hint&auml;&auml;n 2.</em> Ly&ouml;dyt ja kunnarit yhteens&auml; 67 kappaletta 33 runkosarjaottelussa eli 2,0 per peli. Arvio: ~1,65.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Yksi juoksu sunnuntaina, kaksikymment&auml; astetta keskiviikkona. Sama kentt&auml;, sama pari, eri peli &mdash; jos t&auml;h&auml;n asti p&auml;&auml;st&auml;&auml;n.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 + api.pesistulokset.fi 23.8.2026. Taustat: TIETOPANKKI/KENTAT.md. S&auml;&auml;ennuste: Open-Meteo 23.8.2026.</p>"
+  },
+  {
+   "id": "146959-ennakko",
+   "match_id": 146959,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "KiPa",
+   "vieras": "KPL",
+   "pvm": "2026-08-26",
+   "klo": "17:00",
+   "stadion": "Rantakenttä, Kitee",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 19.2,
+    "sade_mm": 0,
+    "sade_tn": 4,
+    "tuuli_kmh": 13,
+    "kuvaus": "19 astetta laskien 15:een, selkeää, poutaa, tuuli laantuu 13:sta 7,5:een km/h"
+   },
+   "otsikko": "Kitee rakentaa enemmän kolmostilanteita kuin kukaan — ja kotiuttaa niistä joka kolmannen",
+   "teaser": "Ehdollinen ennakko: ottelu pelataan vain, jos Kiteen Pallo voittaa tiistain kolmannen ottelun Kouvolassa. Rantakentällä nähtiin sunnuntaina 0–2 ja koko ottelussa kaksi juoksua.",
+   "html": "<p class='pikku'><strong>Ehdollinen:</strong> ottelu pelataan vain, jos KiPa voittaa tiistain kolmannen ottelun Kouvolassa. Sarjatilanne ennakon kirjoitushetkell&auml;: KPL johtaa 2&ndash;0.</p><p>Kiteen Pallo rakensi runkosarjassa 22,3 kolmostilannetta per ottelu. Se on koko sarjan eniten, enemm&auml;n kuin Vimpelill&auml; tai Sotkamolla. Kite&auml; siis vie pelaajia kolmospes&auml;lle taajemmin kuin kukaan muu.</p><p>Ja kotiuttaa niist&auml; 36,7 prosenttia. Siin&auml; on koko kes&auml;n tarina yhdess&auml; lauseparissa.</p><p>Sunnuntaina Rantakent&auml;ll&auml; se n&auml;kyi ik&auml;v&auml;ll&auml; tavalla: KPL vei ottelun 0&ndash;2 jaksoin 0&ndash;1 ja 0&ndash;1, ja koko illan aikana tehtiin kaksi juoksua. Kite&auml; on nyt 0&ndash;2 tappiolla, ja t&auml;m&auml; ennakko koskee tilannetta, jossa se ensin voittaa Kouvolassa tiistaina.</p><p>Kouvolan Pallonly&ouml;j&auml;t on kes&auml;n loppupuolen paras joukkue Suomessa. Viisi voittoa putkeen runkosarjan p&auml;&auml;tteeksi, kaksi lis&auml;&auml; pudotuspeleist&auml;. Sen ulkopeli p&auml;&auml;sti kaudella 3,42 juoksua per ottelu, koko sarjan v&auml;hiten, ja sen k&auml;rkily&ouml;nti kolmospes&auml;lt&auml; 64,1 prosenttia on sarjan paras. Kouvola tekee siis tasan p&auml;invastoin kuin Kite&auml;: v&auml;hemm&auml;n tilanteita, enemm&auml;n juoksuja niist&auml;.</p><p>Kite&auml;n toivo lep&auml;&auml; Samu-Kalle Varosen ja Lassi Vasaraisen varassa. Varonen onnistuu kolmosen k&auml;rjess&auml; 65,3-prosenttisesti (66/101) ja on ly&ouml;nyt kolme kunnaria; Vasarainen on ly&ouml;nyt viisi kunnaria kahdessakymmeness&auml;viidess&auml; ottelussa, mik&auml; on joukkueen paras tahti. Janne M&auml;kel&auml; on ly&ouml;nyt kotiin 55 kertaa, mutta h&auml;nen kolmospes&auml;n k&auml;rkily&ouml;ntins&auml; on onnistunut vain 12 kertaa 38 yrityksest&auml;. Otto Kauppinen on juossut itse kotiin 34 kertaa.</p><p>Kouvolan puolella Elias Pitk&auml;nen on se pelaaja, jota kannattaa katsoa: k&auml;rkily&ouml;nti kolmoselta 78,8 prosenttia (63/80), nelj&auml; kunnaria, 26 itse juostua pistett&auml;. Patrik Wahlsten on ly&ouml;nyt eniten (53) mutta my&ouml;s palanut eniten (palo-osuus 30,2 %). Eemeli Laine juoksi kaudella kotiin 44 kertaa.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>KiPa 22,3 kolmostilannetta per ottelu &mdash; sarjan eniten; kotiutus niist&auml; 36,7 %. KPL p&auml;&auml;st&auml;&auml; 3,42 juoksua per ottelu &mdash; sarjan v&auml;hiten; k&auml;rkily&ouml;nti kolmoselta 64,1 % &mdash; sarjan paras. Sunnuntain ottelussa juoksuja kaksi.</p></div><p>Rantakentt&auml; on pesäpallon erikoisimpia paikkoja. Kakkospuolen l&auml;pily&ouml;nti voi p&auml;&auml;ty&auml; kirjaimellisesti Kiteenj&auml;rven rantakaislikkoon ja takaly&ouml;nti veden t&auml;ytt&auml;m&auml;&auml;n ojaan. Katsomot ovat poikkeuksellisen l&auml;hell&auml; kentt&auml;&auml;, ja pudotuspeliyleis&ouml; hengitt&auml;&auml; pelaajien niskaan. Stadionin kaikkien aikojen yleis&ouml;enn&auml;tys ei muuten ole pesäpallosta: Nightwish veti kes&auml;kuussa 2023 samalle kent&auml;lle 10 500 katsojaa.</p><p>Keskiviikon ennuste on selke&auml;: yhdeks&auml;ntoista astetta ottelun alkaessa, viisitoista viimeisiss&auml; vuoropareissa, taivas l&auml;hes pilvet&ouml;n ja poutaa. Tuuli laantuu kolmestatoista seitsem&auml;&auml;n ja puoleen kilometriin tunnissa. J&auml;rvenrannalla ilta viilenee nopeasti, mik&auml; tarkoittaa, ett&auml; pelin loppupuolella pallo ei kanna samalla tavalla kuin alussa. Kiteelle on kahdessa viikossa satanut 38 milli&auml;, eli kentt&auml; on normaalikosteudessa.</p><p>Kertoimissa t&auml;m&auml; sarja on ollut alle-puolen sarja. Viidess&auml; keskin&auml;isess&auml; kohtaamisessa on n&auml;hty kaksi kotiutusly&ouml;ntikilpailua ja yksi kahden juoksun ottelu. Kausifrekvenssit sanovat yhdeks&auml;n, mutta t&auml;m&auml; pari ei ole pelannut kausifrekvenssin mukaan kertaakaan.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Ottelun juoksut yhteens&auml; alle 9,5.</em> Odotus noin 9,1, mutta keskin&auml;iset kohtaamiset ovat j&auml;&auml;neet toistuvasti alle. Arvio: ~1,75.</li><li><em>Samu-Kalle Varonen tuo tai ly&ouml; v&auml;hint&auml;&auml;n 1.</em> Ly&ouml;dyt ja kunnarit yhteens&auml; 26 kappaletta 31 runkosarjaottelussa eli 0,84 per peli. Arvio: ~1,75.</li><li><em>Ottelussa ly&ouml;d&auml;&auml;n kunnari &ndash; ei.</em> Molemmilla 13 kunnaria 33 ottelussa eli yhteens&auml; 0,8 per peli, ja illan viileneminen vahvistaa ei-puolta. Arvio: ~2,15.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Kite&auml; on koko kes&auml;n p&auml;&auml;ssyt kolmospes&auml;lle useammin kuin kukaan muu. Nyt olisi hyv&auml; hetki keksi&auml;, mit&auml; siell&auml; tehd&auml;&auml;n.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 + api.pesistulokset.fi 23.8.2026. Taustat: TIETOPANKKI/KENTAT.md. S&auml;&auml;ennuste: Open-Meteo 23.8.2026.</p>"
+  },
+  {
+   "id": "146964-ennakko",
+   "match_id": 146964,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "KoU",
+   "vieras": "AA",
+   "pvm": "2026-08-26",
+   "klo": "17:00",
+   "stadion": "Sähkökoje Areena, Koskenkorva (Ilmajoki)",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 20.6,
+    "sade_mm": 0,
+    "sade_tn": 0,
+    "tuuli_kmh": 6,
+    "kuvaus": "20,6 astetta laskien 17:ään, puolipilvistä, poutaa, lähes tyyntä (5–9 km/h)"
+   },
+   "otsikko": "Koskenkorvalla voi keskiviikkona päättyä Alajärven pääsarjataival — ja tuomarikiista käy yhä",
+   "teaser": "Koskenkorvan Urheilijat johtaa putoamiskarsintaa 2–0 ja voi keskiviikkona pudottaa Alajärven Ankkurit Ykköspesikseen. Alajärvi kiistelee yhä perjantain kohuratkaisusta, jota se väittää tahalliseksi.",
+   "html": "<p class='pikku'><strong>Sarjatilanne:</strong> KoU johtaa 2&ndash;0 (paras viidest&auml;). H&auml;vi&auml;j&auml; putoaa suoraan Ykk&ouml;spesikseen.</p><p>Yksi ly&ouml;nti on pysynyt otsikoissa koko viikonlopun. Perjantaina Koskenkorvalla Alaj&auml;rven ly&ouml;j&auml;jokeri Petteri Kortelainen sivalsi ajol&auml;hd&ouml;ss&auml; pallon takakent&auml;lle, takarajatuomari tuomitsi sen laittomaksi, ja Ankkurit j&auml;i ilman juoksuja, joita se katsoo olleen tarjolla jopa nelj&auml;. Seuran puheenjohtaja Tapio Kantokoski sanoi Yle Urheilulle pit&auml;v&auml;ns&auml; virhett&auml; tahallisena. Pes&auml;palloliiton toiminnanjohtaja Miika Rantatorikka vastasi, ettei tahallisuudesta ole mit&auml;&auml;n n&auml;ytt&ouml;&auml; ja ett&auml; seuran valitus tuli liian my&ouml;h&auml;&auml;n.</p><p>Riita on ymm&auml;rrett&auml;v&auml;, koska panos on kova. Ja koska se ei muuta yht&auml;&auml;n mit&auml;&auml;n.</p><p>Ankkurit on n&auml;et 0&ndash;2 tappiolla. Perjantaina Koskenkorvalla 0&ndash;1, sunnuntaina omalla kent&auml;ll&auml;&auml;n Kitrossa 0&ndash;2 jaksoin 6&ndash;9 ja 3&ndash;5. Keskiviikkona Koskenkorva voi p&auml;&auml;tt&auml;&auml; asian, ja silloin Alaj&auml;rvi putoaa suoraan Ykk&ouml;spesikseen.</p><p>Kes&auml;n numerot eiv&auml;t kaunistele. Alaj&auml;rvi voitti 33 runkosarjaottelustaan kaksi. Se teki 3,2 juoksua per ottelu ja p&auml;&auml;sti 8,5. Kunnareita tuli kaudella viisi &mdash; koko sarjan v&auml;hiten, ja seuraavaksi v&auml;hiten ly&ouml;nyt Kempele ylsi kymmeneen. Koskenkorva voitti viisi, teki 3,9 ja p&auml;&auml;sti 8,1. Kummankin torjunta j&auml;i 56 prosentin tienoille, mik&auml; on koko sarjan pohjaa.</p><p>Yksi asia erottaa n&auml;m&auml; kaksi toisistaan, ja se on n&auml;kynyt molemmissa karsintaotteluissa: Koskenkorva l&ouml;i kaudella 18 kunnaria, sarjan toiseksi eniten. Enemm&auml;n kuin Sotkamo, Kouvola tai Kite&auml;. Kun joukkueen muu kotiutuspeli on heikkoa, kunnari on se ty&ouml;kalu, joka silti tuottaa.</p><p>Rasmus Teppo on Koskenkorvan k&auml;rkinimi: 63 ly&ouml;ty&auml; juoksua ja kaksi kunnaria runkosarjassa, karsintasarjassa jo viisi ly&ouml;ty&auml; ja kunnari. Matias Rauhala on ly&ouml;nyt viisi kunnaria ja onnistuu kolmosen k&auml;rjess&auml; 47,7-prosenttisesti. Alaj&auml;rven puolella Petteri Kortelainen on kantanut kotiutusvastuun koko kes&auml;n &mdash; 41 ly&ouml;ty&auml; juoksua ja nolla itse juostua pistett&auml; koko kaudella. Mies on ly&ouml;nyt muita kotiin kes&auml;ss&auml;, jossa voittoja ei tullut, eik&auml; ole kertaakaan itse k&auml;ynyt.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>Kunnarit kaudella: KoU 18, AA 5. Torjunta: KoU 56,0 %, AA 56,6 % &mdash; sarjan heikoimmat. Juoksuja n&auml;iden kahden otteluissa kaudella keskim&auml;&auml;rin noin 12. Keskin&auml;isist&auml; viidest&auml; kohtaamisesta Koskenkorva on voittanut kolme, ja molemmat karsintaottelut.</p></div><p>S&auml;hk&ouml;koje Areena on pesispiirien erikoisuus: Wikipedian mukaan Suomen ainoa seuran itsens&auml; omistama pesäpallostadion, valmistunut 1996, kaksituhattaviisisataa paikkaa ja l&auml;hes kokonaan katettu. Kyl&auml; tunnetaan maailmalla viinasta, mutta paikan p&auml;&auml;ll&auml; usko on pesäpallossa &mdash; stadionia on kutsuttu nimell&auml; &rdquo;Kossu Iskee -Areena&rdquo;. Kent&auml;n yleis&ouml;enn&auml;tys 3 547 on vuodelta 2007 ja tietysti pohjalaisderbyst&auml; Vimpeli&auml; vastaan.</p><p>Keskiviikon keli on koko sarjan paras: kaksikymment&auml; astetta ottelun alkaessa, puolipilvist&auml;, poutaa ja tuulta viidest&auml; yhdeks&auml;&auml;n kilometriin tunnissa. Se on k&auml;yt&auml;nn&ouml;ss&auml; tyynt&auml;. L&auml;mmin ja tyyni ilta on ly&ouml;jien ilta &mdash; ja jos jompikumpi joukkue osaa k&auml;ytt&auml;&auml; sen, se on kunnarikonetta l&auml;hinn&auml; oleva Koskenkorva.</p><p>Kertoimissa juoksuja pit&auml;isi tulla. N&auml;iden kahden kausifrekvenssit tuottavat yhteens&auml; noin kahdentoista juoksun odotuksen, mik&auml; on selv&auml;sti korkeampi kuin miss&auml;&auml;n muussa k&auml;ynniss&auml; olevassa ottelusarjassa. Sunnuntaina Kitrossa juoksuja tuli kaksikymment&auml;kolme.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Ottelun juoksut yhteens&auml; yli 11,5.</em> Kausifrekvenssien odotus noin 11,8, ja l&auml;mmin tyyni ilta nostaa sit&auml;. Arvio: ~1,90.</li><li><em>Rasmus Teppo tuo tai ly&ouml; v&auml;hint&auml;&auml;n 2.</em> Ly&ouml;dyt ja kunnarit yhteens&auml; 65 kappaletta 32 runkosarjaottelussa eli 2,0 per peli; karsintasarjassa kuusi kahdessa ottelussa. Arvio: ~1,65.</li><li><em>Ottelussa ly&ouml;d&auml;&auml;n kunnari &ndash; kyll&auml;.</em> KoU 18 ja AA 5 kunnaria 33 ottelussa eli yhteens&auml; 0,7 per peli, mutta tyyni ja l&auml;mmin keli puoltaa kyll&auml;-puolta. Arvio: ~1,90.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Yksi ly&ouml;nti perjantailta puhuttaa yh&auml;. Keskiviikkona Koskenkorvalla ratkaistaan asia, jota mik&auml;&auml;n videohaasto ei en&auml;&auml; korjaa.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 (karsintatilastot 21.8. ottelusta) + api.pesistulokset.fi 23.8.2026. Taustat: Yle Urheilu 22.&ndash;23.8.2026, TIETOPANKKI/KENTAT.md. S&auml;&auml;ennuste: Open-Meteo 23.8.2026.</p>"
+  },
+  {
+   "id": "146943-ennakko",
+   "match_id": 146943,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "ViVe",
+   "vieras": "PattU",
+   "pvm": "2026-08-25",
+   "klo": "17:00",
+   "stadion": "Saarikenttä, Vimpeli",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 19.8,
+    "sade_mm": 0,
+    "sade_tn": 0,
+    "tuuli_kmh": 15,
+    "kuvaus": "20 astetta ottelun alkaessa, laskee 17:ään, poutaa, pilvet hälvenevät, tuulta 14–16 km/h"
+   },
+   "otsikko": "Viisi yritystä, viisi tappiota — tiistaina Pattijoella on kuudes ja luultavasti viimeinen",
+   "teaser": "Vimpelin Veto on voittanut kaikki viisi tämänkesäistä kohtaamistaan Pattijoen Urheilijoita vastaan ja johtaa puolivälieräsarjaa 2–0. Saarikentällä riittää yksi voitto lisää.",
+   "html": "<p class='pikku'><strong>Sarjatilanne:</strong> ViVe johtaa 2&ndash;0 (paras viidest&auml;)</p><p>Viisi kertaa t&auml;n&auml; kes&auml;n&auml; Pattijoen Urheilijat on mennyt samalle kent&auml;lle Vimpelin Vedon kanssa. Viisi kertaa se on k&auml;vellyt pois h&auml;vi&auml;j&auml;n&auml;. Kes&auml;kuun alussa Raahessa, hein&auml;kuun lopussa Raahessa, elokuun alussa Vimpeliss&auml;, viime torstaina Vimpeliss&auml; ja lauantaina j&auml;lleen Raahessa. Tiistaina tarjoutuu kuudes tilaisuus, ja se on kaiken j&auml;rjen mukaan my&ouml;s viimeinen.</p><p>Veto tarvitsee yhden voiton p&auml;&auml;st&auml;kseen v&auml;lieriin. Pattijoki tarvitsee kolme. Sen verran kylm&auml; asetelma on.</p><p>Vedon runkosarjaa ei oikein voi kuvailla kuulostamatta seuran tiedotteelta: 28 voittoa, viisi tappiota, 81 pistett&auml;. Yle kirjasi pistem&auml;&auml;r&auml;n kaikkien aikojen enn&auml;tykseksi. Kunnareita kertyi 32, koko sarjan eniten; seuraavaksi eniten ly&ouml;nyt Koskenkorva ylsi kahdeksaantoista. Juoksuja Vimpeli teki 7,2 per ottelu ja p&auml;&auml;sti 3,9. Pattijoki p&auml;&auml;tyi kahdeksanneksi luvuin 14&ndash;19, teki 4,7 ja p&auml;&auml;sti 5,0. Ei katastrofi. Ei my&ouml;sk&auml;&auml;n mit&auml;&auml;n muuta.</p><p>Henri Puputti on se mies, jonka takia Vimpeliss&auml; menn&auml;&auml;n saareen. 82 ly&ouml;ty&auml; juoksua ja seitsem&auml;n kunnaria kahdessakymmeness&auml;kahdeksassa ottelussa, k&auml;rkily&ouml;nti kolmospes&auml;lt&auml; 66,7 prosenttia eli 46 onnistumista 69 yrityksest&auml;. Torstaina h&auml;n l&ouml;i nelj&auml; juoksua. Puputti ei ole hienovarainen pelaaja eik&auml; yrit&auml;k&auml;&auml;n olla.</p><p>Pesill&auml; odottaa Aleksi Lassila, jonka kolmospes&auml;n k&auml;rkily&ouml;nti on 79,2 prosenttia (19/24) ja joka juoksi kaudella itse kotiin 44 kertaa. Ja sitten on Mikko Vihri&auml;l&auml;: 59 itse juostua pistett&auml;, palo-osuus 4,2 prosenttia. Nelj&auml; pilkku kaksi. Mies ei yksinkertaisesti pala.</p><p>Raahen puolella Martti Viitasalo on kantanut kotiutusvastuun koko kes&auml;n &mdash; 61 ly&ouml;ty&auml; juoksua ja kaksi kunnaria &mdash; mutta my&ouml;s 27,5 prosentin palo-osuudella, mik&auml; kertoo kaiken siit&auml;, kuinka usein h&auml;nen ly&ouml;ntivuoronsa p&auml;&auml;ttyy ilman mit&auml;&auml;n. Mikael M&auml;kel&auml; on toista maata: viisi kunnaria, 42 itse juostua ja palo-osuus 3,9. Jos Pattijoki venytt&auml;&auml; sarjaa, se tapahtuu n&auml;iden kahden kautta.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>Viisi keskin&auml;ist&auml; kohtaamista kaudella, viisi Vimpelin voittoa. Pudotuspelien kahdessa ottelussa Pattijoen kotiutusvarmuus on 28,6 % ja torjunta 57,9 %; Vedolla vastaavat 42,1 % ja 71,4 %. Runkosarjassa Veto l&ouml;i 32 kunnaria, Pattijoki 15.</p></div><p>Saarikentt&auml; on kirjaimellisesti saari: Savonjoki kiert&auml;&auml; sen joka puolelta. Kentt&auml; raivattiin talkoilla 1930-luvulla, ja kuudensadan miesty&ouml;p&auml;iv&auml;n ja nelj&auml;nsadan hevosty&ouml;p&auml;iv&auml;n j&auml;lkeen Kalle Herrala kynti pinnan viel&auml; puusahralla. Istumapaikkoja on 2 590, mutta pudotuspeleihin niit&auml; on ennenkin saatu yli viidentuhannen. Kyl&auml;ss&auml; asuu noin 2 800 ihmist&auml;. Laskekaa itse.</p><p>Ja sallittakoon yksi sivupolku. Kun Saarikent&auml;ll&auml; pelattiin ensimm&auml;inen p&auml;&auml;sarjaottelu 29. toukokuuta 1938, kolmensadan paikan kent&auml;lle ahtautui yli 1 200 katsojaa. Vastassa Helsingin Pallo-Toverit, lopputulos 1&ndash;1. Melkein yhdeks&auml;nkymment&auml; vuotta my&ouml;hemmin sama kentt&auml;, sama liioittelu, isommat katsomot.</p><p>Tiistain ennuste on vimpelil&auml;isittain ik&auml;v&auml;n hyv&auml;: kaksikymment&auml; astetta ottelun alkaessa, pilvet h&auml;lvenev&auml;t illan mittaan, poutaa, tuulta nelj&auml;toista&ndash;kuusitoista kilometri&auml; tunnissa. Kahdessa viikossa Vimpeliin on satanut 18 milli&auml;, mik&auml; on kuivan puolella &mdash; pomppu nousee tavallista paremmin, ja se sopii joukkueelle, joka osaa sen k&auml;ytt&auml;&auml;.</p><p>Kertoimissa suunta on niin selv&auml;, ettei ottelun voittajassa ole mit&auml;&auml;n haettavaa. Kiinnostavampi kohta on jaksot. Lauantaina Raahessa Pattijoki piti toisen jakson tasan 1&ndash;1, mik&auml; oli sen paras kahdenkymmenen p&auml;iv&auml;n suoritus Vetoa vastaan. Jaksotasoituksissa ja jaksovoittajissa liikkumavaraa on enemm&auml;n kuin lopputuloksessa.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Ottelussa ly&ouml;d&auml;&auml;n kunnari &ndash; kyll&auml;.</em> Veto 32 ja Pattijoki 15 kunnaria 33 ottelussa eli yhteens&auml; noin 1,4 per peli. Kuiva kentt&auml; ja l&auml;mmin ilta puoltavat kyll&auml;-puolta. Arvio: ~1,30.</li><li><em>Henri Puputti tuo tai ly&ouml; v&auml;hint&auml;&auml;n 3.</em> Ly&ouml;dyt ja kunnarit yhteens&auml; 89 kappaletta 28 runkosarjaottelussa eli 3,2 per peli. Arvio: ~1,60.</li><li><em>Ottelun juoksut yhteens&auml; alle 10,5.</em> Joukkueiden tehtyjen ja p&auml;&auml;stettyjen keskiarvoista laskettu odotus on noin 10,4, eli raja osuu keskelle. Arvio: ~1,85.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Kuusi kertaa saman vastustajan kaataminen samana kes&auml;n&auml; on paljon pyydetty. Viisi on jo tehty.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 (pudotuspelitilastot 20.&ndash;22.8. otteluista) + api.pesistulokset.fi 23.8.2026. Taustat: Yle Urheilu 20.&ndash;22.8.2026, TIETOPANKKI/KENTAT.md. S&auml;&auml;ennuste: Open-Meteo 23.8.2026.</p>"
+  },
+  {
+   "id": "146948-ennakko",
+   "match_id": 146948,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "SoJy",
+   "vieras": "JoMa",
+   "pvm": "2026-08-25",
+   "klo": "17:00",
+   "stadion": "Terrafame Stadion (Hiukka), Sotkamo",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 18.2,
+    "sade_mm": 0,
+    "sade_tn": 0,
+    "tuuli_kmh": 13,
+    "kuvaus": "18 astetta laskien 16:een, pilvistä mutta poutaa, tuuli laantuu 13:sta 9:ään km/h"
+   },
+   "otsikko": "601 — ja Hiukassa on tiistaina katkon paikka",
+   "teaser": "Roope Korhonen ohitti lauantaina Joensuussa 600 lyödyn juoksun rajan miesten Superpesiksessä. Jymy johtaa puolivälieräsarjaa 2–0, ja Joensuun Maila kotiuttaa kolmospesältä heikommin kuin yksikään toinen joukkue sarjassa.",
+   "html": "<p class='pikku'><strong>Sarjatilanne:</strong> SoJy johtaa 2&ndash;0 (paras viidest&auml;)</p><p>Lauantaina Mehtimäell&auml; tapahtui jotain, mit&auml; pesäpallossa ei ole ennen tapahtunut. Roope Korhonen puhkaisi takakent&auml;n kunnarin arvoisesti avausjakson viimeisess&auml; vuoroparissa, ja samalla lajin kaikkien aikojen ly&ouml;j&auml;tilaston k&auml;rkimies ohitti 600 ly&ouml;dyn juoksun rajapyykin miesten Superpesiksess&auml;. Seuran oman raportin mukaan lukema oli sen j&auml;lkeen 601.</p><p>Yhden miehen enn&auml;tys ei kuitenkaan ollut lauantai-illan t&auml;rkein numero. T&auml;rkein oli 2&ndash;0. Sotkamon Jymy voi tiistaina kotonaan katkaista sarjan ja marssia v&auml;lieriin.</p><p>Jymyn kes&auml; oli hyv&auml; muttei ylivoimainen: toinen sija, 23&ndash;10, 62 pistett&auml;. Ulkopeli oli sarjan k&auml;rke&auml; &mdash; torjunta 67,0 prosenttia ja p&auml;&auml;stettyj&auml; juoksuja vain 3,6 per ottelu. Sis&auml;peli haki muotoaan pitk&auml;lle kes&auml;&auml;n. Kalle Kuosmasen mukaan siirtyminen kahden keulan peliin on tuonut siihen rauhaa: <em>&rdquo;Kenenk&auml;&auml;n ei tarvitse pakottaa&rdquo;</em>, h&auml;n kuvasi Yle Urheilulle lauantaina.</p><p>Joensuun Maila tuli pudotuspeleihin seitsem&auml;nten&auml; luvuin 17&ndash;16. Sen ulkopeli on aivan yht&auml; hyv&auml; kuin Jymyn &mdash; torjunta 68,1 prosenttia, itse asiassa sarjan toiseksi paras &mdash; mutta sis&auml;peli on toista maata. JoMa kotiutti kolmospes&auml;lt&auml; 31,1 prosenttia yrityksist&auml;&auml;n. Se on koko sarjan heikoin lukema, heikompi kuin putoamiskarsintaan joutuneilla Koskenkorvalla ja Alaj&auml;rvell&auml;. Joukkue p&auml;&auml;see kolmoselle, mutta sielt&auml; kotiin ei tahdo p&auml;&auml;st&auml;.</p><p>Lauantain sankari ei ollut Korhonen vaan Aapo Hiltunen, joka l&ouml;i toisen jakson kaikki viisi vieraiden juoksua. Runkosarjassa Hiltusen saldo oli 49 ly&ouml;ty&auml; ja kaksi kunnaria, k&auml;rkily&ouml;nti kolmoselta 59,2 prosenttia (45/76). Palo-osuus 23,1 prosenttia kertoo, ett&auml; mies ottaa riskej&auml;. Lauantaina ne kannattivat.</p><p>Vastaan asettuu Juho Toivola, joka on Mailan varsinainen kotiuttaja: 59 ly&ouml;ty&auml; juoksua, nelj&auml; kunnaria, k&auml;rkily&ouml;nti kolmoselta 61,6 prosenttia. Kapteeni Niko Korhonen on taas se, joka p&auml;&auml;see itse kotiin &mdash; 20 juostua pistett&auml; ja 110 kolmospes&auml;n k&auml;rkily&ouml;ntiyrityst&auml;, joista 73 onnistui. Lauantaina Joensuun kokoonpanosta puuttui Kasperi H&auml;m&auml;l&auml;inen, ja lukkari Ukko Schroderus pelasi torstaina saamastaan p&auml;&auml;n alueen t&auml;rskyst&auml; huolimatta.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>JoMan kotiutus kolmospes&auml;lt&auml; 31,1 % &mdash; sarjan heikoin. Jymyn torjunta 67,0 %. Keskin&auml;isi&auml; kohtaamisia kaudella viisi, joista JoMa on voittanut kaksi &mdash; molemmat Joensuussa. Hiukassa Maila ei ole voittanut kertaakaan.</p></div><p>Hiukka on erikoinen paikka pelata. Tekonurmi vaihdettiin 2009 vihre&auml;st&auml; violettiin, ja Vuokatin matkailusivujen mukaan kyseess&auml; saattaa olla maailman ainoa violetti pesispinta. Vieraileva ulkopelaaja lukee ly&ouml;ntej&auml; tausta vasten, jollaista ei muualla n&auml;e. Kentt&auml; itse rakennettiin sotien j&auml;lkeen talkoilla: 176 sotkamolaista, 212 kuormaa savea. Vieress&auml; lainehtii Sapsoj&auml;rvi, johon 21 Suomen mestaruutta on kastettu.</p><p>Tiistain keli on raskaan puolella. Kahdeksantoista astetta ottelun alkaessa, kuusitoista viimeisiss&auml; vuoropareissa, taivas pilviss&auml; koko illan mutta poutaa. Tuuli laantuu kolmestatoista yhdeks&auml;&auml;n kilometriin tunnissa. Sotkamoon on kahdessa viikossa satanut 71 milli&auml;, joten kentt&auml; on m&auml;rk&auml;: pomppu ei nouse eik&auml; pallo kanna kuten hein&auml;kuussa. T&auml;llainen ilta suosii tarkkaa etenemispeli&auml; ja tiivist&auml; ulkokentt&auml;&auml; &mdash; eli molempia joukkueita, mutta erityisesti sit&auml;, joka osaa kotiuttaa kolmoselta.</p><p>Kertoimissa juoksuodotus kannattaa pit&auml;&auml; alhaalla. Kahden parhaan ulkopelin kohtaaminen viile&auml;ss&auml;, pilvisess&auml; ja m&auml;rk&auml;pohjaisessa illassa ei ole se, jossa taulukko t&auml;yttyy.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Ottelun juoksut yhteens&auml; alle 9,5.</em> Kausifrekvensseist&auml; laskettu odotus on noin 9,1, ja keli painaa sit&auml; alasp&auml;in. Arvio: ~1,75.</li><li><em>Aapo Hiltunen tuo tai ly&ouml; v&auml;hint&auml;&auml;n 2.</em> Ly&ouml;dyt ja kunnarit yhteens&auml; 51 kappaletta 30 runkosarjaottelussa eli 1,7 per peli; lauantaina viisi. Arvio: ~1,95.</li><li><em>Ottelussa ly&ouml;d&auml;&auml;n kunnari &ndash; ei.</em> Jymy 13 ja Maila 14 kunnaria 33 ottelussa eli yhteens&auml; 0,8 per peli; viile&auml; ja pilvinen ilta vahvistaa ei-puolta. Arvio: ~2,20.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Kuusisataa yksi ly&ouml;ty&auml; juoksua, kaksikymment&auml;yksi mestaruutta ja violetti matto. Jos Maila haluaa katkaista t&auml;m&auml;n, sen on teht&auml;v&auml; se paikassa, jossa se ei ole t&auml;n&auml; kes&auml;n&auml; onnistunut kertaakaan.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 (pudotuspelitilastot 20.&ndash;22.8. otteluista) + api.pesistulokset.fi 23.8.2026. Taustat: superjymy.fi 22.8.2026, Yle Urheilu 22.8.2026, TIETOPANKKI/KENTAT.md. S&auml;&auml;ennuste: Open-Meteo 23.8.2026.</p>"
+  },
+  {
+   "id": "146958-ennakko",
+   "match_id": 146958,
+   "tyyppi": "ennakko",
+   "status": "luonnos",
+   "koti": "KPL",
+   "vieras": "KiPa",
+   "pvm": "2026-08-25",
+   "klo": "17:10",
+   "stadion": "KSS Energia Areena, Kouvola",
+   "kirjoitettu": "2026-08-23",
+   "generoija": "cowork-auto",
+   "saa": {
+    "lampotila": 19.7,
+    "sade_mm": 0,
+    "sade_tn": 0,
+    "tuuli_kmh": 16.6,
+    "kuvaus": "20 astetta laskien 17,5:een, lähes selkeää, poutaa, tuulta 13–17 km/h"
+   },
+   "otsikko": "Kaksi juoksua koko ottelussa — ja Kouvola on voiton päässä välieristä",
+   "teaser": "Sunnuntaina Kiteellä nähtiin 0–2 jaksoin 0–1 ja 0–1. Kouvolan Pallonlyöjät päästää vähemmän juoksuja kuin yksikään toinen joukkue sarjassa, ja se johtaa puolivälieräsarjaa 2–0.",
+   "html": "<p class='pikku'><strong>Sarjatilanne:</strong> KPL johtaa 2&ndash;0 (paras viidest&auml;)</p><p>Kaksi juoksua. Sen verran Rantakent&auml;ll&auml; n&auml;htiin sunnuntaina koko ottelussa, jonka Kouvolan Pallonly&ouml;j&auml;t vei 0&ndash;2 jaksoin 0&ndash;1 ja 0&ndash;1. Jos joku etsii esimerkki&auml; siit&auml;, milt&auml; kahden hyv&auml;n ulkopelin pudotuspeliottelu n&auml;ytt&auml;&auml;, se l&ouml;ytyi Kiteelt&auml;.</p><p>Nyt Kouvola on voiton p&auml;&auml;ss&auml; v&auml;lieriss&auml;, ja kotikentt&auml; alla.</p><p>KPL tuli pudotuspeleihin viiden voiton putkessa &mdash; Tahko, Jymy, Manse, Manse, KiPa &mdash; ja jatkoi siit&auml; kahdella lis&auml;&auml;. Numeroissa se n&auml;kyy kahdessa kohdassa. Ensimm&auml;inen: Kouvola p&auml;&auml;sti runkosarjassa 3,42 juoksua per ottelu, koko sarjan v&auml;hiten. Toinen: sen k&auml;rkily&ouml;nti kolmospes&auml;lt&auml; onnistui 64,1-prosenttisesti, my&ouml;s sarjan paras. Ulkona tiivis, sis&auml;&auml;n p&auml;&auml;stess&auml;&auml;n tarkka.</p><p>Kiteen Pallon kes&auml; oli toisenlainen. Kuudes sija, 20&ndash;13, ja kaikkein eniten kolmostilanteita koko sarjassa &mdash; 22,3 per ottelu. KiPa siis rakentaa tilanteita enemm&auml;n kuin kukaan muu. Sielt&auml; eteenp&auml;in matka tyss&auml;&auml;: kotiutus kolmoselta 36,7 prosenttia. Kite&auml;l&auml;iset ovat koko kes&auml;n koputelleet ovea, joka aukeaa joka kolmas kerta.</p><p>Patrik Wahlsten on Kouvolan p&auml;&auml;kotiuttaja: 53 ly&ouml;ty&auml; juoksua, mutta my&ouml;s 30,2 prosentin palo-osuus, mik&auml; on koko sarjan korkeimpia. Miehen ly&ouml;ntivuoro on joko juoksu tai ei mit&auml;&auml;n. Elias Pitk&auml;nen on t&auml;ysin toista tyyppi&auml;: k&auml;rkily&ouml;nti kolmoselta 78,8 prosenttia (63/80), nelj&auml; kunnaria ja 26 itse juostua pistett&auml;. Ja sitten Eemeli Laine, joka juoksi kaudella kotiin 44 kertaa ja onnistui kolmosen k&auml;rjess&auml; 90-prosenttisesti &mdash; tosin vain kahdellakymmenell&auml; yrityksell&auml;, joten &auml;lk&auml;&auml; rakentako sen varaan taloa.</p><p>Kiteen puolella Janne M&auml;kel&auml; on ly&ouml;nyt kotiin 55 kertaa, mutta h&auml;nen k&auml;rkily&ouml;ntins&auml; kolmospes&auml;lt&auml; on 31,6 prosenttia (12/38) &mdash; kunnioitettava m&auml;&auml;r&auml; juoksuja tehottomalla ty&ouml;kalulla. Samu-Kalle Varonen on tasaisempi (65,3 %, 66/101) ja Lassi Vasarainen ly&ouml;nyt viisi kunnaria kahdessakymmeness&auml;viidess&auml; ottelussa.</p><div class='nostoboksi'><div class='nosto-otsikko'>KYLM&Auml; FAKTA</div><p>KPL p&auml;&auml;sti runkosarjassa 3,42 juoksua per ottelu &mdash; sarjan v&auml;hiten. K&auml;rkily&ouml;nti kolmospes&auml;lt&auml; 64,1 % &mdash; sarjan paras. Viisi keskin&auml;ist&auml; kohtaamista kaudella: KPL kolme, KiPa kaksi, joista molemmat kotiutusly&ouml;ntikilpailussa. Sunnuntain ottelussa juoksuja kaksi.</p></div><p>Kouvolan pesäpallostadion vihittiin 16. elokuuta 1925 ja t&auml;ytti viime kaudella sata vuotta. Se on n&auml;hnyt itsen&auml;isyysp&auml;iv&auml;n paraatikatselmuksen kahdesti ja vuoden 1979 mestaruusuusinnassa arviolta yli 11 000 katsojaa &mdash; ottelussa, jossa ei muuten pelannut Kouvola vaan Hyvink&auml;&auml;n Tahko ja Jyv&auml;skyl&auml;n Kiri. Harva pesiskentt&auml; on n&auml;hnyt panssariajoneuvoja kotipes&auml;ss&auml;.</p><p>Tiistain ennuste on kes&auml;n parhaita t&auml;lle sarjalle: kaksikymment&auml; astetta ottelun alkaessa, l&auml;hes selke&auml;&auml;, poutaa. Tuulta on kolmetoista&ndash;seitsem&auml;ntoista kilometri&auml; tunnissa, mik&auml; hillitsee korkeimpia palloja mutta ei muuta pelin luonnetta. L&auml;mmin ja kuiva ilta on l&auml;ht&ouml;kohtaisesti ly&ouml;jien puolella &mdash; mik&auml; on t&auml;ss&auml; ottelussa uutinen l&auml;hinn&auml; siksi, ettei sarjassa ole viel&auml; n&auml;hty juoksuja juuri lainkaan.</p><p>Ja siin&auml; onkin kertoimien mielenkiintoisin kohta. Kolme viimeist&auml; kohtaamista ovat tuottaneet kaksi kotiutusly&ouml;ntikilpailua ja yhden kahden juoksun ottelun. Kausifrekvenssit lupaavat noin yhdeks&auml;n juoksun iltaa, mutta t&auml;m&auml; pari on koko kes&auml;n pelannut alle sen.</p><div class='spesiaali'><div class='nosto-otsikko'>SPESIAALINURKKA</div><ul><li><em>Ottelun juoksut yhteens&auml; alle 9,5.</em> Kausifrekvenssien odotus noin 9,1, mutta viisi keskin&auml;ist&auml; ottelua ovat j&auml;&auml;neet selv&auml;sti sen alle. Arvio: ~1,75, ja alle-puoli on t&auml;ss&auml; parin oma historia. </li><li><em>Elias Pitk&auml;nen tuo tai ly&ouml; v&auml;hint&auml;&auml;n 1.</em> Ly&ouml;dyt ja kunnarit yhteens&auml; 29 kappaletta 32 runkosarjaottelussa eli 0,9 per peli. Arvio: ~1,70.</li><li><em>Ottelu ratkeaa kotiutusly&ouml;ntikilpailussa &ndash; kyll&auml;.</em> Kahdessa viidest&auml; keskin&auml;isest&auml; kohtaamisesta on menty kilpailuun; pieni otanta, mutta ulkopelien taso tukee sit&auml;. Arvio: ~3,50.</li></ul><p class='pikku'>Kerroinarviot ovat laskennallisia frekvenssiarvioita ilman marginaalia. Lopullinen kerroin on EpicBetin p&auml;&auml;t&ouml;s.</p></div><p>Kite&auml; on rakentanut tilanteita enemm&auml;n kuin kukaan koko kes&auml;n. Tiistaina sen pit&auml;isi my&ouml;s ly&ouml;d&auml; niist&auml; joku kotiin, tai kausi on ohi.</p><p class='vastuu'>Pelaa maltilla ja vain sen verran kuin huvittaa h&auml;vit&auml;. 18+. Peluuri 0800 100 101.</p><p class='lahde'>Luvut: pdata.js 22.8.2026 (pudotuspelitilastot 20.&ndash;22.8. otteluista) + api.pesistulokset.fi 23.8.2026. Taustat: TIETOPANKKI/KENTAT.md, superpesis.fi. S&auml;&auml;ennuste: Open-Meteo 23.8.2026.</p>"
+  },
   {
    "id": "146953-ennakko",
    "match_id": 146953,
@@ -19,9 +226,9 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 17.5,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 32,
-    "tuuli_kmh": 17.0,
+    "tuuli_kmh": 17,
     "kuvaus": "17–19 astetta, lähes selkeää, poutaa, tuulta noin 17 km/h"
    },
    "otsikko": "Kolmas erä Kaupissa — ja ensimmäinen kunnollinen lyöjäkeli koko sarjassa",
@@ -44,7 +251,7 @@ const RAPORTIT = {
     "lampotila": 15.6,
     "sade_mm": 0.1,
     "sade_tn": 70,
-    "tuuli_kmh": 23.0,
+    "tuuli_kmh": 23,
     "kuvaus": "15–16 astetta, täysin pilvistä, tihkun mahdollisuus, tuulista — 20–26 km/h"
    },
    "otsikko": "Seitsemän juoksua koko iltana — ja nyt päälle kova tuuli",
@@ -67,7 +274,7 @@ const RAPORTIT = {
     "lampotila": 13.5,
     "sade_mm": 4.4,
     "sade_tn": 99,
-    "tuuli_kmh": 22.0,
+    "tuuli_kmh": 22,
     "kuvaus": "13–14 astetta, umpipilvistä, sadetta noin 4 mm, tuulta 19–25 km/h"
    },
    "otsikko": "Neljätoista juoksua perjantaina — sunnuntaina sataa ja on kolmetoista astetta",
@@ -88,7 +295,7 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 17.7,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 63,
     "tuuli_kmh": 19.5,
     "kuvaus": "17–18 astetta, pilvistä mutta poutaa, tuulta 18–21 km/h"
@@ -111,9 +318,9 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 17.1,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 55,
-    "tuuli_kmh": 16.0,
+    "tuuli_kmh": 16,
     "kuvaus": "17 astetta, lähes selkeää, poutaa, tuulta 15–17 km/h ja puuskia 30 km/h"
    },
    "otsikko": "Neljä ottelua, seitsemän ratkennutta jaksoa, nolla Pattijoelle",
@@ -134,9 +341,9 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 19.8,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 22,
-    "tuuli_kmh": 10.0,
+    "tuuli_kmh": 10,
     "kuvaus": "20 astetta, umpipilvistä mutta poutaa, tuulta noin 10 km/h"
    },
    "otsikko": "Joensuu voitti jakson nollaan ja menetti lukkarinsa — kumpi painaa lauantaina enemmän?",
@@ -210,7 +417,7 @@ const RAPORTIT = {
     "lampotila": 14.9,
     "sade_mm": 1.5,
     "sade_tn": 71,
-    "tuuli_kmh": 10.0,
+    "tuuli_kmh": 10,
     "kuvaus": "15 astetta, pilvistä, sadetta luvassa, tuulta noin 10 km/h"
    },
    "otsikko": "Sarjan paras kotiutus vastaan sarjan paras torjunta — sateessa",
@@ -231,9 +438,9 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 17.4,
-    "sade_mm": 2.0,
+    "sade_mm": 2,
     "sade_tn": 54,
-    "tuuli_kmh": 12.0,
+    "tuuli_kmh": 12,
     "kuvaus": "15–19 astetta, vaihtelevaa pilvisyyttä, sadekuuroja mahdollisesti"
    },
    "otsikko": "Neljä putkeen vastaan kaksitoista putkeen",
@@ -256,7 +463,7 @@ const RAPORTIT = {
     "lampotila": 18.3,
     "sade_mm": 0.2,
     "sade_tn": 26,
-    "tuuli_kmh": 8.0,
+    "tuuli_kmh": 8,
     "kuvaus": "18–20 astetta, lähes selkeää, poutaa, heikkoa tuulta"
    },
    "otsikko": "Kaksi joukkuetta, yksi paikka — ja lämpimin ilta kierroksella",
@@ -311,9 +518,9 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 17.2,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 10,
-    "tuuli_kmh": 15.0,
+    "tuuli_kmh": 15,
     "kuvaus": "17 astetta, poutaa, puolipilvistä, tuulta noin 15 km/h"
    },
    "otsikko": "Neljäkymmentäkolme vuotta, kaikki tilastot — ja sitten nollataan",
@@ -336,7 +543,7 @@ const RAPORTIT = {
     "lampotila": 14.5,
     "sade_mm": 0.3,
     "sade_tn": 93,
-    "tuuli_kmh": 9.0,
+    "tuuli_kmh": 9,
     "kuvaus": "14–15 astetta, täysin pilvistä, tihkusadetta, lähes tyyntä"
    },
    "otsikko": "Roopen viimeinen syksy alkaa märässä Hiukassa",
@@ -357,7 +564,7 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 21.7,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 17,
     "tuuli_kmh": 19.4,
     "kuvaus": "22 astetta, pilvetön taivas, poutaa, tuulta noin 19 km/h"
@@ -380,7 +587,7 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 19.7,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 100,
     "tuuli_kmh": 6.3,
     "kuvaus": "20 astetta, pilvistä ja tyyntä, sadekuurot liikkeellä (100 % todennäköisyys, kertymä vähäinen)"
@@ -402,8 +609,8 @@ const RAPORTIT = {
    "kirjoitettu": "2026-08-15",
    "generoija": "cowork-auto",
    "saa": {
-    "lampotila": 18.0,
-    "sade_mm": 0.0,
+    "lampotila": 18,
+    "sade_mm": 0,
     "sade_tn": 100,
     "tuuli_kmh": 10.7,
     "kuvaus": "18 astetta, pilvistä, sadekuurot liikkeellä (100 % todennäköisyys, kertymä vähäinen)"
@@ -449,9 +656,9 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 21.2,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 67,
-    "tuuli_kmh": 19.0,
+    "tuuli_kmh": 19,
     "kuvaus": "21 astetta, puolipilvistä, poutaa mutta kuuron mahdollisuus (67 %), tuulista"
    },
    "otsikko": "Tahko ei ole voittanut viiteen — ja Maila voi ohittaa sen viimeisellä lyönnillä",
@@ -495,7 +702,7 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 16.8,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 10,
     "tuuli_kmh": 12.6,
     "kuvaus": "alustava ennuste: 17 astetta, pilvistä, poutaa"
@@ -541,7 +748,7 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 19.4,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 25,
     "tuuli_kmh": 16.3,
     "kuvaus": "alustava ennuste: 19–20 astetta, pilvistä, poutaa, tuulta noin 16 km/h"
@@ -587,7 +794,7 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 17.8,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 7,
     "tuuli_kmh": 11.5,
     "kuvaus": "alustava ennuste: 18 astetta, täysin pilvistä, poutaa"
@@ -610,9 +817,9 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 18.7,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 3,
-    "tuuli_kmh": 13.0,
+    "tuuli_kmh": 13,
     "kuvaus": "alustava ennuste: 19 astetta, täysin pilvistä, poutaa"
    },
    "otsikko": "Kaksi ottelua kahdessa päivässä, ja toinen niistä on Imatran viimeinen oljenkorsi",
@@ -633,7 +840,7 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 15.2,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 3,
     "tuuli_kmh": 16.6,
     "kuvaus": "15 astetta, lähes pilvetöntä, poutaa, tuulta noin 17 km/h"
@@ -656,7 +863,7 @@ const RAPORTIT = {
    "generoija": "cowork-auto",
    "saa": {
     "lampotila": 14.6,
-    "sade_mm": 0.0,
+    "sade_mm": 0,
     "sade_tn": 39,
     "tuuli_kmh": 12.2,
     "kuvaus": "14–15 astetta, harmaata ja pilvistä, poutaa mutta viileää"
@@ -678,8 +885,8 @@ const RAPORTIT = {
    "kirjoitettu": "2026-08-09",
    "generoija": "cowork-auto",
    "saa": {
-    "lampotila": 17.0,
-    "sade_mm": 3.0,
+    "lampotila": 17,
+    "sade_mm": 3,
     "sade_tn": 50,
     "tuuli_kmh": 8.7,
     "kuvaus": "17 astetta, pilvistä, sadekuuroja luvassa (50 % todennäköisyys, noin 3 mm)"
