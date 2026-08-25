@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-24 20:21:22
+// 2026-08-25 21:54:37
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-24 20:21:22",
+  "generoitu": "2026-08-25 21:54:37",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -17,10 +17,10 @@ const PSARJA = {
    "best_of": "5",
    "tarvittavat": 3,
    "voitot": {
-    "koti": 2,
+    "koti": 3,
     "vieras": 0
    },
-   "paattynyt": false,
+   "paattynyt": true,
    "kulma": "Parin kiinnostavin asetelma. Molemmat elavat torjunnalla: KPL +95 ja KiPa +86, sarjan kaksi parasta. Kummankin kotiutus on odottaman alapuolella. Runkosarjassa KiPa vei 2-1 ja molemmat voitot tulivat kotiutuskilpailussa. Ne ovat myos sarjan kaksi parasta kotarijoukkuetta: KPL 8/12, KiPa 7/11. Odota vahajuoksuista sarjaa ja varaudu siihen etta ratkaisu tulee kotarista.",
    "runko": {
     "KPL": {
@@ -59,9 +59,9 @@ const PSARJA = {
      "eroTorjunta": 95.0,
      "eroYhteensa": 67.9,
      "juoksut_per_O": 5.85,
-     "vapaat_per_O": 2.91,
+     "vapaat_per_O": 2.92,
      "vapaat_kolmostil": 6,
-     "karpaset_per_O": 1.06,
+     "karpaset_per_O": 1.11,
      "kotari": {
       "n": 12,
       "voitot": 8,
@@ -81,9 +81,9 @@ const PSARJA = {
      "eroTorjunta": 85.5,
      "eroYhteensa": 79.8,
      "juoksut_per_O": 5.97,
-     "vapaat_per_O": 2.69,
+     "vapaat_per_O": 2.64,
      "vapaat_kolmostil": 9,
-     "karpaset_per_O": 0.97,
+     "karpaset_per_O": 0.94,
      "kotari": {
       "n": 11,
       "voitot": 7,
@@ -755,36 +755,287 @@ const PSARJA = {
      "stadion": "KSS Energia Areena, Kouvola",
      "koti": "KPL",
      "vieras": "KiPa",
-     "pelattu": false
-    },
-    {
-     "match_id": 146959,
-     "pvm": "2026-08-26",
-     "klo": "17:00",
-     "stadion": "Rantakenttä, Kitee",
-     "koti": "KiPa",
-     "vieras": "KPL",
-     "pelattu": false
-    },
-    {
-     "match_id": 146960,
-     "pvm": "2026-08-28",
-     "klo": "17:00",
-     "stadion": "KSS Energia Areena, Kouvola",
-     "koti": "KPL",
-     "vieras": "KiPa",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "2-1s (2-1, 0-1, 3-0)",
+     "jaksot": "2-1, 0-1, 3-0",
+     "joukkueet": {
+      "KPL": {
+       "kotiutus": {
+        "onn": 4,
+        "yrit": 11,
+        "pct": 36.4
+       },
+       "torjunta_pct": 80.0,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 16,
+         "yrit": 24,
+         "pct": 66.7
+        },
+        {
+         "pesa": 1,
+         "onn": 11,
+         "yrit": 22,
+         "pct": 50.0
+        },
+        {
+         "pesa": 2,
+         "onn": 7,
+         "yrit": 12,
+         "pct": 58.3
+        },
+        {
+         "pesa": 3,
+         "onn": 5,
+         "yrit": 12,
+         "pct": 41.7
+        }
+       ],
+       "kunnarit": 1,
+       "juoksut": 5,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 23,
+         "juoksuja": 0,
+         "paloja": 2
+        },
+        "1": {
+         "vuoroja": 22,
+         "juoksuja": 0,
+         "paloja": 10
+        },
+        "1-2": {
+         "vuoroja": 10,
+         "juoksuja": 4,
+         "paloja": 5,
+         "tuottavia": 2
+        },
+        "1-2-3": {
+         "vuoroja": 5,
+         "juoksuja": 1,
+         "paloja": 5,
+         "tuottavia": 1
+        },
+        "1-3": {
+         "vuoroja": 4,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "3": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "2": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 9939,
+         "nimi": "Elias Pitkänen",
+         "nro": 5,
+         "paikka": "L",
+         "jokeri": false,
+         "L": 3,
+         "K": 1,
+         "yrit": 3,
+         "T": 1
+        },
+        {
+         "pid": 8440,
+         "nimi": "Elmeri Lieto",
+         "nro": 4,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 6733,
+         "nimi": "Patrik Wahlsten",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 6140,
+         "nimi": "Teemu Nikkanen",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        }
+       ]
+      },
+      "KiPa": {
+       "kotiutus": {
+        "onn": 2,
+        "yrit": 10,
+        "pct": 20.0
+       },
+       "torjunta_pct": 63.6,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 8,
+         "yrit": 20,
+         "pct": 40.0
+        },
+        {
+         "pesa": 1,
+         "onn": 12,
+         "yrit": 18,
+         "pct": 66.7
+        },
+        {
+         "pesa": 2,
+         "onn": 9,
+         "yrit": 15,
+         "pct": 60.0
+        },
+        {
+         "pesa": 3,
+         "onn": 2,
+         "yrit": 13,
+         "pct": 15.4
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 2,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 22,
+         "juoksuja": 0,
+         "paloja": 4
+        },
+        "1": {
+         "vuoroja": 15,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "1-2": {
+         "vuoroja": 11,
+         "juoksuja": 1,
+         "paloja": 7,
+         "tuottavia": 1
+        },
+        "1-2-3": {
+         "vuoroja": 11,
+         "juoksuja": 1,
+         "paloja": 11,
+         "tuottavia": 1
+        },
+        "2": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "2-3": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-3": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "3": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 1
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 3509,
+         "nimi": "Janne Mäkelä",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 4,
+         "T": 0
+        },
+        {
+         "pid": 7885,
+         "nimi": "Juho Keinänen",
+         "nro": 4,
+         "paikka": "1V",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 11603,
+         "nimi": "Jiri Pippola",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 4,
+         "T": 0
+        }
+       ]
+      }
+     },
+     "kunnarit": [
+      {
+       "joukkue": "KPL",
+       "pelaaja": "Elias Pitkänen"
+      }
+     ],
+     "ryopyt": [
+      {
+       "jakso": 3,
+       "vuoropari": 0,
+       "joukkue": "KPL",
+       "maara": 3
+      }
+     ],
+     "tuojat": [
+      [
+       "Perttu Kenttäaho",
+       2
+      ],
+      [
+       "Otto Kauppinen",
+       2
+      ],
+      [
+       "Patrik Vartama",
+       1
+      ],
+      [
+       "Eemeli Laine",
+       1
+      ],
+      [
+       "Elias Pitkänen",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     }
    ],
-   "seuraava": {
-    "match_id": 146958,
-    "pvm": "2026-08-25",
-    "klo": "17:10",
-    "stadion": "KSS Energia Areena, Kouvola",
-    "koti": "KPL",
-    "vieras": "KiPa",
-    "pelattu": false
-   }
+   "seuraava": null
   },
   {
    "id": 3337,
@@ -1639,22 +1890,22 @@ const PSARJA = {
        },
        "kotiuttajat": [
         {
-         "pid": 4294,
-         "nimi": "Juha Niemi",
-         "nro": 10,
-         "paikka": null,
-         "jokeri": true,
+         "pid": 12934,
+         "nimi": "Samu Kyhyräinen",
+         "nro": 4,
+         "paikka": "S",
+         "jokeri": false,
          "L": 0,
          "K": 0,
          "yrit": 2,
          "T": 0
         },
         {
-         "pid": 12934,
-         "nimi": "Samu Kyhyräinen",
-         "nro": 4,
-         "paikka": "S",
-         "jokeri": false,
+         "pid": 4294,
+         "nimi": "Juha Niemi",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
          "L": 0,
          "K": 0,
          "yrit": 2,
@@ -1711,7 +1962,7 @@ const PSARJA = {
    "tarvittavat": 3,
    "voitot": {
     "koti": 2,
-    "vieras": 0
+    "vieras": 1
    },
    "paattynyt": false,
    "kulma": "Sijoitusero puhuu SoJy:n puolesta, kohtaamiset eivat. JoMa voitti kolmesta kaksi, viimeisimman kotarissa 14.8. Mutta JoMa on sarjan pahin alisuorittaja kotiutuksessa, 51 juoksua odottamaa jaljessa, ja antaa 3,81 vapaata ottelua kohti. SoJy:n torjunta on +65. Jos JoMa ei tallakaan saa kotarikierrosta, matematiikka kaantyy nopeasti.",
@@ -1752,9 +2003,9 @@ const PSARJA = {
      "eroTorjunta": 64.7,
      "eroYhteensa": 92.0,
      "juoksut_per_O": 6.73,
-     "vapaat_per_O": 2.91,
+     "vapaat_per_O": 2.86,
      "vapaat_kolmostil": 5,
-     "karpaset_per_O": 1.23,
+     "karpaset_per_O": 1.19,
      "kotari": {
       "n": 8,
       "voitot": 5,
@@ -1774,9 +2025,9 @@ const PSARJA = {
      "eroTorjunta": 23.2,
      "eroYhteensa": -27.9,
      "juoksut_per_O": 4.97,
-     "vapaat_per_O": 3.69,
+     "vapaat_per_O": 3.67,
      "vapaat_kolmostil": 9,
-     "karpaset_per_O": 1.03,
+     "karpaset_per_O": 1.0,
      "kotari": {
       "n": 9,
       "voitot": 3,
@@ -2412,17 +2663,6 @@ const PSARJA = {
          "T": 1
         },
         {
-         "pid": 10950,
-         "nimi": "Vertti Veittikoski",
-         "nro": 11,
-         "paikka": null,
-         "jokeri": true,
-         "L": 0,
-         "K": 0,
-         "yrit": 1,
-         "T": 1
-        },
-        {
          "pid": 10559,
          "nimi": "Samuel Huotari",
          "nro": 6,
@@ -2432,6 +2672,17 @@ const PSARJA = {
          "K": 0,
          "yrit": 1,
          "T": 2
+        },
+        {
+         "pid": 10950,
+         "nimi": "Vertti Veittikoski",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 1
         }
        ]
       }
@@ -2493,7 +2744,285 @@ const PSARJA = {
      "stadion": "Terrafame Stadion, Sotkamo",
      "koti": "SoJy",
      "vieras": "JoMa",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "0-1 (1-1, 0-2)",
+     "jaksot": "1-1, 0-2",
+     "joukkueet": {
+      "SoJy": {
+       "kotiutus": {
+        "onn": 1,
+        "yrit": 9,
+        "pct": 11.1
+       },
+       "torjunta_pct": 72.7,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 14,
+         "yrit": 25,
+         "pct": 56.0
+        },
+        {
+         "pesa": 1,
+         "onn": 10,
+         "yrit": 20,
+         "pct": 50.0
+        },
+        {
+         "pesa": 2,
+         "onn": 8,
+         "yrit": 15,
+         "pct": 53.3
+        },
+        {
+         "pesa": 3,
+         "onn": 1,
+         "yrit": 9,
+         "pct": 11.1
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 1,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 23,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1": {
+         "vuoroja": 19,
+         "juoksuja": 0,
+         "paloja": 8
+        },
+        "1-2": {
+         "vuoroja": 9,
+         "juoksuja": 0,
+         "paloja": 4
+        },
+        "1-2-3": {
+         "vuoroja": 10,
+         "juoksuja": 1,
+         "paloja": 10,
+         "tuottavia": 1
+        },
+        "2": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-3": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "3": {
+         "vuoroja": 4,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "2-3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 11969,
+         "nimi": "Aapo Hiltunen",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 4,
+         "T": 0
+        },
+        {
+         "pid": 1456,
+         "nimi": "Roope Korhonen",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 4,
+         "T": 0
+        },
+        {
+         "pid": 9666,
+         "nimi": "Aleksanteri Huotari",
+         "nro": 4,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      },
+      "JoMa": {
+       "kotiutus": {
+        "onn": 3,
+        "yrit": 11,
+        "pct": 27.3
+       },
+       "torjunta_pct": 88.9,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 14,
+         "yrit": 27,
+         "pct": 51.9
+        },
+        {
+         "pesa": 1,
+         "onn": 7,
+         "yrit": 16,
+         "pct": 43.8
+        },
+        {
+         "pesa": 2,
+         "onn": 7,
+         "yrit": 9,
+         "pct": 77.8
+        },
+        {
+         "pesa": 3,
+         "onn": 3,
+         "yrit": 11,
+         "pct": 27.3
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 3,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 24,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1": {
+         "vuoroja": 15,
+         "juoksuja": 0,
+         "paloja": 7
+        },
+        "1-2": {
+         "vuoroja": 7,
+         "juoksuja": 1,
+         "paloja": 3,
+         "tuottavia": 1
+        },
+        "2": {
+         "vuoroja": 7,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "3": {
+         "vuoroja": 4,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-2-3": {
+         "vuoroja": 6,
+         "juoksuja": 2,
+         "paloja": 7,
+         "tuottavia": 1
+        },
+        "1-3": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 4607,
+         "nimi": "Juho Toivola",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 20452,
+         "nimi": "Joosua Rättö",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 5,
+         "T": 0
+        },
+        {
+         "pid": 8416,
+         "nimi": "Konsta Kettunen",
+         "nro": 1,
+         "paikka": "2P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 11421,
+         "nimi": "Ukko Schroderus",
+         "nro": 7,
+         "paikka": "L",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 7013,
+         "nimi": "Ville Kotro",
+         "nro": 9,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      }
+     },
+     "kunnarit": [],
+     "ryopyt": [
+      {
+       "jakso": 2,
+       "vuoropari": 0,
+       "joukkue": "JoMa",
+       "maara": 2
+      }
+     ],
+     "tuojat": [
+      [
+       "Kasperi Hämäläinen",
+       1
+      ],
+      [
+       "Elmeri Purmonen",
+       1
+      ],
+      [
+       "Joni Lehikoinen",
+       1
+      ],
+      [
+       "Elmeri Lonkainen",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     },
     {
      "match_id": 146949,
@@ -2515,12 +3044,12 @@ const PSARJA = {
     }
    ],
    "seuraava": {
-    "match_id": 146948,
-    "pvm": "2026-08-25",
+    "match_id": 146949,
+    "pvm": "2026-08-26",
     "klo": "17:00",
-    "stadion": "Terrafame Stadion, Sotkamo",
-    "koti": "SoJy",
-    "vieras": "JoMa",
+    "stadion": "Ilosaarirock Stadion, Joensuu",
+    "koti": "JoMa",
+    "vieras": "SoJy",
     "pelattu": false
    }
   },
@@ -2532,10 +3061,10 @@ const PSARJA = {
    "best_of": "5",
    "tarvittavat": 3,
    "voitot": {
-    "koti": 2,
+    "koti": 3,
     "vieras": 0
    },
-   "paattynyt": false,
+   "paattynyt": true,
    "kulma": "ViVe on molemmilla mittareilla sarjan paras: kotiutus +67 ja torjunta +51 odottamaan nahden, ja juoksuero +2,3 per jakso on kaksinkertainen seuraavaan. Lukkari antaa 1,84 vapaata ottelua kohti, vahiten koko sarjassa — PattU ei saa ilmaisia etenijoita. Runkosarjassa 3-0 ViVelle. Mallin luku on kuitenkin sen testatun alueen ulkopuolella, joten ota se suuntana eika lukuna. PattU:n realistisin tie kulkee kotiutuskilpailun kautta.",
    "runko": {
     "ViVe": {
@@ -2574,9 +3103,9 @@ const PSARJA = {
      "eroTorjunta": 51.1,
      "eroYhteensa": 118.3,
      "juoksut_per_O": 8.7,
-     "vapaat_per_O": 1.74,
+     "vapaat_per_O": 1.72,
      "vapaat_kolmostil": 5,
-     "karpaset_per_O": 0.89,
+     "karpaset_per_O": 0.92,
      "kotari": {
       "n": 9,
       "voitot": 5,
@@ -2596,9 +3125,9 @@ const PSARJA = {
      "eroTorjunta": -7.3,
      "eroYhteensa": -19.8,
      "juoksut_per_O": 5.3,
-     "vapaat_per_O": 2.89,
+     "vapaat_per_O": 2.81,
      "vapaat_kolmostil": 7,
-     "karpaset_per_O": 1.26,
+     "karpaset_per_O": 1.31,
      "kotari": {
       "n": 9,
       "voitot": 4,
@@ -3095,22 +3624,22 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 10350,
-         "nimi": "Eemeli Mikkilä",
-         "nro": 11,
-         "paikka": null,
-         "jokeri": true,
+         "pid": 2861,
+         "nimi": "Antti Karjaluoto",
+         "nro": 4,
+         "paikka": "2P",
+         "jokeri": false,
          "L": 0,
          "K": 0,
          "yrit": 1,
          "T": 0
         },
         {
-         "pid": 2861,
-         "nimi": "Antti Karjaluoto",
-         "nro": 4,
-         "paikka": "2P",
-         "jokeri": false,
+         "pid": 10350,
+         "nimi": "Eemeli Mikkilä",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
          "L": 0,
          "K": 0,
          "yrit": 1,
@@ -3262,36 +3791,377 @@ const PSARJA = {
      "stadion": "Saarikenttä, Vimpeli",
      "koti": "ViVe",
      "vieras": "PattU",
-     "pelattu": false
-    },
-    {
-     "match_id": 146944,
-     "pvm": "2026-08-26",
-     "klo": "17:00",
-     "stadion": "MiiluAreena, Raahe",
-     "koti": "PattU",
-     "vieras": "ViVe",
-     "pelattu": false
-    },
-    {
-     "match_id": 146945,
-     "pvm": "2026-08-28",
-     "klo": "17:00",
-     "stadion": "Saarikenttä, Vimpeli",
-     "koti": "ViVe",
-     "vieras": "PattU",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "2-1s (3-4, 7-2, 2-0)",
+     "jaksot": "3-4, 7-2, 2-0",
+     "joukkueet": {
+      "ViVe": {
+       "kotiutus": {
+        "onn": 9,
+        "yrit": 18,
+        "pct": 50.0
+       },
+       "torjunta_pct": 45.5,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 18,
+         "yrit": 24,
+         "pct": 75.0
+        },
+        {
+         "pesa": 1,
+         "onn": 12,
+         "yrit": 21,
+         "pct": 57.1
+        },
+        {
+         "pesa": 2,
+         "onn": 15,
+         "yrit": 21,
+         "pct": 71.4
+        },
+        {
+         "pesa": 3,
+         "onn": 11,
+         "yrit": 21,
+         "pct": 52.4
+        }
+       ],
+       "kunnarit": 2,
+       "juoksut": 12,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 21,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1": {
+         "vuoroja": 20,
+         "juoksuja": 2,
+         "paloja": 5,
+         "tuottavia": 1
+        },
+        "1-2": {
+         "vuoroja": 10,
+         "juoksuja": 0,
+         "paloja": 5
+        },
+        "1-2-3": {
+         "vuoroja": 11,
+         "juoksuja": 5,
+         "paloja": 9,
+         "tuottavia": 4
+        },
+        "2-3": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-3": {
+         "vuoroja": 6,
+         "juoksuja": 3,
+         "paloja": 2,
+         "tuottavia": 3
+        },
+        "2": {
+         "vuoroja": 4,
+         "juoksuja": 2,
+         "paloja": 1,
+         "tuottavia": 1
+        },
+        "3": {
+         "vuoroja": 4,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 5653,
+         "nimi": "Matias Rinta-aho",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 3,
+         "K": 0,
+         "yrit": 6,
+         "T": 0
+        },
+        {
+         "pid": 1315,
+         "nimi": "Henri Puputti",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 4,
+         "T": 0
+        },
+        {
+         "pid": 10077,
+         "nimi": "Lauri Vihriälä",
+         "nro": 4,
+         "paikka": "3V",
+         "jokeri": false,
+         "L": 2,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 9940,
+         "nimi": "Aleksi Lassila",
+         "nro": 2,
+         "paikka": "S",
+         "jokeri": false,
+         "L": 1,
+         "K": 1,
+         "yrit": 1,
+         "T": 2
+        },
+        {
+         "pid": 8573,
+         "nimi": "Elmeri Anttila",
+         "nro": 3,
+         "paikka": "3K",
+         "jokeri": false,
+         "L": 1,
+         "K": 1,
+         "yrit": 1,
+         "T": 4
+        },
+        {
+         "pid": 9082,
+         "nimi": "Mikko Vihriälä",
+         "nro": 1,
+         "paikka": "2K",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 2
+        },
+        {
+         "pid": 11676,
+         "nimi": "Ville Soini",
+         "nro": 8,
+         "paikka": "L",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 5985,
+         "nimi": "Severi Lassila",
+         "nro": 9,
+         "paikka": "1V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      },
+      "PattU": {
+       "kotiutus": {
+        "onn": 6,
+        "yrit": 11,
+        "pct": 54.5
+       },
+       "torjunta_pct": 50.0,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 12,
+         "yrit": 21,
+         "pct": 57.1
+        },
+        {
+         "pesa": 1,
+         "onn": 13,
+         "yrit": 16,
+         "pct": 81.2
+        },
+        {
+         "pesa": 2,
+         "onn": 7,
+         "yrit": 20,
+         "pct": 35.0
+        },
+        {
+         "pesa": 3,
+         "onn": 6,
+         "yrit": 12,
+         "pct": 50.0
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 6,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 22,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1": {
+         "vuoroja": 14,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "2-3": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-2-3": {
+         "vuoroja": 14,
+         "juoksuja": 6,
+         "paloja": 9,
+         "tuottavia": 6
+        },
+        "2": {
+         "vuoroja": 5,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-2": {
+         "vuoroja": 16,
+         "juoksuja": 0,
+         "paloja": 14
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 10350,
+         "nimi": "Eemeli Mikkilä",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 4,
+         "K": 0,
+         "yrit": 5,
+         "T": 0
+        },
+        {
+         "pid": 8952,
+         "nimi": "Martti Viitasalo",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 2861,
+         "nimi": "Antti Karjaluoto",
+         "nro": 4,
+         "paikka": "2P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 10193,
+         "nimi": "Vertti Kontinaho",
+         "nro": 5,
+         "paikka": "2K",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 1
+        },
+        {
+         "pid": 10522,
+         "nimi": "Vili Still",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
+        }
+       ]
+      }
+     },
+     "kunnarit": [
+      {
+       "joukkue": "ViVe",
+       "pelaaja": "Elmeri Anttila"
+      },
+      {
+       "joukkue": "ViVe",
+       "pelaaja": "Aleksi Lassila"
+      }
+     ],
+     "ryopyt": [
+      {
+       "jakso": 1,
+       "vuoropari": 0,
+       "joukkue": "PattU",
+       "maara": 2
+      },
+      {
+       "jakso": 1,
+       "vuoropari": 1,
+       "joukkue": "PattU",
+       "maara": 2
+      },
+      {
+       "jakso": 2,
+       "vuoropari": 1,
+       "joukkue": "ViVe",
+       "maara": 5
+      },
+      {
+       "jakso": 2,
+       "vuoropari": 2,
+       "joukkue": "ViVe",
+       "maara": 2
+      },
+      {
+       "jakso": 3,
+       "vuoropari": 0,
+       "joukkue": "ViVe",
+       "maara": 2
+      }
+     ],
+     "tuojat": [
+      [
+       "Elmeri Anttila",
+       4
+      ],
+      [
+       "Konsta Launonen",
+       2
+      ],
+      [
+       "Vili Still",
+       2
+      ],
+      [
+       "Jere Saukko",
+       2
+      ],
+      [
+       "Mikko Vihriälä",
+       2
+      ]
+     ],
+     "tarkistus_ok": true
     }
    ],
-   "seuraava": {
-    "match_id": 146943,
-    "pvm": "2026-08-25",
-    "klo": "17:00",
-    "stadion": "Saarikenttä, Vimpeli",
-    "koti": "ViVe",
-    "vieras": "PattU",
-    "pelattu": false
-   }
+   "seuraava": null
   },
   {
    "id": 3338,
@@ -3847,22 +4717,22 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 7794,
-         "nimi": "Mikael Penninkangas",
-         "nro": 12,
-         "paikka": null,
-         "jokeri": true,
+         "pid": 5814,
+         "nimi": "Toni Marjamäki",
+         "nro": 4,
+         "paikka": "S",
+         "jokeri": false,
          "L": 1,
          "K": 0,
          "yrit": 4,
          "T": 0
         },
         {
-         "pid": 5814,
-         "nimi": "Toni Marjamäki",
-         "nro": 4,
-         "paikka": "S",
-         "jokeri": false,
+         "pid": 7794,
+         "nimi": "Mikael Penninkangas",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
          "L": 1,
          "K": 0,
          "yrit": 4,
