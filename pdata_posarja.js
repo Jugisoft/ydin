@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-25 21:54:37
+// 2026-08-27 20:36:52
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-25 21:54:37",
+  "generoitu": "2026-08-27 20:36:52",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -1962,7 +1962,7 @@ const PSARJA = {
    "tarvittavat": 3,
    "voitot": {
     "koti": 2,
-    "vieras": 1
+    "vieras": 2
    },
    "paattynyt": false,
    "kulma": "Sijoitusero puhuu SoJy:n puolesta, kohtaamiset eivat. JoMa voitti kolmesta kaksi, viimeisimman kotarissa 14.8. Mutta JoMa on sarjan pahin alisuorittaja kotiutuksessa, 51 juoksua odottamaa jaljessa, ja antaa 3,81 vapaata ottelua kohti. SoJy:n torjunta on +65. Jos JoMa ei tallakaan saa kotarikierrosta, matematiikka kaantyy nopeasti.",
@@ -2003,7 +2003,7 @@ const PSARJA = {
      "eroTorjunta": 64.7,
      "eroYhteensa": 92.0,
      "juoksut_per_O": 6.73,
-     "vapaat_per_O": 2.86,
+     "vapaat_per_O": 2.81,
      "vapaat_kolmostil": 5,
      "karpaset_per_O": 1.19,
      "kotari": {
@@ -2025,9 +2025,9 @@ const PSARJA = {
      "eroTorjunta": 23.2,
      "eroYhteensa": -27.9,
      "juoksut_per_O": 4.97,
-     "vapaat_per_O": 3.67,
+     "vapaat_per_O": 3.62,
      "vapaat_kolmostil": 9,
-     "karpaset_per_O": 1.0,
+     "karpaset_per_O": 0.97,
      "kotari": {
       "n": 9,
       "voitot": 3,
@@ -3031,7 +3031,282 @@ const PSARJA = {
      "stadion": "Ilosaarirock Stadion, Joensuu",
      "koti": "JoMa",
      "vieras": "SoJy",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "1-0 (4-2, 2-2)",
+     "jaksot": "4-2, 2-2",
+     "joukkueet": {
+      "JoMa": {
+       "kotiutus": {
+        "onn": 6,
+        "yrit": 9,
+        "pct": 66.7
+       },
+       "torjunta_pct": 66.7,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 15,
+         "yrit": 34,
+         "pct": 44.1
+        },
+        {
+         "pesa": 1,
+         "onn": 10,
+         "yrit": 19,
+         "pct": 52.6
+        },
+        {
+         "pesa": 2,
+         "onn": 8,
+         "yrit": 15,
+         "pct": 53.3
+        },
+        {
+         "pesa": 3,
+         "onn": 6,
+         "yrit": 9,
+         "pct": 66.7
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 6,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 31,
+         "juoksuja": 0,
+         "paloja": 2
+        },
+        "1": {
+         "vuoroja": 20,
+         "juoksuja": 0,
+         "paloja": 10
+        },
+        "2": {
+         "vuoroja": 5,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-2": {
+         "vuoroja": 9,
+         "juoksuja": 1,
+         "paloja": 4,
+         "tuottavia": 1
+        },
+        "3": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-3": {
+         "vuoroja": 2,
+         "juoksuja": 1,
+         "paloja": 0,
+         "tuottavia": 1
+        },
+        "1-2-3": {
+         "vuoroja": 7,
+         "juoksuja": 4,
+         "paloja": 6,
+         "tuottavia": 2
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 20452,
+         "nimi": "Joosua Rättö",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 4,
+         "K": 0,
+         "yrit": 7,
+         "T": 0
+        },
+        {
+         "pid": 8286,
+         "nimi": "Joni Lehikoinen",
+         "nro": 4,
+         "paikka": "S",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 4607,
+         "nimi": "Juho Toivola",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 1
+        }
+       ]
+      },
+      "SoJy": {
+       "kotiutus": {
+        "onn": 4,
+        "yrit": 12,
+        "pct": 33.3
+       },
+       "torjunta_pct": 33.3,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 12,
+         "yrit": 22,
+         "pct": 54.5
+        },
+        {
+         "pesa": 1,
+         "onn": 12,
+         "yrit": 15,
+         "pct": 80.0
+        },
+        {
+         "pesa": 2,
+         "onn": 10,
+         "yrit": 18,
+         "pct": 55.6
+        },
+        {
+         "pesa": 3,
+         "onn": 4,
+         "yrit": 12,
+         "pct": 33.3
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 4,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 21,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "1": {
+         "vuoroja": 15,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "1-2": {
+         "vuoroja": 13,
+         "juoksuja": 1,
+         "paloja": 9,
+         "tuottavia": 1
+        },
+        "1-3": {
+         "vuoroja": 4,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-2-3": {
+         "vuoroja": 7,
+         "juoksuja": 1,
+         "paloja": 7,
+         "tuottavia": 1
+        },
+        "2": {
+         "vuoroja": 8,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "3": {
+         "vuoroja": 5,
+         "juoksuja": 2,
+         "paloja": 0,
+         "tuottavia": 2
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 1456,
+         "nimi": "Roope Korhonen",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 5,
+         "T": 0
+        },
+        {
+         "pid": 10950,
+         "nimi": "Vertti Veittikoski",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 11969,
+         "nimi": "Aapo Hiltunen",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 10559,
+         "nimi": "Samuel Huotari",
+         "nro": 6,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 1
+        }
+       ]
+      }
+     },
+     "kunnarit": [],
+     "ryopyt": [
+      {
+       "jakso": 1,
+       "vuoropari": 2,
+       "joukkue": "SoJy",
+       "maara": 2
+      },
+      {
+       "jakso": 1,
+       "vuoropari": 3,
+       "joukkue": "JoMa",
+       "maara": 3
+      }
+     ],
+     "tuojat": [
+      [
+       "Konsta Piironen",
+       2
+      ],
+      [
+       "Samuel Huotari",
+       1
+      ],
+      [
+       "Kalle Kuosmanen",
+       1
+      ],
+      [
+       "Konsta Kettunen",
+       1
+      ],
+      [
+       "Juho Toivola",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     },
     {
      "match_id": 146950,
@@ -3044,12 +3319,12 @@ const PSARJA = {
     }
    ],
    "seuraava": {
-    "match_id": 146949,
-    "pvm": "2026-08-26",
+    "match_id": 146950,
+    "pvm": "2026-08-28",
     "klo": "17:00",
-    "stadion": "Ilosaarirock Stadion, Joensuu",
-    "koti": "JoMa",
-    "vieras": "SoJy",
+    "stadion": "Terrafame Stadion, Sotkamo",
+    "koti": "SoJy",
+    "vieras": "JoMa",
     "pelattu": false
    }
   },
@@ -4171,10 +4446,10 @@ const PSARJA = {
    "best_of": "5",
    "tarvittavat": 3,
    "voitot": {
-    "koti": 2,
+    "koti": 3,
     "vieras": 0
    },
-   "paattynyt": false,
+   "paattynyt": true,
    "kulma": "Putoamiskarsinta. Haviaja putoaa, ja se nakyy pelissa. KoU vei runkosarjan kohtaamiset 2-1 ja voitti viimeisimman selvasti. KoU:n lukkari antaa kuitenkin eniten vapaita koko sarjassa, 4,94 ottelua kohti, ja AA:n torjunta on sarjan heikoin, 160 karkilyontia odottamaa enemman. Kumpikaan ei torju, joten juoksuja tulee.",
    "runko": {
     "KoU": {
@@ -4213,9 +4488,9 @@ const PSARJA = {
      "eroTorjunta": -130.2,
      "eroYhteensa": -131.2,
      "juoksut_per_O": 4.64,
-     "vapaat_per_O": 4.74,
-     "vapaat_kolmostil": 17,
-     "karpaset_per_O": 0.8,
+     "vapaat_per_O": 4.75,
+     "vapaat_kolmostil": 18,
+     "karpaset_per_O": 0.78,
      "kotari": {
       "n": 3,
       "voitot": 1,
@@ -4235,7 +4510,7 @@ const PSARJA = {
      "eroTorjunta": -160.1,
      "eroYhteensa": -200.2,
      "juoksut_per_O": 3.52,
-     "vapaat_per_O": 2.71,
+     "vapaat_per_O": 2.78,
      "vapaat_kolmostil": 11,
      "karpaset_per_O": 1.14,
      "kotari": {
@@ -4959,36 +5234,350 @@ const PSARJA = {
      "stadion": "Sähkökoje Areena, Koskenkorva (Ilmajoki)",
      "koti": "KoU",
      "vieras": "AA",
-     "pelattu": false
-    },
-    {
-     "match_id": 146965,
-     "pvm": "2026-08-31",
-     "klo": "16:30",
-     "stadion": "Saltex Areena, Alajärvi",
-     "koti": "AA",
-     "vieras": "KoU",
-     "pelattu": false
-    },
-    {
-     "match_id": 146966,
-     "pvm": "2026-09-02",
-     "klo": "16:30",
-     "stadion": "Sähkökoje Areena, Koskenkorva (Ilmajoki)",
-     "koti": "KoU",
-     "vieras": "AA",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "1-0 (2-2, 9-1)",
+     "jaksot": "2-2, 9-1",
+     "joukkueet": {
+      "KoU": {
+       "kotiutus": {
+        "onn": 10,
+        "yrit": 17,
+        "pct": 58.8
+       },
+       "torjunta_pct": 84.6,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 15,
+         "yrit": 30,
+         "pct": 50.0
+        },
+        {
+         "pesa": 1,
+         "onn": 8,
+         "yrit": 18,
+         "pct": 44.4
+        },
+        {
+         "pesa": 2,
+         "onn": 12,
+         "yrit": 15,
+         "pct": 80.0
+        },
+        {
+         "pesa": 3,
+         "onn": 11,
+         "yrit": 18,
+         "pct": 61.1
+        }
+       ],
+       "kunnarit": 1,
+       "juoksut": 11,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 27,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "1": {
+         "vuoroja": 21,
+         "juoksuja": 2,
+         "paloja": 7,
+         "tuottavia": 1
+        },
+        "1-2": {
+         "vuoroja": 10,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "1-3": {
+         "vuoroja": 4,
+         "juoksuja": 1,
+         "paloja": 1,
+         "tuottavia": 1
+        },
+        "1-2-3": {
+         "vuoroja": 14,
+         "juoksuja": 8,
+         "tuottavia": 6,
+         "paloja": 9
+        },
+        "2": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 9064,
+         "nimi": "Rasmus Teppo",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 4,
+         "K": 0,
+         "yrit": 6,
+         "T": 0
+        },
+        {
+         "pid": 9997,
+         "nimi": "Matias Rauhala",
+         "nro": 4,
+         "paikka": "3K",
+         "jokeri": false,
+         "L": 3,
+         "K": 0,
+         "yrit": 3,
+         "T": 1
+        },
+        {
+         "pid": 8322,
+         "nimi": "Joona Anttila",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 11330,
+         "nimi": "Eetu Lehto",
+         "nro": 6,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 1,
+         "K": 1,
+         "yrit": 2,
+         "T": 2
+        },
+        {
+         "pid": 10919,
+         "nimi": "Miki Likander",
+         "nro": 2,
+         "paikka": "2K",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
+        },
+        {
+         "pid": 8688,
+         "nimi": "Aapeli Suvisalmi",
+         "nro": 3,
+         "paikka": "1V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 1
+        },
+        {
+         "pid": 10497,
+         "nimi": "Tony Latvala",
+         "nro": 7,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 1
+        }
+       ]
+      },
+      "AA": {
+       "kotiutus": {
+        "onn": 2,
+        "yrit": 13,
+        "pct": 15.4
+       },
+       "torjunta_pct": 41.2,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 10,
+         "yrit": 19,
+         "pct": 52.6
+        },
+        {
+         "pesa": 1,
+         "onn": 11,
+         "yrit": 19,
+         "pct": 57.9
+        },
+        {
+         "pesa": 2,
+         "onn": 11,
+         "yrit": 14,
+         "pct": 78.6
+        },
+        {
+         "pesa": 3,
+         "onn": 2,
+         "yrit": 13,
+         "pct": 15.4
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 3,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 23,
+         "juoksuja": 0,
+         "paloja": 2
+        },
+        "1": {
+         "vuoroja": 19,
+         "juoksuja": 0,
+         "paloja": 6
+        },
+        "1-2": {
+         "vuoroja": 7,
+         "juoksuja": 0,
+         "paloja": 4
+        },
+        "1-2-3": {
+         "vuoroja": 8,
+         "juoksuja": 2,
+         "paloja": 8,
+         "tuottavia": 2
+        },
+        "2": {
+         "vuoroja": 4,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "3": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-3": {
+         "vuoroja": 8,
+         "juoksuja": 1,
+         "tuottavia": 1,
+         "paloja": 3
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 6875,
+         "nimi": "Petteri Kortelainen",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 8,
+         "T": 0
+        },
+        {
+         "pid": 5814,
+         "nimi": "Toni Marjamäki",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 7789,
+         "nimi": "Nestori Yli-Sissala",
+         "nro": 3,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
+        },
+        {
+         "pid": 9201,
+         "nimi": "Niko Tuikka",
+         "nro": 4,
+         "paikka": "2P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 9761,
+         "nimi": "Jere Peltomäki",
+         "nro": 5,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      }
+     },
+     "kunnarit": [
+      {
+       "joukkue": "KoU",
+       "pelaaja": "Eetu Lehto"
+      }
+     ],
+     "ryopyt": [
+      {
+       "jakso": 1,
+       "vuoropari": 2,
+       "joukkue": "KoU",
+       "maara": 2
+      },
+      {
+       "jakso": 2,
+       "vuoropari": 0,
+       "joukkue": "KoU",
+       "maara": 3
+      },
+      {
+       "jakso": 2,
+       "vuoropari": 2,
+       "joukkue": "KoU",
+       "maara": 6
+      }
+     ],
+     "tuojat": [
+      [
+       "Nestori Yli-Sissala",
+       2
+      ],
+      [
+       "Miki Likander",
+       2
+      ],
+      [
+       "Miska Mäkiviita",
+       2
+      ],
+      [
+       "Eetu Lehto",
+       2
+      ],
+      [
+       "Elmeri Koivusalmi",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     }
    ],
-   "seuraava": {
-    "match_id": 146964,
-    "pvm": "2026-08-26",
-    "klo": "17:00",
-    "stadion": "Sähkökoje Areena, Koskenkorva (Ilmajoki)",
-    "koti": "KoU",
-    "vieras": "AA",
-    "pelattu": false
-   }
+   "seuraava": null
   }
  ]
 };
