@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-27 20:36:52
+// 2026-08-28 21:33:02
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-27 20:36:52",
+  "generoitu": "2026-08-28 21:33:02",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -1557,6 +1557,17 @@ const PSARJA = {
        },
        "kotiuttajat": [
         {
+         "pid": 4294,
+         "nimi": "Juha Niemi",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
          "pid": 12934,
          "nimi": "Samu Kyhyräinen",
          "nro": 4,
@@ -1573,17 +1584,6 @@ const PSARJA = {
          "nro": 5,
          "paikka": "3P",
          "jokeri": false,
-         "L": 0,
-         "K": 0,
-         "yrit": 2,
-         "T": 0
-        },
-        {
-         "pid": 4294,
-         "nimi": "Juha Niemi",
-         "nro": 10,
-         "paikka": null,
-         "jokeri": true,
          "L": 0,
          "K": 0,
          "yrit": 2,
@@ -1961,10 +1961,10 @@ const PSARJA = {
    "best_of": "5",
    "tarvittavat": 3,
    "voitot": {
-    "koti": 2,
+    "koti": 3,
     "vieras": 2
    },
-   "paattynyt": false,
+   "paattynyt": true,
    "kulma": "Sijoitusero puhuu SoJy:n puolesta, kohtaamiset eivat. JoMa voitti kolmesta kaksi, viimeisimman kotarissa 14.8. Mutta JoMa on sarjan pahin alisuorittaja kotiutuksessa, 51 juoksua odottamaa jaljessa, ja antaa 3,81 vapaata ottelua kohti. SoJy:n torjunta on +65. Jos JoMa ei tallakaan saa kotarikierrosta, matematiikka kaantyy nopeasti.",
    "runko": {
     "SoJy": {
@@ -2003,9 +2003,9 @@ const PSARJA = {
      "eroTorjunta": 64.7,
      "eroYhteensa": 92.0,
      "juoksut_per_O": 6.73,
-     "vapaat_per_O": 2.81,
+     "vapaat_per_O": 2.87,
      "vapaat_kolmostil": 5,
-     "karpaset_per_O": 1.19,
+     "karpaset_per_O": 1.18,
      "kotari": {
       "n": 8,
       "voitot": 5,
@@ -2025,9 +2025,9 @@ const PSARJA = {
      "eroTorjunta": 23.2,
      "eroYhteensa": -27.9,
      "juoksut_per_O": 4.97,
-     "vapaat_per_O": 3.62,
+     "vapaat_per_O": 3.58,
      "vapaat_kolmostil": 9,
-     "karpaset_per_O": 0.97,
+     "karpaset_per_O": 0.95,
      "kotari": {
       "n": 9,
       "voitot": 3,
@@ -3315,18 +3315,364 @@ const PSARJA = {
      "stadion": "Terrafame Stadion, Sotkamo",
      "koti": "SoJy",
      "vieras": "JoMa",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "1-0 (7-1, 2-2)",
+     "jaksot": "7-1, 2-2",
+     "joukkueet": {
+      "SoJy": {
+       "kotiutus": {
+        "onn": 6,
+        "yrit": 14,
+        "pct": 42.9
+       },
+       "torjunta_pct": 57.1,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 12,
+         "yrit": 17,
+         "pct": 70.6
+        },
+        {
+         "pesa": 1,
+         "onn": 8,
+         "yrit": 17,
+         "pct": 47.1
+        },
+        {
+         "pesa": 2,
+         "onn": 5,
+         "yrit": 12,
+         "pct": 41.7
+        },
+        {
+         "pesa": 3,
+         "onn": 8,
+         "yrit": 16,
+         "pct": 50.0
+        }
+       ],
+       "kunnarit": 2,
+       "juoksut": 9,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 16,
+         "juoksuja": 1,
+         "tuottavia": 1,
+         "paloja": 1
+        },
+        "3": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-3": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-2-3": {
+         "vuoroja": 12,
+         "juoksuja": 4,
+         "paloja": 7,
+         "tuottavia": 4
+        },
+        "1": {
+         "vuoroja": 19,
+         "juoksuja": 3,
+         "tuottavia": 2,
+         "paloja": 9
+        },
+        "1-2": {
+         "vuoroja": 5,
+         "juoksuja": 1,
+         "paloja": 2,
+         "tuottavia": 1
+        },
+        "2-3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "2": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 1
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 1456,
+         "nimi": "Roope Korhonen",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 9182,
+         "nimi": "Kalle Kuosmanen",
+         "nro": 3,
+         "paikka": "2P",
+         "jokeri": false,
+         "L": 1,
+         "K": 1,
+         "yrit": 1,
+         "T": 4
+        },
+        {
+         "pid": 10559,
+         "nimi": "Samuel Huotari",
+         "nro": 5,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 4,
+         "T": 1
+        },
+        {
+         "pid": 7806,
+         "nimi": "Hannes Pekkinen",
+         "nro": 4,
+         "paikka": "1V",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 11969,
+         "nimi": "Aapo Hiltunen",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 9971,
+         "nimi": "Iivari Vihanto",
+         "nro": 1,
+         "paikka": "3K",
+         "jokeri": false,
+         "L": 0,
+         "K": 1,
+         "yrit": 0,
+         "T": 2
+        },
+        {
+         "pid": 9666,
+         "nimi": "Aleksanteri Huotari",
+         "nro": 6,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 10950,
+         "nimi": "Vertti Veittikoski",
+         "nro": 7,
+         "paikka": "3V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 12933,
+         "nimi": "Elmeri Iivonen",
+         "nro": 8,
+         "paikka": "L",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      },
+      "JoMa": {
+       "kotiutus": {
+        "onn": 3,
+        "yrit": 7,
+        "pct": 42.9
+       },
+       "torjunta_pct": 57.1,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 8,
+         "yrit": 22,
+         "pct": 36.4
+        },
+        {
+         "pesa": 1,
+         "onn": 8,
+         "yrit": 19,
+         "pct": 42.1
+        },
+        {
+         "pesa": 2,
+         "onn": 4,
+         "yrit": 9,
+         "pct": 44.4
+        },
+        {
+         "pesa": 3,
+         "onn": 3,
+         "yrit": 7,
+         "pct": 42.9
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 3,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 24,
+         "juoksuja": 0,
+         "paloja": 5
+        },
+        "1": {
+         "vuoroja": 16,
+         "juoksuja": 0,
+         "paloja": 8
+        },
+        "1-2": {
+         "vuoroja": 6,
+         "juoksuja": 0,
+         "paloja": 4
+        },
+        "2": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "3": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-2-3": {
+         "vuoroja": 8,
+         "juoksuja": 3,
+         "paloja": 7,
+         "tuottavia": 3
+        },
+        "2-3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 20452,
+         "nimi": "Joosua Rättö",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 9568,
+         "nimi": "Kasperi Hämäläinen",
+         "nro": 4,
+         "paikka": "3K",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 4607,
+         "nimi": "Juho Toivola",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        }
+       ]
+      }
+     },
+     "kunnarit": [
+      {
+       "joukkue": "SoJy",
+       "pelaaja": "Iivari Vihanto"
+      },
+      {
+       "joukkue": "SoJy",
+       "pelaaja": "Kalle Kuosmanen"
+      }
+     ],
+     "ryopyt": [
+      {
+       "jakso": 1,
+       "vuoropari": 0,
+       "joukkue": "SoJy",
+       "maara": 3
+      },
+      {
+       "jakso": 1,
+       "vuoropari": 2,
+       "joukkue": "SoJy",
+       "maara": 3
+      },
+      {
+       "jakso": 2,
+       "vuoropari": 0,
+       "joukkue": "SoJy",
+       "maara": 2
+      }
+     ],
+     "tuojat": [
+      [
+       "Kalle Kuosmanen",
+       4
+      ],
+      [
+       "Iivari Vihanto",
+       2
+      ],
+      [
+       "Konsta Kettunen",
+       2
+      ],
+      [
+       "Elmeri Purmonen",
+       1
+      ],
+      [
+       "Samuel Huotari",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     }
    ],
-   "seuraava": {
-    "match_id": 146950,
-    "pvm": "2026-08-28",
-    "klo": "17:00",
-    "stadion": "Terrafame Stadion, Sotkamo",
-    "koti": "SoJy",
-    "vieras": "JoMa",
-    "pelattu": false
-   }
+   "seuraava": null
   },
   {
    "id": 3334,
@@ -4334,6 +4680,17 @@ const PSARJA = {
          "T": 0
         },
         {
+         "pid": 10522,
+         "nimi": "Vili Still",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
+        },
+        {
          "pid": 2861,
          "nimi": "Antti Karjaluoto",
          "nro": 4,
@@ -4354,17 +4711,6 @@ const PSARJA = {
          "K": 0,
          "yrit": 1,
          "T": 1
-        },
-        {
-         "pid": 10522,
-         "nimi": "Vili Still",
-         "nro": 12,
-         "paikka": null,
-         "jokeri": true,
-         "L": 0,
-         "K": 0,
-         "yrit": 1,
-         "T": 2
         }
        ]
       }
@@ -5578,6 +5924,354 @@ const PSARJA = {
     }
    ],
    "seuraava": null
+  },
+  {
+   "id": 3391,
+   "kierros": "Välierät",
+   "koti": "SoJy",
+   "vieras": "KPL",
+   "best_of": "5",
+   "tarvittavat": 3,
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "kulma": null,
+   "runko": {
+    "SoJy": {
+     "ottelut": 33,
+     "KL_b": [
+      60.1,
+      60.4,
+      61.5,
+      48.1
+     ],
+     "kotiutus_pct": 47.3,
+     "torjunta_pct": 59.9
+    },
+    "KPL": {
+     "ottelut": 33,
+     "KL_b": [
+      56.4,
+      54.3,
+      64.1,
+      41.5
+     ],
+     "kotiutus_pct": 41.7,
+     "torjunta_pct": 61.7
+    }
+   },
+   "runko_po": {
+    "koti": {
+     "nimi": "SoJy",
+     "sija": null,
+     "ottelut": 33,
+     "voitot": 23,
+     "KL_pct": 57.7,
+     "KL3_pct": 47.7,
+     "torjunta_pct": 49.3,
+     "eroHyokkays": 27.3,
+     "eroTorjunta": 64.7,
+     "eroYhteensa": 92.0,
+     "juoksut_per_O": 6.73,
+     "vapaat_per_O": 2.87,
+     "vapaat_kolmostil": 5,
+     "karpaset_per_O": 1.18,
+     "kotari": {
+      "n": 8,
+      "voitot": 5,
+      "pct": 62.5
+     },
+     "rating": 0.5656
+    },
+    "vieras": {
+     "nimi": "KPL",
+     "sija": null,
+     "ottelut": 33,
+     "voitot": 23,
+     "KL_pct": 54.5,
+     "KL3_pct": 41.9,
+     "torjunta_pct": 51.0,
+     "eroHyokkays": -27.1,
+     "eroTorjunta": 95.0,
+     "eroYhteensa": 67.9,
+     "juoksut_per_O": 5.85,
+     "vapaat_per_O": 2.92,
+     "vapaat_kolmostil": 6,
+     "karpaset_per_O": 1.11,
+     "kotari": {
+      "n": 12,
+      "voitot": 8,
+      "pct": 66.7
+     },
+     "rating": 0.3689
+    }
+   },
+   "h2h": {
+    "ottelut": [
+     {
+      "pvm": "2026-06-14",
+      "koti": "KPL",
+      "vieras": "SoJy",
+      "tulos": "1-2k (2-0, 0-1, 0-4k)",
+      "ratkaisu": "k",
+      "voittaja": "SoJy"
+     },
+     {
+      "pvm": "2026-06-17",
+      "koti": "SoJy",
+      "vieras": "KPL",
+      "tulos": "2-0 (2-0, 4-2)",
+      "ratkaisu": null,
+      "voittaja": "SoJy"
+     },
+     {
+      "pvm": "2026-08-07",
+      "koti": "KPL",
+      "vieras": "SoJy",
+      "tulos": "2-1k (2-1, 0-1, 1-0k)",
+      "ratkaisu": "k",
+      "voittaja": "KPL"
+     }
+    ],
+    "voitot": {
+     "SoJy": 2,
+     "KPL": 1
+    },
+    "kotareita": 2
+   },
+   "tarina": {},
+   "ottelut": [
+    {
+     "match_id": 147206,
+     "pvm": "2026-08-30",
+     "klo": "16:00",
+     "stadion": "Terrafame Stadion, Sotkamo",
+     "koti": "SoJy",
+     "vieras": "KPL",
+     "pelattu": false
+    },
+    {
+     "match_id": 147207,
+     "pvm": "2026-09-02",
+     "klo": "16:30",
+     "stadion": "KSS Energia Areena, Kouvola",
+     "koti": "KPL",
+     "vieras": "SoJy",
+     "pelattu": false
+    },
+    {
+     "match_id": 147208,
+     "pvm": "2026-09-04",
+     "klo": "16:30",
+     "stadion": "Terrafame Stadion, Sotkamo",
+     "koti": "SoJy",
+     "vieras": "KPL",
+     "pelattu": false
+    },
+    {
+     "match_id": 147209,
+     "pvm": "2026-09-06",
+     "klo": "15:00",
+     "stadion": "KSS Energia Areena, Kouvola",
+     "koti": "KPL",
+     "vieras": "SoJy",
+     "pelattu": false
+    },
+    {
+     "match_id": 147210,
+     "pvm": "2026-09-09",
+     "klo": "16:00",
+     "stadion": "Terrafame Stadion, Sotkamo",
+     "koti": "SoJy",
+     "vieras": "KPL",
+     "pelattu": false
+    }
+   ],
+   "seuraava": {
+    "match_id": 147206,
+    "pvm": "2026-08-30",
+    "klo": "16:00",
+    "stadion": "Terrafame Stadion, Sotkamo",
+    "koti": "SoJy",
+    "vieras": "KPL",
+    "pelattu": false
+   }
+  },
+  {
+   "id": 3390,
+   "kierros": "Välierät",
+   "koti": "ViVe",
+   "vieras": "Manse",
+   "best_of": "5",
+   "tarvittavat": 3,
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "kulma": null,
+   "runko": {
+    "ViVe": {
+     "ottelut": 33,
+     "KL_b": [
+      58.3,
+      62.0,
+      62.1,
+      52.8
+     ],
+     "kotiutus_pct": 50.1,
+     "torjunta_pct": 57.8
+    },
+    "Manse": {
+     "ottelut": 33,
+     "KL_b": [
+      55.8,
+      56.3,
+      58.0,
+      51.0
+     ],
+     "kotiutus_pct": 49.9,
+     "torjunta_pct": 57.1
+    }
+   },
+   "runko_po": {
+    "koti": {
+     "nimi": "ViVe",
+     "sija": null,
+     "ottelut": 33,
+     "voitot": 28,
+     "KL_pct": 58.9,
+     "KL3_pct": 52.8,
+     "torjunta_pct": 48.7,
+     "eroHyokkays": 67.2,
+     "eroTorjunta": 51.1,
+     "eroYhteensa": 118.3,
+     "juoksut_per_O": 8.7,
+     "vapaat_per_O": 1.72,
+     "vapaat_kolmostil": 5,
+     "karpaset_per_O": 0.92,
+     "kotari": {
+      "n": 9,
+      "voitot": 5,
+      "pct": 55.6
+     },
+     "rating": 1.2833
+    },
+    "vieras": {
+     "nimi": "Manse",
+     "sija": null,
+     "ottelut": 33,
+     "voitot": 19,
+     "KL_pct": 55.4,
+     "KL3_pct": 51.0,
+     "torjunta_pct": 47.3,
+     "eroHyokkays": 47.6,
+     "eroTorjunta": 19.5,
+     "eroYhteensa": 67.1,
+     "juoksut_per_O": 7.18,
+     "vapaat_per_O": 3.36,
+     "vapaat_kolmostil": 7,
+     "karpaset_per_O": 1.0,
+     "kotari": {
+      "n": 12,
+      "voitot": 6,
+      "pct": 50.0
+     },
+     "rating": 0.3149
+    }
+   },
+   "h2h": {
+    "ottelut": [
+     {
+      "pvm": "2026-06-09",
+      "koti": "ViVe",
+      "vieras": "Manse",
+      "tulos": "2-1k (5-1, 3-4, 6-5k)",
+      "ratkaisu": "k",
+      "voittaja": "ViVe"
+     },
+     {
+      "pvm": "2026-07-31",
+      "koti": "Manse",
+      "vieras": "ViVe",
+      "tulos": "0-1 (4-4, 2-4)",
+      "ratkaisu": null,
+      "voittaja": "ViVe"
+     },
+     {
+      "pvm": "2026-08-02",
+      "koti": "ViVe",
+      "vieras": "Manse",
+      "tulos": "2-0 (3-2, 4-2)",
+      "ratkaisu": null,
+      "voittaja": "ViVe"
+     }
+    ],
+    "voitot": {
+     "ViVe": 3,
+     "Manse": 0
+    },
+    "kotareita": 1
+   },
+   "tarina": {},
+   "ottelut": [
+    {
+     "match_id": 147201,
+     "pvm": "2026-09-01",
+     "klo": "16:30",
+     "stadion": "Saarikenttä, Vimpeli",
+     "koti": "ViVe",
+     "vieras": "Manse",
+     "pelattu": false
+    },
+    {
+     "match_id": 147202,
+     "pvm": "2026-09-03",
+     "klo": "16:30",
+     "stadion": "Kaupin pesäpallostadion, Tampere",
+     "koti": "Manse",
+     "vieras": "ViVe",
+     "pelattu": false
+    },
+    {
+     "match_id": 147203,
+     "pvm": "2026-09-05",
+     "klo": "16:00",
+     "stadion": "Saarikenttä, Vimpeli",
+     "koti": "ViVe",
+     "vieras": "Manse",
+     "pelattu": false
+    },
+    {
+     "match_id": 147204,
+     "pvm": "2026-09-08",
+     "klo": "16:30",
+     "stadion": "Kaupin pesäpallostadion, Tampere",
+     "koti": "Manse",
+     "vieras": "ViVe",
+     "pelattu": false
+    },
+    {
+     "match_id": 147205,
+     "pvm": "2026-09-09",
+     "klo": "16:30",
+     "stadion": "Saarikenttä, Vimpeli",
+     "koti": "ViVe",
+     "vieras": "Manse",
+     "pelattu": false
+    }
+   ],
+   "seuraava": {
+    "match_id": 147201,
+    "pvm": "2026-09-01",
+    "klo": "16:30",
+    "stadion": "Saarikenttä, Vimpeli",
+    "koti": "ViVe",
+    "vieras": "Manse",
+    "pelattu": false
+   }
   }
  ]
 };

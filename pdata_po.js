@@ -2,7 +2,7 @@ const PPO = {
  "meta": {
   "kausi": 2026,
   "seasonSeries": 2945,
-  "generoitu": "2026-08-27 20:36:45",
+  "generoitu": "2026-08-28 21:32:52",
   "kutistuspaino_w": 34,
   "rating": {
    "AA": -1.3455,
@@ -199,57 +199,57 @@ const PPO = {
     "K": 14
    },
    "po": {
-    "ottelut": 4,
+    "ottelut": 5,
     "voitot": 2,
-    "voitto_pct": 50.0,
-    "KL": 139,
-    "KLY": 272,
-    "KL_pct": 51.1,
+    "voitto_pct": 40.0,
+    "KL": 162,
+    "KLY": 329,
+    "KL_pct": 49.2,
     "KL_pct_b": [
-     50.5,
-     52.9,
-     63.5,
-     35.6
+     48.1,
+     50.6,
+     60.7,
+     36.5
     ],
     "KLY_b": [
-     107,
-     68,
-     52,
-     45
+     129,
+     87,
+     61,
+     52
     ],
     "torjunta_pct": 47.0,
-    "T": 16,
+    "T": 19,
     "K": 0
    },
    "koko": {
-    "ottelut": 37,
+    "ottelut": 38,
     "voitot": 19,
-    "voitto_pct": 51.4,
-    "KL": 1304,
-    "KLY": 2430,
-    "KL_pct": 53.7,
+    "voitto_pct": 50.0,
+    "KL": 1327,
+    "KLY": 2487,
+    "KL_pct": 53.4,
     "KL_pct_b": [
-     58.3,
-     52.6,
-     60.9,
-     38.8
+     57.8,
+     52.3,
+     60.6,
+     38.9
     ],
     "KLY_b": [
-     797,
-     679,
-     506,
-     448
+     819,
+     698,
+     515,
+     455
     ],
     "torjunta_pct": 47.4,
-    "T": 180,
+    "T": 183,
     "K": 14
    },
    "delta": {
-    "KL_pct": -2.9
+    "KL_pct": -4.8
    },
    "ennuste": {
-    "KL_pct": 51.4,
-    "po_paino": 0.889
+    "KL_pct": 49.7,
+    "po_paino": 0.906
    },
    "rating": 0.2595
   },
@@ -728,57 +728,57 @@ const PPO = {
     "K": 10
    },
    "po": {
-    "ottelut": 4,
-    "voitot": 2,
-    "voitto_pct": 50.0,
-    "KL": 152,
-    "KLY": 287,
+    "ottelut": 5,
+    "voitot": 3,
+    "voitto_pct": 60.0,
+    "KL": 185,
+    "KLY": 349,
     "KL_pct": 53.0,
     "KL_pct_b": [
-     54.4,
-     58.7,
-     55.0,
-     38.8
+     56.7,
+     56.5,
+     52.8,
+     41.5
     ],
     "KLY_b": [
-     103,
-     75,
-     60,
-     49
+     120,
+     92,
+     72,
+     65
     ],
-    "torjunta_pct": 48.9,
-    "T": 19,
-    "K": 1
+    "torjunta_pct": 50.8,
+    "T": 28,
+    "K": 3
    },
    "koko": {
-    "ottelut": 37,
-    "voitot": 25,
-    "voitto_pct": 67.6,
-    "KL": 1376,
-    "KLY": 2407,
-    "KL_pct": 57.2,
+    "ottelut": 38,
+    "voitot": 26,
+    "voitto_pct": 68.4,
+    "KL": 1409,
+    "KLY": 2469,
+    "KL_pct": 57.1,
     "KL_pct_b": [
-     60.3,
-     58.8,
-     60.4,
-     46.8
+     60.6,
+     58.5,
+     60.0,
+     46.9
     ],
     "KLY_b": [
-     726,
-     639,
-     546,
-     496
+     743,
+     656,
+     558,
+     512
     ],
-    "torjunta_pct": 49.3,
-    "T": 241,
-    "K": 11
+    "torjunta_pct": 49.5,
+    "T": 250,
+    "K": 13
    },
    "delta": {
     "KL_pct": -4.7
    },
    "ennuste": {
-    "KL_pct": 53.5,
-    "po_paino": 0.894
+    "KL_pct": 53.4,
+    "po_paino": 0.911
    },
    "rating": 0.5656
   },
@@ -2611,55 +2611,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
-    "L": 0,
-    "T": 3,
-    "YHT": 3,
-    "KL": 13,
-    "KLY": 27,
-    "KL_pct": 48.1,
+    "L": 1,
+    "T": 4,
+    "YHT": 5,
+    "KL": 17,
+    "KLY": 37,
+    "KL_pct": 45.9,
     "KLY_b": [
-     8,
-     16,
-     1,
-     2
+     9,
+     18,
+     4,
+     6
     ],
     "KL_pct_b": [
-     25.0,
-     62.5,
-     100.0,
-     0.0
+     33.3,
+     55.6,
+     75.0,
+     16.7
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 0,
-    "L": 30,
-    "T": 19,
-    "YHT": 49,
-    "KL": 124,
-    "KLY": 224,
-    "KL_pct": 55.4,
+    "L": 31,
+    "T": 20,
+    "YHT": 51,
+    "KL": 128,
+    "KLY": 234,
+    "KL_pct": 54.7,
     "KLY_b": [
-     41,
-     65,
-     69,
-     49
+     42,
+     67,
+     72,
+     53
     ],
     "KL_pct_b": [
-     46.3,
-     46.2,
-     65.2,
-     61.2
+     47.6,
+     44.8,
+     65.3,
+     58.5
     ]
    },
    "delta": {
-    "KL_pct": -8.2
+    "KL_pct": -10.4
    },
    "ennuste": {
-    "KL_pct": 52.7,
-    "po_paino": 0.443
+    "KL_pct": 50.9,
+    "po_paino": 0.521
    }
   },
   {
@@ -3212,55 +3212,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 1,
     "T": 1,
     "YHT": 2,
-    "KL": 8,
-    "KLY": 21,
-    "KL_pct": 38.1,
+    "KL": 9,
+    "KLY": 24,
+    "KL_pct": 37.5,
     "KLY_b": [
-     8,
-     5,
+     9,
+     6,
      4,
-     4
+     5
     ],
     "KL_pct_b": [
-     37.5,
-     20.0,
+     33.3,
+     33.3,
      75.0,
-     25.0
+     20.0
     ]
    },
    "koko": {
-    "O": 40,
+    "O": 41,
     "K": 3,
     "L": 6,
     "T": 37,
     "YHT": 46,
-    "KL": 154,
-    "KLY": 258,
-    "KL_pct": 59.7,
+    "KL": 155,
+    "KLY": 261,
+    "KL_pct": 59.4,
     "KLY_b": [
-     63,
-     149,
+     64,
+     150,
      30,
-     16
+     17
     ],
     "KL_pct_b": [
-     44.4,
-     63.8,
+     43.8,
+     64.0,
      73.3,
-     56.2
+     52.9
     ]
    },
    "delta": {
-    "KL_pct": -23.5
+    "KL_pct": -24.1
    },
    "ennuste": {
-    "KL_pct": 52.6,
-    "po_paino": 0.382
+    "KL_pct": 51.6,
+    "po_paino": 0.414
    }
   },
   {
@@ -3579,55 +3579,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 1,
     "YHT": 1,
     "KL": 4,
-    "KLY": 18,
-    "KL_pct": 22.2,
+    "KLY": 23,
+    "KL_pct": 17.4,
     "KLY_b": [
-     11,
-     3,
+     13,
+     6,
      4,
      0
     ],
     "KL_pct_b": [
-     9.1,
+     7.7,
      0.0,
      75.0,
      null
     ]
    },
    "koko": {
-    "O": 36,
+    "O": 37,
     "K": 0,
     "L": 7,
     "T": 9,
     "YHT": 16,
     "KL": 71,
-    "KLY": 156,
-    "KL_pct": 45.5,
+    "KLY": 161,
+    "KL_pct": 44.1,
     "KLY_b": [
-     41,
-     56,
+     43,
+     59,
      39,
      20
     ],
     "KL_pct_b": [
-     31.7,
-     41.1,
+     30.2,
+     39.0,
      71.8,
      35.0
     ]
    },
    "delta": {
-    "KL_pct": -26.4
+    "KL_pct": -31.2
    },
    "ennuste": {
-    "KL_pct": 39.4,
-    "po_paino": 0.346
+    "KL_pct": 36.0,
+    "po_paino": 0.404
    }
   },
   {
@@ -4001,55 +4001,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 0,
     "YHT": 0,
-    "KL": 3,
-    "KLY": 14,
-    "KL_pct": 21.4,
+    "KL": 4,
+    "KLY": 17,
+    "KL_pct": 23.5,
     "KLY_b": [
-     10,
-     0,
+     11,
+     2,
      1,
      3
     ],
     "KL_pct_b": [
-     20.0,
-     null,
+     18.2,
+     50.0,
      100.0,
      0.0
     ]
    },
    "koko": {
-    "O": 36,
+    "O": 37,
     "K": 0,
     "L": 17,
     "T": 6,
     "YHT": 23,
-    "KL": 58,
-    "KLY": 170,
+    "KL": 59,
+    "KLY": 173,
     "KL_pct": 34.1,
     "KLY_b": [
-     24,
-     46,
+     25,
+     48,
      54,
      46
     ],
     "KL_pct_b": [
-     33.3,
-     17.4,
+     32.0,
+     18.8,
      46.3,
      37.0
     ]
    },
    "delta": {
-    "KL_pct": -13.9
+    "KL_pct": -11.8
    },
    "ennuste": {
-    "KL_pct": 31.2,
-    "po_paino": 0.292
+    "KL_pct": 31.3,
+    "po_paino": 0.333
    }
   },
   {
@@ -4735,55 +4735,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
-    "L": 8,
+    "L": 9,
     "T": 1,
-    "YHT": 9,
-    "KL": 13,
-    "KLY": 31,
-    "KL_pct": 41.9,
+    "YHT": 10,
+    "KL": 14,
+    "KLY": 34,
+    "KL_pct": 41.2,
     "KLY_b": [
      1,
      1,
-     10,
-     19
+     12,
+     20
     ],
     "KL_pct_b": [
      100.0,
      0.0,
-     40.0,
-     42.1
+     33.3,
+     45.0
     ]
    },
    "koko": {
-    "O": 34,
+    "O": 35,
     "K": 2,
-    "L": 57,
+    "L": 58,
     "T": 6,
-    "YHT": 65,
-    "KL": 123,
-    "KLY": 251,
-    "KL_pct": 49.0,
+    "YHT": 66,
+    "KL": 124,
+    "KLY": 254,
+    "KL_pct": 48.8,
     "KLY_b": [
      5,
      27,
-     86,
-     133
+     88,
+     134
     ],
     "KL_pct_b": [
      20.0,
      51.9,
-     57.0,
-     44.4
+     55.7,
+     44.8
     ]
    },
    "delta": {
-    "KL_pct": -8.1
+    "KL_pct": -8.8
    },
    "ennuste": {
-    "KL_pct": 46.2,
-    "po_paino": 0.477
+    "KL_pct": 45.6,
+    "po_paino": 0.5
    }
   },
   {
@@ -4813,55 +4813,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 2,
     "YHT": 2,
-    "KL": 22,
-    "KLY": 33,
-    "KL_pct": 66.7,
+    "KL": 26,
+    "KLY": 38,
+    "KL_pct": 68.4,
     "KLY_b": [
      6,
-     18,
-     9,
+     20,
+     12,
      0
     ],
     "KL_pct_b": [
      66.7,
-     61.1,
-     77.8,
+     60.0,
+     83.3,
      null
     ]
    },
    "koko": {
-    "O": 35,
+    "O": 36,
     "K": 2,
     "L": 6,
     "T": 22,
     "YHT": 30,
-    "KL": 185,
-    "KLY": 302,
-    "KL_pct": 61.3,
+    "KL": 189,
+    "KLY": 307,
+    "KL_pct": 61.6,
     "KLY_b": [
      46,
-     126,
-     119,
+     128,
+     122,
      11
     ],
     "KL_pct_b": [
      54.3,
-     57.1,
-     67.2,
+     57.0,
+     68.0,
      72.7
     ]
    },
    "delta": {
-    "KL_pct": 6.1
+    "KL_pct": 7.8
    },
    "ennuste": {
-    "KL_pct": 63.6,
-    "po_paino": 0.493
+    "KL_pct": 64.7,
+    "po_paino": 0.528
    }
   },
   {
@@ -5597,55 +5597,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 0,
     "YHT": 0,
     "KL": 0,
-    "KLY": 5,
+    "KLY": 6,
     "KL_pct": 0.0,
     "KLY_b": [
      0,
      1,
      4,
-     0
+     1
     ],
     "KL_pct_b": [
      null,
      0.0,
      0.0,
-     null
+     0.0
     ]
    },
    "koko": {
-    "O": 31,
+    "O": 32,
     "K": 1,
     "L": 9,
     "T": 3,
     "YHT": 13,
     "KL": 31,
-    "KLY": 63,
-    "KL_pct": 49.2,
+    "KLY": 64,
+    "KL_pct": 48.4,
     "KLY_b": [
      6,
      13,
      19,
-     25
+     26
     ],
     "KL_pct_b": [
      50.0,
      69.2,
      47.4,
-     40.0
+     38.5
     ]
    },
    "delta": {
     "KL_pct": -53.4
    },
    "ennuste": {
-    "KL_pct": 46.6,
-    "po_paino": 0.128
+    "KL_pct": 45.4,
+    "po_paino": 0.15
    }
   },
   {
@@ -6693,55 +6693,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 1,
-    "L": 8,
+    "L": 10,
     "T": 1,
-    "YHT": 10,
-    "KL": 14,
-    "KLY": 31,
-    "KL_pct": 45.2,
+    "YHT": 12,
+    "KL": 16,
+    "KLY": 36,
+    "KL_pct": 44.4,
     "KLY_b": [
      1,
      3,
-     7,
-     20
+     9,
+     23
     ],
     "KL_pct_b": [
      100.0,
      100.0,
-     14.3,
-     45.0
+     11.1,
+     47.8
     ]
    },
    "koko": {
-    "O": 22,
+    "O": 23,
     "K": 2,
-    "L": 45,
+    "L": 47,
     "T": 2,
-    "YHT": 49,
-    "KL": 82,
-    "KLY": 179,
-    "KL_pct": 45.8,
+    "YHT": 51,
+    "KL": 84,
+    "KLY": 184,
+    "KL_pct": 45.7,
     "KLY_b": [
      6,
      17,
-     48,
-     108
+     50,
+     111
     ],
     "KL_pct_b": [
      100.0,
      64.7,
-     37.5,
-     43.5
+     36.0,
+     44.1
     ]
    },
    "delta": {
-    "KL_pct": -0.7
+    "KL_pct": -1.5
    },
    "ennuste": {
-    "KL_pct": 45.6,
-    "po_paino": 0.477
+    "KL_pct": 45.2,
+    "po_paino": 0.514
    }
   },
   {
@@ -7312,55 +7312,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
-    "L": 9,
+    "L": 11,
     "T": 1,
-    "YHT": 10,
-    "KL": 16,
-    "KLY": 35,
-    "KL_pct": 45.7,
+    "YHT": 12,
+    "KL": 18,
+    "KLY": 39,
+    "KL_pct": 46.2,
     "KLY_b": [
      3,
      3,
-     8,
-     21
+     9,
+     24
     ],
     "KL_pct_b": [
      33.3,
      66.7,
-     50.0,
-     42.9
+     44.4,
+     45.8
     ]
    },
    "koko": {
-    "O": 35,
+    "O": 36,
     "K": 2,
-    "L": 44,
+    "L": 46,
     "T": 4,
-    "YHT": 50,
-    "KL": 113,
-    "KLY": 241,
+    "YHT": 52,
+    "KL": 115,
+    "KLY": 245,
     "KL_pct": 46.9,
     "KLY_b": [
      7,
      35,
-     81,
-     118
+     82,
+     121
     ],
     "KL_pct_b": [
      42.9,
      48.6,
-     58.0,
-     39.0
+     57.3,
+     39.7
     ]
    },
    "delta": {
-    "KL_pct": -1.4
+    "KL_pct": -0.9
    },
    "ennuste": {
-    "KL_pct": 46.4,
-    "po_paino": 0.507
+    "KL_pct": 46.6,
+    "po_paino": 0.534
    }
   },
   {
@@ -8023,55 +8023,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 3,
     "T": 2,
     "YHT": 5,
-    "KL": 18,
-    "KLY": 41,
-    "KL_pct": 43.9,
+    "KL": 20,
+    "KLY": 52,
+    "KL_pct": 38.5,
     "KLY_b": [
      0,
-     8,
-     20,
-     13
+     12,
+     24,
+     16
     ],
     "KL_pct_b": [
      null,
-     37.5,
-     60.0,
-     23.1
+     33.3,
+     54.2,
+     18.8
     ]
    },
    "koko": {
-    "O": 36,
+    "O": 37,
     "K": 4,
     "L": 62,
     "T": 9,
     "YHT": 75,
-    "KL": 138,
-    "KLY": 306,
-    "KL_pct": 45.1,
+    "KL": 140,
+    "KLY": 317,
+    "KL_pct": 44.2,
     "KLY_b": [
      4,
-     34,
-     93,
-     175
+     38,
+     97,
+     178
     ],
     "KL_pct_b": [
      25.0,
-     41.2,
-     61.3,
-     37.7
+     39.5,
+     59.8,
+     37.1
     ]
    },
    "delta": {
-    "KL_pct": -1.4
+    "KL_pct": -6.8
    },
    "ennuste": {
-    "KL_pct": 44.5,
-    "po_paino": 0.547
+    "KL_pct": 41.2,
+    "po_paino": 0.605
    }
   },
   {
@@ -8234,7 +8234,7 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 0,
@@ -8256,7 +8256,7 @@ const PPO = {
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 0,
     "L": 5,
     "T": 2,
@@ -8312,7 +8312,7 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 0,
@@ -8334,7 +8334,7 @@ const PPO = {
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 0,
     "L": 4,
     "T": 0,
@@ -8968,55 +8968,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
-    "T": 2,
-    "YHT": 2,
-    "KL": 22,
-    "KLY": 34,
-    "KL_pct": 64.7,
+    "T": 3,
+    "YHT": 3,
+    "KL": 23,
+    "KLY": 39,
+    "KL_pct": 59.0,
     "KLY_b": [
      17,
-     17,
+     22,
      0,
      0
     ],
     "KL_pct_b": [
      58.8,
-     70.6,
+     59.1,
      null,
      null
     ]
    },
    "koko": {
-    "O": 30,
+    "O": 31,
     "K": 1,
     "L": 4,
-    "T": 19,
-    "YHT": 24,
-    "KL": 99,
-    "KLY": 176,
-    "KL_pct": 56.2,
+    "T": 20,
+    "YHT": 25,
+    "KL": 100,
+    "KLY": 181,
+    "KL_pct": 55.2,
     "KLY_b": [
      58,
-     82,
+     87,
      29,
      7
     ],
     "KL_pct_b": [
      41.4,
-     64.6,
+     62.1,
      58.6,
      71.4
     ]
    },
    "delta": {
-    "KL_pct": 10.5
+    "KL_pct": 4.8
    },
    "ennuste": {
-    "KL_pct": 59.5,
-    "po_paino": 0.5
+    "KL_pct": 56.8,
+    "po_paino": 0.534
    }
   },
   {
@@ -9491,7 +9491,7 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 0,
@@ -9513,7 +9513,7 @@ const PPO = {
     ]
    },
    "koko": {
-    "O": 32,
+    "O": 33,
     "K": 0,
     "L": 1,
     "T": 0,
@@ -9945,55 +9945,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
-    "T": 3,
-    "YHT": 3,
-    "KL": 18,
-    "KLY": 32,
-    "KL_pct": 56.2,
+    "T": 4,
+    "YHT": 4,
+    "KL": 24,
+    "KLY": 40,
+    "KL_pct": 60.0,
     "KLY_b": [
-     16,
-     16,
+     19,
+     21,
      0,
      0
     ],
     "KL_pct_b": [
-     68.8,
-     43.8,
+     68.4,
+     52.4,
      null,
      null
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 1,
     "L": 2,
-    "T": 38,
-    "YHT": 41,
-    "KL": 179,
-    "KLY": 277,
-    "KL_pct": 64.6,
+    "T": 39,
+    "YHT": 42,
+    "KL": 185,
+    "KLY": 285,
+    "KL_pct": 64.9,
     "KLY_b": [
-     99,
-     169,
+     102,
+     174,
      6,
      3
     ],
     "KL_pct_b": [
-     73.7,
-     58.0,
+     73.5,
+     58.6,
      83.3,
      100.0
     ]
    },
    "delta": {
-    "KL_pct": -9.5
+    "KL_pct": -5.7
    },
    "ennuste": {
-    "KL_pct": 61.1,
-    "po_paino": 0.485
+    "KL_pct": 62.6,
+    "po_paino": 0.541
    }
   },
   {
@@ -10234,55 +10234,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
-    "L": 1,
+    "L": 2,
     "T": 1,
-    "YHT": 2,
-    "KL": 20,
-    "KLY": 32,
-    "KL_pct": 62.5,
+    "YHT": 3,
+    "KL": 22,
+    "KLY": 40,
+    "KL_pct": 55.0,
     "KLY_b": [
-     6,
-     15,
-     10,
-     1
+     8,
+     17,
+     12,
+     3
     ],
     "KL_pct_b": [
      50.0,
-     60.0,
-     70.0,
-     100.0
+     52.9,
+     58.3,
+     66.7
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 2,
-    "L": 18,
+    "L": 19,
     "T": 26,
-    "YHT": 46,
-    "KL": 162,
-    "KLY": 259,
-    "KL_pct": 62.5,
+    "YHT": 47,
+    "KL": 164,
+    "KLY": 267,
+    "KL_pct": 61.4,
     "KLY_b": [
-     34,
-     87,
-     104,
-     34
+     36,
+     89,
+     106,
+     36
     ],
     "KL_pct_b": [
-     47.1,
-     60.9,
-     70.2,
-     58.8
+     47.2,
+     59.6,
+     68.9,
+     58.3
     ]
    },
    "delta": {
-    "KL_pct": -0.1
+    "KL_pct": -7.6
    },
    "ennuste": {
-    "KL_pct": 62.5,
-    "po_paino": 0.485
+    "KL_pct": 58.5,
+    "po_paino": 0.541
    }
   },
   {
@@ -11069,55 +11069,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 3,
     "T": 1,
     "YHT": 4,
-    "KL": 14,
-    "KLY": 28,
-    "KL_pct": 50.0,
+    "KL": 16,
+    "KLY": 33,
+    "KL_pct": 48.5,
     "KLY_b": [
-     7,
-     11,
+     10,
+     13,
      6,
      4
     ],
     "KL_pct_b": [
-     14.3,
-     63.6,
+     30.0,
+     53.8,
      50.0,
      75.0
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 0,
     "L": 9,
     "T": 13,
     "YHT": 22,
-    "KL": 110,
-    "KLY": 213,
-    "KL_pct": 51.6,
+    "KL": 112,
+    "KLY": 218,
+    "KL_pct": 51.4,
     "KLY_b": [
-     71,
-     75,
+     74,
+     77,
      52,
      15
     ],
     "KL_pct_b": [
-     39.4,
-     56.0,
+     40.5,
+     54.5,
      59.6,
      60.0
     ]
    },
    "delta": {
-    "KL_pct": -1.9
+    "KL_pct": -3.4
    },
    "ennuste": {
-    "KL_pct": 51.0,
-    "po_paino": 0.452
+    "KL_pct": 50.2,
+    "po_paino": 0.493
    }
   },
   {
@@ -11335,55 +11335,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 1,
-    "T": 3,
-    "YHT": 4,
-    "KL": 14,
-    "KLY": 22,
-    "KL_pct": 63.6,
+    "T": 5,
+    "YHT": 6,
+    "KL": 17,
+    "KLY": 27,
+    "KL_pct": 63.0,
     "KLY_b": [
-     13,
+     18,
      2,
      4,
      3
     ],
     "KL_pct_b": [
-     69.2,
+     66.7,
      50.0,
      75.0,
      33.3
     ]
    },
    "koko": {
-    "O": 33,
+    "O": 34,
     "K": 1,
     "L": 6,
-    "T": 20,
-    "YHT": 27,
-    "KL": 125,
-    "KLY": 203,
-    "KL_pct": 61.6,
+    "T": 22,
+    "YHT": 29,
+    "KL": 128,
+    "KLY": 208,
+    "KL_pct": 61.5,
     "KLY_b": [
-     140,
+     145,
      23,
      24,
      16
     ],
     "KL_pct_b": [
-     65.7,
+     65.5,
      56.5,
      54.2,
      43.8
     ]
    },
    "delta": {
-    "KL_pct": 2.3
+    "KL_pct": 1.7
    },
    "ennuste": {
-    "KL_pct": 62.2,
-    "po_paino": 0.393
+    "KL_pct": 62.1,
+    "po_paino": 0.443
    }
   },
   {
@@ -12390,55 +12390,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
-    "K": 0,
-    "L": 0,
-    "T": 1,
-    "YHT": 1,
-    "KL": 16,
-    "KLY": 22,
-    "KL_pct": 72.7,
+    "O": 5,
+    "K": 1,
+    "L": 1,
+    "T": 5,
+    "YHT": 7,
+    "KL": 23,
+    "KLY": 30,
+    "KL_pct": 76.7,
     "KLY_b": [
      0,
-     9,
      13,
-     0
+     15,
+     2
     ],
     "KL_pct_b": [
      null,
-     77.8,
-     69.2,
-     null
+     76.9,
+     73.3,
+     100.0
     ]
    },
    "koko": {
-    "O": 29,
-    "K": 1,
-    "L": 2,
-    "T": 23,
-    "YHT": 26,
-    "KL": 133,
-    "KLY": 182,
-    "KL_pct": 73.1,
+    "O": 30,
+    "K": 2,
+    "L": 3,
+    "T": 27,
+    "YHT": 32,
+    "KL": 140,
+    "KLY": 190,
+    "KL_pct": 73.7,
     "KLY_b": [
      40,
-     108,
-     28,
-     6
+     112,
+     30,
+     8
     ],
     "KL_pct_b": [
      65.0,
-     76.9,
-     75.0,
-     50.0
+     76.8,
+     76.7,
+     62.5
     ]
    },
    "delta": {
-    "KL_pct": -0.4
+    "KL_pct": 3.6
    },
    "ennuste": {
-    "KL_pct": 73.0,
-    "po_paino": 0.393
+    "KL_pct": 74.8,
+    "po_paino": 0.469
    }
   },
   {
@@ -13000,55 +13000,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
-    "T": 5,
-    "YHT": 5,
-    "KL": 19,
-    "KLY": 33,
-    "KL_pct": 57.6,
+    "T": 6,
+    "YHT": 6,
+    "KL": 24,
+    "KLY": 38,
+    "KL_pct": 63.2,
     "KLY_b": [
-     32,
+     37,
      1,
      0,
      0
     ],
     "KL_pct_b": [
-     59.4,
+     64.9,
      0.0,
      null,
      null
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 0,
     "L": 2,
-    "T": 50,
-    "YHT": 52,
-    "KL": 172,
-    "KLY": 257,
-    "KL_pct": 66.9,
+    "T": 51,
+    "YHT": 53,
+    "KL": 177,
+    "KLY": 262,
+    "KL_pct": 67.6,
     "KLY_b": [
-     246,
+     251,
      5,
      4,
      2
     ],
     "KL_pct_b": [
-     66.7,
+     67.3,
      40.0,
      100.0,
      100.0
     ]
    },
    "delta": {
-    "KL_pct": -10.7
+    "KL_pct": -5.1
    },
    "ennuste": {
-    "KL_pct": 63.0,
-    "po_paino": 0.493
+    "KL_pct": 65.6,
+    "po_paino": 0.528
    }
   },
   {
@@ -13344,55 +13344,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 2,
     "YHT": 2,
     "KL": 13,
-    "KLY": 25,
-    "KL_pct": 52.0,
+    "KLY": 29,
+    "KL_pct": 44.8,
     "KLY_b": [
-     24,
+     28,
      1,
      0,
      0
     ],
     "KL_pct_b": [
-     50.0,
+     42.9,
      100.0,
      null,
      null
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 1,
     "L": 0,
     "T": 24,
     "YHT": 25,
     "KL": 129,
-    "KLY": 217,
-    "KL_pct": 59.4,
+    "KLY": 221,
+    "KL_pct": 58.4,
     "KLY_b": [
-     135,
+     139,
      74,
      4,
      4
     ],
     "KL_pct_b": [
-     55.6,
+     54.0,
      68.9,
      50.0,
      25.0
     ]
    },
    "delta": {
-    "KL_pct": -8.4
+    "KL_pct": -15.6
    },
    "ennuste": {
-    "KL_pct": 56.9,
-    "po_paino": 0.424
+    "KL_pct": 53.2,
+    "po_paino": 0.46
    }
   },
   {
@@ -13500,55 +13500,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 2,
+    "O": 3,
     "K": 0,
-    "L": 0,
+    "L": 1,
     "T": 1,
-    "YHT": 1,
-    "KL": 12,
-    "KLY": 14,
-    "KL_pct": 85.7,
+    "YHT": 2,
+    "KL": 15,
+    "KLY": 21,
+    "KL_pct": 71.4,
     "KLY_b": [
-     10,
-     4,
-     0,
-     0
+     14,
+     5,
+     1,
+     1
     ],
     "KL_pct_b": [
-     80.0,
+     64.3,
      100.0,
-     null,
-     null
+     0.0,
+     100.0
     ]
    },
    "koko": {
-    "O": 31,
+    "O": 32,
     "K": 3,
-    "L": 1,
+    "L": 2,
     "T": 27,
-    "YHT": 31,
-    "KL": 132,
-    "KLY": 197,
-    "KL_pct": 67.0,
+    "YHT": 32,
+    "KL": 135,
+    "KLY": 204,
+    "KL_pct": 66.2,
     "KLY_b": [
-     165,
-     12,
-     8,
-     12
+     169,
+     13,
+     9,
+     13
     ],
     "KL_pct_b": [
-     67.9,
-     83.3,
-     75.0,
-     33.3
+     66.9,
+     84.6,
+     66.7,
+     38.5
     ]
    },
    "delta": {
-    "KL_pct": 20.1
+    "KL_pct": 5.8
    },
    "ennuste": {
-    "KL_pct": 71.4,
-    "po_paino": 0.292
+    "KL_pct": 67.8,
+    "po_paino": 0.382
    }
   },
   {
@@ -13734,55 +13734,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
+    "O": 5,
     "K": 0,
     "L": 0,
     "T": 0,
     "YHT": 0,
-    "KL": 11,
-    "KLY": 23,
-    "KL_pct": 47.8,
+    "KL": 13,
+    "KLY": 28,
+    "KL_pct": 46.4,
     "KLY_b": [
-     7,
-     6,
      9,
-     1
+     8,
+     9,
+     2
     ],
     "KL_pct_b": [
-     42.9,
      33.3,
+     50.0,
      66.7,
      0.0
     ]
    },
    "koko": {
-    "O": 37,
+    "O": 38,
     "K": 1,
     "L": 27,
     "T": 17,
     "YHT": 45,
-    "KL": 106,
-    "KLY": 201,
-    "KL_pct": 52.7,
+    "KL": 108,
+    "KLY": 206,
+    "KL_pct": 52.4,
     "KLY_b": [
-     58,
-     34,
      60,
-     49
+     36,
+     60,
+     50
     ],
     "KL_pct_b": [
-     48.3,
-     35.3,
+     46.7,
+     38.9,
      63.3,
-     57.1
+     56.0
     ]
    },
    "delta": {
-    "KL_pct": -5.6
+    "KL_pct": -7.0
    },
    "ennuste": {
-    "KL_pct": 51.1,
-    "po_paino": 0.404
+    "KL_pct": 50.2,
+    "po_paino": 0.452
    }
   },
   {
@@ -14413,55 +14413,55 @@ const PPO = {
     ]
    },
    "po": {
-    "O": 4,
-    "K": 0,
+    "O": 5,
+    "K": 1,
     "L": 0,
-    "T": 4,
-    "YHT": 4,
-    "KL": 15,
-    "KLY": 25,
-    "KL_pct": 60.0,
+    "T": 6,
+    "YHT": 7,
+    "KL": 23,
+    "KLY": 34,
+    "KL_pct": 67.6,
     "KLY_b": [
-     22,
-     1,
+     28,
      2,
-     0
+     3,
+     1
     ],
     "KL_pct_b": [
-     59.1,
-     0.0,
+     64.3,
+     50.0,
      100.0,
-     null
+     100.0
     ]
    },
    "koko": {
-    "O": 37,
-    "K": 1,
+    "O": 38,
+    "K": 2,
     "L": 9,
-    "T": 37,
-    "YHT": 47,
-    "KL": 166,
-    "KLY": 249,
-    "KL_pct": 66.7,
+    "T": 39,
+    "YHT": 50,
+    "KL": 174,
+    "KLY": 258,
+    "KL_pct": 67.4,
     "KLY_b": [
-     107,
-     92,
-     33,
-     17
+     113,
+     93,
+     34,
+     18
     ],
     "KL_pct_b": [
-     71.0,
-     63.0,
-     66.7,
-     58.8
+     71.7,
+     63.4,
+     67.6,
+     61.1
     ]
    },
    "delta": {
-    "KL_pct": -7.4
+    "KL_pct": 0.2
    },
    "ennuste": {
-    "KL_pct": 64.3,
-    "po_paino": 0.424
+    "KL_pct": 67.5,
+    "po_paino": 0.5
    }
   },
   {
@@ -15116,9 +15116,9 @@ const PPO = {
       "eroTorjunta": 64.7,
       "eroYhteensa": 92.0,
       "juoksut_per_O": 6.73,
-      "vapaat_per_O": 2.81,
+      "vapaat_per_O": 2.87,
       "vapaat_kolmostil": 5,
-      "karpaset_per_O": 1.19,
+      "karpaset_per_O": 1.18,
       "kotari": {
        "n": 8,
        "voitot": 5,
@@ -15138,9 +15138,9 @@ const PPO = {
       "eroTorjunta": 23.2,
       "eroYhteensa": -27.9,
       "juoksut_per_O": 4.97,
-      "vapaat_per_O": 3.62,
+      "vapaat_per_O": 3.58,
       "vapaat_kolmostil": 9,
-      "karpaset_per_O": 0.97,
+      "karpaset_per_O": 0.95,
       "kotari": {
        "n": 9,
        "voitot": 3,
@@ -15292,21 +15292,17 @@ const PPO = {
    "koti": "SoJy",
    "vieras": "JoMa",
    "voitot": {
-    "koti": 2,
+    "koti": 3,
     "vieras": 2
    },
-   "paattynyt": false,
+   "paattynyt": true,
    "todennakoisyys": {
     "koti_ottelu_kotona": 0.678,
     "koti_ottelu_vieraissa": 0.5878,
-    "koti_sarja": 0.678,
+    "koti_sarja": 1.0,
     "koti_sarja_alussa": 0.7531
    },
-   "seuraava": {
-    "pvm": "2026-08-28",
-    "koti": "SoJy",
-    "vieras": "JoMa"
-   },
+   "seuraava": null,
    "ottelut": [
     {
      "id": 146946,
@@ -15351,12 +15347,12 @@ const PPO = {
     {
      "id": 146950,
      "pvm": "2026-08-28",
-     "pelattu": false,
+     "pelattu": true,
      "koti": "SoJy",
      "vieras": "JoMa",
-     "tulos": null,
+     "tulos": "1-0 (7-1, 2-2)",
      "ratkaisu": null,
-     "supervuoropari": false
+     "supervuoropari": true
     }
    ]
   },
@@ -15833,6 +15829,530 @@ const PPO = {
      "tulos": "1-0 (2-2, 9-1)",
      "ratkaisu": null,
      "supervuoropari": true
+    }
+   ]
+  },
+  {
+   "id": 3391,
+   "kierros": "Välierät",
+   "ennakko": {
+    "kulma": null,
+    "vertailu": {
+     "koti": {
+      "nimi": "SoJy",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 23,
+      "KL_pct": 57.7,
+      "KL3_pct": 47.7,
+      "torjunta_pct": 49.3,
+      "eroHyokkays": 27.3,
+      "eroTorjunta": 64.7,
+      "eroYhteensa": 92.0,
+      "juoksut_per_O": 6.73,
+      "vapaat_per_O": 2.87,
+      "vapaat_kolmostil": 5,
+      "karpaset_per_O": 1.18,
+      "kotari": {
+       "n": 8,
+       "voitot": 5,
+       "pct": 62.5
+      },
+      "rating": 0.5656
+     },
+     "vieras": {
+      "nimi": "KPL",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 23,
+      "KL_pct": 54.5,
+      "KL3_pct": 41.9,
+      "torjunta_pct": 51.0,
+      "eroHyokkays": -27.1,
+      "eroTorjunta": 95.0,
+      "eroYhteensa": 67.9,
+      "juoksut_per_O": 5.85,
+      "vapaat_per_O": 2.92,
+      "vapaat_kolmostil": 6,
+      "karpaset_per_O": 1.11,
+      "kotari": {
+       "n": 12,
+       "voitot": 8,
+       "pct": 66.7
+      },
+      "rating": 0.3689
+     }
+    },
+    "h2h": {
+     "ottelut": [
+      {
+       "pvm": "2026-06-14",
+       "koti": "KPL",
+       "vieras": "SoJy",
+       "tulos": "1-2k (2-0, 0-1, 0-4k)",
+       "ratkaisu": "k",
+       "voittaja": "SoJy"
+      },
+      {
+       "pvm": "2026-06-17",
+       "koti": "SoJy",
+       "vieras": "KPL",
+       "tulos": "2-0 (2-0, 4-2)",
+       "ratkaisu": null,
+       "voittaja": "SoJy"
+      },
+      {
+       "pvm": "2026-08-07",
+       "koti": "KPL",
+       "vieras": "SoJy",
+       "tulos": "2-1k (2-1, 0-1, 1-0k)",
+       "ratkaisu": "k",
+       "voittaja": "KPL"
+      }
+     ],
+     "voitot": {
+      "SoJy": 2,
+      "KPL": 1
+     },
+     "kotareita": 2
+    },
+    "avainpelaajat": {
+     "SoJy": {
+      "panos": [
+       {
+        "nimi": "Aapo Hiltunen",
+        "YHT": 56,
+        "K": 2,
+        "L": 49,
+        "T": 5,
+        "KL_pct": 50.0,
+        "KLY": 220
+       },
+       {
+        "nimi": "Elmeri Purmonen",
+        "YHT": 47,
+        "K": 0,
+        "L": 2,
+        "T": 45,
+        "KL_pct": 68.3,
+        "KLY": 224
+       },
+       {
+        "nimi": "Samuel Huotari",
+        "YHT": 46,
+        "K": 0,
+        "L": 30,
+        "T": 16,
+        "KL_pct": 56.3,
+        "KLY": 197
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Kalle Kuosmanen",
+        "YHT": 25,
+        "K": 1,
+        "L": 2,
+        "T": 22,
+        "KL_pct": 73.1,
+        "KLY": 160
+       },
+       {
+        "nimi": "Elmeri Purmonen",
+        "YHT": 47,
+        "K": 0,
+        "L": 2,
+        "T": 45,
+        "KL_pct": 68.3,
+        "KLY": 224
+       }
+      ]
+     },
+     "KPL": {
+      "panos": [
+       {
+        "nimi": "Teemu Nikkanen",
+        "YHT": 55,
+        "K": 2,
+        "L": 50,
+        "T": 3,
+        "KL_pct": 49.3,
+        "KLY": 225
+       },
+       {
+        "nimi": "Patrik Wahlsten",
+        "YHT": 55,
+        "K": 0,
+        "L": 53,
+        "T": 2,
+        "KL_pct": 37.5,
+        "KLY": 208
+       },
+       {
+        "nimi": "Elias Pitkänen",
+        "YHT": 55,
+        "K": 4,
+        "L": 25,
+        "T": 26,
+        "KL_pct": 64.7,
+        "KLY": 221
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Eemeli Laine",
+        "YHT": 47,
+        "K": 1,
+        "L": 2,
+        "T": 44,
+        "KL_pct": 68.7,
+        "KLY": 230
+       },
+       {
+        "nimi": "Elias Pitkänen",
+        "YHT": 55,
+        "K": 4,
+        "L": 25,
+        "T": 26,
+        "KL_pct": 64.7,
+        "KLY": 221
+       }
+      ]
+     }
+    }
+   },
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "SoJy",
+   "vieras": "KPL",
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.6011,
+    "koti_ottelu_vieraissa": 0.5049,
+    "koti_sarja": 0.6167,
+    "koti_sarja_alussa": 0.6167
+   },
+   "seuraava": {
+    "pvm": "2026-08-30",
+    "koti": "SoJy",
+    "vieras": "KPL"
+   },
+   "ottelut": [
+    {
+     "id": 147206,
+     "pvm": "2026-08-30",
+     "pelattu": false,
+     "koti": "SoJy",
+     "vieras": "KPL",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 147207,
+     "pvm": "2026-09-02",
+     "pelattu": false,
+     "koti": "KPL",
+     "vieras": "SoJy",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 147208,
+     "pvm": "2026-09-04",
+     "pelattu": false,
+     "koti": "SoJy",
+     "vieras": "KPL",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 147209,
+     "pvm": "2026-09-06",
+     "pelattu": false,
+     "koti": "KPL",
+     "vieras": "SoJy",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 147210,
+     "pvm": "2026-09-09",
+     "pelattu": false,
+     "koti": "SoJy",
+     "vieras": "KPL",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    }
+   ]
+  },
+  {
+   "id": 3390,
+   "kierros": "Välierät",
+   "ennakko": {
+    "kulma": null,
+    "vertailu": {
+     "koti": {
+      "nimi": "ViVe",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 28,
+      "KL_pct": 58.9,
+      "KL3_pct": 52.8,
+      "torjunta_pct": 48.7,
+      "eroHyokkays": 67.2,
+      "eroTorjunta": 51.1,
+      "eroYhteensa": 118.3,
+      "juoksut_per_O": 8.7,
+      "vapaat_per_O": 1.72,
+      "vapaat_kolmostil": 5,
+      "karpaset_per_O": 0.92,
+      "kotari": {
+       "n": 9,
+       "voitot": 5,
+       "pct": 55.6
+      },
+      "rating": 1.2833
+     },
+     "vieras": {
+      "nimi": "Manse",
+      "sija": null,
+      "ottelut": 33,
+      "voitot": 19,
+      "KL_pct": 55.4,
+      "KL3_pct": 51.0,
+      "torjunta_pct": 47.3,
+      "eroHyokkays": 47.6,
+      "eroTorjunta": 19.5,
+      "eroYhteensa": 67.1,
+      "juoksut_per_O": 7.18,
+      "vapaat_per_O": 3.36,
+      "vapaat_kolmostil": 7,
+      "karpaset_per_O": 1.0,
+      "kotari": {
+       "n": 12,
+       "voitot": 6,
+       "pct": 50.0
+      },
+      "rating": 0.3149
+     }
+    },
+    "h2h": {
+     "ottelut": [
+      {
+       "pvm": "2026-06-09",
+       "koti": "ViVe",
+       "vieras": "Manse",
+       "tulos": "2-1k (5-1, 3-4, 6-5k)",
+       "ratkaisu": "k",
+       "voittaja": "ViVe"
+      },
+      {
+       "pvm": "2026-07-31",
+       "koti": "Manse",
+       "vieras": "ViVe",
+       "tulos": "0-1 (4-4, 2-4)",
+       "ratkaisu": null,
+       "voittaja": "ViVe"
+      },
+      {
+       "pvm": "2026-08-02",
+       "koti": "ViVe",
+       "vieras": "Manse",
+       "tulos": "2-0 (3-2, 4-2)",
+       "ratkaisu": null,
+       "voittaja": "ViVe"
+      }
+     ],
+     "voitot": {
+      "ViVe": 3,
+      "Manse": 0
+     },
+     "kotareita": 1
+    },
+    "avainpelaajat": {
+     "ViVe": {
+      "panos": [
+       {
+        "nimi": "Henri Puputti",
+        "YHT": 101,
+        "K": 7,
+        "L": 82,
+        "T": 12,
+        "KL_pct": 62.7,
+        "KLY": 233
+       },
+       {
+        "nimi": "Mikko Vihriälä",
+        "YHT": 64,
+        "K": 3,
+        "L": 2,
+        "T": 59,
+        "KL_pct": 65.9,
+        "KLY": 232
+       },
+       {
+        "nimi": "Aleksi Lassila",
+        "YHT": 57,
+        "K": 4,
+        "L": 9,
+        "T": 44,
+        "KL_pct": 66.4,
+        "KLY": 256
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Mikko Kanala",
+        "YHT": 36,
+        "K": 2,
+        "L": 0,
+        "T": 34,
+        "KL_pct": 76.9,
+        "KLY": 156
+       },
+       {
+        "nimi": "Elmeri Anttila",
+        "YHT": 46,
+        "K": 4,
+        "L": 20,
+        "T": 22,
+        "KL_pct": 70.0,
+        "KLY": 240
+       }
+      ]
+     },
+     "Manse": {
+      "panos": [
+       {
+        "nimi": "Perttu Ruuska",
+        "YHT": 82,
+        "K": 2,
+        "L": 65,
+        "T": 15,
+        "KL_pct": 50.0,
+        "KLY": 274
+       },
+       {
+        "nimi": "Jukka-Pekka Vainionpää",
+        "YHT": 71,
+        "K": 2,
+        "L": 65,
+        "T": 4,
+        "KL_pct": 43.8,
+        "KLY": 224
+       },
+       {
+        "nimi": "Antti Korhonen",
+        "YHT": 56,
+        "K": 1,
+        "L": 33,
+        "T": 22,
+        "KL_pct": 62.4,
+        "KLY": 189
+       }
+      ],
+      "karki": [
+       {
+        "nimi": "Perttu Olli",
+        "YHT": 39,
+        "K": 3,
+        "L": 3,
+        "T": 33,
+        "KL_pct": 63.5,
+        "KLY": 189
+       },
+       {
+        "nimi": "Antti Korhonen",
+        "YHT": 56,
+        "K": 1,
+        "L": 33,
+        "T": 22,
+        "KL_pct": 62.4,
+        "KLY": 189
+       }
+      ]
+     }
+    }
+   },
+   "best_of": "5",
+   "tarvittavat_voitot": 3,
+   "koti": "ViVe",
+   "vieras": "Manse",
+   "voitot": {
+    "koti": 0,
+    "vieras": 0
+   },
+   "paattynyt": false,
+   "todennakoisyys": {
+    "koti_ottelu_kotona": 0.7143,
+    "koti_ottelu_vieraissa": 0.6287,
+    "koti_sarja": 0.8106,
+    "koti_sarja_alussa": 0.8106
+   },
+   "seuraava": {
+    "pvm": "2026-09-01",
+    "koti": "ViVe",
+    "vieras": "Manse"
+   },
+   "ottelut": [
+    {
+     "id": 147201,
+     "pvm": "2026-09-01",
+     "pelattu": false,
+     "koti": "ViVe",
+     "vieras": "Manse",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 147202,
+     "pvm": "2026-09-03",
+     "pelattu": false,
+     "koti": "Manse",
+     "vieras": "ViVe",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 147203,
+     "pvm": "2026-09-05",
+     "pelattu": false,
+     "koti": "ViVe",
+     "vieras": "Manse",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 147204,
+     "pvm": "2026-09-08",
+     "pelattu": false,
+     "koti": "Manse",
+     "vieras": "ViVe",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
+    },
+    {
+     "id": 147205,
+     "pvm": "2026-09-09",
+     "pelattu": false,
+     "koti": "ViVe",
+     "vieras": "Manse",
+     "tulos": null,
+     "ratkaisu": null,
+     "supervuoropari": false
     }
    ]
   }
@@ -17844,6 +18364,96 @@ const PPO = {
    "supervuoropari_kaytossa": true,
    "sarja": 3335,
    "pvm": "2026-08-28"
+  },
+  "147206": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3391,
+   "pvm": "2026-08-30"
+  },
+  "147201": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3390,
+   "pvm": "2026-09-01"
+  },
+  "147207": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3391,
+   "pvm": "2026-09-02"
+  },
+  "147202": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3390,
+   "pvm": "2026-09-03"
+  },
+  "147208": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3391,
+   "pvm": "2026-09-04"
+  },
+  "147203": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3390,
+   "pvm": "2026-09-05"
+  },
+  "147209": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3391,
+   "pvm": "2026-09-06"
+  },
+  "147204": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3390,
+   "pvm": "2026-09-08"
+  },
+  "147210": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3391,
+   "pvm": "2026-09-09"
+  },
+  "147205": {
+   "phase": 2,
+   "group": 5844,
+   "ryhma": "Ylemmät pudotuspelit",
+   "playoff": true,
+   "supervuoropari_kaytossa": true,
+   "sarja": 3390,
+   "pvm": "2026-09-09"
   }
  }
 };
