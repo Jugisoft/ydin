@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-29 09:03:38
+// 2026-08-29 09:12:20
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-29 09:03:38",
+  "generoitu": "2026-08-29 09:12:20",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -6048,7 +6048,7 @@ const PSARJA = {
       "pvm": "2026-08-29",
       "joukkue": "KPL",
       "tyyppi": "tausta",
-      "tieto": "Runkosarjan Tier A -otteluissa eli kolmea kovinta vastustajaa vastaan Kouvolan kotiutus oli 26,9 % ja se teki kuudessa ottelussa 14 juoksua (2,33/peli). Pudotus joukkueen omaan Tier D -tasoon on 27,6 prosenttiyksikköä — kolminkertainen muihin välieräjoukkueisiin nähden, ja Kouvolan ainoa negatiivinen juoksuerotus koko kaudella (14–25). Sama suunta jatkui puolivälierässä: kotiutus 41,7 → 33,3 % ja kärkilyönti kolmospesältä 64,1 → 45,2 %. Tier A -otanta on kuusi ottelua, joten yksin sen varaan ei voi rakentaa.",
+      "tieto": "Runkosarjan Tier A -otteluissa eli kolmea kovinta vastustajaa vastaan Kouvolan kotiutus oli 26,9 % ja se teki kuudessa ottelussa 14 juoksua (2,33/peli). Pudotus joukkueen omaan Tier D -tasoon on 27,6 prosenttiyksikköä — kolminkertainen muihin välieräjoukkueisiin nähden, ja Kouvolan ainoa negatiivinen juoksuerotus koko kaudella (14–25). Sama suunta jatkui puolivälierässä: kotiutus 41,7 → 33,3 % ja kärkilyönti 2. pesältä (KL%2, 2-tilanteen purku) 64,1 → 45,2 %. Tier A -otanta on kuusi ottelua, joten yksin sen varaan ei voi rakentaa.",
       "lahde": "pdata.js 28.8.2026, oma analyysi",
       "url": null,
       "varmuus": "tulkinta"
@@ -6334,7 +6334,7 @@ const PSARJA = {
       "pvm": "2026-08-29",
       "joukkue": "Manse",
       "tyyppi": "tausta",
-      "tieto": "Mansen puolivälierä oli tilastollisesti poikkeuksellinen: kotiutus romahti 49,9 → 21,7 %, kärkilyönti kolmospesältä 58,0 → 40,5 %, kotiutus kolmospesältä 44,2 → 12,5 % ja kunnarit 17 → 0. Torjunta nousi 57,1 → 87,5 %. Perttu Ruuskan palo-osuus oli 38,2 % ja Jukka-Pekka Vainionpään 36,8 % (runkosarjassa 22,0 ja 20,0). Otanta on kolme ottelua, joten suunta on selvä mutta taso epävarma.",
+      "tieto": "Mansen puolivälierä oli tilastollisesti poikkeuksellinen: kotiutus romahti 49,9 → 21,7 %, kärkilyönti 2. pesältä (KL%2, 2-tilanteen purku) 58,0 → 40,5 %, kotiutus kolmospesältä 44,2 → 12,5 % ja kunnarit 17 → 0. Torjunta nousi 57,1 → 87,5 %. Perttu Ruuskan palo-osuus oli 38,2 % ja Jukka-Pekka Vainionpään 36,8 % (runkosarjassa 22,0 ja 20,0). Otanta on kolme ottelua, joten suunta on selvä mutta taso epävarma.",
       "lahde": "pdata.js 28.8.2026, oma analyysi",
       "url": null,
       "varmuus": "tulkinta"
