@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-28 21:33:02
+// 2026-08-29 09:03:38
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-28 21:33:02",
+  "generoitu": "2026-08-29 09:03:38",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -1557,17 +1557,6 @@ const PSARJA = {
        },
        "kotiuttajat": [
         {
-         "pid": 4294,
-         "nimi": "Juha Niemi",
-         "nro": 10,
-         "paikka": null,
-         "jokeri": true,
-         "L": 0,
-         "K": 0,
-         "yrit": 2,
-         "T": 0
-        },
-        {
          "pid": 12934,
          "nimi": "Samu Kyhyräinen",
          "nro": 4,
@@ -1584,6 +1573,17 @@ const PSARJA = {
          "nro": 5,
          "paikka": "3P",
          "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 4294,
+         "nimi": "Juha Niemi",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
          "L": 0,
          "K": 0,
          "yrit": 2,
@@ -2960,6 +2960,17 @@ const PSARJA = {
          "T": 0
         },
         {
+         "pid": 7013,
+         "nimi": "Ville Kotro",
+         "nro": 9,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
          "pid": 8416,
          "nimi": "Konsta Kettunen",
          "nro": 1,
@@ -2975,17 +2986,6 @@ const PSARJA = {
          "nimi": "Ukko Schroderus",
          "nro": 7,
          "paikka": "L",
-         "jokeri": false,
-         "L": 0,
-         "K": 0,
-         "yrit": 1,
-         "T": 0
-        },
-        {
-         "pid": 7013,
-         "nimi": "Ville Kotro",
-         "nro": 9,
-         "paikka": "2V",
          "jokeri": false,
          "L": 0,
          "K": 0,
@@ -3123,17 +3123,6 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 8286,
-         "nimi": "Joni Lehikoinen",
-         "nro": 4,
-         "paikka": "S",
-         "jokeri": false,
-         "L": 1,
-         "K": 0,
-         "yrit": 1,
-         "T": 0
-        },
-        {
          "pid": 4607,
          "nimi": "Juho Toivola",
          "nro": 11,
@@ -3143,6 +3132,17 @@ const PSARJA = {
          "K": 0,
          "yrit": 1,
          "T": 1
+        },
+        {
+         "pid": 8286,
+         "nimi": "Joni Lehikoinen",
+         "nro": 4,
+         "paikka": "S",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
         }
        ]
       },
@@ -6041,7 +6041,92 @@ const PSARJA = {
     },
     "kotareita": 2
    },
-   "tarina": {},
+   "tarina": {
+    "kulma": "Runkosarjassa nämä kaksi voittivat täsmälleen yhtä monta ottelua, 23, ja hävisivät kymmenen. Ero syntyi vain siitä, missä kohtaa ottelua voitto tuli: Jymy voitti kolmetoista varsinaisella peliajalla, Kouvola kymmenen, ja Kouvolan kolmetoista jatkovoittoa on sarjan eniten. Keskinäiset kohtaamiset ovat olleet poikkeuksellisen matalia — kolmessa ottelussa yhteensä viisitoista juoksua ja kaksi kotiutuslyöntikilpailua. Kouvola elää ulkopelistä (sarjan vähiten päästettyjä juoksuja, 3,42 per ottelu) ja on koko kauden ollut selvästi heikoimmillaan juuri kärkijoukkueita vastaan. Jymyn puolella sarjalla on lisäulottuvuus: Roope Korhonen ja pelinjohtaja Iiro Haimi ovat molemmat viimeistä kauttaan seurassa.",
+    "seuranta": [
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "KPL",
+      "tyyppi": "tausta",
+      "tieto": "Runkosarjan Tier A -otteluissa eli kolmea kovinta vastustajaa vastaan Kouvolan kotiutus oli 26,9 % ja se teki kuudessa ottelussa 14 juoksua (2,33/peli). Pudotus joukkueen omaan Tier D -tasoon on 27,6 prosenttiyksikköä — kolminkertainen muihin välieräjoukkueisiin nähden, ja Kouvolan ainoa negatiivinen juoksuerotus koko kaudella (14–25). Sama suunta jatkui puolivälierässä: kotiutus 41,7 → 33,3 % ja kärkilyönti kolmospesältä 64,1 → 45,2 %. Tier A -otanta on kuusi ottelua, joten yksin sen varaan ei voi rakentaa.",
+      "lahde": "pdata.js 28.8.2026, oma analyysi",
+      "url": null,
+      "varmuus": "tulkinta"
+     },
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "KPL",
+      "tyyppi": "tausta",
+      "tieto": "Keskinäiset kohtaamiset kaudella 2026: Jymy 2–1, juoksut yhteensä 9–6 kolmessa ottelussa. Kaksi kolmesta ratkesi kotiutuslyöntikilpailussa (14.6. Kouvolassa SoJy 1–2k, 7.8. Kouvolassa KPL 2–1k), eikä kummassakaan supervuoropari tuottanut ainuttakaan juoksua.",
+      "lahde": "api.pesistulokset.fi",
+      "url": null,
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-28",
+      "joukkue": "SoJy",
+      "tyyppi": "avainpelaaja",
+      "tieto": "Roope Korhonen, 45, pelaa viimeistä kauttaan. Neljätoista Suomen mestaruutta, pääsarjassa vuodesta 2000, ilman SM-mitalia vain kolmesti, ja miesten Superpesiksen kaikkien aikojen lyöjätilaston ykkönen. Puolivälierän ratkaisuottelussa hän voitti hutunkeiton ja löi kaksi juoksua. Seuran tunnuslause näihin pudotuspeleihin on 'On vain tämä kausi'.",
+      "lahde": "Yle Urheilu 28.8.2026 + superjymy.fi 28.8.2026",
+      "url": "https://yle.fi/a/74-20243537",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-28",
+      "joukkue": "SoJy",
+      "tyyppi": "ottelutapahtuma",
+      "tieto": "Puolivälierä JoMaa vastaan ratkesi viidennessä ottelussa Sotkamossa 1–0 (7–1, 2–2). Seuran mukaan paikalla oli yli 2 000 katsojaa. Ottelun parhaana palkittiin Kalle Kuosmanen, seitsemän paloa; Iivari Vihannon kiinniotto jatkeelta nostettiin ratkaisevaksi hetkeksi.",
+      "lahde": "superjymy.fi 28.8.2026",
+      "url": "https://www.superjymy.fi/hiukka-herasi-huutoon/",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-28",
+      "joukkue": "SoJy",
+      "tyyppi": "aikataulu",
+      "tieto": "Jymy pelasi puolivälieränsä täyteen viiteen otteluun (28.8.) ja saa yhden lepopäivän ennen välierien avausta 30.8. Kouvola on levännyt 25. elokuuta lähtien eli viisi päivää.",
+      "lahde": "api.pesistulokset.fi + superjymy.fi",
+      "url": "https://www.superjymy.fi/valierat2026/",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-28",
+      "joukkue": "SoJy",
+      "tyyppi": "avainpelaaja",
+      "tieto": "Iivari Vihanto arvioi Yle Urheilulle ratkaisuottelun jälkeen, että Kouvolasta tulee vastaan 'ehkä vielä vähän kovempi sisäpelijoukkue' kuin Joensuu, ja että Jymyn oma sisäpeli on ollut sarjan ongelma.",
+      "lahde": "Yle Urheilu 28.8.2026",
+      "url": "https://yle.fi/a/74-20243537",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-28",
+      "joukkue": "SoJy",
+      "tyyppi": "pelinjohto",
+      "tieto": "Iiro Haimi johtaa Jymyä viimeistä kauttaan. Hän aloittaa Kajaanin Pallokerhon managerina 1.10.2026 ja on johtanut peliä miesten Superpesiksessä yhtäjaksoisesti vuodesta 2018.",
+      "lahde": "superjymy.fi / superpesis.fi 2026",
+      "url": null,
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-26",
+      "joukkue": "KPL",
+      "tyyppi": "ottelutapahtuma",
+      "tieto": "Kouvola katkaisi puolivälieräsarjan KiPaa vastaan 3–0. Ratkaisu tuli supervuorossa: Elias Pitkänen löi kakkosluukusta läpi kolmen juoksun arvoisesti. Toisella jaksolla KPL sai vain kaksi kolmostilannetta ja seura kuvasi sisäpeliä tukkoiseksi; ottelun parhaat Pitkänen ja Patrik Vartama.",
+      "lahde": "kouvolanpallonlyojat.fi 26.8.2026",
+      "url": "https://www.kouvolanpallonlyojat.fi/post/kopla-jatkaa-v%C3%A4lieriin",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "KPL",
+      "tyyppi": "tausta",
+      "tieto": "Kokoonpano- tai loukkaantumistietoja ei ole julkaistu kummaltakaan seuralta 29.8. mennessä. Kouvolan tuorein ennakko on 20.8. julkaistu 'Kohti puolivälieriä'. Tilanne on tarkistettava käsin ennen otteluita.",
+      "lahde": "Oma seuranta 29.8.2026",
+      "url": null,
+      "varmuus": "tulkinta"
+     }
+    ]
+   },
    "ottelut": [
     {
      "match_id": 147206,
@@ -6215,7 +6300,101 @@ const PSARJA = {
     },
     "kotareita": 1
    },
-   "tarina": {},
+   "tarina": {
+    "kulma": "Huhtikuussa Superpesiksen pelinjohtajat äänestivät Manse PP:n sarjan ykköseksi ja Vimpelin Vedon neljänneksi. Syyskuun alussa Veto tulee välieriin runkosarjan voittajana 81 pisteellä, mikä on Ylen mukaan kaikkien aikojen ennätys, ja se on voittanut kaikki kolme keskinäistä kohtaamista. Vedon profiili on suoraviivainen: sarjan paras kotiutus, eniten tehtyjä juoksuja, 32 kunnaria ja lukkarikaarti, joka syötti vain 59 vapaata koko kaudella. Manse taas selvitti puolivälieränsä pelaamalla käytännössä ilman sisäpeliä — viisi juoksua kolmessa ottelussa varsinaisilla jaksoilla — ja nostamalla torjuntansa 87,5 prosenttiin. Sarjan kysymys on, kestääkö tuo ulkopelirakenne myös sarjan parasta kotiutusjoukkuetta vastaan.",
+    "seuranta": [
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "ViVe",
+      "tyyppi": "tausta",
+      "tieto": "Saarikentän 14 vuorokauden sadesumma on 5,6 mm — selvästi kuivin välieräkenttä (Sotkamo 57, Kouvola 37, Tampere 31). Kentän hiekkatekonurmi on vuodelta 1994, eli riittävän vanha, että kuivuus näkyy pinnassa ja pomppu nousee. Tämä suosii Vedon pomppupeliä avausottelussa 1.9.",
+      "lahde": "Open-Meteo 29.8.2026 + TIETOPANKKI/KENTAT.md",
+      "url": null,
+      "varmuus": "tulkinta"
+     },
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "ViVe",
+      "tyyppi": "tausta",
+      "tieto": "Vimpelin lukkarit syöttivät runkosarjassa 59 vapaata — sarjan vähiten selvällä erolla, kun seuraavaksi vähiten syöttänyt joukkue ylsi 87:ään ja Manse syötti 111. Veto antaa vastustajalle ilmaisia etenemisiä noin kaksi kolmasosaa siitä, mitä kukaan muu.",
+      "lahde": "pdata.js 28.8.2026",
+      "url": null,
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "ViVe",
+      "tyyppi": "tausta",
+      "tieto": "Keskinäiset kohtaamiset kaudella 2026: Veto 3–0, juoksut 23–15. Yksi kohtaaminen ratkesi kotiutuslyöntikilpailussa (9.6. Vimpelissä 6–5) ja yksi yhden jakson erolla Tampereella (31.7.). Kolme nollaa ei siis tarkoita, että kaikki olisi ollut helppoa.",
+      "lahde": "api.pesistulokset.fi",
+      "url": null,
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "Manse",
+      "tyyppi": "tausta",
+      "tieto": "Mansen puolivälierä oli tilastollisesti poikkeuksellinen: kotiutus romahti 49,9 → 21,7 %, kärkilyönti kolmospesältä 58,0 → 40,5 %, kotiutus kolmospesältä 44,2 → 12,5 % ja kunnarit 17 → 0. Torjunta nousi 57,1 → 87,5 %. Perttu Ruuskan palo-osuus oli 38,2 % ja Jukka-Pekka Vainionpään 36,8 % (runkosarjassa 22,0 ja 20,0). Otanta on kolme ottelua, joten suunta on selvä mutta taso epävarma.",
+      "lahde": "pdata.js 28.8.2026, oma analyysi",
+      "url": null,
+      "varmuus": "tulkinta"
+     },
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "ViVe",
+      "tyyppi": "tausta",
+      "tieto": "Veto on ainoa välieräjoukkue, jonka kotiutus ei käytännössä laske kovaa vastusta vastaan: Tier A -otteluissa 55,6 %, mikä on vain 1,6 prosenttiyksikköä oman Tier D -tason alapuolella. Vertailuksi Jymyllä pudotus on 8,8 ja Kouvolalla 27,6 prosenttiyksikköä. Torjunnassa Veto on kuitenkin Tier A:ta vastaan neljästä välieräjoukkueesta heikoin (54,4 %).",
+      "lahde": "pdata.js 28.8.2026, oma analyysi",
+      "url": null,
+      "varmuus": "tulkinta"
+     },
+     {
+      "pvm": "2026-08-25",
+      "joukkue": "ViVe",
+      "tyyppi": "ottelutapahtuma",
+      "tieto": "Aleksi Lassila ratkaisi puolivälierän kunnarilla supervuorossa Saarikentällä (2–1s). Lassila arvioi itse joukkueen ulkopelin räpylävirheitä poikkeuksellisen runsaiksi ja epäili ylilatausta.",
+      "lahde": "Atleetti 25.8.2026",
+      "url": "https://atleetti.fi/vimpeli-kaatoi-pattijoen-3-0-aleksi-laakso-ei-saastellyt-itsekritiikkia/",
+      "varmuus": "yksi_lahde"
+     },
+     {
+      "pvm": "2026-08-24",
+      "joukkue": "Manse",
+      "tyyppi": "ottelutapahtuma",
+      "tieto": "Manse varmisti välieräpaikan kauden ensimmäisenä joukkueena. Kolmas ottelu Kaupissa ratkesi kotiutuslyöntikilpailussa 2–1 sen jälkeen, kun kahdeksassa vuoroparissa ja supervuoroparissa ei syntynyt yhtään juoksua. Mansen kotiutuslyönnit Perttu Ruuska ja Antti Korhonen.",
+      "lahde": "Yle Urheilu 24.8.2026",
+      "url": "https://yle.fi/a/74-20242655",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-19",
+      "joukkue": "Manse",
+      "tyyppi": "loukkaantuminen",
+      "tieto": "Tomi Lehtosen kerrottiin loukkaantuneen runkosarjan päätösottelussa Kouvolaa vastaan. Diagnoosia tai paluuaikataulua ei ole julkaistu, eikä seura ole tiedottanut asiasta. Myös Juuso Myllyniemen roolia kuvattiin kysymysmerkiksi. Molemmat tiedot ovat yhden kolmannen osapuolen varassa — tarkistettava ennen otteluita.",
+      "lahde": "Pallomeri.net 19.8.2026",
+      "url": "https://pallomeri.net/superpesiksen-pudotuspelit-2026-ennakko/",
+      "varmuus": "yksi_lahde"
+     },
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "Manse",
+      "tyyppi": "pelinjohto",
+      "tieto": "Altti-Jussi Ronkainen aloitti Mansen ykköspelinjohtajana kaudeksi 2026; edeltäjä Jani Komulainen. Vimpeliä johtaa Jussi Parvi (sopimus kausille 2025–2026). Kummaltakaan ei ole julkaistu tekstimuotoisia välierälausuntoja 29.8. mennessä.",
+      "lahde": "mansepp.fi 26.5.2025 + superpesis.fi 25.7.2024",
+      "url": "https://www.mansepp.fi/uutoksia-manse-ppn-miesten-superpesis-joukkueen-pelinjohtotiimissa-kaudelle-2026/",
+      "varmuus": "vahvistettu"
+     },
+     {
+      "pvm": "2026-08-29",
+      "joukkue": "Manse",
+      "tyyppi": "tausta",
+      "tieto": "Huhtikuun pelinjohtajakyselyssä Manse äänestettiin sarjan ykköseksi (13 pistettä) ja Vimpeli neljänneksi (45). Sotkamo oli toinen ja Kouvola kolmas. Runkosarja meni päinvastoin kärjen osalta.",
+      "lahde": "Superpesiksen pelinjohtajien ennakkoarviot 2026",
+      "url": "https://www.datocms-assets.com/115766/1776322079-superpesis-ennakkoarviot-2026.pdf",
+      "varmuus": "vahvistettu"
+     }
+    ]
+   },
    "ottelut": [
     {
      "match_id": 147201,
