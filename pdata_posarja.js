@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-08-29 09:12:20
+// 2026-08-30 19:17:30
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-08-29 09:12:20",
+  "generoitu": "2026-08-30 19:17:30",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -61,7 +61,7 @@ const PSARJA = {
      "juoksut_per_O": 5.85,
      "vapaat_per_O": 2.92,
      "vapaat_kolmostil": 6,
-     "karpaset_per_O": 1.11,
+     "karpaset_per_O": 1.08,
      "kotari": {
       "n": 12,
       "voitot": 8,
@@ -2005,7 +2005,7 @@ const PSARJA = {
      "juoksut_per_O": 6.73,
      "vapaat_per_O": 2.87,
      "vapaat_kolmostil": 5,
-     "karpaset_per_O": 1.18,
+     "karpaset_per_O": 1.21,
      "kotari": {
       "n": 8,
       "voitot": 5,
@@ -2663,17 +2663,6 @@ const PSARJA = {
          "T": 1
         },
         {
-         "pid": 10559,
-         "nimi": "Samuel Huotari",
-         "nro": 6,
-         "paikka": "3P",
-         "jokeri": false,
-         "L": 0,
-         "K": 0,
-         "yrit": 1,
-         "T": 2
-        },
-        {
          "pid": 10950,
          "nimi": "Vertti Veittikoski",
          "nro": 11,
@@ -2683,6 +2672,17 @@ const PSARJA = {
          "K": 0,
          "yrit": 1,
          "T": 1
+        },
+        {
+         "pid": 10559,
+         "nimi": "Samuel Huotari",
+         "nro": 6,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
         }
        ]
       }
@@ -2960,17 +2960,6 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 7013,
-         "nimi": "Ville Kotro",
-         "nro": 9,
-         "paikka": "2V",
-         "jokeri": false,
-         "L": 0,
-         "K": 0,
-         "yrit": 1,
-         "T": 0
-        },
-        {
          "pid": 8416,
          "nimi": "Konsta Kettunen",
          "nro": 1,
@@ -2986,6 +2975,17 @@ const PSARJA = {
          "nimi": "Ukko Schroderus",
          "nro": 7,
          "paikka": "L",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 7013,
+         "nimi": "Ville Kotro",
+         "nro": 9,
+         "paikka": "2V",
          "jokeri": false,
          "L": 0,
          "K": 0,
@@ -3123,17 +3123,6 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 4607,
-         "nimi": "Juho Toivola",
-         "nro": 11,
-         "paikka": null,
-         "jokeri": true,
-         "L": 1,
-         "K": 0,
-         "yrit": 1,
-         "T": 1
-        },
-        {
          "pid": 8286,
          "nimi": "Joni Lehikoinen",
          "nro": 4,
@@ -3143,6 +3132,17 @@ const PSARJA = {
          "K": 0,
          "yrit": 1,
          "T": 0
+        },
+        {
+         "pid": 4607,
+         "nimi": "Juho Toivola",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 1
         }
        ]
       },
@@ -4680,17 +4680,6 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 10522,
-         "nimi": "Vili Still",
-         "nro": 12,
-         "paikka": null,
-         "jokeri": true,
-         "L": 0,
-         "K": 0,
-         "yrit": 1,
-         "T": 2
-        },
-        {
          "pid": 2861,
          "nimi": "Antti Karjaluoto",
          "nro": 4,
@@ -4711,6 +4700,17 @@ const PSARJA = {
          "K": 0,
          "yrit": 1,
          "T": 1
+        },
+        {
+         "pid": 10522,
+         "nimi": "Vili Still",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
         }
        ]
       }
@@ -5933,7 +5933,7 @@ const PSARJA = {
    "best_of": "5",
    "tarvittavat": 3,
    "voitot": {
-    "koti": 0,
+    "koti": 1,
     "vieras": 0
    },
    "paattynyt": false,
@@ -5977,7 +5977,7 @@ const PSARJA = {
      "juoksut_per_O": 6.73,
      "vapaat_per_O": 2.87,
      "vapaat_kolmostil": 5,
-     "karpaset_per_O": 1.18,
+     "karpaset_per_O": 1.21,
      "kotari": {
       "n": 8,
       "voitot": 5,
@@ -5999,7 +5999,7 @@ const PSARJA = {
      "juoksut_per_O": 5.85,
      "vapaat_per_O": 2.92,
      "vapaat_kolmostil": 6,
-     "karpaset_per_O": 1.11,
+     "karpaset_per_O": 1.08,
      "kotari": {
       "n": 12,
       "voitot": 8,
@@ -6135,7 +6135,296 @@ const PSARJA = {
      "stadion": "Terrafame Stadion, Sotkamo",
      "koti": "SoJy",
      "vieras": "KPL",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "2-0 (3-2, 5-2)",
+     "jaksot": "3-2, 5-2",
+     "joukkueet": {
+      "SoJy": {
+       "kotiutus": {
+        "onn": 7,
+        "yrit": 15,
+        "pct": 46.7
+       },
+       "torjunta_pct": 63.6,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 9,
+         "yrit": 16,
+         "pct": 56.2
+        },
+        {
+         "pesa": 1,
+         "onn": 10,
+         "yrit": 15,
+         "pct": 66.7
+        },
+        {
+         "pesa": 2,
+         "onn": 7,
+         "yrit": 16,
+         "pct": 43.8
+        },
+        {
+         "pesa": 3,
+         "onn": 8,
+         "yrit": 16,
+         "pct": 50.0
+        }
+       ],
+       "kunnarit": 1,
+       "juoksut": 8,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 19,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "1": {
+         "vuoroja": 15,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "1-2": {
+         "vuoroja": 12,
+         "juoksuja": 1,
+         "paloja": 7,
+         "tuottavia": 1
+        },
+        "1-3": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-2-3": {
+         "vuoroja": 12,
+         "juoksuja": 7,
+         "paloja": 8,
+         "tuottavia": 5
+        },
+        "3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 7806,
+         "nimi": "Hannes Pekkinen",
+         "nro": 4,
+         "paikka": "1V",
+         "jokeri": false,
+         "L": 3,
+         "K": 1,
+         "yrit": 4,
+         "T": 1
+        },
+        {
+         "pid": 1456,
+         "nimi": "Roope Korhonen",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 10559,
+         "nimi": "Samuel Huotari",
+         "nro": 5,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 11969,
+         "nimi": "Aapo Hiltunen",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 9666,
+         "nimi": "Aleksanteri Huotari",
+         "nro": 6,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 9182,
+         "nimi": "Kalle Kuosmanen",
+         "nro": 3,
+         "paikka": "2P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
+        }
+       ]
+      },
+      "KPL": {
+       "kotiutus": {
+        "onn": 4,
+        "yrit": 11,
+        "pct": 36.4
+       },
+       "torjunta_pct": 53.3,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 15,
+         "yrit": 28,
+         "pct": 53.6
+        },
+        {
+         "pesa": 1,
+         "onn": 8,
+         "yrit": 21,
+         "pct": 38.1
+        },
+        {
+         "pesa": 2,
+         "onn": 8,
+         "yrit": 10,
+         "pct": 80.0
+        },
+        {
+         "pesa": 3,
+         "onn": 4,
+         "yrit": 11,
+         "pct": 36.4
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 4,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 27,
+         "juoksuja": 0,
+         "paloja": 2
+        },
+        "1": {
+         "vuoroja": 22,
+         "juoksuja": 0,
+         "paloja": 9
+        },
+        "3": {
+         "vuoroja": 6,
+         "juoksuja": 0,
+         "paloja": 2
+        },
+        "2": {
+         "vuoroja": 4,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-2": {
+         "vuoroja": 6,
+         "juoksuja": 0,
+         "paloja": 3
+        },
+        "1-2-3": {
+         "vuoroja": 8,
+         "juoksuja": 3,
+         "tuottavia": 3,
+         "paloja": 6
+        },
+        "1-3": {
+         "vuoroja": 3,
+         "juoksuja": 1,
+         "paloja": 1,
+         "tuottavia": 1
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 6140,
+         "nimi": "Teemu Nikkanen",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 3,
+         "K": 0,
+         "yrit": 4,
+         "T": 0
+        },
+        {
+         "pid": 6733,
+         "nimi": "Patrik Wahlsten",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 5,
+         "T": 0
+        },
+        {
+         "pid": 8440,
+         "nimi": "Elmeri Lieto",
+         "nro": 4,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        }
+       ]
+      }
+     },
+     "kunnarit": [
+      {
+       "joukkue": "SoJy",
+       "pelaaja": "Hannes Pekkinen"
+      }
+     ],
+     "ryopyt": [
+      {
+       "jakso": 2,
+       "vuoropari": 1,
+       "joukkue": "SoJy",
+       "maara": 4
+      }
+     ],
+     "tuojat": [
+      [
+       "Kalle Kuosmanen",
+       2
+      ],
+      [
+       "Patrik Vartama",
+       2
+      ],
+      [
+       "Jere Vikström",
+       2
+      ],
+      [
+       "Eemeli Laine",
+       2
+      ],
+      [
+       "Vertti Veittikoski",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     },
     {
      "match_id": 147207,
@@ -6175,12 +6464,12 @@ const PSARJA = {
     }
    ],
    "seuraava": {
-    "match_id": 147206,
-    "pvm": "2026-08-30",
-    "klo": "16:00",
-    "stadion": "Terrafame Stadion, Sotkamo",
-    "koti": "SoJy",
-    "vieras": "KPL",
+    "match_id": 147207,
+    "pvm": "2026-09-02",
+    "klo": "16:30",
+    "stadion": "KSS Energia Areena, Kouvola",
+    "koti": "KPL",
+    "vieras": "SoJy",
     "pelattu": false
    }
   },
