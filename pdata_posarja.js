@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-09-01 19:58:18
+// 2026-09-02 20:24:55
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-09-01 19:58:18",
+  "generoitu": "2026-09-02 20:24:55",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -24,26 +24,26 @@ const PSARJA = {
    "kulma": "Parin kiinnostavin asetelma. Molemmat elavat torjunnalla: KPL +95 ja KiPa +86, sarjan kaksi parasta. Kummankin kotiutus on odottaman alapuolella. Runkosarjassa KiPa vei 2-1 ja molemmat voitot tulivat kotiutuskilpailussa. Ne ovat myos sarjan kaksi parasta kotarijoukkuetta: KPL 8/12, KiPa 7/11. Odota vahajuoksuista sarjaa ja varaudu siihen etta ratkaisu tulee kotarista.",
    "runko": {
     "KPL": {
-     "ottelut": 27,
+     "ottelut": 33,
      "KL_b": [
       56.4,
       54.3,
       64.1,
       41.5
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 41.7,
+     "torjunta_pct": 61.7
     },
     "KiPa": {
-     "ottelut": 19,
+     "ottelut": 33,
      "KL_b": [
       54.2,
       57.9,
       58.4,
       44.9
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 43.7,
+     "torjunta_pct": 57.9
     }
    },
    "runko_po": {
@@ -63,9 +63,9 @@ const PSARJA = {
      "vapaat_kolmostil": 6,
      "karpaset_per_O": 1.08,
      "kotari": {
-      "n": 12,
+      "n": 13,
       "voitot": 8,
-      "pct": 66.7
+      "pct": 61.5
      },
      "rating": 0.3689
     },
@@ -1052,26 +1052,26 @@ const PSARJA = {
    "kulma": "Jaksovoitoissa nama ovat kaytannossa sama joukkue: 36-25 ja 34-26. Ero syntyy marginaalista — Manse +1,00 juoksua per jakso, Tahko +0,56. Kotiutuksessa Manse on +48 odottamaan, Tahko tasan; torjunnassa jarjestys kaantyy, Tahko +64 ja Manse +20. Runkosarjassa Tahko vei 2-1 ja molemmat voitot tulivat kotarissa. Loppukaudesta puhutaan Tahkon notkahduksesta, ja viisi viimeista olikin 1/5 ja -1,6 juoksua — mutta Manse teki samaan aikaan 2/5 ja -1,4, eli molemmat hyytyivat. Tahkon lukkari antaa eniten kolmostilanteen vapaita koko sarjassa, 15 kappaletta. Siina on Mansen sauma.",
    "runko": {
     "Manse": {
-     "ottelut": 27,
+     "ottelut": 33,
      "KL_b": [
       55.8,
       56.3,
       58.0,
       51.0
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 49.9,
+     "torjunta_pct": 57.1
     },
     "Tahko": {
-     "ottelut": 26,
+     "ottelut": 33,
      "KL_b": [
       54.6,
       54.6,
       53.2,
       44.9
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 44.1,
+     "torjunta_pct": 62.5
     }
    },
    "runko_po": {
@@ -1968,26 +1968,26 @@ const PSARJA = {
    "kulma": "Sijoitusero puhuu SoJy:n puolesta, kohtaamiset eivat. JoMa voitti kolmesta kaksi, viimeisimman kotarissa 14.8. Mutta JoMa on sarjan pahin alisuorittaja kotiutuksessa, 51 juoksua odottamaa jaljessa, ja antaa 3,81 vapaata ottelua kohti. SoJy:n torjunta on +65. Jos JoMa ei tallakaan saa kotarikierrosta, matematiikka kaantyy nopeasti.",
    "runko": {
     "SoJy": {
-     "ottelut": 24,
+     "ottelut": 33,
      "KL_b": [
       60.1,
       60.4,
       61.5,
       48.1
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 47.3,
+     "torjunta_pct": 59.9
     },
     "JoMa": {
-     "ottelut": 24,
+     "ottelut": 33,
      "KL_b": [
       59.7,
       52.5,
       60.7,
       39.0
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 37.7,
+     "torjunta_pct": 60.7
     }
    },
    "runko_po": {
@@ -2003,13 +2003,13 @@ const PSARJA = {
      "eroTorjunta": 64.7,
      "eroYhteensa": 92.0,
      "juoksut_per_O": 6.73,
-     "vapaat_per_O": 2.87,
+     "vapaat_per_O": 2.85,
      "vapaat_kolmostil": 5,
-     "karpaset_per_O": 1.21,
+     "karpaset_per_O": 1.2,
      "kotari": {
-      "n": 8,
-      "voitot": 5,
-      "pct": 62.5
+      "n": 9,
+      "voitot": 6,
+      "pct": 66.7
      },
      "rating": 0.5656
     },
@@ -3689,26 +3689,26 @@ const PSARJA = {
    "kulma": "ViVe on molemmilla mittareilla sarjan paras: kotiutus +67 ja torjunta +51 odottamaan nahden, ja juoksuero +2,3 per jakso on kaksinkertainen seuraavaan. Lukkari antaa 1,84 vapaata ottelua kohti, vahiten koko sarjassa — PattU ei saa ilmaisia etenijoita. Runkosarjassa 3-0 ViVelle. Mallin luku on kuitenkin sen testatun alueen ulkopuolella, joten ota se suuntana eika lukuna. PattU:n realistisin tie kulkee kotiutuskilpailun kautta.",
    "runko": {
     "ViVe": {
-     "ottelut": 26,
+     "ottelut": 33,
      "KL_b": [
       58.3,
       62.0,
       62.1,
       52.8
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 50.1,
+     "torjunta_pct": 57.8
     },
     "PattU": {
-     "ottelut": 21,
+     "ottelut": 33,
      "KL_b": [
       57.3,
       55.2,
       59.1,
       43.8
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 42.4,
+     "torjunta_pct": 54.9
     }
    },
    "runko_po": {
@@ -4245,22 +4245,22 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 2861,
-         "nimi": "Antti Karjaluoto",
-         "nro": 4,
-         "paikka": "2P",
-         "jokeri": false,
+         "pid": 10350,
+         "nimi": "Eemeli Mikkilä",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
          "L": 0,
          "K": 0,
          "yrit": 1,
          "T": 0
         },
         {
-         "pid": 10350,
-         "nimi": "Eemeli Mikkilä",
-         "nro": 11,
-         "paikka": null,
-         "jokeri": true,
+         "pid": 2861,
+         "nimi": "Antti Karjaluoto",
+         "nro": 4,
+         "paikka": "2P",
+         "jokeri": false,
          "L": 0,
          "K": 0,
          "yrit": 1,
@@ -4799,26 +4799,26 @@ const PSARJA = {
    "kulma": "Putoamiskarsinta. Haviaja putoaa, ja se nakyy pelissa. KoU vei runkosarjan kohtaamiset 2-1 ja voitti viimeisimman selvasti. KoU:n lukkari antaa kuitenkin eniten vapaita koko sarjassa, 4,94 ottelua kohti, ja AA:n torjunta on sarjan heikoin, 160 karkilyontia odottamaa enemman. Kumpikaan ei torju, joten juoksuja tulee.",
    "runko": {
     "KoU": {
-     "ottelut": 23,
+     "ottelut": 33,
      "KL_b": [
       51.0,
       47.8,
       51.3,
       45.3
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 43.1,
+     "torjunta_pct": 48.0
     },
     "AA": {
-     "ottelut": 21,
+     "ottelut": 33,
      "KL_b": [
       49.5,
       51.0,
       51.4,
       38.0
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 37.4,
+     "torjunta_pct": 48.0
     }
    },
    "runko_po": {
@@ -5933,33 +5933,33 @@ const PSARJA = {
    "best_of": "5",
    "tarvittavat": 3,
    "voitot": {
-    "koti": 1,
+    "koti": 2,
     "vieras": 0
    },
    "paattynyt": false,
    "kulma": null,
    "runko": {
     "SoJy": {
-     "ottelut": 24,
+     "ottelut": 33,
      "KL_b": [
       60.1,
       60.4,
       61.5,
       48.1
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 47.3,
+     "torjunta_pct": 59.9
     },
     "KPL": {
-     "ottelut": 27,
+     "ottelut": 33,
      "KL_b": [
       56.4,
       54.3,
       64.1,
       41.5
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 41.7,
+     "torjunta_pct": 61.7
     }
    },
    "runko_po": {
@@ -5975,13 +5975,13 @@ const PSARJA = {
      "eroTorjunta": 64.7,
      "eroYhteensa": 92.0,
      "juoksut_per_O": 6.73,
-     "vapaat_per_O": 2.87,
+     "vapaat_per_O": 2.85,
      "vapaat_kolmostil": 5,
-     "karpaset_per_O": 1.21,
+     "karpaset_per_O": 1.2,
      "kotari": {
-      "n": 8,
-      "voitot": 5,
-      "pct": 62.5
+      "n": 9,
+      "voitot": 6,
+      "pct": 66.7
      },
      "rating": 0.5656
     },
@@ -6001,9 +6001,9 @@ const PSARJA = {
      "vapaat_kolmostil": 6,
      "karpaset_per_O": 1.08,
      "kotari": {
-      "n": 12,
+      "n": 13,
       "voitot": 8,
-      "pct": 66.7
+      "pct": 61.5
      },
      "rating": 0.3689
     }
@@ -6433,7 +6433,330 @@ const PSARJA = {
      "stadion": "KSS Energia Areena, Kouvola",
      "koti": "KPL",
      "vieras": "SoJy",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "0-1k (2-2, 3-3, 0-0, 0-2)",
+     "jaksot": "2-2, 3-3, 0-0, 0-2",
+     "joukkueet": {
+      "KPL": {
+       "kotiutus": {
+        "onn": 5,
+        "yrit": 12,
+        "pct": 41.7
+       },
+       "torjunta_pct": 64.3,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 16,
+         "yrit": 25,
+         "pct": 64.0
+        },
+        {
+         "pesa": 1,
+         "onn": 9,
+         "yrit": 20,
+         "pct": 45.0
+        },
+        {
+         "pesa": 2,
+         "onn": 8,
+         "yrit": 12,
+         "pct": 66.7
+        },
+        {
+         "pesa": 3,
+         "onn": 5,
+         "yrit": 13,
+         "pct": 38.5
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 5,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 27,
+         "juoksuja": 0,
+         "paloja": 5
+        },
+        "1": {
+         "vuoroja": 18,
+         "juoksuja": 2,
+         "paloja": 9,
+         "tuottavia": 1
+        },
+        "1-2": {
+         "vuoroja": 6,
+         "juoksuja": 0,
+         "paloja": 2
+        },
+        "1-2-3": {
+         "vuoroja": 12,
+         "juoksuja": 4,
+         "tuottavia": 4,
+         "paloja": 8
+        },
+        "2-3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "2": {
+         "vuoroja": 2,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "3": {
+         "vuoroja": 7,
+         "juoksuja": 1,
+         "paloja": 1,
+         "tuottavia": 1
+        },
+        "1-3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 6140,
+         "nimi": "Teemu Nikkanen",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 4,
+         "T": 0
+        },
+        {
+         "pid": 9939,
+         "nimi": "Elias Pitkänen",
+         "nro": 4,
+         "paikka": "L",
+         "jokeri": false,
+         "L": 2,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 8440,
+         "nimi": "Elmeri Lieto",
+         "nro": 5,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 6733,
+         "nimi": "Patrik Wahlsten",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 2,
+         "T": 0
+        },
+        {
+         "pid": 8112,
+         "nimi": "Valtteri Luoma",
+         "nro": 9,
+         "paikka": "3V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      },
+      "SoJy": {
+       "kotiutus": {
+        "onn": 5,
+        "yrit": 14,
+        "pct": 35.7
+       },
+       "torjunta_pct": 58.3,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 9,
+         "yrit": 20,
+         "pct": 45.0
+        },
+        {
+         "pesa": 1,
+         "onn": 10,
+         "yrit": 16,
+         "pct": 62.5
+        },
+        {
+         "pesa": 2,
+         "onn": 9,
+         "yrit": 16,
+         "pct": 56.2
+        },
+        {
+         "pesa": 3,
+         "onn": 5,
+         "yrit": 15,
+         "pct": 33.3
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 7,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 23,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1": {
+         "vuoroja": 17,
+         "juoksuja": 0,
+         "paloja": 7
+        },
+        "1-2": {
+         "vuoroja": 12,
+         "juoksuja": 0,
+         "paloja": 7
+        },
+        "1-3": {
+         "vuoroja": 4,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-2-3": {
+         "vuoroja": 13,
+         "juoksuja": 4,
+         "paloja": 10,
+         "tuottavia": 4
+        },
+        "3": {
+         "vuoroja": 3,
+         "juoksuja": 1,
+         "paloja": 0,
+         "tuottavia": 1
+        },
+        "2": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 11969,
+         "nimi": "Aapo Hiltunen",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 2,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 10559,
+         "nimi": "Samuel Huotari",
+         "nro": 5,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 7806,
+         "nimi": "Hannes Pekkinen",
+         "nro": 4,
+         "paikka": "1V",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 9666,
+         "nimi": "Aleksanteri Huotari",
+         "nro": 6,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 1456,
+         "nimi": "Roope Korhonen",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 5,
+         "T": 0
+        },
+        {
+         "pid": 10950,
+         "nimi": "Vertti Veittikoski",
+         "nro": 7,
+         "paikka": "3V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      }
+     },
+     "kunnarit": [],
+     "ryopyt": [
+      {
+       "jakso": 2,
+       "vuoropari": 2,
+       "joukkue": "SoJy",
+       "maara": 2
+      },
+      {
+       "jakso": 4,
+       "vuoropari": 0,
+       "joukkue": "SoJy",
+       "maara": 2
+      }
+     ],
+     "tuojat": [
+      [
+       "Elmeri Purmonen",
+       3
+      ],
+      [
+       "Patrik Vartama",
+       2
+      ],
+      [
+       "Iivari Vihanto",
+       2
+      ],
+      [
+       "Kalle Kuosmanen",
+       2
+      ],
+      [
+       "Eemeli Laine",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     },
     {
      "match_id": 147208,
@@ -6464,12 +6787,12 @@ const PSARJA = {
     }
    ],
    "seuraava": {
-    "match_id": 147207,
-    "pvm": "2026-09-02",
+    "match_id": 147208,
+    "pvm": "2026-09-04",
     "klo": "16:30",
-    "stadion": "KSS Energia Areena, Kouvola",
-    "koti": "KPL",
-    "vieras": "SoJy",
+    "stadion": "Terrafame Stadion, Sotkamo",
+    "koti": "SoJy",
+    "vieras": "KPL",
     "pelattu": false
    }
   },
@@ -6488,26 +6811,26 @@ const PSARJA = {
    "kulma": null,
    "runko": {
     "ViVe": {
-     "ottelut": 26,
+     "ottelut": 33,
      "KL_b": [
       58.3,
       62.0,
       62.1,
       52.8
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 50.1,
+     "torjunta_pct": 57.8
     },
     "Manse": {
-     "ottelut": 27,
+     "ottelut": 33,
      "KL_b": [
       55.8,
       56.3,
       58.0,
       51.0
      ],
-     "kotiutus_pct": null,
-     "torjunta_pct": null
+     "kotiutus_pct": 49.9,
+     "torjunta_pct": 57.1
     }
    },
    "runko_po": {
