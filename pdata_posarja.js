@@ -1,8 +1,8 @@
 // pdata_posarja.js — generoitu SANDBOX_posarja_vie.py:lla
-// 2026-09-02 20:24:55
+// 2026-09-03 20:47:57
 const PSARJA = {
  "meta": {
-  "generoitu": "2026-09-02 20:24:55",
+  "generoitu": "2026-09-03 20:47:57",
   "kausi": 2026,
   "seasonSeries": 2945,
   "lahde": "pesistulokset.fi API + pdata_po.js",
@@ -1087,7 +1087,7 @@ const PSARJA = {
      "eroTorjunta": 19.5,
      "eroYhteensa": 67.1,
      "juoksut_per_O": 7.18,
-     "vapaat_per_O": 3.3,
+     "vapaat_per_O": 3.21,
      "vapaat_kolmostil": 7,
      "karpaset_per_O": 0.97,
      "kotari": {
@@ -1890,22 +1890,22 @@ const PSARJA = {
        },
        "kotiuttajat": [
         {
-         "pid": 12934,
-         "nimi": "Samu Kyhyräinen",
-         "nro": 4,
-         "paikka": "S",
-         "jokeri": false,
+         "pid": 4294,
+         "nimi": "Juha Niemi",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
          "L": 0,
          "K": 0,
          "yrit": 2,
          "T": 0
         },
         {
-         "pid": 4294,
-         "nimi": "Juha Niemi",
-         "nro": 10,
-         "paikka": null,
-         "jokeri": true,
+         "pid": 12934,
+         "nimi": "Samu Kyhyräinen",
+         "nro": 4,
+         "paikka": "S",
+         "jokeri": false,
          "L": 0,
          "K": 0,
          "yrit": 2,
@@ -3725,7 +3725,7 @@ const PSARJA = {
      "eroYhteensa": 118.3,
      "juoksut_per_O": 8.7,
      "vapaat_per_O": 1.76,
-     "vapaat_kolmostil": 5,
+     "vapaat_kolmostil": 6,
      "karpaset_per_O": 0.92,
      "kotari": {
       "n": 9,
@@ -3949,17 +3949,6 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 6131,
-         "nimi": "Mikko Kanala",
-         "nro": 6,
-         "paikka": "2V",
-         "jokeri": false,
-         "L": 0,
-         "K": 0,
-         "yrit": 1,
-         "T": 2
-        },
-        {
          "pid": 5985,
          "nimi": "Severi Lassila",
          "nro": 9,
@@ -3976,6 +3965,17 @@ const PSARJA = {
          "nro": 11,
          "paikka": null,
          "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 2
+        },
+        {
+         "pid": 6131,
+         "nimi": "Mikko Kanala",
+         "nro": 6,
+         "paikka": "2V",
+         "jokeri": false,
          "L": 0,
          "K": 0,
          "yrit": 1,
@@ -4245,22 +4245,22 @@ const PSARJA = {
          "T": 0
         },
         {
-         "pid": 10350,
-         "nimi": "Eemeli Mikkilä",
-         "nro": 11,
-         "paikka": null,
-         "jokeri": true,
+         "pid": 2861,
+         "nimi": "Antti Karjaluoto",
+         "nro": 4,
+         "paikka": "2P",
+         "jokeri": false,
          "L": 0,
          "K": 0,
          "yrit": 1,
          "T": 0
         },
         {
-         "pid": 2861,
-         "nimi": "Antti Karjaluoto",
-         "nro": 4,
-         "paikka": "2P",
-         "jokeri": false,
+         "pid": 10350,
+         "nimi": "Eemeli Mikkilä",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
          "L": 0,
          "K": 0,
          "yrit": 1,
@@ -6804,7 +6804,7 @@ const PSARJA = {
    "best_of": "5",
    "tarvittavat": 3,
    "voitot": {
-    "koti": 1,
+    "koti": 2,
     "vieras": 0
    },
    "paattynyt": false,
@@ -6847,7 +6847,7 @@ const PSARJA = {
      "eroYhteensa": 118.3,
      "juoksut_per_O": 8.7,
      "vapaat_per_O": 1.76,
-     "vapaat_kolmostil": 5,
+     "vapaat_kolmostil": 6,
      "karpaset_per_O": 0.92,
      "kotari": {
       "n": 9,
@@ -6868,7 +6868,7 @@ const PSARJA = {
      "eroTorjunta": 19.5,
      "eroYhteensa": 67.1,
      "juoksut_per_O": 7.18,
-     "vapaat_per_O": 3.3,
+     "vapaat_per_O": 3.21,
      "vapaat_kolmostil": 7,
      "karpaset_per_O": 0.97,
      "kotari": {
@@ -7419,7 +7419,309 @@ const PSARJA = {
      "stadion": "Kaupin pesäpallostadion, Tampere",
      "koti": "Manse",
      "vieras": "ViVe",
-     "pelattu": false
+     "pelattu": true,
+     "tulos": "1-2s (3-5, 1-0, 1-2)",
+     "jaksot": "3-5, 1-0, 1-2",
+     "joukkueet": {
+      "Manse": {
+       "kotiutus": {
+        "onn": 5,
+        "yrit": 15,
+        "pct": 33.3
+       },
+       "torjunta_pct": 50.0,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 10,
+         "yrit": 20,
+         "pct": 50.0
+        },
+        {
+         "pesa": 1,
+         "onn": 11,
+         "yrit": 13,
+         "pct": 84.6
+        },
+        {
+         "pesa": 2,
+         "onn": 12,
+         "yrit": 19,
+         "pct": 63.2
+        },
+        {
+         "pesa": 3,
+         "onn": 5,
+         "yrit": 15,
+         "pct": 33.3
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 5,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 20,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1": {
+         "vuoroja": 11,
+         "juoksuja": 0,
+         "paloja": 1
+        },
+        "1-2": {
+         "vuoroja": 17,
+         "juoksuja": 0,
+         "paloja": 11
+        },
+        "1-2-3": {
+         "vuoroja": 14,
+         "juoksuja": 4,
+         "paloja": 11,
+         "tuottavia": 4
+        },
+        "2": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 0
+        },
+        "1-3": {
+         "vuoroja": 3,
+         "juoksuja": 1,
+         "paloja": 1,
+         "tuottavia": 1
+        },
+        "3": {
+         "vuoroja": 1,
+         "juoksuja": 0,
+         "paloja": 0
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 4911,
+         "nimi": "Jukka-Pekka Vainionpää",
+         "nro": 11,
+         "paikka": null,
+         "jokeri": true,
+         "L": 3,
+         "K": 0,
+         "yrit": 6,
+         "T": 0
+        },
+        {
+         "pid": 2941,
+         "nimi": "Antti Korhonen",
+         "nro": 4,
+         "paikka": "1V",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 3,
+         "T": 1
+        },
+        {
+         "pid": 8574,
+         "nimi": "Perttu Ruuska",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 1,
+         "K": 0,
+         "yrit": 3,
+         "T": 0
+        },
+        {
+         "pid": 9500,
+         "nimi": "Aapo Komulainen",
+         "nro": 5,
+         "paikka": "L",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 11358,
+         "nimi": "Toma Heikkilä",
+         "nro": 6,
+         "paikka": "2V",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        },
+        {
+         "pid": 11014,
+         "nimi": "Matias Paananen",
+         "nro": 7,
+         "paikka": "3P",
+         "jokeri": false,
+         "L": 0,
+         "K": 0,
+         "yrit": 1,
+         "T": 0
+        }
+       ]
+      },
+      "ViVe": {
+       "kotiutus": {
+        "onn": 6,
+        "yrit": 12,
+        "pct": 50.0
+       },
+       "torjunta_pct": 66.7,
+       "KL": [
+        {
+         "pesa": 0,
+         "onn": 14,
+         "yrit": 27,
+         "pct": 51.9
+        },
+        {
+         "pesa": 1,
+         "onn": 11,
+         "yrit": 18,
+         "pct": 61.1
+        },
+        {
+         "pesa": 2,
+         "onn": 7,
+         "yrit": 15,
+         "pct": 46.7
+        },
+        {
+         "pesa": 3,
+         "onn": 6,
+         "yrit": 12,
+         "pct": 50.0
+        }
+       ],
+       "kunnarit": 0,
+       "juoksut": 7,
+       "tilanteet": {
+        "tyhjä": {
+         "vuoroja": 25,
+         "juoksuja": 0,
+         "paloja": 2
+        },
+        "1": {
+         "vuoroja": 18,
+         "juoksuja": 0,
+         "paloja": 10
+        },
+        "1-2": {
+         "vuoroja": 13,
+         "juoksuja": 2,
+         "paloja": 4,
+         "tuottavia": 2
+        },
+        "1-2-3": {
+         "vuoroja": 7,
+         "juoksuja": 5,
+         "paloja": 5,
+         "tuottavia": 3
+        },
+        "2": {
+         "vuoroja": 3,
+         "juoksuja": 0,
+         "paloja": 1
+        }
+       },
+       "kotiuttajat": [
+        {
+         "pid": 5653,
+         "nimi": "Matias Rinta-aho",
+         "nro": 12,
+         "paikka": null,
+         "jokeri": true,
+         "L": 4,
+         "K": 0,
+         "yrit": 6,
+         "T": 0
+        },
+        {
+         "pid": 10077,
+         "nimi": "Lauri Vihriälä",
+         "nro": 4,
+         "paikka": "3V",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 2,
+         "T": 1
+        },
+        {
+         "pid": 8573,
+         "nimi": "Elmeri Anttila",
+         "nro": 3,
+         "paikka": "3K",
+         "jokeri": false,
+         "L": 1,
+         "K": 0,
+         "yrit": 1,
+         "T": 1
+        },
+        {
+         "pid": 1315,
+         "nimi": "Henri Puputti",
+         "nro": 10,
+         "paikka": null,
+         "jokeri": true,
+         "L": 0,
+         "K": 0,
+         "yrit": 3,
+         "T": 1
+        }
+       ]
+      }
+     },
+     "kunnarit": [],
+     "ryopyt": [
+      {
+       "jakso": 1,
+       "vuoropari": 0,
+       "joukkue": "Manse",
+       "maara": 2
+      },
+      {
+       "jakso": 1,
+       "vuoropari": 0,
+       "joukkue": "ViVe",
+       "maara": 4
+      },
+      {
+       "jakso": 3,
+       "vuoropari": 0,
+       "joukkue": "ViVe",
+       "maara": 2
+      }
+     ],
+     "tuojat": [
+      [
+       "Simo Vainikainen",
+       2
+      ],
+      [
+       "Severi Tikkakoski",
+       1
+      ],
+      [
+       "Tino Heikkilä",
+       1
+      ],
+      [
+       "Aleksi Lassila",
+       1
+      ],
+      [
+       "Elmeri Anttila",
+       1
+      ]
+     ],
+     "tarkistus_ok": true
     },
     {
      "match_id": 147203,
@@ -7450,12 +7752,12 @@ const PSARJA = {
     }
    ],
    "seuraava": {
-    "match_id": 147202,
-    "pvm": "2026-09-03",
-    "klo": "16:30",
-    "stadion": "Kaupin pesäpallostadion, Tampere",
-    "koti": "Manse",
-    "vieras": "ViVe",
+    "match_id": 147203,
+    "pvm": "2026-09-05",
+    "klo": "16:00",
+    "stadion": "Saarikenttä, Vimpeli",
+    "koti": "ViVe",
+    "vieras": "Manse",
     "pelattu": false
    }
   }
